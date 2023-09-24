@@ -1,0 +1,105 @@
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../variable";
+
+#header {
+  background-color: $black;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: $padding-y 0;
+  // overflow-x: hidden;
+  @media (min-width: $lg) {
+    padding: $padding-x 0;
+  }
+  #logo {
+    order: 2;
+    @media (min-width: $lg) {
+      order: 1;
+      margin-left: $padding-x;
+    }
+  }
+  div.btn {
+    order: 1;
+    margin-left: $padding-x;
+    border: none;
+    padding: 0;
+    min-width: 30px;
+    @media (min-width: $lg) {
+      display: none;
+      margin-left: 0;
+    }
+  }
+
+  ul {
+    // visibility: hidden;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color: $black;
+    top: 98px;
+    left: 100%;
+    transition: left 0.5s ease;
+    width: 100vw;
+    font-size: 20px;
+    list-style-type: none;
+    overscroll-behavior-y: contain;
+    &.show {
+      // visibility: visible;
+      left: 0;
+    }
+    @media (min-width: $lg) {
+      position: unset;
+      display: flex;
+      order: 2;
+      width: auto;
+      margin-left: auto;
+    }
+    li {
+      &:first-child {
+        border-top: 2px solid $white;
+      }
+      border-bottom: 2px solid $white;
+      padding: $padding-x $padding-x;
+      @media (min-width: $lg) {
+        &:first-child {
+          border-top: none;
+        }
+        padding: 0;
+        margin-left: auto;
+        margin-right: $padding-x * 3;
+        border-bottom: none;
+      }
+      a {
+        display: inline-flex;
+        img {
+          margin-left: $padding-x;
+          @media (min-width: $lg) {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+  #resume {
+    order: 3;
+    &.btn {
+      color: $white;
+      padding: $padding-y $padding-x;
+      border-radius: $border-radius 0 0 $border-radius;
+      border: 1px solid $white;
+      border-right: none;
+      &:hover {
+        color: $pink;
+      }
+    }
+    @media (min-width: $lg) {
+
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "../variable";
+#home {
+  display: flex;
+  #greeting {
+    @include container();
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 50px;
+      .content {
+        flex-basis: 100%;
+        @media (min-width: $sm) {
+          flex-basis: 50%;
+        }
+        .title {
+          font-weight: 900;
+          font-size: 36px;
+          line-height: 40px;
+          margin-bottom: 30px;
+          @media (min-width: $lg) {
+            // margin-top: 100px;
+            margin-bottom: 50px;
+            font-size: 80px;
+            line-height: 100px;
+          }
+          span::before {
+            content: "\a";
+            white-space: pre;
+          }
+        }
+        .intro {
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 22px;
+          margin-bottom: 30px;
+          span {
+            color: $pink;
+            text-decoration: underline;
+          }
+          @media (min-width: $lg) {
+            margin-bottom: 80px;
+            font-size: 38px;
+            line-height: 50px;
+          }
+        }
+        .btn {
+          text-transform: uppercase;
+        }
+      }
+      .image {
+        flex-basis: 100%;
+        text-align: center;
+        @media (min-width: $sm) {
+          flex-basis: 45%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

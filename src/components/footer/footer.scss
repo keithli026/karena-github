@@ -1,0 +1,17 @@
+@import "../../variable";
+#footer {
+  background-color: $black;
+  color: $white;
+  padding: $padding-x * 2 $padding-x; 
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+  }
+}
