@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: $padding-y 0;
-  // overflow-x: hidden;
+  z-index: 99;
   @media (min-width: $lg) {
     padding: $padding-x 0;
   }
@@ -28,7 +28,10 @@
     margin-left: $padding-x;
     border: none;
     padding: 0;
-    min-width: 30px;
+  
+    &:hover {
+      background-color: unset;
+    }
     @media (min-width: $lg) {
       display: none;
       margin-left: 0;
@@ -75,9 +78,11 @@
         border-bottom: none;
       }
       a {
-        display: inline-flex;
+        display: flex;
+        align-items: center;
         img {
           margin-left: $padding-x;
+          max-width: 60px;
           @media (min-width: $lg) {
             display: none;
           }
@@ -95,7 +100,8 @@
       border: 1px solid $white;
       border-right: none;
       &:hover {
-        color: $pink;
+        border: 1px solid $pink;
+        // color: $pink;
       }
     }
     @media (min-width: $lg) {

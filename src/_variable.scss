@@ -1,11 +1,12 @@
+$white-100: #FAFAFA;
 $white: #FFFFFF;
 $black: #000000;
 $lightdark : #666666;
-$dark :#272727;
+$dark :#040404;
 $red: #C70000;
 $pink: #FF33A0;
-$lightgrey: #F3F3F3;
-$grey: #D9D9D9;
+$lightgrey: #B2B2B2;
+$grey: #4A4A4A;
 $lightblue: #0097BD;
 $blue: #0d6c8f;
 $sm: 576px;
@@ -27,7 +28,7 @@ $padding-y: 10px;
 $border-radius: 20px;
 
 @mixin container {
-  width: 100%;
+  // width: 100%;
   padding-left: $padding-x;
   padding-right: $padding-x;
   margin-left: auto;
@@ -59,26 +60,5 @@ $border-radius: 20px;
 
   @media (min-width: $xxxxl) {
     max-width: $xxxxl-max-width;
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
-button, .btn {
-  cursor: pointer;
-  color: $black;
-  padding: $padding-y $padding-x * 2;
-  border-radius: $border-radius;
-  border: 1px solid $black;
-} 
-
-a {
-  text-decoration: none;
-  color: $white;
-
-  &:hover {
-    color: $pink;
   }
 }

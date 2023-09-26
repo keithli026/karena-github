@@ -1,0 +1,67 @@
+@import "./font";
+@import "variable";
+body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', 'Nunito', sans-serif;
+  margin: 0;
+  font-size: 16px;
+}
+
+button, .btn {
+  cursor: pointer;
+  color: $black;
+  padding: $padding-y $padding-x * 2;
+  border-radius: $border-radius;
+  border: 1px solid $black;
+  font-weight: 700;
+  &:hover {
+    background-color: $pink;
+    border: 1px solid $pink;
+    color: $white;
+  }
+} 
+
+a {
+  text-decoration: none;
+  color: $white;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+.image {
+  img {
+    width: 100%;
+  }
+}
+
+.backToTop {
+  position: fixed;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  padding: $padding-y;
+  bottom: $padding-y * 2;
+  right: $padding-x;
+  background-color: $white;
+  color: $pink;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 100;
+  &:hover {
+    background-color: $pink;
+    color: $white;
+    box-shadow: 2px 2px 3px $grey;
+  }
+  @media (min-width: $lg) {
+    width: 40px;
+    height: 40px;
+    padding: $padding-x;
+  }
+}

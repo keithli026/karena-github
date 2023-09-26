@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,9 +10,33 @@ import Home from './pages/Home';
 import MyStory from './pages/MyStory';
 import Projects from './pages/Projects';
 import ProjectsOverview from './pages/ProjectsOverview';
+import BadgeDesign from './pages/BadgeDesign';
+import BoothDesign from './pages/BoothDesign';
+import EFSet from './pages/EFSet';
+import WebDesign from './pages/WebDesign';
+import ReHome  from './pages/ReHome';
 import LetsTalk from './pages/LetsTalk';
 import NoPage from './pages/NoPage';
 import Resume from './pages/Resume';
+
+import ScrollButton from './components/ScrollButton';
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+// export const phone = "61431201847";
+// export function WhatsApp() {
+//   return (
+//     <a
+//       href={`https://wa.me/${phone}`}
+//       className="whatsapp_float"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//     >
+//       <FontAwesomeIcon icon={faArrowUp} />
+//       {/* <FontAwesomeIcon icon="fas fa-arrow-up" /> */}
+//       {/* <FontAwesomeIcon icon={faWhatsapp} ></FontAwesomeIcon> */}
+//     </a>
+//   );
+// }
 
 export default function MainApp() {
   return (
@@ -24,6 +48,11 @@ export default function MainApp() {
             <Route path="my-story" element={<MyStory />} />
             <Route path="projects" element={<Projects />}>
               <Route index element={<ProjectsOverview />} />
+              <Route path="badge-design" element={<BadgeDesign />} />
+              <Route path="booth-design" element={<BoothDesign />} />
+              <Route path="ef-set" element={<EFSet />} />
+              <Route path="web-design" element={<WebDesign />} />
+              <Route path="re-home" element={<ReHome />} />
             </Route>
             <Route path="lets-talk" element={<LetsTalk />} />
             <Route path="*" element={<NoPage />} />
@@ -37,6 +66,7 @@ export default function MainApp() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ScrollButton />
     <MainApp />
   </React.StrictMode>
 );

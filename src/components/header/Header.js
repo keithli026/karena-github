@@ -28,6 +28,9 @@ const Header = () => {
   const showMenu = () => {
     setShow(!show);
   }
+  const closeMenu = () => {
+    setShow(false);
+  }
   const onLoad = () => {
     console.log("Image onloaded", refImg.current, refImg.current.clientHeight);
     setLoaded(true);
@@ -36,10 +39,10 @@ const Header = () => {
     console.log("Image error");
   }
 
-  // const changeLocation = (placeToGo) => {
-  //   navigate(placeToGo, { replace: true });
-  //   window.location.reload();
-  // }
+  const changeLocation = (placeToGo) => {
+    navigate(placeToGo, { replace: true });
+    window.location.reload();
+  }
   const refHeader = useRef(null);
   const refMenu = useRef(null);
   const refImg = useRef(null);
@@ -120,9 +123,9 @@ const Header = () => {
           {show ? <img alt="menu" src={process.env.PUBLIC_URL + '/icons/cross.png'} /> : <img alt="menu" src={process.env.PUBLIC_URL + '/icons/menu.png'} />}
         </div>
         <ul className={show ? "show": null} ref={refMenu}>
-          <li><Link to="/my-story">My Story<img src={process.env.PUBLIC_URL + '/icons/arrow_white.png'} /></Link></li>
-          <li><Link to="/projects">Projects<img src={process.env.PUBLIC_URL + '/icons/arrow_white.png'} /></Link></li>
-          <li><Link to="/lets-talk">Let's Talk<img src={process.env.PUBLIC_URL + '/icons/arrow_white.png'} /></Link></li>
+          <li><Link to="/my-story" onClick={closeMenu}>My Story<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
+          <li><Link to="/projects" onClick={closeMenu}>Projects<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
+          <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
         </ul>
         <Link to="/resume" title="resume" id="resume" className="btn">Resume</Link>
       </div>

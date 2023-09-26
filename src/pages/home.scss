@@ -1,18 +1,24 @@
 @import "../variable";
 #home {
-  display: flex;
   #greeting {
     @include container();
+    margin-bottom: 200px;
     .flexbox {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-top: 50px;
+      margin-top: $padding-y * 5;
+
+      @media (min-width: $lg) {
+        margin-top: 100px;
+      }
       .content {
         flex-basis: 100%;
+        margin-bottom: $padding-y * 5;
         @media (min-width: $sm) {
           flex-basis: 50%;
+          margin-bottom: 0;
         }
         .title {
           font-weight: 900;
@@ -20,8 +26,7 @@
           line-height: 40px;
           margin-bottom: 30px;
           @media (min-width: $lg) {
-            // margin-top: 100px;
-            margin-bottom: 50px;
+            margin-bottom: $padding-y * 5;
             font-size: 80px;
             line-height: 100px;
           }
@@ -34,7 +39,7 @@
           font-weight: 500;
           font-size: 15px;
           line-height: 22px;
-          margin-bottom: 30px;
+          margin-bottom: $padding-y * 5;
           span {
             color: $pink;
             text-decoration: underline;
@@ -47,17 +52,170 @@
         }
         .btn {
           text-transform: uppercase;
+          @media (min-width: $lg) {
+            padding: $padding-y $padding-x * 5;
+          }
         }
       }
       .image {
         flex-basis: 100%;
         text-align: center;
         @media (min-width: $sm) {
-          flex-basis: 45%;
+          flex-basis: 40%;
         }
         img {
           width: 100%;
         }
+      }
+    }
+  }
+  #slogan {
+    text-align: center;
+    @include container();
+    margin-bottom: 200px;
+    .title {
+      color: $pink;
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 30px;
+      @media (min-width: $lg) {
+        font-size: 64px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      @media (min-width: $xl) {
+        font-size: 32px;
+      }
+    }
+    
+    img {
+      max-height: 40px;
+      @media (min-width: $lg) {
+        max-height: 110px;
+      }
+    }
+  }
+  #projects {
+    .project {
+      position: relative;
+      @media (min-width: $lg) {
+        margin-bottom: $padding-y * 10;
+      }
+      &:nth-of-type(2n) {
+        @media (min-width: $lg) {
+          .image {
+            margin-left: auto;
+          }
+          .content {
+            left: 5%;
+          }
+        }
+      }
+      &:last-of-type {
+        @media (min-width: $lg) {
+          margin-bottom: $padding-y * 35;
+          .image {
+            position: relative;
+            z-index: 1;
+          }
+          .content {
+            margin-top: unset;
+            margin-bottom: unset;
+            bottom: unset;
+            top: 30%;
+            .wrapper {
+              margin-right: calc($padding-x * 4 + 5%);
+            }
+          }
+        }
+        @media (min-width: $xl) {
+          margin-bottom: $padding-y * 25;
+        }
+        @media (min-width: $xxl) {
+          margin-bottom: $padding-y * 15;
+        }
+      }
+      .image {
+        display: flex;
+        flex-basis: 100%;
+        @media (min-width: $lg) {
+          flex-basis: 50%;
+          width: 50%;
+        }
+      }
+      .content {
+        flex-basis: 100%;
+        background-color: $white-100;
+        @media (min-width: $lg) {
+          width: 50%;
+          height: fit-content;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 45%;
+          margin-top: auto;
+          margin-bottom: auto;
+
+        }
+        .wrapper {
+          @include container();
+          padding-top: $padding-y * 4;
+          padding-bottom: $padding-y * 10;
+          .hashtag {
+            word-break: break-all;
+            font-size: 20px;
+            line-height: 1.8;
+            color: $lightgrey;
+            margin-bottom: $padding-y * 5;
+            span {
+              margin-left: $padding-x;
+            }
+          }
+          @media (min-width: $lg) {
+            margin: $padding-y * 2 $padding-x * 2;
+          }
+          .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: $padding-y * 4;
+            position: relative;
+            &::after {
+              content: "";
+              width: 2em;
+              border-top: 2px solid $dark;
+              position: absolute;
+              top: 150%;
+              left: 0;
+            }
+          }
+          p {
+            margin-bottom: $padding-y * 4;
+          }
+          @media (min-width: $lg) {
+            flex-basis: 50%;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  #contact {
+    @include container();
+    text-align: center;
+    margin-bottom: $padding-y * 10;
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      @media (min-width: $lg) {
+        font-size: 40px;
+      }
+    }
+    .btn {
+      text-transform: uppercase;
+      @media (min-width: $lg) {
+        padding: $padding-y $padding-x * 5;
       }
     }
   }
