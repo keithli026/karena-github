@@ -5,6 +5,7 @@ $lightdark : #666666;
 $dark :#040404;
 $red: #C70000;
 $pink: #FF33A0;
+$lightgrey-100: #f9f9f9;
 $lightgrey: #B2B2B2;
 $grey: #4A4A4A;
 $lightblue: #0097BD;
@@ -28,7 +29,7 @@ $padding-y: 10px;
 $border-radius: 20px;
 
 @mixin container {
-  // width: 100%;
+  width: 100%;
   padding-left: $padding-x;
   padding-right: $padding-x;
   margin-left: auto;

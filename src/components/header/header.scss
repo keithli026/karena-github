@@ -38,57 +38,58 @@
     }
   }
 
-  ul {
-    // visibility: hidden;
+  nav {
     position: fixed;
-    padding: 0;
-    margin: 0;
-    background-color: $black;
     top: 98px;
     left: 100%;
+    background-color: $black;
     transition: left 0.5s ease;
     width: 100vw;
     font-size: 20px;
-    list-style-type: none;
-    overscroll-behavior-y: contain;
     &.show {
-      // visibility: visible;
       left: 0;
     }
     @media (min-width: $lg) {
       position: unset;
-      display: flex;
       order: 2;
       width: auto;
       margin-left: auto;
     }
-    li {
-      &:first-child {
-        border-top: 2px solid $white;
-      }
-      border-bottom: 2px solid $white;
-      padding: $padding-x $padding-x;
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
       @media (min-width: $lg) {
-        &:first-child {
-          border-top: none;
-        }
-        padding: 0;
-        margin-left: auto;
-        margin-right: $padding-x * 3;
-        border-bottom: none;
-      }
-      a {
         display: flex;
-        align-items: center;
-        img {
-          margin-left: $padding-x;
-          max-width: 60px;
-          @media (min-width: $lg) {
-            display: none;
+      }
+      li {
+        &:first-child {
+          border-top: 2px solid $white;
+        }
+        border-bottom: 2px solid $white;
+        padding: $padding-x $padding-x;
+        @media (min-width: $lg) {
+          &:first-child {
+            border-top: none;
+          }
+          padding: 0;
+          margin-left: auto;
+          margin-right: $padding-x * 3;
+          border-bottom: none;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          img {
+            margin-left: $padding-x;
+            max-width: 60px;
+            @media (min-width: $lg) {
+              display: none;
+            }
           }
         }
+  
       }
-
     }
   }
   #resume {

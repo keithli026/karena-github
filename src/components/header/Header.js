@@ -48,7 +48,7 @@ const Header = () => {
   const refImg = useRef(null);
 
   useEffect(() => {
-    if(window.innerWidth < lg) {
+    if (window.innerWidth < lg) {
       refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
       refMenu.current.style.height = `${window.innerHeight - refHeader.current.clientHeight}px`;
     }
@@ -94,17 +94,17 @@ const Header = () => {
   //   dispatch({ type: "gp" });
   // }
   const [width, height] = useWindowSize();
-  if(loaded) {
+  if (loaded) {
     if (width < lg) {
       // refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
       refMenu.current.style.height = `${height - refHeader.current.clientHeight}px`;
     } else {
-     // refMenu.current.style.top = null;
-     refMenu.current.style.height = null;
+      // refMenu.current.style.top = null;
+      refMenu.current.style.height = null;
     }
   }
-  if(show) {
-    if(width < lg) {
+  if (show) {
+    if (width < lg) {
       document.body.style.overflowY = "hidden";
     } else {
       document.body.style.overflowY = null;
@@ -117,16 +117,18 @@ const Header = () => {
     <>
       <div id="header" ref={refHeader}>
         <Link to="/" title="home" id="logo">
-          <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError}/>
+          <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError} />
         </Link>
         <div className="btn" onClick={showMenu}>
           {show ? <img alt="menu" src={process.env.PUBLIC_URL + '/icons/cross.png'} /> : <img alt="menu" src={process.env.PUBLIC_URL + '/icons/menu.png'} />}
         </div>
-        <ul className={show ? "show": null} ref={refMenu}>
-          <li><Link to="/my-story" onClick={closeMenu}>My Story<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-          <li><Link to="/projects" onClick={closeMenu}>Projects<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-          <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-        </ul>
+        <nav className={show ? "show" : null} ref={refMenu}>
+          <ul>
+            <li><Link to="/my-story" onClick={closeMenu}>My Story<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
+            <li><Link to="/projects" onClick={closeMenu}>Projects<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
+            <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
+          </ul>
+        </nav>
         <Link to="/resume" title="resume" id="resume" className="btn">Resume</Link>
       </div>
       {/* <H.Header id="header">

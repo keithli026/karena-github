@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./home.scss"
-import { Container } from "../GlobalStyle";
 const Home = () => {
+  const myStyle = {
+    backgroundImage: `url(${process.env.PUBLIC_URL + "/icons/mobile_little_icon.png"})`,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'repeat',
+  };
   return (
     <>
       <div id="home">
-        <div id="greeting">
+        <div className="greeting">
           <div className='flexbox'>
             <div className='content'>
               <div className='title'>Hello there! <span>I’m Karena</span></div>
@@ -18,13 +22,15 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div id="slogan">
-          <div className='title'>“Simple is Better”</div>
-          <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
-          <p><b>Here’s a few projects that I’d like to share.</b></p>
-          <img src={process.env.PUBLIC_URL + '/icons/arrow.png'} alt="arrow" />
+        <div className="slogan" style={myStyle}>
+          <div className='wrapper'>
+            <div className='title'>“Simple is Better”</div>
+            <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
+            <p><b>Here’s a few projects that I’d like to share.</b></p>
+            <img src={process.env.PUBLIC_URL + '/icons/arrow.png'} alt="arrow" />
+          </div>
         </div>
-        <div id="projects">
+        <div className="projects">
           <div className='project'>
             <div className='image'>
               <img src={process.env.PUBLIC_URL + './home/rehome.png'} alt="RE-Home" />
@@ -79,10 +85,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div id="contact">
+        <div className="contact">
           <div className='title'>Let's Talk!</div>
           <p>I'd love to chat about new opportunities or anything design related!</p>
-          <a className='btn' href="#">Contact me</a>
+          <Link to={"/lets-talk"} className='btn'>Contact me</Link>
         </div>
       </div>
     </>

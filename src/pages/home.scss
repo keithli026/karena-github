@@ -1,6 +1,6 @@
 @import "../variable";
 #home {
-  #greeting {
+  .greeting {
     @include container();
     margin-bottom: 200px;
     .flexbox {
@@ -69,35 +69,41 @@
       }
     }
   }
-  #slogan {
-    text-align: center;
-    @include container();
-    margin-bottom: 200px;
-    .title {
-      color: $pink;
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 30px;
-      @media (min-width: $lg) {
-        font-size: 64px;
-      }
-    }
-
-    p {
-      font-size: 14px;
-      @media (min-width: $xl) {
+  .slogan {
+    .wrapper {
+      text-align: center;
+      @include container();
+      margin-bottom: 200px;
+      .title {
+        color: $pink;
         font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 30px;
+        @media (min-width: $lg) {
+          font-size: 64px;
+        }
       }
-    }
-    
-    img {
-      max-height: 40px;
-      @media (min-width: $lg) {
-        max-height: 110px;
+  
+      p {
+        font-size: 14px;
+        @media (min-width: $xl) {
+          font-size: 32px;
+        }
+      }
+      
+      img {
+        max-height: 40px;
+        @media (min-width: $lg) {
+          max-height: 110px;
+        }
       }
     }
   }
-  #projects {
+  .projects {
+    margin-bottom: $padding-y * 10;
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
     .project {
       position: relative;
       @media (min-width: $lg) {
@@ -126,7 +132,7 @@
             bottom: unset;
             top: 30%;
             .wrapper {
-              margin-right: calc($padding-x * 4 + 5%);
+              padding-right: calc($padding-x * 4 + 5%);
             }
           }
         }
@@ -138,10 +144,7 @@
         }
       }
       .image {
-        display: flex;
-        flex-basis: 100%;
         @media (min-width: $lg) {
-          flex-basis: 50%;
           width: 50%;
         }
       }
@@ -163,18 +166,18 @@
           @include container();
           padding-top: $padding-y * 4;
           padding-bottom: $padding-y * 10;
+          @media (min-width: $lg) {
+            padding: $padding-y * 2 $padding-x * 2;
+          }
           .hashtag {
             word-break: break-all;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.8;
             color: $lightgrey;
             margin-bottom: $padding-y * 5;
             span {
               margin-left: $padding-x;
             }
-          }
-          @media (min-width: $lg) {
-            margin: $padding-y * 2 $padding-x * 2;
           }
           .title {
             font-size: 24px;
@@ -193,15 +196,11 @@
           p {
             margin-bottom: $padding-y * 4;
           }
-          @media (min-width: $lg) {
-            flex-basis: 50%;
-            padding: 0;
-          }
         }
       }
     }
   }
-  #contact {
+  .contact {
     @include container();
     text-align: center;
     margin-bottom: $padding-y * 10;
