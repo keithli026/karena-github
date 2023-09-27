@@ -116,7 +116,7 @@ const Header = () => {
   return (
     <>
       <div id="header" ref={refHeader}>
-        <Link to="/" title="home" id="logo">
+        <Link to="/" title="home" id="logo" onClick={showMenu}>
           <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError} />
         </Link>
         <div className="btn" onClick={showMenu}>

@@ -1,0 +1,16 @@
+@import "../variable";
+
+#resume {
+  .desktop {
+    display: none;
+    @media (min-width: $lg) {
+      display: block;
+    }
+  }
+  .mobile {
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+}

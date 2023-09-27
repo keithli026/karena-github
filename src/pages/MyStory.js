@@ -42,6 +42,7 @@ const MyStory = () => {
         </div>
       </div>
       <div className='resume'>
+        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={process.env.PUBLIC_URL + "/icons/arrow_black.png"} alt="arrow" /></Link>
         <div className='wrapper'>
           <div className='image'>
             <img src={process.env.PUBLIC_URL + "/home/karena.png"} alt="karena" />
