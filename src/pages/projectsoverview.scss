@@ -27,9 +27,11 @@
       left: 0;
       bottom: 0;
       right: 0;
+      padding: 0 $padding-x;
       margin: auto;
       width: fit-content;
       height: fit-content;
+      text-align: center;
       font-size: 36px;
       font-weight: 700;
       color: $white;
@@ -43,6 +45,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: $padding-y * 5;
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 10;
+    }
     @include container();
     .image {
       flex-basis: 100%;
@@ -56,6 +62,24 @@
       }
       @media (min-width: $xxl) {
         margin-bottom: $padding-y * 8;
+      }
+    }
+  }
+  .contact {
+    @include container();
+    text-align: center;
+    margin-bottom: $padding-y * 10;
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      @media (min-width: $lg) {
+        font-size: 40px;
+      }
+    }
+    .btn {
+      text-transform: uppercase;
+      @media (min-width: $lg) {
+        padding: $padding-y $padding-x * 5;
       }
     }
   }
