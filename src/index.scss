@@ -38,6 +38,11 @@ p {
   margin-bottom: 50px;
 }
 
+ul, ol {
+  line-height: 1.8;
+  padding-left: 1.5em;
+}
+
 .image {
   img {
     width: 100%;
@@ -58,7 +63,7 @@ nav {
   padding: $padding-y;
   bottom: $padding-y * 2;
   right: $padding-x;
-  background-color: $white;
+  // background-color: $white;
   color: $pink;
   // box-shadow: 2px 2px 3px $grey;
   border-radius: 50%;

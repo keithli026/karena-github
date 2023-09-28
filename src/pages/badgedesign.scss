@@ -1,12 +1,15 @@
 @import "../variable";
 $header-height: 119px;
-#web_design {
+
+#badge_design {
   .banner {
     position: relative;
     margin-bottom: $padding-y * 5;
+
     @media (min-width: $lg) {
       margin-bottom: $padding-y * 10;
     }
+
     .image {
       img {
         @media (min-width: $lg) {
@@ -15,6 +18,7 @@ $header-height: 119px;
         }
       }
     }
+
     .content {
       padding: $padding-x;
       color: $white;
@@ -26,35 +30,45 @@ $header-height: 119px;
       display: flex;
       justify-content: space-between;
       align-items: end;
+
       @media (min-width: $lg) {
         padding-bottom: $padding-y * 5;
       }
 
       .keypoint {
         display: flex;
+
         @media (min-width: $lg) {
           padding-left: calc((100vw - $lg-max-width - $padding-x) / 2);
         }
+
         @media (min-width: $xl) {
           padding-left: calc((100vw - $xl-max-width - $padding-x) / 2);
         }
+
         @media (min-width: $xxl) {
           padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
         }
+
         @media (min-width: $xxxl) {
           padding-left: calc((100vw - $xxxl-max-width - $padding-x) / 2);
         }
+
         @media (min-width: $xxxxl) {
           padding-left: calc((100vw - $xxxxl-max-width - $padding-x) / 2);
         }
+
         div {
           line-height: 1.5;
+
           &:nth-child(2) {
             margin: 0 $padding-x;
+
             @media (min-width: $sm) {
               margin: 0 $padding-x * 4;
             }
           }
+
           span {
             &::before {
               content: "\a";
@@ -93,6 +107,11 @@ $header-height: 119px;
 
   .summary {
     @include container();
+    margin-bottom: $padding-y * 10;
+
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 15;
+    }
 
     h2 {
       font-size: 30px;
@@ -103,125 +122,71 @@ $header-height: 119px;
       }
     }
 
-    p, ol {
+    p,
+    ol {
       font-size: 16px;
+
       @media (min-width: $lg) {
         font-size: 24px;
-      }
-    }
-
-    .section {
-      margin-bottom: $padding-y * 10;
-
-      @media (min-width: $lg) {
-        margin-bottom: $padding-y * 15;
-      }
-    }
-
-    .flexbox {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      margin-bottom: $padding-y * 10;
-      @media (min-width: $lg) {
-        margin-bottom: $padding-y * 15;
-      }
-
-      &.two {
-        margin-bottom: $padding-y * 3;
-
-        .image {
-          margin-bottom: $padding-y * 3;
-
-          &:first-child {
-            max-width: 276px;
-          }
-
-          &:nth-child(2) {
-            max-width: 558px;
-          }
-
-          @media (min-width: $lg) {
-            &:first-child {
-              flex-basis: 48%;
-            }
-
-            &:nth-child(2) {
-              flex-basis: 48%;
-            }
-          }
-        }
-      }
-
-      .image {
-        flex-basis: 100%;
-        text-align: center;
-        @media (min-width: $lg) {
-          flex-basis: 32%;
-        }
-        img {
-          max-width: 447px;
-        }
-      }
-    }
-
-    .center {
-      margin-bottom: $padding-y * 10;
-
-      img {
-        max-width: 914px;
-      }
-
-      @media (min-width: $lg) {
-        text-align: center;
-        margin-bottom: $padding-y * 15;
       }
     }
   }
 
   .wrapper {
-    margin-bottom: $padding-y * 10;
+    padding: $padding-y * 10 0;
+    background-color: $white-400;
 
     @media (min-width: $lg) {
-      position: relative;
-      margin-bottom: $padding-y * 15;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background-color: $white-300;
-        z-index: -1;
-      }
+      padding: $padding-y * 15 0;
     }
 
     .image {
       @include container();
-
-      @media (min-width: $lg) {
-        text-align: center;
-        padding-top: $padding-y * 15;
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: $padding-y * 10;
+        @media (min-width: $lg) {
+          margin-bottom: $padding-y * 15;
+        }
+        img {
+          max-width: 878px;
+        }
       }
-
-      img {
-        max-width: 792px;
+      &:last-child {
+        img {
+          max-width: 1440px;
+        }
       }
     }
   }
 
-  .others {
-    @include container();
-    text-align: center;
-    margin-bottom: $padding-y * 10;
+  .wrapper2 {
+    padding: $padding-y * 10 0;
+    background-color: $white-400;
 
-    .btn {
-      text-transform: uppercase;
+    @media (min-width: $lg) {
+      padding: $padding-y * 15 0;
+    }
 
-      @media (min-width: $lg) {
-        padding: $padding-y $padding-x * 5;
+    .image {
+      @include container();
+      text-align: center;
+      img {
+        max-width: 1143px;
+      }
+    }
+
+    .others {
+      @include container();
+      text-align: center;
+      margin-top: $padding-y * 10;
+
+      .btn {
+        text-transform: uppercase;
+
+        @media (min-width: $lg) {
+          padding: $padding-y $padding-x * 5;
+        }
       }
     }
   }

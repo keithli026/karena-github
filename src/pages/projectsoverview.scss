@@ -1,5 +1,5 @@
 @import "../variable";
-
+$header-height: 119px;
 #projects {
   .banner {
     position: relative;
@@ -20,6 +20,12 @@
         background-color: rgba($black, 0.7);
 
       } 
+      img {
+        @media (min-width: $lg) {
+          height: calc(100vh - $header-height);
+          object-fit: cover;
+        }
+      }
     }
     .title {
       position: absolute;

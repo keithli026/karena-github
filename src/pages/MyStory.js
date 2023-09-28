@@ -72,7 +72,7 @@ const MyStory = () => {
             <div className='flexbox'>
               <img src={process.env.PUBLIC_URL + "/icons/value_3.svg"} alt="Passion"></img>
               <div className='value'>Passion</div>
-              <p>Be open-minded, creative in facilitating interesting conversation among people.</p>
+              <p>Keep learning something new, build empathy among people, and focus on value creation for society.</p>
             </div>
           </Slider>
           {/* <div className='flexbox_wrapper'>
