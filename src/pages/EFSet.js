@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./efset.scss"
+import "./efSet.scss"
 const EFSet = () => {
   return (
     <div id='ef_set'>
       <div className='banner'>
         <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/banner.png'} alt="EF Set test" /></div>
+        <div className='title'>EF SET TESTS</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>GRAPHIC DESIGN 丨UI DESIGN | BRANDING</span></div>

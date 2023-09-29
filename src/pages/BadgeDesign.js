@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./badgedesign.scss"
+import "./badgeDesign.scss"
 
 const BadgeDesign = () => {
   return (
     <div id='badge_design'>
       <div className='banner'>
         <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/badge_design.png'} alt="Badge Design" /></div>
+        <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>GRAPHIC DESIGN 丨UI DESIGN</span></div>

@@ -1,5 +1,5 @@
 @import "../variable";
-$header-height: 119px;
+
 #web_design {
   .banner {
     position: relative;
@@ -9,12 +9,34 @@ $header-height: 119px;
     }
     .image {
       img {
+        height: calc(100vh - $header-mobile-height);
+        object-fit: cover;
         @media (min-width: $lg) {
           height: calc(100vh - $header-height);
-          object-fit: cover;
         }
       }
     }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 0 $padding-x;
+      margin: auto;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      @media (min-width: $lg) {
+        font-size: 50px;
+      }
+    }
+    
     .content {
       padding: $padding-x;
       color: $white;

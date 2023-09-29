@@ -1,5 +1,5 @@
 @import "../variable";
-$header-height: 119px;
+
 #projects {
   .banner {
     position: relative;
@@ -21,9 +21,10 @@ $header-height: 119px;
 
       } 
       img {
+        height: calc(100vh - $header-mobile-height);
+        object-fit: cover;
         @media (min-width: $lg) {
           height: calc(100vh - $header-height);
-          object-fit: cover;
         }
       }
     }

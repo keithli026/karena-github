@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./projectsoverview.scss"
+import "./projectsOverview.scss"
 
 const ProjectsOverview = () => {
   return (

@@ -1,0 +1,314 @@
+@import "../variable";
+
+#re-home {
+  .banner {
+    position: relative;
+    margin-bottom: $padding-y * 5;
+
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 10;
+    }
+
+    .image {
+      img {
+        height: calc(100vh - $header-mobile-height);
+        object-fit: cover;
+
+        @media (min-width: $lg) {
+          height: calc(100vh - $header-height);
+        }
+      }
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 0 $padding-x;
+      margin: auto;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+
+      @media (min-width: $lg) {
+        font-size: 50px;
+      }
+    }
+
+    .content {
+      padding: $padding-x;
+      color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      @media (min-width: $lg) {
+        padding-bottom: $padding-y * 5;
+      }
+
+      .keypoint {
+        display: flex;
+
+        @media (min-width: $lg) {
+          padding-left: calc((100vw - $lg-max-width - $padding-x) / 2);
+        }
+
+        @media (min-width: $xl) {
+          padding-left: calc((100vw - $xl-max-width - $padding-x) / 2);
+        }
+
+        @media (min-width: $xxl) {
+          padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
+        }
+
+        @media (min-width: $xxxl) {
+          padding-left: calc((100vw - $xxxl-max-width - $padding-x) / 2);
+        }
+
+        @media (min-width: $xxxxl) {
+          padding-left: calc((100vw - $xxxxl-max-width - $padding-x) / 2);
+        }
+
+        div {
+          line-height: 1.5;
+
+          &:nth-child(2) {
+            margin: 0 $padding-x;
+
+            @media (min-width: $sm) {
+              margin: 0 $padding-x * 4;
+            }
+          }
+
+          span {
+            &::before {
+              content: "\a";
+              white-space: pre;
+
+              @media (min-width: $lg) {
+                white-space: normal;
+              }
+            }
+          }
+        }
+      }
+
+      .icons {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: $lg) {
+          flex-direction: row;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        @media (min-width: $lg) {
+          img {
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+
+    @media (min-width: $lg) {
+      font-size: 40px;
+    }
+  }
+
+  p,
+  ol {
+    font-size: 16px;
+
+    @media (min-width: $lg) {
+      font-size: 24px;
+    }
+  }
+
+  .section {
+    margin-bottom: $padding-y * 10;
+
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 15;
+    }
+    &#design {
+      .image {
+        text-align: center;
+
+        img {
+          max-width: 1195px;
+        }
+      }
+    }
+    &#sitemap {
+      .image {
+        text-align: center;
+
+        img {
+          max-width: 1313px;
+        }
+      }
+    }
+
+    &#wireframe {
+      .image {
+        text-align: center;
+
+        img {
+          max-width: 1072px;
+        }
+      }
+    }
+
+    &#usability {
+      .image {
+        text-align: center;
+
+        img {
+          max-width: 751px;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    @include container();
+  }
+
+  >.image {
+    margin-bottom: $padding-y * 10;
+    &:nth-child(1) {
+      img {
+        max-width: 1440px;
+      }
+    }
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 15;
+    }
+  }
+
+  .bg {
+    background-color: $white-500;
+    padding: $padding-y * 10 0;
+
+    @media (min-width: $md) {
+      padding-top: $padding-y * 15;
+      padding-bottom: 0;
+    }
+
+    .wrapper {
+      .flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        @media (min-width: $md) {
+          flex-direction: column;
+          height: 2800px;
+        }
+        @media (min-width: $lg) {
+          height: 2000px;
+        }
+        @media (min-width: $xl) {
+          height: 2200px;
+        }
+        @media (min-width: $xxl) {
+          height: 2300px;
+        }
+        .content {
+          flex-basis: 100%;
+          margin-bottom: $padding-y * 5;
+          @media (min-width: $md) {
+            max-width: 45%;
+            flex-basis: auto;
+            margin-bottom: $padding-y * 10;
+          }
+          @media (min-width: $lg) {
+            max-width: 30%;
+            flex-basis: auto;
+            margin-bottom: $padding-y * 10;
+          }
+          @media (min-width: $xl) {
+            position: absolute;
+            max-width: unset;
+            width: 50%;
+            // flex-basis: auto;
+            // margin-bottom: $padding-y * 10;
+          }
+        }
+
+        .image {
+          text-align: center;
+          flex-basis: 100%;
+          margin-bottom: $padding-y * 10;
+          @media (min-width: $md) {
+            text-align: start;
+            max-width: 45%;
+            flex-basis: auto;
+            margin-bottom: $padding-y * 15;
+          }
+          @media (min-width: $lg) {
+            max-width: 30%;
+            flex-basis: auto;
+            margin-bottom: $padding-y * 15;
+            &:nth-of-type(4) {
+              margin-top: $padding-y * 20;
+            }
+          }
+          @media (min-width: $xl) {
+            &:nth-of-type(2) {
+              margin-top: $padding-y * 45;
+            }
+            &:nth-of-type(4) {
+              margin-top: $padding-y * 30;
+            }
+          }
+          img {
+            width: auto;
+            @media (min-width: $md) {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .others {
+    @include container();
+    text-align: center;
+    margin-top: $padding-y * 10;
+    margin-bottom: $padding-y * 10;
+
+    @media (min-width: $lg) {
+      margin-top: $padding-y * 15;
+      margin-bottom: $padding-y * 15;
+    }
+
+    .btn {
+      text-transform: uppercase;
+
+      @media (min-width: $lg) {
+        padding: $padding-y $padding-x * 5;
+      }
+    }
+  }
+}

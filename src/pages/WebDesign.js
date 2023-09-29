@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./webdesign.scss"
+import "./webDesign.scss"
 
 const WebDesign = () => {
   return (
     <div id='web_design'>
       <div className='banner'>
         <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/englishtown.png'} alt="Englishtown" /></div>
+        <div className='title'>EF | Englishtown</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>UI/UX DESIGN</span></div>

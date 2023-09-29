@@ -1,7 +1,6 @@
 @import "../variable";
-$header-height: 119px;
 
-#badge_design {
+#ef_set {
   .banner {
     position: relative;
     margin-bottom: $padding-y * 5;
@@ -12,10 +11,31 @@ $header-height: 119px;
 
     .image {
       img {
+        height: calc(100vh - $header-mobile-height);
+        object-fit: cover;
         @media (min-width: $lg) {
           height: calc(100vh - $header-height);
-          object-fit: cover;
         }
+      }
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 0 $padding-x;
+      margin: auto;
+      width: fit-content;
+      height: fit-content;
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+      @media (min-width: $lg) {
+        font-size: 50px;
       }
     }
 
@@ -107,11 +127,6 @@ $header-height: 119px;
 
   .summary {
     @include container();
-    margin-bottom: $padding-y * 10;
-
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 15;
-    }
 
     h2 {
       font-size: 30px;
@@ -122,71 +137,100 @@ $header-height: 119px;
       }
     }
 
-    p,
-    ol {
+    p, ol {
       font-size: 16px;
-
       @media (min-width: $lg) {
         font-size: 24px;
+      }
+    }
+
+    .section {
+      margin-bottom: $padding-y * 10;
+
+      @media (min-width: $lg) {
+        margin-bottom: $padding-y * 15;
+      }
+    }
+  }
+
+  .gallery {
+    .image {
+      text-align: center;
+      margin-bottom: $padding-y * 5;
+      &:nth-child(2) {
+        @media (min-width: $lg) {
+          text-align: start;
+        }
+        img {
+          max-width: 980px;
+        }
+      }
+      &:nth-child(3) {
+        @media (min-width: $lg) {
+          text-align: end;
+        }
+        img {
+          max-width: 850px;
+        }
+      }
+      &:nth-child(4) {
+        @media (min-width: $lg) {
+          text-align: start;
+        }
+        img {
+          max-width: 1191px;
+        }
+      }
+      &:nth-child(5) {
+        img {
+          max-width: 702px;
+          margin-bottom: $padding-y * 10;
+        }
       }
     }
   }
 
   .wrapper {
-    padding: $padding-y * 10 0;
-    background-color: $white-400;
-
+    @include container();
+    margin-bottom: $padding-y * 10;
     @media (min-width: $lg) {
-      padding: $padding-y * 15 0;
+      margin-bottom: $padding-y * 15;
     }
-
-    .image {
-      @include container();
-      text-align: center;
-      &:not(:last-child) {
-        margin-bottom: $padding-y * 10;
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .image{
+        flex-basis: 100%;
+        &:not(:last-child) {
+          margin-bottom: $padding-y * 5;
+        }
         @media (min-width: $lg) {
-          margin-bottom: $padding-y * 15;
-        }
-        img {
-          max-width: 878px;
-        }
-      }
-      &:last-child {
-        img {
-          max-width: 1440px;
+          &:first-child {
+            flex-basis: 50%;
+          }
+          &:nth-child(2) {
+            flex-basis: 43.65%;
+          }
         }
       }
     }
   }
 
-  .wrapper2 {
-    padding: $padding-y * 10 0;
-    background-color: $white-400;
-
+  .others {
+    @include container();
+    text-align: center;
+    margin-top: $padding-y * 10;
+    margin-bottom: $padding-y * 10;
     @media (min-width: $lg) {
-      padding: $padding-y * 15 0;
+      margin-top: $padding-y * 15;
+      margin-bottom: $padding-y * 15;
     }
+    .btn {
+      text-transform: uppercase;
 
-    .image {
-      @include container();
-      text-align: center;
-      img {
-        max-width: 1143px;
-      }
-    }
-
-    .others {
-      @include container();
-      text-align: center;
-      margin-top: $padding-y * 10;
-
-      .btn {
-        text-transform: uppercase;
-
-        @media (min-width: $lg) {
-          padding: $padding-y $padding-x * 5;
-        }
+      @media (min-width: $lg) {
+        padding: $padding-y $padding-x * 5;
       }
     }
   }
