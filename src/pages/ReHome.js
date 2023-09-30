@@ -99,7 +99,7 @@ const ReHome = () => {
       </div>
       <div className='wrapper'>
         <div className="section center">
-          <Link to="/lets-talk" className='btn'>Other projects</Link>
+          <Link to="/projects" className='btn'>Other projects</Link>
         </div>
       </div>
     </div>

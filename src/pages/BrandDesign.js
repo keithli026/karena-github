@@ -33,7 +33,10 @@ const BrandDesign = () => {
         </div>
         <div className='section center'>
           <img src={process.env.PUBLIC_URL + '/brand_design/color_4.jpg'} alt="Four colors" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/gt.png'} alt="Green powder" />
+          <div className='ref'>
+            <img src={process.env.PUBLIC_URL + '/brand_design/gt.png'} alt="Green powder" />
+            <img src={process.env.PUBLIC_URL + '/brand_design/pocina.png'} alt="POCINA" className='cover'/>
+          </div>
           <img src={process.env.PUBLIC_URL + '/brand_design/combination.png'} alt="Combination" />
         </div>
         <div className='section flexbox'>
@@ -47,32 +50,10 @@ const BrandDesign = () => {
           <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/taro.jpg'} alt="Taro" /></div>
           <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/powder.jpg'} alt="Powder" /></div>
         </div>
+        <div className="section center">
+          <Link to="/projects" className='btn'>Other projects</Link>
+        </div>
       </div>
-
-
-      {/* <div className='bg'>
-        <div className='wrapper'>
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_40.png'} alt="Badge 40" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_60.png'} alt="Badge 60" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_30.png'} alt="Badge 30" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_50.png'} alt="Badge 50" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_70.png'} alt="Badge 70" />
-          <img src={process.env.PUBLIC_URL + '/brand_design/badge_on_phone.png'} alt="badge on mobile" />
-        </div>
-        <div className='section'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/badge_design_1.png'} alt="badge design" /></div>
-        </div>
-        <div className='section'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/badge_design_2.png'} alt="badge design" /></div>
-        </div>
-        <div className='wrapper'>
-          <img src={process.env.PUBLIC_URL + '/brand_design/award.png'} alt="award page" />
-          <div className="center">
-            <Link to="/lets-talk" className='btn'>Other projects</Link>
-          </div>
-        </div>
-      </div> */}
-
     </div>
   )
 }

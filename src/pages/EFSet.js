@@ -50,7 +50,7 @@ const EFSet = () => {
       </div>
       <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/mobile.webp'} alt="EF Set test" /></div>
       <div className="others">
-        <Link to="/lets-talk" className='btn'>Other projects</Link>
+        <Link to="/projects" className='btn'>Other projects</Link>
       </div>
     </div>
   )

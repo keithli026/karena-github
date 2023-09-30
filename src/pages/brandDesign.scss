@@ -107,7 +107,7 @@
       .icons {
         display: flex;
         flex-direction: column;
-
+        min-width: 30px;
         @media (min-width: $lg) {
           flex-direction: row;
         }
@@ -186,6 +186,32 @@
         @media (min-width: $lg) {
           flex-basis: 33%;
         }
+      }
+    }
+  }
+
+  .ref {
+    position: relative;
+    margin-bottom: $padding-y * 5;
+    img {
+      margin-bottom: 0;
+    }
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin-right: $padding-x;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: auto;
+      height: auto;
+      max-width: 45%;
+      @media (min-width: $xxxl) {
+        right: calc((100vw - $xxxl-max-width) / 2 + $padding-x * 2);
+      }
+      @media (min-width: $xxxxl) {
+        right: calc((100vw - $xxxxl-max-width) / 2 + $padding-x * 2);
       }
     }
   }

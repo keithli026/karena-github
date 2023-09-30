@@ -51,7 +51,7 @@ const BadgeDesign = () => {
         <div className='wrapper'>
           <img src={process.env.PUBLIC_URL + '/badge_design/award.png'} alt="award page" />
           <div className="center">
-            <Link to="/lets-talk" className='btn'>Other projects</Link>
+            <Link to="/projects" className='btn'>Other projects</Link>
           </div>
         </div>
       </div>

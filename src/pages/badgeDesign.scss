@@ -107,7 +107,7 @@
       .icons {
         display: flex;
         flex-direction: column;
-
+        min-width: 30px;
         @media (min-width: $lg) {
           flex-direction: row;
         }

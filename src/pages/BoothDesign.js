@@ -45,7 +45,7 @@ const BoothDesign = () => {
           <img src={process.env.PUBLIC_URL + '/bookfair/book-cover.png'} alt="Book cover" />
         </div>
         <div className="section center">
-          <Link to="/lets-talk" className='btn'>Other projects</Link>
+          <Link to="/projects" className='btn'>Other projects</Link>
         </div>
       </div>
     </div>
