@@ -96,7 +96,7 @@
               content: "\a";
               white-space: pre;
 
-              @media (min-width: $lg) {
+              @media (min-width: $sm) {
                 white-space: normal;
               }
             }
@@ -154,6 +154,23 @@
 
   .center {
     text-align: center;
+    button {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      margin-bottom: $padding-y * 5;
+      font-size: 32px;
+      &:hover {
+        color: $black;
+      }
+      img {
+        margin-right: $padding-x * 2;
+        margin-bottom: 0;
+      }
+    }
+
     img {
       margin-bottom: $padding-y * 5;
     }
@@ -213,22 +230,6 @@
       @media (min-width: $xxxxl) {
         right: calc((100vw - $xxxxl-max-width) / 2 + $padding-x * 2);
       }
-    }
-  }
-  button {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    margin-bottom: $padding-y * 5;
-    font-size: 32px;
-    &:hover {
-      color: $black;
-    }
-    img {
-      margin-right: $padding-x * 2;
-      margin-bottom: 0;
     }
   }
 }

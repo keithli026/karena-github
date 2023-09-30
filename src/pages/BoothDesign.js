@@ -11,7 +11,7 @@ const BoothDesign = () => {
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>
-            <div>MY ROLE: <span>PRODUCT DESIGN 丨BRANDING 丨3D DESIGN</span></div>
+            <div>MY ROLE: <span>PRODUCT DESIGN 丨<span>BRANDING</span> 丨<span>3D DESIGN</span></span></div>
             <div>TIMELINE: <span>4 WEEKS, 2023</span></div>
           </div>
           <div className='icons'>

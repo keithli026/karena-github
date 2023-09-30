@@ -11,7 +11,7 @@ const BadgeDesign = () => {
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>
-            <div>MY ROLE: <span>GRAPHIC DESIGN 丨UI DESIGN</span></div>
+            <div>MY ROLE: <span>GRAPHIC DESIGN 丨<span>UI DESIGN</span></span></div>
             <div>TIMELINE: <span>4 WEEKS, 2015</span></div>
           </div>
           <div className='icons'>

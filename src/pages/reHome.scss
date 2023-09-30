@@ -96,7 +96,7 @@
               content: "\a";
               white-space: pre;
 
-              @media (min-width: $lg) {
+              @media (min-width: $sm) {
                 white-space: normal;
               }
             }
@@ -110,6 +110,7 @@
         min-width: 30px;
         @media (min-width: $lg) {
           flex-direction: row;
+          min-width: 45px * 4;
         }
 
         img {

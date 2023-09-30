@@ -11,7 +11,7 @@ const EFSet = () => {
         <div className='title'>EF SET TESTS</div>
         <div className='content'>
           <div className='keypoint'>
-            <div>MY ROLE: <span>GRAPHIC DESIGN 丨UI DESIGN | BRANDING</span></div>
+            <div>MY ROLE: <span>GRAPHIC DESIGN 丨<span>UI DESIGN</span> | <span>BRANDING</span></span></div>
             <div>TIMELINE: <span>8 WEEKS, 2014-2015</span></div>
           </div>
           <div className='icons'>

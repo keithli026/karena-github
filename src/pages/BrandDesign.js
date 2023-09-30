@@ -11,7 +11,7 @@ const BrandDesign = () => {
         <div className='title'>Brand Identity Design</div>
         <div className='content'>
           <div className='keypoint'>
-            <div>MY ROLE: <span>BRANDING丨MEDIA DESIGN 丨PHOTOGRAPHY</span></div>
+            <div>MY ROLE: <span>BRANDING丨<span>MEDIA DESIGN</span> 丨<span>PHOTOGRAPHY</span></span></div>
             <div>TIMELINE: <span>3 WEEKS, 2022</span></div>
           </div>
           <div className='icons'>

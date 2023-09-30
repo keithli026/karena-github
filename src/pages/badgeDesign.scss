@@ -96,7 +96,7 @@
               content: "\a";
               white-space: pre;
 
-              @media (min-width: $lg) {
+              @media (min-width: $sm) {
                 white-space: normal;
               }
             }

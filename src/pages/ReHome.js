@@ -11,7 +11,7 @@ const ReHome = () => {
         <div className='title'>RE-Home</div>
         <div className='content'>
           <div className='keypoint'>
-            <div>MY ROLE: <span>UI DESIGN 丨UX RESEARCHER 丨BRANDING 丨DESIGNER STRATEGY</span></div>
+            <div>MY ROLE: <span>UI DESIGN 丨<span>UX RESEARCHER</span> 丨<span>BRANDING</span> 丨<span>DESIGNER STRATEGY</span></span></div>
             <div>TIMELINE: <span>12 WEEKS, 2023</span></div>
           </div>
           <div className='icons'>

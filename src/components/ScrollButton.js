@@ -10,7 +10,7 @@ const ScrollButton = () => {
     });
   }
   return (
-    <FontAwesomeIcon icon={faArrowUp} onClick={ScrollToTop} className='backToTop'/>
+    <div className='back-to-top'><FontAwesomeIcon icon={faArrowUp} onClick={ScrollToTop} /></div>
   )
 }
 
