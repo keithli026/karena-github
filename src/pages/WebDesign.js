@@ -19,7 +19,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className='summary'>
+      <div className='wrapper'>
         <div className='section'>
           <h2>Brief</h2>
           <p>I was given the task to updated new logo, redesign visual content strategy and ensure that the website is responsiveness and optimized for version devices and screen size. Optimize landing pages and forms to improve conversion rates.</p>
@@ -34,28 +34,39 @@ const WebDesign = () => {
           </ol>
         </div>
       </div>
+      <div className='bg'>
+        <div className='wrapper'>
+          <div className='section center'>
+            <img src={process.env.PUBLIC_URL + '/web_design/web2.jpg'} alt="Englishtown desktop design" />
+          </div>
+        </div>
+      </div>
       <div className='wrapper'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web2.jpg'} alt="Englishtown desktop design" /></div>
-      </div>
-      <div className='summary'>
-        <h2>Next Steps</h2>
-        <p>Improve responsiveness on mobile and tablet</p>
-        <div className='flexbox'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile1.png'} alt="Englishtown mobile design" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile2.png'} alt="Englishtown mobile design" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile3.png'} alt="Englishtown mobile design" /></div>
+        <div className='section'>
+          <h2>Next Steps</h2>
+          <p>Improve responsiveness on mobile and tablet</p>
+          <div className='flexbox'>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile1.png'} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile2.png'} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile3.png'} alt="Englishtown mobile design" /></div>
+          </div>
+          <div className='flexbox two'>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web1.jpg'} alt="Englishtown desktop design" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web3.jpg'} alt="Englishtown desktop design" /></div>
+          </div>
+          <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/web_design/web4.jpg'} alt="Englishtown desktop design" />
+          </div>
         </div>
-        <div className='flexbox two'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web1.jpg'} alt="Englishtown desktop design" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web3.jpg'} alt="Englishtown desktop design" /></div>
+        <div className='section'>
+          <h2>Reflection</h2>
+          <p>I'm proud to work on such a large-scale project from the very beginning. Thanks a lot to my team for believing in me and supporting me throughout the process. I learned to collaborate with developers and hand off final deliverables. I challenged myself to think of a lot of iterations, present them to my manager, and test them with users.</p>
         </div>
-        <div className='image center'><img src={process.env.PUBLIC_URL + '/web_design/web4.jpg'} alt="Englishtown desktop design" /></div>
-        <h2>Reflection</h2>
-        <p>I'm proud to work on such a large-scale project from the very beginning. Thanks a lot to my team for believing in me and supporting me throughout the process. I learned to collaborate with developers and hand off final deliverables. I challenged myself to think of a lot of iterations, present them to my manager, and test them with users.</p>
+        <div className="section center">
+          <Link to="/lets-talk" className='btn'>Other projects</Link>
+        </div>
       </div>
-      <div className="others">
-        <Link to="/lets-talk" className='btn'>Other projects</Link>
-      </div>
+
     </div>
   )
 }

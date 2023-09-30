@@ -1,6 +1,6 @@
 @import "../variable";
 
-#re-home {
+#brand_design {
   .banner {
     position: relative;
     margin-bottom: $padding-y * 5;
@@ -154,6 +154,13 @@
 
   .center {
     text-align: center;
+    img {
+      margin-bottom: $padding-y * 5;
+    }
+  }
+
+  .wrapper {
+    @include container();
   }
 
   .section {
@@ -164,88 +171,22 @@
     }
   }
 
-  .wrapper {
-    @include container();
-  }
-
-  .bg {
-    background-color: $white-500;
-    padding: $padding-y * 10 0;
-    @media (min-width: $md) {
-      padding: $padding-y * 15 0;
+  .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .image {
+      flex-basis: 100%;
+      @media (min-width: $lg) {
+        flex-basis: 20%;
+      }
     }
-
-    .wrapper {
-      .flexbox {
-        display: flex;
-        flex-wrap: wrap;
-        @media (min-width: $md) {
-          flex-direction: column;
-          height: 2800px;
-        }
+    &.three {
+      .image {
         @media (min-width: $lg) {
-          height: 2000px;
-        }
-        @media (min-width: $xl) {
-          height: 2200px;
-        }
-        @media (min-width: $xxl) {
-          height: 2350px;
-        }
-        .content {
-          flex-basis: 100%;
-          margin-bottom: $padding-y * 5;
-          @media (min-width: $md) {
-            max-width: 45%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 10;
-          }
-          @media (min-width: $lg) {
-            max-width: 30%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 10;
-          }
-          @media (min-width: $xl) {
-            position: absolute;
-            max-width: unset;
-            width: 50%;
-            // flex-basis: auto;
-            // margin-bottom: $padding-y * 10;
-          }
-        }
-
-        .image {
-          text-align: center;
-          flex-basis: 100%;
-          margin-bottom: $padding-y * 10;
-          @media (min-width: $md) {
-            text-align: start;
-            max-width: 45%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 15;
-          }
-          @media (min-width: $lg) {
-            max-width: 30%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 15;
-            &:nth-of-type(4) {
-              margin-top: $padding-y * 20;
-            }
-          }
-          @media (min-width: $xl) {
-            &:nth-of-type(2) {
-              margin-top: $padding-y * 45;
-            }
-            &:nth-of-type(4) {
-              margin-top: $padding-y * 30;
-            }
-          }
-          img {
-            width: auto;
-          }
+          flex-basis: 33%;
         }
       }
     }
   }
-
 }

@@ -22,24 +22,34 @@ const ReHome = () => {
         </div>
       </div>
       <div className='wrapper'>
-        <div className='section' id="design">
+        <div className='section'>
           <h2>Design Approach</h2>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/design-approach.png'} alt="Design approach" /></div>
+          <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/re-home/design-approach.png'} alt="Design approach" />
+          </div>
         </div>
         <h2>Persona</h2>
         <p>By conducting research, we interviewed 2 people and identified few problems of adopting animals who could be our target users.</p>
       </div>
-      <div className='image' id="persona"><img src={process.env.PUBLIC_URL + '/re-home/persona.png'} alt="Persona" /></div>
+      <div className='bg section'>
+          <div className='wrapper'>
+            <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/re-home/persona.png'} alt="Persona" />
+            </div>
+          </div>
+      </div>
       <div className='wrapper'>
-        <div className='section' id="sitemap">
+        <div className='section'>
           <h2>Sitemap</h2>
           <p>
             Difficulty with website navigation was a primary pain point for user.<br />
             My goal here was to make strategic information architecture decisions that would improve overall responsive web flow.
           </p>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/sitemap.png'} alt="Sitemap" /></div>
+          <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/re-home/sitemap.png'} alt="Sitemap" />
+          </div>
         </div>
-        <div className='section' id="insight">
+        <div className='section'>
           <h2>User Insights</h2>
           <div className='list_title'>User needs</div>
           <ul>
@@ -54,14 +64,18 @@ const ReHome = () => {
             <li>To connect with experienced people who can share their experience and knowledge with others</li>
           </ul>
         </div>
-        <div className='section' id="wireframe">
+        <div className='section'>
           <h2>Paper wireframes</h2>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/wireframe.png'} alt="Wireframe" /></div>
+          <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/re-home/wireframe.png'} alt="Wireframe" />
+          </div>
         </div>
-        <div className='section' id="usability">
+        <div className='section'>
           <h2>Usability studies</h2>
           <p>Early design allowed for some text search but after usability studies, i added icons option to choose.</p>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/usability-study.png'} alt="Usability study" /></div>
+          <div className='center'>
+            <img src={process.env.PUBLIC_URL + '/re-home/usability-study.png'} alt="Usability study" />
+          </div>
         </div>
       </div>
       <div className='bg'>
@@ -71,19 +85,22 @@ const ReHome = () => {
               <h2>The solution</h2>
               <p>Easy to search and access to detailed information about the animals available for adoption</p>
             </div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/booking.png'} alt="Booking" /></div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/confirmation.png'} alt="Confirmation" /></div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/dog-infomation.png'} alt="Dog Infomation" /></div>
             <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/login-open.png'} alt="Login open" /></div>
             <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/search.png'} alt="Search" /></div>
             <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/welcome.png'} alt="Welcome" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/confirmation.png'} alt="Confirmation" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/dog-infomation.png'} alt="Dog Infomation" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/booking.png'} alt="Booking" /></div>
           </div>
         </div>
       </div>
-
+      <div className='section'>
       <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/laptop.jpg'} alt="Laptop" /></div>
-      <div className="others">
-        <Link to="/lets-talk" className='btn'>Other projects</Link>
+      </div>
+      <div className='wrapper'>
+        <div className="section center">
+          <Link to="/lets-talk" className='btn'>Other projects</Link>
+        </div>
       </div>
     </div>
   )

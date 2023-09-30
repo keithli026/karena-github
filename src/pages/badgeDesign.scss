@@ -13,6 +13,7 @@
       img {
         height: calc(100vh - $header-mobile-height);
         object-fit: cover;
+
         @media (min-width: $lg) {
           height: calc(100vh - $header-height);
         }
@@ -34,6 +35,7 @@
       font-weight: 700;
       color: $white;
       text-transform: uppercase;
+
       @media (min-width: $lg) {
         font-size: 50px;
       }
@@ -125,89 +127,64 @@
     }
   }
 
-  .summary {
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+
+    @media (min-width: $lg) {
+      font-size: 40px;
+    }
+  }
+
+  p,
+  ol {
+    font-size: 16px;
+
+    @media (min-width: $lg) {
+      font-size: 24px;
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+    @media (min-width: $lg) {
+      padding: $padding-y $padding-x * 5;
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .wrapper {
     @include container();
+  }
+
+  .section {
     margin-bottom: $padding-y * 10;
 
     @media (min-width: $lg) {
       margin-bottom: $padding-y * 15;
     }
-
-    h2 {
-      font-size: 30px;
-      font-weight: 700;
-
-      @media (min-width: $lg) {
-        font-size: 40px;
-      }
-    }
-
-    p,
-    ol {
-      font-size: 16px;
-
-      @media (min-width: $lg) {
-        font-size: 24px;
-      }
-    }
   }
 
-  .wrapper {
-    padding: $padding-y * 10 0;
+  .bg {
     background-color: $white-400;
-
+    padding: $padding-y * 10 0;
     @media (min-width: $lg) {
       padding: $padding-y * 15 0;
     }
-
-    .image {
-      @include container();
+    .wrapper {
       text-align: center;
-      &:not(:last-child) {
+
+      img {
         margin-bottom: $padding-y * 10;
         @media (min-width: $lg) {
           margin-bottom: $padding-y * 15;
         }
-        img {
-          max-width: 878px;
-        }
-      }
-      &:last-child {
-        img {
-          max-width: 1440px;
-        }
       }
     }
+
   }
 
-  .wrapper2 {
-    padding: $padding-y * 10 0;
-    background-color: $white-400;
-
-    @media (min-width: $lg) {
-      padding: $padding-y * 15 0;
-    }
-
-    .image {
-      @include container();
-      text-align: center;
-      img {
-        max-width: 1143px;
-      }
-    }
-
-    .others {
-      @include container();
-      text-align: center;
-      margin-top: $padding-y * 10;
-
-      .btn {
-        text-transform: uppercase;
-
-        @media (min-width: $lg) {
-          padding: $padding-y $padding-x * 5;
-        }
-      }
-    }
-  }
 }
