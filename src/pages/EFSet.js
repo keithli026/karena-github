@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./efSet.scss"
+import BackButton from '../components/BackButton'
+
 const EFSet = () => {
   return (
     <div id='ef_set'>
@@ -19,7 +21,7 @@ const EFSet = () => {
           </div>
         </div>
       </div>
-      <div className='summary'>
+      <div className='wrapper'>
         <div className='section'>
           <h2>Brief</h2>
           <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First, a global language training company​.</p>
@@ -35,22 +37,33 @@ const EFSet = () => {
           </ol>
         </div>
       </div>
-      <div className='gallery'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/image_1.webp'} alt="EF Set test" /></div>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/image_2.webp'} alt="EF Set test" /></div>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/image_3.webp'} alt="EF Set test" /></div>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/image_4.webp'} alt="EF Set test" /></div>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/image_5.webp'} alt="EF Set test" /></div>
+      <div className='section gallery'>
+        <div className='image'>
+          <img src={process.env.PUBLIC_URL + '/ef_set/image_1.webp'} alt="EF Set test" />
+          <BackButton /> 
+        </div>
+        <img src={process.env.PUBLIC_URL + '/ef_set/image_2.webp'} alt="EF Set test" />
+        <img src={process.env.PUBLIC_URL + '/ef_set/image_3.webp'} alt="EF Set test" />
+        <img src={process.env.PUBLIC_URL + '/ef_set/image_4.webp'} alt="EF Set test" />
+        <img src={process.env.PUBLIC_URL + '/ef_set/image_5.webp'} alt="EF Set test" />
       </div>
       <div className='wrapper'>
-        <div className='flexbox'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/result_1.webp'} alt="EF Set test" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/result_2.webp'} alt="EF Set test" /></div>
+        <div className='section'>
+          <div className='flexbox'>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/result_1.webp'} alt="EF Set test" /></div>
+            <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/result_2.webp'} alt="EF Set test" /></div>
+          </div>
         </div>
       </div>
-      <div className='image'><img src={process.env.PUBLIC_URL + '/ef_set/mobile.webp'} alt="EF Set test" /></div>
-      <div className="others">
-        <Link to="/projects" className='btn'>Other projects</Link>
+      <div className='bg section'>
+        <div className='wrapper'>
+          <img src={process.env.PUBLIC_URL + '/ef_set/mobile.webp'} alt="EF Set test" />
+        </div>
+      </div>
+      <div className="wrapper">
+        <div className='section center'>
+          <Link to="/projects" className='btn'>Other projects</Link>
+        </div>
       </div>
     </div>
   )

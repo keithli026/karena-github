@@ -18,6 +18,9 @@
   }
   #logo {
     order: 2;
+    @media (min-width: 350px) {
+      margin-left: 60px;
+    }
     @media (min-width: $lg) {
       order: 1;
       margin-left: $padding-x;

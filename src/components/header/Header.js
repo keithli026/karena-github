@@ -106,11 +106,14 @@ const Header = () => {
   if (show) {
     if (width < lg) {
       document.body.style.overflowY = "hidden";
+      // document.querySelector(".backToTop").style.visibility = "hidden";
     } else {
       document.body.style.overflowY = null;
+      // document.querySelector(".backToTop").style.visibility = null;
     }
   } else {
     document.body.style.overflowY = null;
+    // document.querySelector(".backToTop").style.visibility = null;
   }
 
   return (

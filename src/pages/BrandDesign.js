@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./brandDesign.scss"
+import BackButton from '../components/BackButton'
 
 const BrandDesign = () => {
   return (
@@ -32,6 +33,7 @@ const BrandDesign = () => {
           </ol>
         </div>
         <div className='section center'>
+          <BackButton />
           <img src={process.env.PUBLIC_URL + '/brand_design/color_4.jpg'} alt="Four colors" />
           <div className='ref'>
             <img src={process.env.PUBLIC_URL + '/brand_design/gt.png'} alt="Green powder" />

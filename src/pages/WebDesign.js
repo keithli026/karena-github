@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./webDesign.scss"
+import BackButton from '../components/BackButton'
 
 const WebDesign = () => {
   return (
@@ -36,6 +37,7 @@ const WebDesign = () => {
       </div>
       <div className='bg'>
         <div className='wrapper'>
+          <BackButton />
           <div className='section center'>
             <img src={process.env.PUBLIC_URL + '/web_design/web2.jpg'} alt="Englishtown desktop design" />
           </div>

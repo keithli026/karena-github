@@ -2,6 +2,7 @@
 
 #mystory {
   .about {
+    overflow-x: hidden;
     .wrapper {
       @include container();
       .content {

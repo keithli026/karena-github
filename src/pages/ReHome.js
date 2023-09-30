@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./reHome.scss"
+import BackButton from '../components/BackButton'
 
 const ReHome = () => {
   return (
@@ -22,6 +23,7 @@ const ReHome = () => {
         </div>
       </div>
       <div className='wrapper'>
+        <BackButton />
         <div className='section'>
           <h2>Design Approach</h2>
           <div className='center'>

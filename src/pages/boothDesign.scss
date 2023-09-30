@@ -165,6 +165,22 @@
 
   .wrapper {
     @include container();
+    button {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      margin-bottom: $padding-y * 5;
+      font-size: 32px;
+      &:hover {
+        color: $black;
+      }
+      img {
+        margin-right: $padding-x * 2;
+        margin-bottom: 0;
+      }
+    }
     img {
       display: block;
       margin-left: auto;

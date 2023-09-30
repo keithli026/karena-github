@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./boothDesign.scss"
+import BackButton from '../components/BackButton'
 
 const BoothDesign = () => {
   return (
@@ -33,6 +34,7 @@ const BoothDesign = () => {
             <li>Incorporate social media elements into your booth design to encourage attendees to share their experience to increase online visibility and engagement</li>
           </ol>
         </div>
+        <BackButton />
         <img src={process.env.PUBLIC_URL + '/bookfair/book-fair-2023-backdrop.jpg'} alt="Book fair 2023 backdrop" />
         <img src={process.env.PUBLIC_URL + '/bookfair/booth1.png'} alt="Booth" />
         <img src={process.env.PUBLIC_URL + '/bookfair/floorplan2.png'} alt="Badge 30" />

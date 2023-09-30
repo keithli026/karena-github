@@ -127,113 +127,139 @@
     }
   }
 
-  .summary {
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+
+    @media (min-width: $lg) {
+      font-size: 40px;
+    }
+  }
+
+  p, ol {
+    font-size: 16px;
+    @media (min-width: $lg) {
+      font-size: 24px;
+    }
+  }
+
+  .btn {
+    text-transform: uppercase;
+
+    @media (min-width: $lg) {
+      padding: $padding-y $padding-x * 5;
+    }
+  }
+  .section {
+    margin-bottom: $padding-y * 10;
+    @media (min-width: $lg) {
+      margin-bottom: $padding-y * 15;
+    }
+  }
+  .wrapper {
     @include container();
+  }
 
-    h2 {
-      font-size: 30px;
-      font-weight: 700;
-
+  .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .image {
+      flex-basis: 100%;
       @media (min-width: $lg) {
-        font-size: 40px;
+        flex-basis: 48%;
       }
-    }
-
-    p, ol {
-      font-size: 16px;
-      @media (min-width: $lg) {
-        font-size: 24px;
-      }
-    }
-
-    .section {
-      margin-bottom: $padding-y * 10;
-
-      @media (min-width: $lg) {
-        margin-bottom: $padding-y * 15;
+      img {
+        width: auto;
       }
     }
   }
 
+  .center {
+    text-align: center;
+  }
+
+  .bg {
+    background-color: $white-400;
+    padding: $padding-y * 10 0;
+    @media (min-width: $lg) {
+      padding: $padding-y * 15 0;
+    }
+  }
+
+
   .gallery {
-    .image {
-      text-align: center;
+    img {
+      display: block;
       margin-bottom: $padding-y * 5;
       &:nth-child(2) {
         @media (min-width: $lg) {
-          text-align: start;
-        }
-        img {
-          max-width: 980px;
+          margin-right: auto;
         }
       }
       &:nth-child(3) {
         @media (min-width: $lg) {
-          text-align: end;
-        }
-        img {
-          max-width: 850px;
+          margin-left: auto;
         }
       }
       &:nth-child(4) {
         @media (min-width: $lg) {
-          text-align: start;
-        }
-        img {
-          max-width: 1191px;
+          margin-right: auto;
         }
       }
       &:nth-child(5) {
-        img {
-          max-width: 702px;
-          margin-bottom: $padding-y * 10;
+        @media (min-width: $lg) {
+          margin-left: auto;
+          margin-right: auto;
         }
       }
     }
-  }
+    .image {
+      text-align: center;
+      margin-bottom: $padding-y * 5;
+      position: relative;
 
-  .wrapper {
-    @include container();
-    margin-bottom: $padding-y * 10;
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 15;
-    }
-    .flexbox {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .image{
-        flex-basis: 100%;
-        &:not(:last-child) {
-          margin-bottom: $padding-y * 5;
+      button {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        border: none;
+        color: $white;
+        background-color: transparent;
+        font-size: 32px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: $padding-y * 5;
+        margin-left: $padding-x;
+        @media (min-width: $sm) {
+          margin-left: calc((100vw - $sm-max-width) / 2 + $padding-x);
+        }
+        @media (min-width: $md) {
+          margin-left: calc((100vw - $md-max-width) / 2 + $padding-x);
         }
         @media (min-width: $lg) {
-          &:first-child {
-            flex-basis: 50%;
-          }
-          &:nth-child(2) {
-            flex-basis: 43.65%;
-          }
+          margin-left: calc((100vw - $lg-max-width) / 2 + $padding-x);
+        }
+        @media (min-width: $xl) {
+          margin-top: $padding-y * 10;
+          margin-left: calc((100vw - $xl-max-width) / 2 + $padding-x);
+        }
+        @media (min-width: $xxl) {
+          margin-left: calc((100vw - $xxl-max-width) / 2 + $padding-x);
+        }
+        @media (min-width: $xxxl) {
+          margin-left: calc((100vw - $xxxl-max-width) / 2 + $padding-x);
+        } 
+        @media (min-width: $xxxxl) {
+          margin-left: calc((100vw - $xxxxl-max-width) / 2 + $padding-x);
+        }
+        img {
+          margin-right: $padding-x * 2;
+          margin-bottom: 0;
         }
       }
     }
-  }
 
-  .others {
-    @include container();
-    text-align: center;
-    margin-top: $padding-y * 10;
-    margin-bottom: $padding-y * 10;
-    @media (min-width: $lg) {
-      margin-top: $padding-y * 15;
-      margin-bottom: $padding-y * 15;
-    }
-    .btn {
-      text-transform: uppercase;
-
-      @media (min-width: $lg) {
-        padding: $padding-y $padding-x * 5;
-      }
-    }
   }
 }

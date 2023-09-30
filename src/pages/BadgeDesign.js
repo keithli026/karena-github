@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./badgeDesign.scss"
+import BackButton from '../components/BackButton'
 
 const BadgeDesign = () => {
   return (
@@ -35,6 +36,7 @@ const BadgeDesign = () => {
       </div>
       <div className='bg'>
         <div className='wrapper'>
+          <BackButton />
           <img src={process.env.PUBLIC_URL + '/badge_design/badge_40.png'} alt="Badge 40" />
           <img src={process.env.PUBLIC_URL + '/badge_design/badge_60.png'} alt="Badge 60" />
           <img src={process.env.PUBLIC_URL + '/badge_design/badge_30.png'} alt="Badge 30" />
