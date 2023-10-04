@@ -7,8 +7,10 @@ const WebDesign = () => {
   return (
     <div id='web_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/englishtown.png'} alt="Englishtown" /></div>
-        <div className='title'>EF | Englishtown</div>
+        <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/banner.png'} alt="Englishtown banner" /></div>
+        <div className='title'>
+          <img src={process.env.PUBLIC_URL + '/icons/EF_logo.png'} alt="EF Englishtown logo" />
+        </div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>UI/UX DESIGN</span></div>
@@ -38,6 +40,9 @@ const WebDesign = () => {
       <div className='bg'>
         <div className='wrapper'>
           <BackButton />
+          <div className='section center'>
+            <img src={process.env.PUBLIC_URL + '/web_design/ipad.gif'} alt="iPad layout design" />
+          </div>
           <div className='section center'>
             <img src={process.env.PUBLIC_URL + '/web_design/web2.jpg'} alt="Englishtown desktop design" />
           </div>

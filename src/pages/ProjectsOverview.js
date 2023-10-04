@@ -7,7 +7,7 @@ const ProjectsOverview = () => {
     <>
       <div id='projects'>
         <div className='banner'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/more_projects/filters_quality.jpg'} alt="More projects" /></div>       
+          <div className='image'><img src={process.env.PUBLIC_URL + '/more_projects/banner.png'} alt="More projects banner" /></div>       
           <div className='title'>More projects</div>
         </div>
         <div className='showcase'>

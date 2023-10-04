@@ -35,11 +35,20 @@ const BoothDesign = () => {
           </ol>
         </div>
         <BackButton />
+        <img src={process.env.PUBLIC_URL + '/bookfair/colours.jpg'} alt="Colours" />
         <img src={process.env.PUBLIC_URL + '/bookfair/book-fair-2023-backdrop.jpg'} alt="Book fair 2023 backdrop" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/booth1.png'} alt="Booth" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/floorplan2.png'} alt="Badge 30" />
         <img src={process.env.PUBLIC_URL + '/bookfair/booth.png'} alt="Booth" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/A4-desktop-foamboard-01.jpg'} alt="Leaflet" />
+        <img src={process.env.PUBLIC_URL + '/bookfair/floorplan2.png'} alt="Floor plan" />
+        <img src={process.env.PUBLIC_URL + '/bookfair/booth1.png'} alt="Booth" />
+        <div className='flexbox_wrapper'>
+          <div className='flexbox'>
+            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_1.jpg'} alt="Foamboard" />
+          </div>
+          <div className='flexbox'>
+            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_2.jpg'} alt="Foamboard" />
+            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_3.jpg'} alt="Foamboard" />
+          </div>
+        </div>
         <img src={process.env.PUBLIC_URL + '/bookfair/ig_story.png'} alt="IG story" />
         <div className='section'>
           <h2>Book cover design</h2>

@@ -192,14 +192,25 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    .image {
-      flex-basis: 100%;
-      @media (min-width: $lg) {
-        flex-basis: 20%;
+
+    &.two {
+      .image {
+        flex-basis: 100%;
+        margin-bottom: 5px;
+        @media (min-width: $lg) {
+          flex-basis: 50%;
+          &:nth-child(2n-1) {
+            padding-right: $padding-x * 0.25;
+          }
+          &:nth-child(2n) {
+            padding-left: $padding-x * 0.25;
+          }
+        }
       }
     }
     &.three {
       .image {
+        margin-bottom: 5px;
         @media (min-width: $lg) {
           flex-basis: 33%;
         }

@@ -7,8 +7,10 @@ const ReHome = () => {
   return (
     <div id='re-home'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/banner.png'} alt="RE-Home" /></div>
-        <div className='title'>RE-Home</div>
+        <div className='image'><img src={process.env.PUBLIC_URL + '/re-home/banner.png'} alt="RE-Home banner" /></div>
+        <div className='title'>
+          <img src={process.env.PUBLIC_URL + '/icons/REHome_logo.png'} alt="RE-Home logo" /><span>RE-Home</span>
+        </div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>UI DESIGN 丨<span>UX RESEARCHER</span> 丨<span>BRANDING</span> 丨<span>DESIGNER STRATEGY</span></span></div>

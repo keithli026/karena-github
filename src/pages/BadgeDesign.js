@@ -7,7 +7,7 @@ const BadgeDesign = () => {
   return (
     <div id='badge_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/badge_design.png'} alt="Badge Design" /></div>
+        <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/banner.png'} alt="Badge design banner" /></div>
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>

@@ -10,7 +10,10 @@ const ScrollButton = () => {
     });
   }
   return (
-    <div className='back-to-top'><FontAwesomeIcon icon={faArrowUp} onClick={ScrollToTop} /></div>
+    <div className='back-to-top'>
+      <img src={process.env.PUBLIC_URL + "/icons/backtotop.png"} alt="back to top icon" onClick={ScrollToTop} />
+      {/* <FontAwesomeIcon icon={faArrowUp} onClick={ScrollToTop} /> */}
+    </div>
   )
 }
 
