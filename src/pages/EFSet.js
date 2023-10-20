@@ -40,12 +40,14 @@ const EFSet = () => {
       <div className='section gallery'>
         <div className='image'>
           <img src={process.env.PUBLIC_URL + '/ef_set/image_1.webp'} alt="EF Set test" />
-          <BackButton /> 
+          {/* <BackButton />  */}
         </div>
-        <img src={process.env.PUBLIC_URL + '/ef_set/image_2.webp'} alt="EF Set test" />
-        <img src={process.env.PUBLIC_URL + '/ef_set/image_3.webp'} alt="EF Set test" />
-        <img src={process.env.PUBLIC_URL + '/ef_set/image_4.webp'} alt="EF Set test" />
-        <img src={process.env.PUBLIC_URL + '/ef_set/image_5.webp'} alt="EF Set test" />
+        <div className='wrapper'>
+          <img src={process.env.PUBLIC_URL + '/ef_set/image_2.webp'} alt="EF Set test" />
+          <img src={process.env.PUBLIC_URL + '/ef_set/image_3.webp'} alt="EF Set test" />
+          <img src={process.env.PUBLIC_URL + '/ef_set/image_4.webp'} alt="EF Set test" />
+          <img src={process.env.PUBLIC_URL + '/ef_set/image_5.webp'} alt="EF Set test" />
+        </div>
       </div>
       <div className='wrapper'>
         <div className='section'>

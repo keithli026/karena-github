@@ -1,7 +1,7 @@
 @import "../variable";
 #home {
+  @include container();
   .greeting {
-    @include container();
     margin-bottom: 200px;
     .flexbox {
       display: flex;

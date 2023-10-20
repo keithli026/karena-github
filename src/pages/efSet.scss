@@ -72,14 +72,6 @@
           padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
         }
 
-        @media (min-width: $xxxl) {
-          padding-left: calc((100vw - $xxxl-max-width - $padding-x) / 2);
-        }
-
-        @media (min-width: $xxxxl) {
-          padding-left: calc((100vw - $xxxxl-max-width - $padding-x) / 2);
-        }
-
         div {
           line-height: 1.5;
 
@@ -189,28 +181,49 @@
 
 
   .gallery {
+    @media (min-width: $xl) {
+      margin-bottom: 0;
+    }
     img {
       display: block;
       margin-bottom: $padding-y * 5;
-      &:nth-child(2) {
+      &:nth-child(1) {
         @media (min-width: $lg) {
           margin-right: auto;
+        }
+        @media (min-width: $xl) {
+          margin-bottom: 0;
+        }
+      }
+      &:nth-child(2) {
+        @media (min-width: $lg) {
+          margin-left: auto;
+        }
+        @media (min-width: $xl) {
+          position: relative;
+          top: -50px;
+          margin-bottom: 0;
         }
       }
       &:nth-child(3) {
         @media (min-width: $lg) {
-          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (min-width: $xl) {
+          position: relative;
+          top: -250px;
+          margin-bottom: 0;
         }
       }
       &:nth-child(4) {
         @media (min-width: $lg) {
-          margin-right: auto;
-        }
-      }
-      &:nth-child(5) {
-        @media (min-width: $lg) {
           margin-left: auto;
           margin-right: auto;
+        }
+        @media (min-width: $xl) {
+          position: relative;
+          top: -150px;
+          margin-bottom: 0;
         }
       }
     }
@@ -248,12 +261,12 @@
         @media (min-width: $xxl) {
           margin-left: calc((100vw - $xxl-max-width) / 2 + $padding-x);
         }
-        @media (min-width: $xxxl) {
-          margin-left: calc((100vw - $xxxl-max-width) / 2 + $padding-x);
-        } 
-        @media (min-width: $xxxxl) {
-          margin-left: calc((100vw - $xxxxl-max-width) / 2 + $padding-x);
-        }
+        // @media (min-width: $xxxl) {
+        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + $padding-x);
+        // } 
+        // @media (min-width: $xxxxl) {
+        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + $padding-x);
+        // }
         img {
           margin-right: $padding-x * 2;
           margin-bottom: 0;

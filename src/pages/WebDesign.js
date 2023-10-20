@@ -39,7 +39,7 @@ const WebDesign = () => {
       </div>
       <div className='bg'>
         <div className='wrapper'>
-          <BackButton />
+          {/* <BackButton /> */}
           <div className='section center'>
             <img src={process.env.PUBLIC_URL + '/web_design/ipad.gif'} alt="iPad layout design" />
           </div>

@@ -25,7 +25,7 @@ const ReHome = () => {
         </div>
       </div>
       <div className='wrapper'>
-        <BackButton />
+        {/* <BackButton /> */}
         <div className='section'>
           <h2>Design Approach</h2>
           <div className='center'>

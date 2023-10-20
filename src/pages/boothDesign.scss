@@ -72,14 +72,6 @@
           padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
         }
 
-        @media (min-width: $xxxl) {
-          padding-left: calc((100vw - $xxxl-max-width - $padding-x) / 2);
-        }
-
-        @media (min-width: $xxxxl) {
-          padding-left: calc((100vw - $xxxxl-max-width - $padding-x) / 2);
-        }
-
         div {
           line-height: 1.5;
 
@@ -223,16 +215,6 @@
           img {
             margin-bottom: 20px;
           }
-        }
-      }
-      @media (min-width: $xxxl) {
-        &:nth-child(2) {
-          flex-basis: 20%;
-        }
-      }
-      @media (min-width: $xxxxl) {
-        &:nth-child(2) {
-          flex-basis: 17.65%;
         }
       }
     }

@@ -35,14 +35,14 @@ const MyStory = () => {
         <div className='wrapper'>
           <div className='content'>
             <div className='title'>About me</div>
-            <p>I am a creative person who with a background in multimedia Design, experience in creating <span>digital</span>, <span>interactive</span> graphics and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
+            <p>I am a creative person who with a background in Multimedia Design, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
             <p>With 8 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
             <p>My mission is to expand my digital briefcase of work by taking on new challenges and finding creative clever solutions.</p>
           </div>
         </div>
       </div>
       <div className='resume'>
-        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={process.env.PUBLIC_URL + "/icons/arrow_black.png"} alt="arrow" /></Link>
+        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={process.env.PUBLIC_URL + "/icons/arrow_pink.png"} alt="arrow" /></Link>
         <div className='wrapper'>
           <div className='image'>
             <img src={process.env.PUBLIC_URL + "/home/karena.png"} alt="karena" />

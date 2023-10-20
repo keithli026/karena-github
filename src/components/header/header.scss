@@ -4,114 +4,122 @@
 @import "../../variable";
 
 #header {
-  background-color: $black;
+  // background-color: $black;
+  background-color: $white;
   position: sticky;
   top: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: $padding-y 0;
   z-index: 99;
-  @media (min-width: $lg) {
-    padding: $padding-x 0;
-  }
-  #logo {
-    order: 2;
-    width: 50px;
-    @media (min-width: 350px) {
-      margin-left: 60px;
-    }
-    @media (min-width: $lg) {
-      order: 1;
-      margin-left: $padding-x;
-    }
-  }
-  div.btn {
-    order: 1;
-    margin-left: $padding-x;
-    border: none;
-    padding: 0;
-  
-    &:hover {
-      background-color: unset;
-    }
-    @media (min-width: $lg) {
-      display: none;
-      margin-left: 0;
-    }
-  }
 
-  nav {
-    position: fixed;
-    top: 98px;
-    left: 100%;
-    background-color: $black;
-    transition: left 0.5s ease;
-    width: 100vw;
-    font-size: 20px;
-    &.show {
-      left: 0;
-    }
+  .wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    // padding: $padding-y 0;
+
     @media (min-width: $lg) {
-      position: unset;
-      order: 2;
-      width: auto;
-      margin-left: auto;
+      // padding: $padding-x 0;
     }
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      @media (min-width: $lg) {
-        display: flex;
+    #logo {
+      // order: 2;
+      width: 50px;
+      @media (min-width: 350px) {
+        // margin-left: 60px;
       }
-      li {
-        &:first-child {
-          border-top: 2px solid $white;
-        }
-        border-bottom: 2px solid $white;
-        padding: $padding-x $padding-x;
+      @media (min-width: $lg) {
+        // order: 1;
+        // margin-left: $padding-x;
+      }
+    }
+    div.btn {
+      // order: 1;
+      // margin-left: $padding-x;
+      border: none;
+      padding: 0;
+    
+      &:hover {
+        background-color: unset;
+      }
+      @media (min-width: $lg) {
+        display: none;
+        // margin-left: 0;
+      }
+    }
+  
+    nav {
+      position: fixed;
+      top: $header-mobile-height;
+      left: 100%;
+      // background-color: $black;
+      background-color: $white;
+      transition: left 0.2s ease;
+      width: 100vw;
+      font-size: 20px;
+      &.show {
+        left: 0;
+      }
+      @media (min-width: $lg) {
+        position: unset;
+        order: 2;
+        width: auto;
+        margin-left: auto;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
         @media (min-width: $lg) {
-          &:first-child {
-            border-top: none;
-          }
-          padding: 0;
-          margin-left: auto;
-          margin-right: $padding-x * 3;
-          border-bottom: none;
-        }
-        a {
           display: flex;
-          align-items: center;
-          img {
-            margin-left: $padding-x;
-            max-width: 60px;
-            @media (min-width: $lg) {
-              display: none;
+        }
+        li {
+          text-align: center;
+          &:first-child {
+            // border-top: 2px solid $white;
+          }
+          // border-bottom: 2px solid $white;
+          padding: $padding-x $padding-x;
+          @media (min-width: $lg) {
+            &:first-child {
+              // border-top: none;
+            }
+            padding: 0;
+            margin-left: auto;
+            margin-right: $padding-x * 3;
+            border-bottom: none;
+          }
+          a {
+            // display: flex;
+            // align-items: center;
+            img {
+              margin-left: $padding-x;
+              max-width: 60px;
+              @media (min-width: $lg) {
+                display: none;
+              }
             }
           }
+    
         }
+      }
+    }
+    // #resume {
+    //   order: 3;
+    //   &.btn {
+    //     color: $white;
+    //     background-color: $black-100;
+    //     padding: $padding-y $padding-x;
+    //     border-radius: $border-radius 0 0 $border-radius;
+    //     border: 1px solid $white;
+    //     border-right: none;
+    //     &:hover {
+    //       border: 1px solid $pink;
+    //       // color: $pink;
+    //     }
+    //   }
+    //   @media (min-width: $lg) {
   
-      }
-    }
-  }
-  #resume {
-    order: 3;
-    &.btn {
-      color: $white;
-      background-color: $black-100;
-      padding: $padding-y $padding-x;
-      border-radius: $border-radius 0 0 $border-radius;
-      border: 1px solid $white;
-      border-right: none;
-      &:hover {
-        border: 1px solid $pink;
-        // color: $pink;
-      }
-    }
-    @media (min-width: $lg) {
-
-    }
+    //   }
+    // }
   }
 }

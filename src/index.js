@@ -56,7 +56,7 @@ export default function MainApp() {
               <Route path="web-design" element={<WebDesign />} />
               <Route path="re-home" element={<ReHome />} />
             </Route>
-            <Route path="lets-talk" element={<LetsTalk />} />
+            {/* <Route path="lets-talk" element={<LetsTalk />} /> */}
             <Route path="*" element={<NoPage />} />
             <Route path="resume" element={<Resume/>} />
           </Route>

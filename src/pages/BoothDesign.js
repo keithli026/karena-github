@@ -34,7 +34,7 @@ const BoothDesign = () => {
             <li>Incorporate social media elements into your booth design to encourage attendees to share their experience to increase online visibility and engagement</li>
           </ol>
         </div>
-        <BackButton />
+        {/* <BackButton /> */}
         <img src={process.env.PUBLIC_URL + '/bookfair/colours.jpg'} alt="Colours" />
         <img src={process.env.PUBLIC_URL + '/bookfair/book-fair-2023-backdrop.jpg'} alt="Book fair 2023 backdrop" />
         <img src={process.env.PUBLIC_URL + '/bookfair/booth.png'} alt="Booth" />

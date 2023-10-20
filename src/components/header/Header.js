@@ -88,10 +88,10 @@ const Header = () => {
   const [width, height] = useWindowSize();
   if (loaded) {
     if (width < lg) {
-      // refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
+      refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
       refMenu.current.style.height = `${height - refHeader.current.clientHeight}px`;
     } else {
-      // refMenu.current.style.top = null;
+      refMenu.current.style.top = null;
       refMenu.current.style.height = null;
     }
   }
@@ -108,20 +108,23 @@ const Header = () => {
   return (
     <>
       <div id="header" ref={refHeader}>
-        <Link to="/" title="home" id="logo" onClick={closeMenu}>
-          <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError} />
-        </Link>
-        <div className="btn" onClick={showMenu}>
-          {show ? <img alt="menu" src={process.env.PUBLIC_URL + '/icons/cross.png'} /> : <img alt="menu" src={process.env.PUBLIC_URL + '/icons/menu.png'} />}
+        <div className='wrapper'>
+          <Link to="/" title="home" id="logo" onClick={closeMenu}>
+            <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError} />
+          </Link>
+          <div className="btn" onClick={showMenu}>
+            {show ? <img alt="menu" src={process.env.PUBLIC_URL + '/icons/finger_down.png'} /> : <img alt="menu" src={process.env.PUBLIC_URL + '/icons/finger_left.png'} />}
+          </div>
+          <nav className={show ? "show" : null} ref={refMenu}>
+            <ul>
+              <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
+              <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
+              {/* <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk</Link></li> */}
+              <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li>
+            </ul>
+          </nav>
+          {/* <Link to="/resume" title="resume" id="resume" className="btn">Resume</Link> */}
         </div>
-        <nav className={show ? "show" : null} ref={refMenu}>
-          <ul>
-            <li><Link to="/my-story" onClick={closeMenu}>My Story<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-            <li><Link to="/projects" onClick={closeMenu}>Projects<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-            <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk<img src={process.env.PUBLIC_URL + '/icons/arrow_white.svg'} alt="arrow" /></Link></li>
-          </ul>
-        </nav>
-        <Link to="/resume" title="resume" id="resume" className="btn">Resume</Link>
       </div>
     </>
   );

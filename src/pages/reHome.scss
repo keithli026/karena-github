@@ -92,14 +92,6 @@
           padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
         }
 
-        @media (min-width: $xxxl) {
-          padding-left: calc((100vw - $xxxl-max-width - $padding-x) / 2);
-        }
-
-        @media (min-width: $xxxxl) {
-          padding-left: calc((100vw - $xxxxl-max-width - $padding-x) / 2);
-        }
-
         div {
           line-height: 1.5;
 
