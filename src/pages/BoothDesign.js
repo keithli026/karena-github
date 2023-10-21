@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./boothDesign.scss"
-import BackButton from '../components/BackButton'
+// import BackButton from '../components/BackButton'
 
 const BoothDesign = () => {
   return (
