@@ -2,7 +2,10 @@
 
 #mystory {
   .about {
-    // overflow-x: hidden;
+    overflow-x: hidden;
+    @media (min-width: $lg) {
+      overflow-x: unset;
+    }
     .wrapper {
       @include container();
       padding-top: $padding-y * 15;

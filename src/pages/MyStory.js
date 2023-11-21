@@ -75,23 +75,6 @@ const MyStory = () => {
               <p>Keep learning something new, build empathy among people, and focus on value creation for society.</p>
             </div>
           </Slider>
-          {/* <div className='flexbox_wrapper'>
-            <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_1.svg"} alt="Curiosity"></img>
-              <div className='value'>Curiosity</div>
-              <p>Always start with "why" and understand context and user behaviour in their day to day life.</p>
-            </div>
-            <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_2.svg"} alt="Creation"></img>
-              <div className='value'>Creation</div>
-              <p>Be open-minded, creative in facilitating interesting conversation among people.</p>
-            </div>
-            <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_3.svg"} alt="Passion"></img>
-              <div className='value'>Passion</div>
-              <p>Be open-minded, creative in facilitating interesting conversation among people.</p>
-            </div>
-          </div> */}
         </div>
       </div>
       <Contact />

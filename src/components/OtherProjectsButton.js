@@ -4,7 +4,7 @@ import "./otherProjectButton.scss"
 
 const OtherProjectsButton = () => {
   return (
-    <Link to="/projects">Other projects</Link>
+    <Link to="/projects" className='backButton'>Other projects</Link>
   )
 }
 
