@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./badgeDesign.scss"
 // import BackButton from '../components/BackButton'
+import OtherProjectsButton from '../components/OtherProjectsButton'
 
 const BadgeDesign = () => {
   return (
@@ -53,11 +54,11 @@ const BadgeDesign = () => {
         <div className='wrapper'>
           <img src={process.env.PUBLIC_URL + '/badge_design/award.png'} alt="award page" />
           <div className="center">
-            <Link to="/projects" className='btn'>Other projects</Link>
+            <OtherProjectsButton />
+            {/* <Link to="/projects" className='btn'>Other projects</Link> */}
           </div>
         </div>
       </div>
-
     </div>
   )
 }

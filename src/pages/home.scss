@@ -8,10 +8,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-top: $padding-y * 5;
+      margin-top: $padding-y * 15;
 
       @media (min-width: $lg) {
-        margin-top: 100px;
+        margin-top: $padding-y * 20;
       }
       .content {
         flex-basis: 100%;
@@ -21,7 +21,7 @@
           margin-bottom: 0;
         }
         .title {
-          font-weight: 900;
+          font-weight: 700;
           font-size: 36px;
           line-height: 40px;
           margin-bottom: 30px;
@@ -77,7 +77,7 @@
       .title {
         color: $pink;
         font-size: 32px;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 30px;
         @media (min-width: $lg) {
           font-size: 64px;
@@ -88,6 +88,9 @@
         font-size: 14px;
         @media (min-width: $xl) {
           font-size: 32px;
+        }
+        &.bold {
+          font-weight: 500;
         }
       }
       
@@ -175,6 +178,7 @@
             line-height: 1.8;
             color: $lightgrey;
             margin-bottom: $padding-y * 5;
+            font-weight: 500;
             span {
               margin-left: $padding-x;
             }
@@ -197,24 +201,6 @@
             margin-bottom: $padding-y * 4;
           }
         }
-      }
-    }
-  }
-  .contact {
-    @include container();
-    text-align: center;
-    margin-bottom: $padding-y * 10;
-    .title {
-      font-size: 20px;
-      font-weight: 900;
-      @media (min-width: $lg) {
-        font-size: 40px;
-      }
-    }
-    .btn {
-      text-transform: uppercase;
-      @media (min-width: $lg) {
-        padding: $padding-y $padding-x * 5;
       }
     }
   }

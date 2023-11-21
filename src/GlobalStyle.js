@@ -4,8 +4,6 @@ export const md = 768;
 export const lg = 992;
 export const xl = 1200;
 export const xxl = 1400;
-export const xxxl = 1600;
-export const xxxxl = 1800;
 export const Container = styled.div`
   width: 100%;
   padding-left: 20px;
@@ -26,12 +24,6 @@ export const Container = styled.div`
   }
   @media (min-width: 1400px) {
     max-width: 1320px;
-  }
-  @media (min-width: 1600px) {
-    max-width: 1520px;
-  }
-  @media (min-width: 1800px) {
-    max-width: 1720px;
   }
 
   ${prop => prop.flexbox && css`

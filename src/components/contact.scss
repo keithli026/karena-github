@@ -1,0 +1,21 @@
+@import "../variable";
+
+.contact {
+  @include container();
+  text-align: center;
+  margin-bottom: $padding-y * 10;
+  .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: $padding-y * 4;
+    @media (min-width: $lg) {
+      font-size: 40px;
+    }
+  }
+  .btn {
+    text-transform: uppercase;
+    @media (min-width: $lg) {
+      padding: $padding-y $padding-x * 5;
+    }
+  }
+}

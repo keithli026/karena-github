@@ -5,6 +5,7 @@
     // overflow-x: hidden;
     .wrapper {
       @include container();
+      padding-top: $padding-y * 15;
       .content {
         background-color: $white;
         padding: $padding-y * 5 $padding-x;
@@ -58,7 +59,7 @@
         }
         .title {
           font-size: 30px;
-          font-weight: 700;
+          font-weight: 500;
           margin-bottom: $padding-y * 4;
           position: relative;
           @media (min-width: $lg) {
@@ -67,7 +68,7 @@
           &::after {
             content: "";
             width: 2em;
-            border-top: 2px solid $dark;
+            border-top: 1px solid $dark;
             position: absolute;
             top: 150%;
             left: 0;
@@ -83,7 +84,7 @@
           }
           span {
             text-decoration: underline;
-            font-weight: 700;
+            font-weight: 500;
           }
         }
       }
@@ -114,9 +115,6 @@
         margin-left: $padding-x;
         height: fit-content;
         align-self: center;
-        @media (min-width: $lg) {
-          // display: none;
-        }
       }
     }
     .wrapper {
@@ -140,7 +138,7 @@
         }
       }
       .content {
-        border: 2px solid $black;
+        border: 3px solid $black;
         padding: $padding-y * 4 $padding-x * 2;
         @media (min-width: $lg) {
           position: absolute;
@@ -164,7 +162,7 @@
           &::after {
             content: "";
             width: 2em;
-            border-top: 2px solid $dark;
+            border-top: 1px solid $dark;
             position: absolute;
             top: 150%;
             left: 0;
@@ -172,7 +170,7 @@
         }
         .position {
           margin-bottom: $padding-y;
-          font-weight: 600;
+          font-weight: 500;
           font-size: 16px;
           @media (min-width: $lg) {
             font-size: 25px;
@@ -182,12 +180,14 @@
           margin-bottom: $padding-y;
           word-break: break-all;
           font-size: 15px;
+          font-weight: 300;
           @media (min-width: $lg) {
             font-size: 25px;
           }
         }
         .tel {
           margin-bottom: $padding-y;
+          font-weight: 300;
           font-size: 15px;
           @media (min-width: $lg) {
             font-size: 25px;
@@ -222,7 +222,7 @@
               margin-right: auto;
             }
             .value {
-              font-weight: 600;
+              font-weight: 500;
               font-size: 36px;
               margin-bottom: $padding-y * 2;
               text-align: center;
@@ -232,49 +232,6 @@
             }
           }
         }
-      }
-      // .flexbox_wrapper {
-      //   display: flex;
-      //   flex-wrap: wrap;
-      //   justify-content: space-between;
-      //   .flexbox {
-      //     display: flex;
-      //     flex-direction: column;
-      //     align-items: center;
-      //     flex-basis: 100%;
-      //     @media (min-width: $lg) {
-      //       flex-basis: 32%;
-      //     }
-      //     img {
-      //       margin-bottom: $padding-y;
-      //       width: 100px;
-      //     }
-      //     .value {
-      //       font-weight: 600;
-      //       margin-bottom: $padding-y;
-      //     }
-      //     p {
-  
-      //     }
-      //   }
-      // }
-    }
-  }
-  .contact {
-    @include container();
-    text-align: center;
-    margin-bottom: $padding-y * 10;
-    .title {
-      font-size: 20px;
-      font-weight: 900;
-      @media (min-width: $lg) {
-        font-size: 40px;
-      }
-    }
-    .btn {
-      text-transform: uppercase;
-      @media (min-width: $lg) {
-        padding: $padding-y $padding-x * 5;
       }
     }
   }

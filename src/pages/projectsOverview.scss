@@ -10,22 +10,9 @@
     .image {
       position: relative;
       margin-bottom: $padding-y * 5;
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   top: 0;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   background-color: rgba($black, 0.7);
-
-      // } 
       img {
-        height: calc(100vh - $header-mobile-height);
+        height: 100vh;
         object-fit: cover;
-        @media (min-width: $lg) {
-          height: calc(100vh - $header-height);
-        }
       }
     }
     .title {
@@ -69,24 +56,6 @@
       }
       @media (min-width: $xxl) {
         margin-bottom: $padding-y * 8;
-      }
-    }
-  }
-  .contact {
-    @include container();
-    text-align: center;
-    margin-bottom: $padding-y * 10;
-    .title {
-      font-size: 20px;
-      font-weight: 900;
-      @media (min-width: $lg) {
-        font-size: 40px;
-      }
-    }
-    .btn {
-      text-transform: uppercase;
-      @media (min-width: $lg) {
-        padding: $padding-y $padding-x * 5;
       }
     }
   }

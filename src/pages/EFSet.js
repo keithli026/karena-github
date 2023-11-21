@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./efSet.scss"
 // import BackButton from '../components/BackButton'
+import OtherProjectsButton from '../components/OtherProjectsButton'
 
 const EFSet = () => {
   return (
@@ -64,7 +65,7 @@ const EFSet = () => {
       </div>
       <div className="wrapper">
         <div className='section center'>
-          <Link to="/projects" className='btn'>Other projects</Link>
+          <OtherProjectsButton />
         </div>
       </div>
     </div>

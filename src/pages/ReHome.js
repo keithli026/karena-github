@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./reHome.scss"
 import BackButton from '../components/BackButton'
+import OtherProjectsButton from '../components/OtherProjectsButton'
 
 const ReHome = () => {
   return (
@@ -103,7 +104,7 @@ const ReHome = () => {
       </div>
       <div className='wrapper'>
         <div className="section center">
-          <Link to="/projects" className='btn'>Other projects</Link>
+          <OtherProjectsButton />
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./home.scss"
+import Contact from '../components/Contact'
+
 const Home = () => {
   const myStyle = {
     backgroundImage: `url(${process.env.PUBLIC_URL + "/icons/mobile_little_icon.png"})`,
@@ -26,7 +28,7 @@ const Home = () => {
           <div className='wrapper'>
             <div className='title'>“Simple is Better”</div>
             <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
-            <p><b>Here’s a few projects that I’d like to share.</b></p>
+            <p className='bold'>Here’s a few projects that I’d like to share.</p>
             <img src={process.env.PUBLIC_URL + '/icons/arrow.png'} alt="arrow" />
           </div>
         </div>
@@ -85,11 +87,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="contact">
-          <div className='title'>Let's Talk!</div>
-          <p>I'd love to chat about new opportunities or anything design related!</p>
-          <Link to="/lets-talk" className='btn'>Contact me</Link>
-        </div>
+        <Contact />
       </div>
     </>
   )

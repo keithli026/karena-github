@@ -1,0 +1,10 @@
+@import "../variable";
+
+a {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  @media (min-width: $lg) {
+    font-size: 20px;
+  }
+}

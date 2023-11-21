@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./webDesign.scss"
 // import BackButton from '../components/BackButton'
+import OtherProjectsButton from '../components/OtherProjectsButton'
 
 const WebDesign = () => {
   return (
@@ -70,7 +71,7 @@ const WebDesign = () => {
           <p>I'm proud to work on such a large-scale project from the very beginning. Thanks a lot to my team for believing in me and supporting me throughout the process. I learned to collaborate with developers and hand off final deliverables. I challenged myself to think of a lot of iterations, present them to my manager, and test them with users.</p>
         </div>
         <div className="section center">
-          <Link to="/projects" className='btn'>Other projects</Link>
+          <OtherProjectsButton />
         </div>
       </div>
 
