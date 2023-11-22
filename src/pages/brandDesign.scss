@@ -11,12 +11,8 @@
 
     .image {
       img {
-        height: calc(100vh - $header-mobile-height);
+        height: 100vh;
         object-fit: cover;
-
-        @media (min-width: $lg) {
-          height: calc(100vh - $header-height);
-        }
       }
     }
 

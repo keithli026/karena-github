@@ -11,12 +11,8 @@
 
     .image {
       img {
-        height: calc(100vh - $header-mobile-height);
+        height: 100vh;
         object-fit: cover;
-
-        @media (min-width: $lg) {
-          height: calc(100vh - $header-height);
-        }
       }
     }
 
@@ -182,7 +178,7 @@
   }
 
   .bg {
-    background-color: $white-500;
+    background-color: #aed0d1;
     padding: $padding-y * 10 0;
     @media (min-width: $md) {
       padding: $padding-y * 15 0;
@@ -222,8 +218,7 @@
             position: absolute;
             max-width: unset;
             width: 50%;
-            // flex-basis: auto;
-            // margin-bottom: $padding-y * 10;
+            max-width: 800px;
           }
         }
 
