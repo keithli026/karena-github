@@ -1,6 +1,5 @@
 import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
+import backToTop from "../assets/images/icons/backtotop.png"
 
 const ScrollButton = () => {
   const ScrollToTop = () => {
@@ -11,8 +10,7 @@ const ScrollButton = () => {
   }
   return (
     <div className='back-to-top'>
-      <img src={process.env.PUBLIC_URL + "/icons/backtotop.png"} alt="back to top icon" onClick={ScrollToTop} />
-      {/* <FontAwesomeIcon icon={faArrowUp} onClick={ScrollToTop} /> */}
+      <img src={backToTop} alt="back to top icon" onClick={ScrollToTop} />
     </div>
   )
 }

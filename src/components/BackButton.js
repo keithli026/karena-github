@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import arrowPink from "../assets/images/icons/arrow_pink.png"
 const BackButton = () => {
   let navigate = useNavigate();
   return (
     <button onClick={() => navigate(-1)}>
-      <img src={process.env.PUBLIC_URL + "/icons/left_arrow_pink.png"} alt="back arrow"></img>Back
+      <img src={arrowPink} alt="back arrow" />Back
     </button>
   )
 }

@@ -3,6 +3,9 @@ import "./badgeDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/badge_design/banner.png"
+import XDIcon from "../assets/images/icons/XD.png"
+import PSIcon from "../assets/images/icons/PS.png"
+import AIIcon from "../assets/images/icons/AI.png"
 import badge30 from "../assets/images/badge_design/badge_30.png"
 import badge40 from "../assets/images/badge_design/badge_40.png"
 import badge50 from "../assets/images/badge_design/badge_50.png"
@@ -25,9 +28,9 @@ const BadgeDesign = () => {
             <div>TIMELINE: <span>4 WEEKS, 2015</span></div>
           </div>
           <div className='icons'>
-            <img src={process.env.PUBLIC_URL + '/icons/XD.png'} alt="xd icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/PS.png'} alt="ps icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/AI.png'} alt="ai icon" />
+            <img src={XDIcon} alt="xd icon" />
+            <img src={PSIcon} alt="ps icon" />
+            <img src={AIIcon} alt="ai icon" />
           </div>
         </div>
       </div>

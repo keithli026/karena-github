@@ -1,8 +1,11 @@
 import React from 'react'
-import { useState, useLayoutEffect, useRef, useReducer, useEffect } from 'react'
+import { useState, useLayoutEffect, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { lg } from "../../GlobalStyle"
 import "./header.scss";
+import siteLogo from "../../assets/images/icons/logo.png"
+import fingerDownIcon from "../../assets/images/icons/finger_down.png"
+import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -53,10 +56,10 @@ const Header = () => {
       <div id="header" ref={refHeader}>
         <div className='wrapper'>
           <Link to="/" title="home" id="logo" onClick={closeMenu}>
-            <img alt="site logo" src={process.env.PUBLIC_URL + '/icons/logo.png'} ref={refImg} onLoad={onLoad} onError={onError} />
+            <img alt="site logo" src={siteLogo} ref={refImg} onLoad={onLoad} onError={onError} />
           </Link>
           <div className="btn" onClick={showMenu}>
-            {show ? <img alt="menu" src={process.env.PUBLIC_URL + '/icons/finger_down.png'} /> : <img alt="menu" src={process.env.PUBLIC_URL + '/icons/finger_left.png'} />}
+            {show ? <img alt="menu" src={fingerDownIcon} /> : <img alt="menu" src={fingerLeftIcon} />}
           </div>
           <nav className={show ? "show" : null} ref={refMenu}>
             <ul>
@@ -66,7 +69,6 @@ const Header = () => {
               <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li>
             </ul>
           </nav>
-          {/* <Link to="/resume" title="resume" id="resume" className="btn">Resume</Link> */}
         </div>
       </div>
     </>
