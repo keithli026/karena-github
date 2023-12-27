@@ -2,6 +2,9 @@
 
 #mystory {
   .about {
+    background-image: url("../assets/images/my_story/cloudy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     overflow-x: hidden;
     @media (min-width: $lg) {
       overflow-x: unset;

@@ -1,16 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import "./webDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
+import banner from "../assets/images/web_design/banner.png"
+import EFIcon from "../assets/images/icons/EF_logo.png"
+import XDIcon from "../assets/images/icons/XD.png"
+import PSIcon from "../assets/images/icons/PS.png"
+import iPadLayout from "../assets/images/web_design/ipad.gif"
+import desktopDesign2 from "../assets/images/web_design/web2.jpg"
+import mobileDesign1 from "../assets/images/web_design/mobile1.png"
+import mobileDesign2 from "../assets/images/web_design/mobile2.png"
+import mobileDesign3 from "../assets/images/web_design/mobile3.png"
+import desktopDesign1 from "../assets/images/web_design/web1.jpg"
+import desktopDesign3 from "../assets/images/web_design/web3.jpg"
+import desktopDesign4 from "../assets/images/web_design/web4.jpg"
 
 const WebDesign = () => {
   return (
     <div id='web_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/banner.png'} alt="Englishtown banner" /></div>
+        <div className='image'><img src={banner} alt="banner" /></div>
         <div className='title'>
-          <img src={process.env.PUBLIC_URL + '/icons/EF_logo.png'} alt="EF Englishtown logo" />
+          <img src={EFIcon} alt="EF Englishtown logo" />
         </div>
         <div className='content'>
           <div className='keypoint'>
@@ -18,8 +29,8 @@ const WebDesign = () => {
             <div>TIMELINE: <span>12 WEEKS, 2014</span></div>
           </div>
           <div className='icons'>
-            <img src={process.env.PUBLIC_URL + '/icons/XD.png'} alt="xd icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/PS.png'} alt="ps icon" />
+            <img src={XDIcon} alt="xd icon" />
+            <img src={PSIcon} alt="ps icon" />
           </div>
         </div>
       </div>
@@ -42,10 +53,10 @@ const WebDesign = () => {
         <div className='wrapper'>
           {/* <BackButton /> */}
           <div className='section center'>
-            <img src={process.env.PUBLIC_URL + '/web_design/ipad.gif'} alt="iPad layout design" />
+            <img src={iPadLayout} alt="iPad layout design" />
           </div>
           <div className='section center'>
-            <img src={process.env.PUBLIC_URL + '/web_design/web2.jpg'} alt="Englishtown desktop design" />
+            <img src={desktopDesign2} alt="Englishtown desktop design" />
           </div>
         </div>
       </div>
@@ -54,16 +65,16 @@ const WebDesign = () => {
           <h2>Next Steps</h2>
           <p>Improve responsiveness on mobile and tablet</p>
           <div className='flexbox'>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile1.png'} alt="Englishtown mobile design" /></div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile2.png'} alt="Englishtown mobile design" /></div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/mobile3.png'} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={mobileDesign1} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={mobileDesign2} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={mobileDesign3} alt="Englishtown mobile design" /></div>
           </div>
           <div className='flexbox two'>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web1.jpg'} alt="Englishtown desktop design" /></div>
-            <div className='image'><img src={process.env.PUBLIC_URL + '/web_design/web3.jpg'} alt="Englishtown desktop design" /></div>
+            <div className='image'><img src={desktopDesign1} alt="Englishtown desktop design" /></div>
+            <div className='image'><img src={desktopDesign3} alt="Englishtown desktop design" /></div>
           </div>
           <div className='center'>
-            <img src={process.env.PUBLIC_URL + '/web_design/web4.jpg'} alt="Englishtown desktop design" />
+            <img src={desktopDesign4} alt="Englishtown desktop design" />
           </div>
         </div>
         <div className='section'>

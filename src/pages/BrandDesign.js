@@ -1,14 +1,36 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import "./brandDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
+import banner from "../assets/images/brand_design/banner.png"
+import AEIcon from "../assets/images/icons/AE.png"
+import PSIcon from "../assets/images/icons/PS.png"
+import AIIcon from "../assets/images/icons/AI.png"
+import color4 from "../assets/images/brand_design/color_4.jpg"
+import greenPowder from "../assets/images/brand_design/gt.png"
+import pocina from "../assets/images/brand_design/pocina.png"
+import combination from "../assets/images/brand_design/combination.png"
+import chocolatePowder from "../assets/images/brand_design/coco_powder.jpg"
+import chocolateBag from "../assets/images/brand_design/chocolate_package.jpg"
+import greenTeaBag from "../assets/images/brand_design/green_tea_package.jpg"
+import greenTeaPowder from "../assets/images/brand_design/green_powder.jpg"
+import powder from "../assets/images/brand_design/powder.jpg"
+import about from "../assets/images/brand_design/about.jpg"
+import taro from "../assets/images/brand_design/taro.jpg"
+import nightRoutine from "../assets/images/brand_design/night.jpg"
+import about2 from "../assets/images/brand_design/about_2.jpg"
+import dayRoutine from "../assets/images/brand_design/day.jpg"
+import facesss from "../assets/images/brand_design/facesss.jpg"
+import dayNightRoutine from "../assets/images/brand_design/day_and_night.png"
+import tea from "../assets/images/brand_design/tea.png"
+import diet from "../assets/images/brand_design/diet.png"
+import taste from "../assets/images/brand_design/taste.jpg"
 
 const BrandDesign = () => {
   return (
     <div id='brand_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/banner.png'} alt="Brand identity design banner" /></div>
+        <div className='image'><img src={banner} alt="Brand identity design banner" /></div>
         <div className='title'>Brand Identity Design</div>
         <div className='content'>
           <div className='keypoint'>
@@ -16,9 +38,9 @@ const BrandDesign = () => {
             <div>TIMELINE: <span>3 WEEKS, 2022</span></div>
           </div>
           <div className='icons'>
-            <img src={process.env.PUBLIC_URL + '/icons/AE.png'} alt="ae icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/PS.png'} alt="ps icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/AI.png'} alt="ai icon" />
+            <img src={AEIcon} alt="ae icon" />
+            <img src={PSIcon} alt="ps icon" />
+            <img src={AIIcon} alt="ai icon" />
           </div>
         </div>
       </div>
@@ -37,35 +59,35 @@ const BrandDesign = () => {
         </div>
         <div className='section center'>
           {/* <BackButton /> */}
-          <img src={process.env.PUBLIC_URL + '/brand_design/color_4.jpg'} alt="Four colors" />
+          <img src={color4} alt="Four colors" />
           <div className='ref'>
-            <img src={process.env.PUBLIC_URL + '/brand_design/gt.png'} alt="Green powder" />
-            <img src={process.env.PUBLIC_URL + '/brand_design/pocina.png'} alt="POCINA" className='cover'/>
+            <img src={greenPowder} alt="Green powder" />
+            <img src={pocina} alt="POCINA" className='cover'/>
           </div>
-          <img src={process.env.PUBLIC_URL + '/brand_design/combination.png'} alt="Combination" />
+          <img src={combination} alt="Combination" />
         </div>
         <div className='section flexbox two'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/coco_powder.jpg'} alt="Chocolate powder" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/chocolate_package.jpg'} alt="Chocolate bag" /></div>    
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/green_tea_package.jpg'} alt="Green tea bag" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/green_powder.jpg'} alt="Green tea powder" /></div>
+          <div className='image'><img src={chocolatePowder} alt="Chocolate powder" /></div>
+          <div className='image'><img src={chocolateBag} alt="Chocolate bag" /></div>    
+          <div className='image'><img src={greenTeaBag} alt="Green tea bag" /></div>
+          <div className='image'><img src={greenTeaPowder} alt="Green tea powder" /></div>
         </div>
         <div className='section flexbox three'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/powder.jpg'} alt="Powder" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/about.jpg'} alt="About" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/taro.jpg'} alt="Taro" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/night.jpg'} alt="Night routine" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/about_2.jpg'} alt="About" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/day.jpg'} alt="Day routine" /></div>
+          <div className='image'><img src={powder} alt="Powder" /></div>
+          <div className='image'><img src={about} alt="About" /></div>
+          <div className='image'><img src={taro} alt="Taro" /></div>
+          <div className='image'><img src={nightRoutine} alt="Night routine" /></div>
+          <div className='image'><img src={about2} alt="About" /></div>
+          <div className='image'><img src={dayRoutine} alt="Day routine" /></div>
         </div>
         <div className='center'>
-          <img src={process.env.PUBLIC_URL + '/brand_design/facesss.jpg'} alt="Facesss" />
+          <img src={facesss} alt="Facesss" />
         </div>
         <div className='section flexbox two'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/day_and_night.png'} alt="day and night routine" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/tea.png'} alt="Tea" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/diet.png'} alt="Diet" /></div>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/brand_design/taste.jpg'} alt="Taste" /></div>
+          <div className='image'><img src={dayNightRoutine} alt="day and night routine" /></div>
+          <div className='image'><img src={tea} alt="Tea" /></div>
+          <div className='image'><img src={diet} alt="Diet" /></div>
+          <div className='image'><img src={taste} alt="Taste" /></div>
         </div>
         <div className="section center">
           <OtherProjectsButton />

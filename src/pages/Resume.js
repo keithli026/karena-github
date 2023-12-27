@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { md, lg } from "../GlobalStyle"
 import { useEffect, useState,  useLayoutEffect } from 'react'
+import mailIcon from "../assets/images/icons/mail.png"
+import karenaMobile from "../assets/images/home/karena_mobile.png"
+import karena from "../assets/images/home/karena.png"
 
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
@@ -21,6 +24,7 @@ const useWindowSize = () => {
 const Resume = () => {
   const [mobile, setMobile] = useState(false);
   const [width, height] = useWindowSize();
+
   useEffect(() => {
     if(width < md) {
       setMobile(true);
@@ -31,11 +35,11 @@ const Resume = () => {
 
   return (
     <div id="resume">
-      <a href="mailto:iamkarena66@gmail.com" id="email"><img src={process.env.PUBLIC_URL + "/icons/mail.png"} alt="email" /></a>  
+      <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" /></a>  
       <div className='wrapper'>
-        <div className='flexbox section' id="intro">
+        <div className='flexbox section'>
           <div className='image'>
-            {mobile ? <img src={process.env.PUBLIC_URL + "/home/karena_mobile.png"} alt="karena" />: <img src={process.env.PUBLIC_URL + "/home/karena.png"} alt="karena" />}  
+            {mobile ? <img src={karenaMobile} alt="karena" />: <img src={karena} alt="karena" />}  
           </div>
           <div className='content'>
             <h2 className='name'>KARENA <br/>LI</h2>

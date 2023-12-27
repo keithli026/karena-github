@@ -1,6 +1,11 @@
 @import "../variable";
+
 #home {
   @include container();
+  margin-top: $padding-y * 15;
+  @media (min-width: $lg) {
+    margin-top: $padding-y * 20;
+  }
   .greeting {
     margin-bottom: 200px;
     .flexbox {
@@ -8,11 +13,6 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      margin-top: $padding-y * 15;
-
-      @media (min-width: $lg) {
-        margin-top: $padding-y * 20;
-      }
       .content {
         flex-basis: 100%;
         margin-bottom: $padding-y * 5;
@@ -70,6 +70,9 @@
     }
   }
   .slogan {
+    background-image: url("../assets//images/icons/mobile_little_icon.png");
+    background-size: contain;
+    background-repeat: repeat;
     .wrapper {
       text-align: center;
       @include container();

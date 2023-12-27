@@ -1,14 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import "./badgeDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
+import banner from "../assets/images/badge_design/banner.png"
+import badge30 from "../assets/images/badge_design/badge_30.png"
+import badge40 from "../assets/images/badge_design/badge_40.png"
+import badge50 from "../assets/images/badge_design/badge_50.png"
+import badge60 from "../assets/images/badge_design/badge_60.png"
+import badge70 from "../assets/images/badge_design/badge_70.png"
+import badgeMobile from "../assets/images/badge_design/badge_on_phone.png"
+import badgeDesign1 from "../assets/images/badge_design/badge_design_1.png"
+import badgeDesign2 from "../assets/images/badge_design/badge_design_2.png"
+import awardPage from "../assets/images/badge_design/award.png"
 
 const BadgeDesign = () => {
   return (
     <div id='badge_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/banner.png'} alt="Badge design banner" /></div>
+        <div className='image'><img src={banner} alt="Badge design banner" /></div>
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>
@@ -38,24 +47,23 @@ const BadgeDesign = () => {
       <div className='bg'>
         <div className='wrapper'>
           {/* <BackButton /> */}
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_40.png'} alt="Badge 40" />
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_60.png'} alt="Badge 60" />
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_30.png'} alt="Badge 30" />
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_50.png'} alt="Badge 50" />
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_70.png'} alt="Badge 70" />
-          <img src={process.env.PUBLIC_URL + '/badge_design/badge_on_phone.png'} alt="badge on mobile" />
+          <img src={badge40} alt="Badge 40" />
+          <img src={badge60} alt="Badge 60" />
+          <img src={badge30} alt="Badge 30" />
+          <img src={badge50} alt="Badge 50" />
+          <img src={badge70} alt="Badge 70" />
+          <img src={badgeMobile} alt="badge on mobile" />
         </div>
         <div className='section'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/badge_design_1.png'} alt="badge design" /></div>
+          <div className='image'><img src={badgeDesign1} alt="badge design" /></div>
         </div>
         <div className='section'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/badge_design/badge_design_2.png'} alt="badge design" /></div>
+          <div className='image'><img src={badgeDesign2} alt="badge design" /></div>
         </div>
         <div className='wrapper'>
-          <img src={process.env.PUBLIC_URL + '/badge_design/award.png'} alt="award page" />
+          <img src={awardPage} alt="award page" />
           <div className="center">
             <OtherProjectsButton />
-            {/* <Link to="/projects" className='btn'>Other projects</Link> */}
           </div>
         </div>
       </div>

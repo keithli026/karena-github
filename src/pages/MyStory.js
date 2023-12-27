@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect, forwardRef } from 'react'
 import "./myStory.scss"
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Contact from '../components/Contact';
+import { useLocation } from 'react-router-dom';
+import { useRef } from 'react';
+import karena from "../assets/images/home/karena.png"
+import arrowPink from "../assets/images/icons/arrow_pink.png"
+import value1 from "../assets/images/icons/value_1.svg"
+import value2 from "../assets/images/icons/value_2.svg"
+import value3 from "../assets/images/icons/value_3.svg"
 
 const MyStory = () => {
   var settings = {
@@ -24,14 +31,20 @@ const MyStory = () => {
       }
     ]
   };
-  const myStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL + "/my_story/cloudy.jpg"})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-  };
+  const { state }  = useLocation();
+  const { targetId } = state || {};
+  const infoRef = useRef(null);
+  console.log(state,targetId);
+
+  useEffect(()=> {
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [targetId])
   return (
     <div id="mystory">
-      <div className='about' style={myStyle}>
+      <div className='about'>
         <div className='wrapper'>
           <div className='content'>
             <div className='title'>About me</div>
@@ -42,10 +55,10 @@ const MyStory = () => {
         </div>
       </div>
       <div className='resume'>
-        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={process.env.PUBLIC_URL + "/icons/arrow_pink.png"} alt="arrow" /></Link>
-        <div className='wrapper'>
+        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" /></Link>
+        <div className='wrapper' id="info" ref={infoRef}>
           <div className='image'>
-            <img src={process.env.PUBLIC_URL + "/home/karena.png"} alt="karena" />
+            <img src={karena} alt="karena" />
           </div>
           <div className='content'>
             <div className='name'>Karena Li</div>
@@ -60,17 +73,17 @@ const MyStory = () => {
           <div className='title'>My Value</div>
           <Slider {...settings}>
             <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_1.svg"} alt="Curiosity"></img>
+              <img src={value1} alt="Curiosity"></img>
               <div className='value'>Curiosity</div>
               <p>Always start with "why" and understand context and user behaviour in their day to day life.</p>
             </div>
             <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_2.svg"} alt="Creation"></img>
+              <img src={value2} alt="Creation"></img>
               <div className='value'>Creation</div>
               <p>Be open-minded, creative in facilitating interesting conversation among people.</p>
             </div>
             <div className='flexbox'>
-              <img src={process.env.PUBLIC_URL + "/icons/value_3.svg"} alt="Passion"></img>
+              <img src={value3} alt="Passion"></img>
               <div className='value'>Passion</div>
               <p>Keep learning something new, build empathy among people, and focus on value creation for society.</p>
             </div>
@@ -80,6 +93,6 @@ const MyStory = () => {
       <Contact />
     </div>
   )
-}
+};
 
 export default MyStory

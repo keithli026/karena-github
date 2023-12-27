@@ -1,14 +1,28 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import "./boothDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
+import banner from "../assets/images/bookfair/banner.png"
+import floorPlannerIcon from "../assets/images/icons/floorplanner.png"
+import PSIcon from "../assets/images/icons/PS.png"
+import AIIcon from "../assets/images/icons/AI.png"
+import colours from "../assets/images/bookfair/colours.jpg"
+import bookFairBackdrop from "../assets/images/bookfair/book-fair-2023-backdrop.jpg"
+import booth from "../assets/images/bookfair/booth.png"
+import floorPlan from "../assets/images/bookfair/floorplan2.png"
+import booth1 from "../assets/images/bookfair/booth1.png"
+import foamBoard1 from "../assets/images/bookfair/foamboard_1.jpg"
+import foamBoard2 from "../assets/images/bookfair/foamboard_2.jpg"
+import foamBoard3 from "../assets/images/bookfair/foamboard_3.jpg"
+import igStory from "../assets/images/bookfair/ig_story.png"
+import bookCoverBack from "../assets/images/bookfair/cover-back.png"
+import bookCover from "../assets/images/bookfair/book-cover.png"
 
 const BoothDesign = () => {
   return (
     <div id='booth_design'>
       <div className='banner'>
-        <div className='image'><img src={process.env.PUBLIC_URL + '/bookfair/banner.png'} alt="Book fair" /></div>
+        <div className='image'><img src={banner} alt="Book fair" /></div>
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>
@@ -16,9 +30,9 @@ const BoothDesign = () => {
             <div>TIMELINE: <span>4 WEEKS, 2023</span></div>
           </div>
           <div className='icons'>
-            <img src={process.env.PUBLIC_URL + '/icons/floorplanner.png'} alt="floorplanner icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/PS.png'} alt="ps icon" />
-            <img src={process.env.PUBLIC_URL + '/icons/AI.png'} alt="ai icon" />
+            <img src={floorPlannerIcon} alt="floorplanner icon" />
+            <img src={PSIcon} alt="ps icon" />
+            <img src={AIIcon} alt="ai icon" />
           </div>
         </div>
       </div>
@@ -36,25 +50,25 @@ const BoothDesign = () => {
           </ol>
         </div>
         {/* <BackButton /> */}
-        <img src={process.env.PUBLIC_URL + '/bookfair/colours.jpg'} alt="Colours" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/book-fair-2023-backdrop.jpg'} alt="Book fair 2023 backdrop" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/booth.png'} alt="Booth" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/floorplan2.png'} alt="Floor plan" />
-        <img src={process.env.PUBLIC_URL + '/bookfair/booth1.png'} alt="Booth" />
+        <img src={colours} alt="Colours" />
+        <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" />
+        <img src={booth} alt="Booth" />
+        <img src={floorPlan} alt="Floor plan" />
+        <img src={booth1} alt="Booth" />
         <div className='flexbox_wrapper'>
           <div className='flexbox'>
-            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_1.jpg'} alt="Foamboard" />
+            <img src={foamBoard1} alt="Foamboard" />
           </div>
           <div className='flexbox'>
-            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_2.jpg'} alt="Foamboard" />
-            <img src={process.env.PUBLIC_URL + '/bookfair/foamboard_3.jpg'} alt="Foamboard" />
+            <img src={foamBoard2} alt="Foamboard" />
+            <img src={foamBoard3} alt="Foamboard" />
           </div>
         </div>
-        <img src={process.env.PUBLIC_URL + '/bookfair/ig_story.png'} alt="IG story" />
+        <img src={igStory} alt="IG story" />
         <div className='section'>
           <h2>Book cover design</h2>
-          <img src={process.env.PUBLIC_URL + '/bookfair/cover-back.png'} alt="Book cover back" />
-          <img src={process.env.PUBLIC_URL + '/bookfair/book-cover.png'} alt="Book cover" />
+          <img src={bookCoverBack} alt="Book cover back" />
+          <img src={bookCover} alt="Book cover" />
         </div>
         <div className="section center">
           <OtherProjectsButton />

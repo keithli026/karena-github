@@ -58,7 +58,7 @@ export default function MainApp() {
             </Route>
             {/* <Route path="lets-talk" element={<LetsTalk />} /> */}
             <Route path="*" element={<NoPage />} />
-            <Route path="resume" element={<Resume/>} />
+            <Route path="resume" element={<Resume />} />
           </Route>
         </Routes>
       </ScrollToTop>

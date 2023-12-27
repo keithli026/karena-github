@@ -2,13 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import "./home.scss"
 import Contact from '../components/Contact'
+import karena from "../assets/images/home/karena.png"
+import arrow from "../assets/images/icons/arrow.png"
+import reHome from "../assets/images/home/rehome.png"
+import badgeDesign from "../assets/images/home/badge_design.png"
+import efSet from "../assets/images/home/EF_SET.png"
+import hult from "../assets/images/home/HULT.png"
+import arrowBlack from "../assets/images/icons/arrow_black.png"
 
 const Home = () => {
-  const myStyle = {
-    backgroundImage: `url(${process.env.PUBLIC_URL + "/icons/mobile_little_icon.png"})`,
-    backgroundSize: 'contain',
-    backgroundRepeat: 'repeat',
-  };
   return (
     <>
       <div id="home">
@@ -20,61 +22,61 @@ const Home = () => {
               <Link to="/my-story" className='btn'>About me</Link>
             </div>
             <div className='image'>
-              <img src={process.env.PUBLIC_URL + "/home/karena.png"} alt="karena" />
+              <img src={karena} alt="karena" />
             </div>
           </div>
         </div>
-        <div className="slogan" style={myStyle}>
+        <div className="slogan">
           <div className='wrapper'>
             <div className='title'>“Simple is Better”</div>
             <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
             <p className='bold'>Here’s a few projects that I’d like to share.</p>
-            <img src={process.env.PUBLIC_URL + '/icons/arrow.png'} alt="arrow" />
+            <img src={arrow} alt="arrow" />
           </div>
         </div>
         <div className="projects">
           <div className='project'>
             <div className='image'>
-              <img src={process.env.PUBLIC_URL + './home/rehome.png'} alt="RE-Home" />
+              <img src={reHome} alt="RE-Home" />
             </div>
             <div className='content'>
               <div className='wrapper'>
                 <div className='hashtag'>#BRANDING <span>#UI</span><span>#UXRESERCHER</span><span>#DESIGNER STRATEGY</span></div>
                 <div className='title'>RE-Home</div>
                 <p>Re-Home is a local animals adoption app that's help users easily to find the matched pet to adopt. Re-Home app strives to reduce the homeless dog numbers.They offer a high level flow to simplify the adoption process.</p>
-                <Link to="/projects/re-home"><img src={process.env.PUBLIC_URL + './icons/arrow_black.png'} alt="RE-Home" /></Link>
+                <Link to="/projects/re-home"><img src={arrowBlack} alt="arrow" /></Link>
               </div>
             </div>
           </div>
           <div className='project'>
             <div className='image'>
-              <img src={process.env.PUBLIC_URL + './home/badge_design.png'} alt="Badge Design" />
+              <img src={badgeDesign} alt="Badge Design" />
             </div>
             <div className='content'>
               <div className='wrapper'>
                 <div className='hashtag'>#BRANDING <span>#UI</span><span>#UXRESERCHER</span><span>#GRAPHIC</span></div>
                 <div className='title'>Badge Design</div>
                 <p>By offering badges as reward, its adds an element of challenge, competition, and achievement for users. This can motivate users to complete certain tasks.</p>
-                <Link to="/projects/badge-design"><img src={process.env.PUBLIC_URL + './icons/arrow_black.png'} alt="Badge Design" /></Link>
+                <Link to="/projects/badge-design"><img src={arrowBlack} alt="arrow" /></Link>
               </div>
             </div>
           </div>
           <div className='project'>
             <div className='image'>
-              <img src={process.env.PUBLIC_URL + './home/EF_SET.png'} alt="EF SET" />
+              <img src={efSet} alt="EF SET" />
             </div>
             <div className='content'>
               <div className='wrapper'>
                 <div className='hashtag'>#BRANDING<span>#UI</span><span>#UX</span></div>
                 <div className='title'>EF SET</div>
                 <p>The EF Standard English Test (EF SET) is a free, online English test designed to meet the high technical standards as the other standardized tests in the field, such as the TOEFL or IELTS.</p>
-                <Link to="/projects/ef-set"><img src={process.env.PUBLIC_URL + './icons/arrow_black.png'} alt="EF SET" /></Link>
+                <Link to="/projects/ef-set"><img src={arrowBlack} alt="arrow" /></Link>
               </div>
             </div>
           </div>
           <div className='project'>
             <div className='image'>
-              <img src={process.env.PUBLIC_URL + './home/HULT.png'} alt="HULT" />
+              <img src={hult} alt="HULT" />
             </div>
             <div className='content'>
               <div className='wrapper'>
@@ -82,7 +84,7 @@ const Home = () => {
                 <div className='title'>Landing Page / Web Design</div>
                 <p>Plan to delivering top-notch quality UI/UX design for your Website, Landing page by using Figma and Adobe creative suite.</p>
                 <p>Having usability and user experience in mind I will do brainstorming and research about your project to deliver attractively, user-friendly, and interactive UI designs.</p>
-                <Link to="/projects/web-design"><img src={process.env.PUBLIC_URL + './icons/arrow_black.png'} alt="Web Design" /></Link>
+                <Link to="/projects/web-design"><img src={arrowBlack} alt="arrow" /></Link>
               </div>
             </div>
           </div>

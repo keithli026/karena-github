@@ -14,6 +14,10 @@
   //   }
   // }
   position: relative;
+  margin-top: $padding-y * 15;
+  @media (min-width: $lg) {
+    margin-top: $padding-y * 20;
+  }
   #email {
     position: absolute;
     bottom: $padding-y;
