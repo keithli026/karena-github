@@ -1,11 +1,11 @@
 import React, { useEffect, forwardRef } from 'react'
 import "./myStory.scss"
-import { Link } from 'react-router-dom';
+// import "../components/contact.scss"
+import { Link } from 'react-router-dom'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Contact from '../components/Contact';
-import { useLocation } from 'react-router-dom';
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import { useLocation } from 'react-router-dom'
 import { useRef } from 'react';
 import karena from "../assets/images/home/karena.png"
 import arrowPink from "../assets/images/icons/arrow_pink.png"
@@ -31,12 +31,12 @@ const MyStory = () => {
       }
     ]
   };
-  const { state }  = useLocation();
+  const { state } = useLocation();
   const { targetId } = state || {};
   const infoRef = useRef(null);
-  console.log(state,targetId);
+  console.log(state, targetId, infoRef.current);
 
-  useEffect(()=> {
+  useEffect(() => {
     const el = document.getElementById(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
@@ -90,7 +90,12 @@ const MyStory = () => {
           </Slider>
         </div>
       </div>
-      <Contact />
+
+      <div className="contact">
+        <div className='title'>Let's Talk!</div>
+        <p>I'd love to chat about new opportunities or anything design related!</p>
+        <span className='btn' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</span>
+      </div>
     </div>
   )
 };

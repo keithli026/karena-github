@@ -15,29 +15,11 @@ import BadgeDesign from './pages/BadgeDesign';
 import BoothDesign from './pages/BoothDesign';
 import EFSet from './pages/EFSet';
 import WebDesign from './pages/WebDesign';
-import ReHome  from './pages/ReHome';
+import ReHome from './pages/ReHome';
 import LetsTalk from './pages/LetsTalk';
 import NoPage from './pages/NoPage';
 import Resume from './pages/Resume';
-
 import ScrollButton from './components/ScrollButton';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
-// export const phone = "61431201847";
-// export function WhatsApp() {
-//   return (
-//     <a
-//       href={`https://wa.me/${phone}`}
-//       className="whatsapp_float"
-//       target="_blank"
-//       rel="noopener noreferrer"
-//     >
-//       <FontAwesomeIcon icon={faArrowUp} />
-//       {/* <FontAwesomeIcon icon="fas fa-arrow-up" /> */}
-//       {/* <FontAwesomeIcon icon={faWhatsapp} ></FontAwesomeIcon> */}
-//     </a>
-//   );
-// }
 
 export default function MainApp() {
   return (

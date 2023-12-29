@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import "./home.scss"
 import Contact from '../components/Contact'
+import KPink from "../assets/images/icons/K_pink.png"
+import KTrans from "../assets/images/icons/K_trans.png"
 import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
@@ -9,12 +11,38 @@ import badgeDesign from "../assets/images/home/badge_design.png"
 import efSet from "../assets/images/home/EF_SET.png"
 import hult from "../assets/images/home/HULT.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
+import throttle from 'lodash.throttle'
 
+const useScrollClassAdder = (targetElementId, className, throttleTime) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(()=> {
+    const handleScroll = throttle(() => {
+      const scrollPosition = window.scrollY;
+      const targetElement = document.getElementById(targetElementId);
+      const targetElementTop = targetElement.getBoundingClientRect().top;
+      if(scrollPosition > targetElementTop) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+      console.log("scrolling");
+    }, throttleTime);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  },[targetElementId, throttleTime]);
+
+  const updateClassName = isScrolled ? className : "";
+  return updateClassName;
+}
 const Home = () => {
+  const className = useScrollClassAdder("greeting", "scrolled", 200);
+
   return (
     <>
       <div id="home">
-        <div className="greeting">
+        <div id="greeting" className={className}>
           <div className='flexbox'>
             <div className='content'>
               <div className='title'>Hello there! <span>I’m Karena</span></div>
@@ -24,9 +52,11 @@ const Home = () => {
             <div className='image'>
               <img src={karena} alt="karena" />
             </div>
+            <img src={KTrans} alt="Letter K" id="k-trans"/>
+            <img src={KPink} alt="Letter K" id="k-pink"/>
           </div>
         </div>
-        <div className="slogan">
+        <div id="slogan">
           <div className='wrapper'>
             <div className='title'>“Simple is Better”</div>
             <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
@@ -34,7 +64,7 @@ const Home = () => {
             <img src={arrow} alt="arrow" />
           </div>
         </div>
-        <div className="projects">
+        <div id="projects">
           <div className='project'>
             <div className='image'>
               <img src={reHome} alt="RE-Home" />

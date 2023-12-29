@@ -6,13 +6,33 @@
   @media (min-width: $lg) {
     margin-top: $padding-y * 20;
   }
-  .greeting {
+  #greeting {
+    &.scrolled {
+      .flexbox {
+        image {
+
+        }
+        #k-pink {
+          position: absolute;
+          bottom: 0;
+          opacity: 1;
+          right: 0;
+        }
+        #k-trans {
+          position: absolute;
+          top: 0;
+          opacity: 1;
+          right: 10%;
+        }
+      }
+    }
     margin-bottom: 200px;
     .flexbox {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .content {
         flex-basis: 100%;
         margin-bottom: $padding-y * 5;
@@ -57,9 +77,10 @@
           }
         }
       }
-      .image {
+      .image { 
         flex-basis: 100%;
         text-align: center;
+        position: relative;
         @media (min-width: $sm) {
           flex-basis: 40%;
         }
@@ -67,9 +88,23 @@
           width: 100%;
         }
       }
+      #k-pink {
+        position: absolute;
+        bottom: 0;
+        right: -20%;
+        opacity: 0;
+        transition: all 0.5s ease 0.5s;
+      }
+      #k-trans {
+        position: absolute;
+        top: 0;
+        right: 20%;
+        opacity: 0;
+        transition: all 0.5s;
+      }
     }
   }
-  .slogan {
+  #slogan {
     background-image: url("../assets//images/icons/mobile_little_icon.png");
     background-size: contain;
     background-repeat: repeat;
@@ -105,7 +140,7 @@
       }
     }
   }
-  .projects {
+  #projects {
     margin-bottom: $padding-y * 10;
     @media (min-width: $lg) {
       margin-bottom: 0;

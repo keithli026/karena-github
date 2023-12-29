@@ -10,7 +10,7 @@ import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
 const useWindowSize = () => {
   const [size, setSize] = useState([0, 0]);
   useLayoutEffect(() => {
-    function updateSize() {
+    const updateSize = () => {
       setSize([window.innerWidth, window.innerHeight]);
     }
     window.addEventListener("resize", updateSize);
@@ -65,7 +65,7 @@ const Header = () => {
             <ul>
               <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
               <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-              {/* <li><Link to="/lets-talk" onClick={closeMenu}>Let's Talk</Link></li> */}
+              {/* <li><Link to="/my-story" state={{ targetId: "info" }} onClick={closeMenu}>Let's Talk</Link></li> */}
               <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li>
             </ul>
           </nav>

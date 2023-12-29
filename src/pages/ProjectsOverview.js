@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./projectsOverview.scss"
+import banner from "../assets/images/more_projects/banner.png"
 import Contact from '../components/Contact'
 import pocina from "../assets/images/more_projects/pocina.png"
 import reHome from "../assets/images/more_projects/RE-HOME.png"
@@ -14,7 +15,7 @@ const ProjectsOverview = () => {
     <>
       <div id='projects'>
         <div className='banner'>
-          <div className='image'><img src={process.env.PUBLIC_URL + '/more_projects/banner.png'} alt="More projects banner" /></div>       
+          <div className='image'><img src={banner} alt="banner" /></div>       
           <div className='title'>More projects</div>
         </div>
         <div className='showcase'>
