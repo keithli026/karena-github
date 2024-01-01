@@ -47,7 +47,7 @@
       height: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: end;
+      align-items: flex-end;
 
       @media (min-width: $lg) {
         padding-bottom: $padding-y * 5;

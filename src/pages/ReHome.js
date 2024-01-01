@@ -1,6 +1,5 @@
 import React from 'react'
 import "./reHome.scss"
-import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/re-home/banner.png"
 import reHomeIcon from "../assets/images/icons/REHome_logo.png"

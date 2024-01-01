@@ -2,7 +2,7 @@ import React from 'react'
 import "./resume.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import { md, lg } from "../GlobalStyle"
+import { md } from "../GlobalStyle"
 import { useEffect, useState,  useLayoutEffect } from 'react'
 import mailIcon from "../assets/images/icons/mail.png"
 import karenaMobile from "../assets/images/home/karena_mobile.png"
@@ -23,7 +23,7 @@ const useWindowSize = () => {
 }
 const Resume = () => {
   const [mobile, setMobile] = useState(false);
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
 
   useEffect(() => {
     if(width < md) {

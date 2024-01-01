@@ -1,25 +1,10 @@
 import React from 'react'
-import { useState, useLayoutEffect, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { lg } from "../../GlobalStyle"
 import "./header.scss";
 import siteLogo from "../../assets/images/icons/logo.png"
 import fingerDownIcon from "../../assets/images/icons/finger_down.png"
 import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
-
-const useWindowSize = () => {
-  const [size, setSize] = useState([0, 0]);
-  useLayoutEffect(() => {
-    const updateSize = () => {
-      setSize([window.innerWidth, window.innerHeight]);
-    }
-    window.addEventListener("resize", updateSize);
-    return () => {
-      window.removeEventListener("resize", updateSize);
-    }
-  }, []);
-  return size;
-}
 
 const Header = () => {
   const [loaded, setLoaded] = useState(false);
@@ -41,13 +26,8 @@ const Header = () => {
   const refHeader = useRef(null);
   const refMenu = useRef(null);
   const refImg = useRef(null);
-  const [width, height] = useWindowSize();
   useEffect(() => {
     refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
-    if (window.innerWidth < lg) {
-      // refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
-      // refMenu.current.style.height = `${window.innerHeight - refHeader.current.clientHeight}px`;
-    }
 
   }, [loaded]);
 

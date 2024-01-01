@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 export const sm = 576;
 export const md = 768;
 export const lg = 992;

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
@@ -16,7 +15,6 @@ import BoothDesign from './pages/BoothDesign';
 import EFSet from './pages/EFSet';
 import WebDesign from './pages/WebDesign';
 import ReHome from './pages/ReHome';
-import LetsTalk from './pages/LetsTalk';
 import NoPage from './pages/NoPage';
 import Resume from './pages/Resume';
 import ScrollButton from './components/ScrollButton';
@@ -38,7 +36,6 @@ export default function MainApp() {
               <Route path="web-design" element={<WebDesign />} />
               <Route path="re-home" element={<ReHome />} />
             </Route>
-            {/* <Route path="lets-talk" element={<LetsTalk />} /> */}
             <Route path="*" element={<NoPage />} />
             <Route path="resume" element={<Resume />} />
           </Route>

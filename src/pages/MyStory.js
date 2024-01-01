@@ -1,6 +1,5 @@
-import React, { useEffect, forwardRef } from 'react'
+import React, { useEffect } from 'react'
 import "./myStory.scss"
-// import "../components/contact.scss"
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
@@ -34,7 +33,7 @@ const MyStory = () => {
   const { state } = useLocation();
   const { targetId } = state || {};
   const infoRef = useRef(null);
-  console.log(state, targetId, infoRef.current);
+  // console.log(state, targetId, infoRef.current);
 
   useEffect(() => {
     const el = document.getElementById(targetId);

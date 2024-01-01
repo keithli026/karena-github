@@ -1,18 +1,6 @@
 @import "../variable";
 
 #resume {
-  // .desktop {
-  //   display: none;
-  //   @media (min-width: $lg) {
-  //     display: block;
-  //   }
-  // }
-  // .mobile {
-
-  //   @media (min-width: $lg) {
-  //     display: none;
-  //   }
-  // }
   position: relative;
   margin-top: $padding-y * 15;
   @media (min-width: $lg) {
@@ -161,14 +149,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .image {
-      // flex-basis: 100%;
       background-color: $lightgrey-100;
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       flex-basis: 35%;
       @media (min-width: $lg) {
         display: flex;
-        align-items: end;
+        align-items: flex-end;
         flex-basis: 25%;
       }
     }
