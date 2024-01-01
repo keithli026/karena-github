@@ -1,5 +1,10 @@
 @import "../variable";
-
+@keyframes icon {
+  0%   {top:0px;}
+  33%  {top:-50px;}
+  66%  {top:-50px;}
+  100% {top:0px;}
+}
 #home {
   @include container();
   margin-top: $padding-y * 15;
@@ -9,20 +14,21 @@
   #greeting {
     &.scrolled {
       .flexbox {
-        image {
-
-        }
-        #k-pink {
-          position: absolute;
-          bottom: 0;
-          opacity: 1;
-          right: 0;
-        }
-        #k-trans {
-          position: absolute;
-          top: 0;
-          opacity: 1;
-          right: 10%;
+        .image {
+          img {
+            animation-name: icon;
+            animation-duration: 1.5s;
+            animation-iteration-count: 1;
+            transition-timing-function: linear;
+          }
+          &::before {
+            opacity: 1;
+            right: -25%;
+          }
+          &::after {
+            opacity: 1;
+            right: 0%;
+          }
         }
       }
     }
@@ -32,7 +38,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      position: relative;
+      // position: relative;
       .content {
         flex-basis: 100%;
         margin-bottom: $padding-y * 5;
@@ -85,23 +91,39 @@
           flex-basis: 40%;
         }
         img {
+          position: relative;
+          top: 0;
+          transition: top 0.5s;
+        }
+        &::before {
+          content: "";
+          background-image: url("../assets/images/icons/K_pink.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 100px;
+          right: -100%;
+          // opacity: 0;
+          transition: all 0.5s ease 1s;
           width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        &::after {
+          content: "";
+          background-image: url("../assets/images/icons/K_trans.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          position: absolute;
+          top: 50px;
+          right: 100%;
+          // opacity: 0;
+          transition: all 0.5s;
+          width: 100%;
+          height: 100%;
         }
       }
-      #k-pink {
-        position: absolute;
-        bottom: 0;
-        right: -20%;
-        opacity: 0;
-        transition: all 0.5s ease 0.5s;
-      }
-      #k-trans {
-        position: absolute;
-        top: 0;
-        right: 20%;
-        opacity: 0;
-        transition: all 0.5s;
-      }
+
     }
   }
   #slogan {

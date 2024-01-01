@@ -2,8 +2,6 @@ import React, {useState, useEffect, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import "./home.scss"
 import Contact from '../components/Contact'
-import KPink from "../assets/images/icons/K_pink.png"
-import KTrans from "../assets/images/icons/K_trans.png"
 import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
@@ -25,7 +23,7 @@ const useScrollClassAdder = (targetElementId, className, throttleTime) => {
       } else {
         setIsScrolled(false);
       }
-      console.log("scrolling");
+      // console.log("scrolling");
     }, throttleTime);
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -52,8 +50,6 @@ const Home = () => {
             <div className='image'>
               <img src={karena} alt="karena" />
             </div>
-            <img src={KTrans} alt="Letter K" id="k-trans"/>
-            <img src={KPink} alt="Letter K" id="k-pink"/>
           </div>
         </div>
         <div id="slogan">
