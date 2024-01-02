@@ -9,33 +9,10 @@ import badgeDesign from "../assets/images/home/badge_design.png"
 import efSet from "../assets/images/home/EF_SET.png"
 import hult from "../assets/images/home/HULT.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
-import throttle from 'lodash.throttle'
+import ScrollClassAdder from '../components/ScrollClassAdder'
 
-const useScrollClassAdder = (targetElementId, className, throttleTime) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(()=> {
-    const handleScroll = throttle(() => {
-      const scrollPosition = window.scrollY;
-      const targetElement = document.getElementById(targetElementId);
-      const targetElementTop = targetElement.getBoundingClientRect().top;
-      if(scrollPosition > targetElementTop) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-      // console.log("scrolling");
-    }, throttleTime);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  },[targetElementId, throttleTime]);
-
-  const updateClassName = isScrolled ? className : "";
-  return updateClassName;
-}
 const Home = () => {
-  const className = useScrollClassAdder("greeting", "scrolled", 200);
+  const className = ScrollClassAdder("header", "scrolled", 200);
 
   return (
     <>
@@ -47,7 +24,7 @@ const Home = () => {
               <p className='intro'>A Multimedia Designer at EF who loves to creating digital experience for <span>people</span>.</p>
               <Link to="/my-story" className='btn'>About me</Link>
             </div>
-            <div className='image'>
+            <div className='image_wrapper'>
               <img src={karena} alt="karena" />
             </div>
           </div>

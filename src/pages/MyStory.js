@@ -56,7 +56,7 @@ const MyStory = () => {
       <div className='resume'>
         <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" /></Link>
         <div className='wrapper' id="info" ref={infoRef}>
-          <div className='image'>
+          <div className='image_wrapper'>
             <img src={karena} alt="karena" />
           </div>
           <div className='content'>

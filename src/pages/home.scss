@@ -11,10 +11,12 @@
   @media (min-width: $lg) {
     margin-top: $padding-y * 20;
   }
+
   #greeting {
+    margin-bottom: 200px;
     &.scrolled {
       .flexbox {
-        .image {
+        .image_wrapper {
           img {
             animation-name: icon;
             animation-duration: 1.5s;
@@ -32,7 +34,6 @@
         }
       }
     }
-    margin-bottom: 200px;
     .flexbox {
       display: flex;
       flex-wrap: wrap;
@@ -82,7 +83,7 @@
           }
         }
       }
-      .image { 
+      .image_wrapper { 
         flex-basis: 100%;
         text-align: center;
         position: relative;
@@ -264,3 +265,4 @@
     }
   }
 }
+

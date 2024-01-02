@@ -5,9 +5,11 @@ import "./header.scss";
 import siteLogo from "../../assets/images/icons/logo.png"
 import fingerDownIcon from "../../assets/images/icons/finger_down.png"
 import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
+// import ScrollClassAdder from '../ScrollClassAdder'
 
 const Header = () => {
-  const [loaded, setLoaded] = useState(false);
+  // const [loaded, setLoaded] = useState(false);
+  // const className = ScrollClassAdder("header", "scrolled", 200);
   const [show, setShow] = useState(false);
   const showMenu = () => {
     setShow(!show);
@@ -15,28 +17,20 @@ const Header = () => {
   const closeMenu = () => {
     setShow(false);
   }
-  const onLoad = () => {
-    // console.log("Image onloaded", refImg.current, refImg.current.clientHeight);
-    setLoaded(true);
-  }
-  const onError = () => {
-    console.log("Image error");
-  }
 
   const refHeader = useRef(null);
   const refMenu = useRef(null);
-  const refImg = useRef(null);
   useEffect(() => {
     refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
 
-  }, [loaded]);
+  }, []);
 
   return (
     <>
       <div id="header" ref={refHeader}>
         <div className='wrapper'>
           <Link to="/" title="home" id="logo" onClick={closeMenu}>
-            <img alt="site logo" src={siteLogo} ref={refImg} onLoad={onLoad} onError={onError} />
+            <img alt="site logo" src={siteLogo} />
           </Link>
           <div className="btn" onClick={showMenu}>
             {show ? <img alt="menu" src={fingerDownIcon} /> : <img alt="menu" src={fingerLeftIcon} />}
