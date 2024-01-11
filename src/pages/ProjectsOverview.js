@@ -19,12 +19,12 @@ const ProjectsOverview = () => {
           <div className='title'>More projects</div>
         </div>
         <div className='showcase'>
-          <div className='image'><Link to="/projects/brand-design"><img src={pocina} alt="Pocina" /></Link></div>
-          <div className='image'><Link to="/projects/re-home"><img src={reHome} alt="RE-HOME" /></Link></div>
-          <div className='image'><Link to="/projects/booth-design"><img src={boothDesign} alt="Book fair booth" /></Link></div>
-          <div className='image'><Link to="/projects/ef-set"><img src={efSet} alt="EF SET" /></Link></div>
-          <div className='image'><Link to="/projects/badge-design"><img src={BadgeDesign} alt="Badge" /></Link></div>
-          <div className='image'><Link to="/projects/web-design"><img src={englishTown} alt="Englishtown" /></Link></div>
+          <div className='image'><Link to="/projects/brand-design"><img src={pocina} alt="Pocina" loading="lazy"/></Link></div>
+          <div className='image'><Link to="/projects/re-home"><img src={reHome} alt="RE-HOME" loading="lazy"/></Link></div>
+          <div className='image'><Link to="/projects/booth-design"><img src={boothDesign} alt="Book fair booth" loading="lazy"/></Link></div>
+          <div className='image'><Link to="/projects/ef-set"><img src={efSet} alt="EF SET" loading="lazy"/></Link></div>
+          <div className='image'><Link to="/projects/badge-design"><img src={BadgeDesign} alt="Badge" loading="lazy"/></Link></div>
+          <div className='image'><Link to="/projects/web-design"><img src={englishTown} alt="Englishtown" loading="lazy"/></Link></div>
         </div>
         <Contact />
       </div>

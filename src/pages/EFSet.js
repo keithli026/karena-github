@@ -51,27 +51,27 @@ const EFSet = () => {
       </div>
       <div className='section gallery'>
         <div className='image'>
-          <img src={EFSetTest1} alt="EF Set test" />
+          <img src={EFSetTest1} alt="EF Set test" loading="lazy"/>
           {/* <BackButton />  */}
         </div>
         <div className='wrapper'>
-          <img src={EFSetTest2} alt="EF Set test" />
-          <img src={EFSetTest3} alt="EF Set test" />
-          <img src={EFSetTest4} alt="EF Set test" />
-          <img src={EFSetTest5} alt="EF Set test" />
+          <img src={EFSetTest2} alt="EF Set test" loading="lazy"/>
+          <img src={EFSetTest3} alt="EF Set test" loading="lazy"/>
+          <img src={EFSetTest4} alt="EF Set test" loading="lazy"/>
+          <img src={EFSetTest5} alt="EF Set test" loading="lazy"/>
         </div>
       </div>
       <div className='wrapper'>
         <div className='section'>
           <div className='flexbox'>
-            <div className='image'><img src={result1} alt="EF Set test" /></div>
-            <div className='image'><img src={result2} alt="EF Set test" /></div>
+            <div className='image'><img src={result1} alt="EF Set test" loading="lazy"/></div>
+            <div className='image'><img src={result2} alt="EF Set test" loading="lazy"/></div>
           </div>
         </div>
       </div>
       <div className='bg section'>
         <div className='wrapper'>
-          <img src={mobile} alt="EF Set test" />
+          <img src={mobile} alt="EF Set test" loading="lazy"/>
         </div>
       </div>
       <div className="wrapper">

@@ -50,21 +50,21 @@ const BadgeDesign = () => {
       <div className='bg'>
         <div className='wrapper'>
           {/* <BackButton /> */}
-          <img src={badge40} alt="Badge 40" />
-          <img src={badge60} alt="Badge 60" />
-          <img src={badge30} alt="Badge 30" />
-          <img src={badge50} alt="Badge 50" />
-          <img src={badge70} alt="Badge 70" />
-          <img src={badgeMobile} alt="badge on mobile" />
+          <img src={badge40} alt="Badge 40" loading="lazy"/>
+          <img src={badge60} alt="Badge 60" loading="lazy"/>
+          <img src={badge30} alt="Badge 30" loading="lazy"/>
+          <img src={badge50} alt="Badge 50" loading="lazy"/>
+          <img src={badge70} alt="Badge 70" loading="lazy"/>
+          <img src={badgeMobile} alt="badge on mobile" loading="lazy"/>
         </div>
         <div className='section'>
-          <div className='image'><img src={badgeDesign1} alt="badge design" /></div>
+          <div className='image'><img src={badgeDesign1} alt="badge design" loading="lazy"/></div>
         </div>
         <div className='section'>
-          <div className='image'><img src={badgeDesign2} alt="badge design" /></div>
+          <div className='image'><img src={badgeDesign2} alt="badge design" loading="lazy"/></div>
         </div>
         <div className='wrapper'>
-          <img src={awardPage} alt="award page" />
+          <img src={awardPage} alt="award page" loading="lazy"/>
           <div className="center">
             <OtherProjectsButton />
           </div>

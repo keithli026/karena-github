@@ -50,25 +50,25 @@ const BoothDesign = () => {
           </ol>
         </div>
         {/* <BackButton /> */}
-        <img src={colours} alt="Colours" />
-        <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" />
-        <img src={booth} alt="Booth" />
-        <img src={floorPlan} alt="Floor plan" />
-        <img src={booth1} alt="Booth" />
+        <img src={colours} alt="Colours" loading="lazy"/>
+        <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy"/>
+        <img src={booth} alt="Booth" loading="lazy"/>
+        <img src={floorPlan} alt="Floor plan" loading="lazy"/>
+        <img src={booth1} alt="Booth" loading="lazy"/>
         <div className='flexbox_wrapper'>
           <div className='flexbox'>
-            <img src={foamBoard1} alt="Foamboard" />
+            <img src={foamBoard1} alt="Foamboard" loading="lazy"/>
           </div>
           <div className='flexbox'>
-            <img src={foamBoard2} alt="Foamboard" />
-            <img src={foamBoard3} alt="Foamboard" />
+            <img src={foamBoard2} alt="Foamboard" loading="lazy"/>
+            <img src={foamBoard3} alt="Foamboard" loading="lazy"/>
           </div>
         </div>
-        <img src={igStory} alt="IG story" />
+        <img src={igStory} alt="IG story" loading="lazy"/>
         <div className='section'>
           <h2>Book cover design</h2>
-          <img src={bookCoverBack} alt="Book cover back" />
-          <img src={bookCover} alt="Book cover" />
+          <img src={bookCoverBack} alt="Book cover back" loading="lazy"/>
+          <img src={bookCover} alt="Book cover" loading="lazy"/>
         </div>
         <div className="section center">
           <OtherProjectsButton />

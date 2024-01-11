@@ -55,10 +55,10 @@ const MyStory = () => {
         </div>
       </div>
       <div className='resume'>
-        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" /></Link>
+        <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" loading="lazy"/></Link>
         <div className='wrapper' id="info" ref={infoRef}>
           <div className='image_wrapper'>
-            <img src={karena} alt="karena" />
+            <img src={karena} alt="karena" loading="lazy"/>
           </div>
           <div className='content'>
             <div className='name'>Karena Li</div>
@@ -73,17 +73,17 @@ const MyStory = () => {
           <div className='title'>My Value</div>
           <Slider {...settings}>
             <div className='flexbox'>
-              <img src={value1} alt="Curiosity"></img>
+              <img src={value1} alt="Curiosity" loading="lazy"/>
               <div className='value'>Curiosity</div>
               <p>Always start with "why" and understand context and user behaviour in their day to day life.</p>
             </div>
             <div className='flexbox'>
-              <img src={value2} alt="Creation"></img>
+              <img src={value2} alt="Creation" loading="lazy"/>
               <div className='value'>Creation</div>
               <p>Be open-minded, creative in facilitating interesting conversation among people.</p>
             </div>
             <div className='flexbox'>
-              <img src={value3} alt="Passion"></img>
+              <img src={value3} alt="Passion" loading="lazy"/>
               <div className='value'>Passion</div>
               <p>Keep learning something new, build empathy among people, and focus on value creation for society.</p>
             </div>

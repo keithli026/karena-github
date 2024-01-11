@@ -53,10 +53,10 @@ const WebDesign = () => {
         <div className='wrapper'>
           {/* <BackButton /> */}
           <div className='section center'>
-            <img src={iPadLayout} alt="iPad layout design" />
+            <img src={iPadLayout} alt="iPad layout design" loading="lazy"/>
           </div>
           <div className='section center'>
-            <img src={desktopDesign2} alt="Englishtown desktop design" />
+            <img src={desktopDesign2} alt="Englishtown desktop design" loading="lazy"/>
           </div>
         </div>
       </div>
@@ -65,16 +65,16 @@ const WebDesign = () => {
           <h2>Next Steps</h2>
           <p>Improve responsiveness on mobile and tablet</p>
           <div className='flexbox'>
-            <div className='image'><img src={mobileDesign1} alt="Englishtown mobile design" /></div>
-            <div className='image'><img src={mobileDesign2} alt="Englishtown mobile design" /></div>
-            <div className='image'><img src={mobileDesign3} alt="Englishtown mobile design" /></div>
+            <div className='image'><img src={mobileDesign1} alt="Englishtown mobile design" loading="lazy"/></div>
+            <div className='image'><img src={mobileDesign2} alt="Englishtown mobile design" loading="lazy"/></div>
+            <div className='image'><img src={mobileDesign3} alt="Englishtown mobile design" loading="lazy"/></div>
           </div>
           <div className='flexbox two'>
-            <div className='image'><img src={desktopDesign1} alt="Englishtown desktop design" /></div>
-            <div className='image'><img src={desktopDesign3} alt="Englishtown desktop design" /></div>
+            <div className='image'><img src={desktopDesign1} alt="Englishtown desktop design" loading="lazy"/></div>
+            <div className='image'><img src={desktopDesign3} alt="Englishtown desktop design" loading="lazy"/></div>
           </div>
           <div className='center'>
-            <img src={desktopDesign4} alt="Englishtown desktop design" />
+            <img src={desktopDesign4} alt="Englishtown desktop design" loading="lazy"/>
           </div>
         </div>
         <div className='section'>

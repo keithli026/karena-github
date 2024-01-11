@@ -46,7 +46,7 @@ const ReHome = () => {
         <div className='section'>
           <h2>Design Approach</h2>
           <div className='center'>
-            <img src={designApproach} alt="Design approach" />
+            <img src={designApproach} alt="Design approach" loading="lazy"/>
           </div>
         </div>
         <h2>Persona</h2>
@@ -55,7 +55,7 @@ const ReHome = () => {
       <div className='bg section'>
           <div className='wrapper'>
             <div className='center'>
-            <img src={persona} alt="Persona" />
+            <img src={persona} alt="Persona" loading="lazy"/>
             </div>
           </div>
       </div>
@@ -67,7 +67,7 @@ const ReHome = () => {
             My goal here was to make strategic information architecture decisions that would improve overall responsive web flow.
           </p>
           <div className='center'>
-            <img src={sitemap} alt="Sitemap" />
+            <img src={sitemap} alt="Sitemap" loading="lazy"/>
           </div>
         </div>
         <div className='section'>
@@ -88,14 +88,14 @@ const ReHome = () => {
         <div className='section'>
           <h2>Paper wireframes</h2>
           <div className='center'>
-            <img src={wireframe} alt="Wireframe" />
+            <img src={wireframe} alt="Wireframe" loading="lazy"/>
           </div>
         </div>
         <div className='section'>
           <h2>Usability studies</h2>
           <p>Early design allowed for some text search but after usability studies, i added icons option to choose.</p>
           <div className='center'>
-            <img src={usabilityStudy} alt="Usability study" />
+            <img src={usabilityStudy} alt="Usability study" loading="lazy"/>
           </div>
         </div>
       </div>
@@ -106,17 +106,17 @@ const ReHome = () => {
               <h2>The solution</h2>
               <p>Easy to search and access to detailed information about the animals available for adoption</p>
             </div>
-            <div className='image'><img src={loginOpen} alt="Login open" /></div>
-            <div className='image'><img src={search} alt="Search" /></div>
-            <div className='image'><img src={welcome} alt="Welcome" /></div>
-            <div className='image'><img src={confirmation} alt="Confirmation" /></div>
-            <div className='image'><img src={dogInformation} alt="Dog Infomation" /></div>
-            <div className='image'><img src={booking} alt="Booking" /></div>
+            <div className='image'><img src={loginOpen} alt="Login open" loading="lazy"/></div>
+            <div className='image'><img src={search} alt="Search" loading="lazy"/></div>
+            <div className='image'><img src={welcome} alt="Welcome" loading="lazy"/></div>
+            <div className='image'><img src={confirmation} alt="Confirmation" loading="lazy"/></div>
+            <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy"/></div>
+            <div className='image'><img src={booking} alt="Booking" loading="lazy"/></div>
           </div>
         </div>
       </div>
       <div className='section'>
-      <div className='image'><img src={laptop} alt="Laptop" /></div>
+      <div className='image'><img src={laptop} alt="Laptop" loading="lazy"/></div>
       </div>
       <div className='wrapper'>
         <div className="section center">

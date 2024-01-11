@@ -12,7 +12,7 @@ const Resume = () => {
       <div className='wrapper'>
         <div className='flexbox section'>
           <div className='image'>
-            <img src={karena} alt="karena" />
+            <img src={karena} alt="karena" loading="lazy"/>
           </div>
           <div className='content'>
             <h2 className='name'>KARENA <br/>LI</h2>
