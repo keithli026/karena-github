@@ -7,9 +7,13 @@
 }
 #home {
   @include container();
+  overflow-x: hidden;
   margin-top: $padding-y * 15;
   @media (min-width: $lg) {
     margin-top: $padding-y * 20;
+  }
+  @media (min-width: $xxl) {
+    overflow-x: visible;
   }
 
   #greeting {

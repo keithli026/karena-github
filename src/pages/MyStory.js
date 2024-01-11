@@ -38,6 +38,7 @@ const MyStory = () => {
   useEffect(() => {
     const el = document.getElementById(targetId);
     if (el) {
+      // console.log("i am going to scroll", el);
       el.scrollIntoView({ behavior: 'smooth' });
     }
   }, [targetId])
