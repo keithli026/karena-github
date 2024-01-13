@@ -1,7 +1,7 @@
 import React from 'react'
 import backToTop from "../assets/images/icons/backtotop.png"
 
-const BackToTopButton = () => {
+const ScrollButton = () => {
   const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -15,4 +15,4 @@ const BackToTopButton = () => {
   )
 }
 
-export default BackToTopButton
+export default ScrollButton

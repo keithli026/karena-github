@@ -1,4 +1,3 @@
-@import "../variable";
 @keyframes icon {
   0%   {top:0px;}
   33%  {top:-50px;}
@@ -6,13 +5,12 @@
   100% {top:0px;}
 }
 #home {
-  @include container();
   overflow-x: hidden;
   margin-top: $padding-y * 15;
-  @media (min-width: $lg) {
+  @include media-breakpoint-up(lg) {
     margin-top: $padding-y * 20;
   }
-  @media (min-width: $xxl) {
+  @include media-breakpoint-up(xxl) {
     overflow-x: visible;
   }
 
@@ -44,9 +42,11 @@
       justify-content: space-between;
       align-items: center;
       .content {
+        position: relative;
+        z-index: 1;
         flex-basis: 100%;
         margin-bottom: $padding-y * 5;
-        @media (min-width: $sm) {
+        @include media-breakpoint-up(sm) {
           flex-basis: 50%;
           margin-bottom: 0;
         }
@@ -55,14 +55,14 @@
           font-size: 36px;
           line-height: 40px;
           margin-bottom: 30px;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             margin-bottom: $padding-y * 5;
             font-size: 80px;
             line-height: 100px;
           }
           span::before {
             content: "\a";
-            white-space: pre;
+            grey-space: pre;
           }
         }
         .intro {
@@ -74,7 +74,7 @@
             color: $pink;
             text-decoration: underline;
           }
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             margin-bottom: 80px;
             font-size: 38px;
             line-height: 50px;
@@ -82,8 +82,8 @@
         }
         .btn {
           text-transform: uppercase;
-          @media (min-width: $lg) {
-            padding: $padding-y $padding-x * 5;
+          @include media-breakpoint-up(lg) {
+            padding: $padding-y $container-padding-x * 5;
           }
         }
       }
@@ -91,7 +91,7 @@
         flex-basis: 100%;
         text-align: center;
         position: relative;
-        @media (min-width: $sm) {
+        @include media-breakpoint-up(sm) {
           flex-basis: 40%;
         }
         img {
@@ -136,21 +136,21 @@
     background-repeat: repeat;
     .wrapper {
       text-align: center;
-      @include container();
+      // @include container();
       margin-bottom: 200px;
       .title {
         color: $pink;
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 30px;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           font-size: 64px;
         }
       }
   
       p {
         font-size: 14px;
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           font-size: 32px;
         }
         &.bold {
@@ -160,7 +160,7 @@
       
       img {
         max-height: 40px;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           max-height: 110px;
         }
       }
@@ -168,16 +168,16 @@
   }
   #projects {
     margin-bottom: $padding-y * 10;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: 0;
     }
     .project {
       position: relative;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         margin-bottom: $padding-y * 10;
       }
       &:nth-of-type(2n) {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           .image {
             margin-left: auto;
           }
@@ -187,7 +187,7 @@
         }
       }
       &:last-of-type {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           margin-bottom: $padding-y * 35;
           .image {
             position: relative;
@@ -199,26 +199,26 @@
             bottom: unset;
             top: 30%;
             .wrapper {
-              padding-right: calc($padding-x * 4 + 5%);
+              padding-right: calc($container-padding-x * 4 + 5%);
             }
           }
         }
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           margin-bottom: $padding-y * 25;
         }
-        @media (min-width: $xxl) {
+        @include media-breakpoint-up(xxl) {
           margin-bottom: $padding-y * 15;
         }
       }
       .image {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 50%;
         }
       }
       .content {
         flex-basis: 100%;
-        background-color: $white-100;
-        @media (min-width: $lg) {
+        background-color: $gray-100;
+        @include media-breakpoint-up(lg) {
           width: 50%;
           height: fit-content;
           position: absolute;
@@ -230,21 +230,21 @@
 
         }
         .wrapper {
-          @include container();
+          // @include container();
           padding-top: $padding-y * 4;
           padding-bottom: $padding-y * 10;
-          @media (min-width: $lg) {
-            padding: $padding-y * 2 $padding-x * 2;
+          @include media-breakpoint-up(lg) {
+            padding: $padding-y * 2 $container-padding-x * 2;
           }
           .hashtag {
             word-break: break-all;
             font-size: 16px;
             line-height: 1.8;
-            color: $lightgrey;
+            color: $gray-600;
             margin-bottom: $padding-y * 5;
             font-weight: 500;
             span {
-              margin-left: $padding-x;
+              margin-left: $container-padding-x;
             }
           }
           .title {

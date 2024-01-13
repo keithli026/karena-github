@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import "./myStory.scss"
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
@@ -11,6 +10,7 @@ import arrowPink from "../assets/images/icons/arrow_pink.png"
 import value1 from "../assets/images/icons/value_1.svg"
 import value2 from "../assets/images/icons/value_2.svg"
 import value3 from "../assets/images/icons/value_3.svg"
+import Button from 'react-bootstrap/Button';
 
 const MyStory = () => {
   var settings = {
@@ -45,7 +45,7 @@ const MyStory = () => {
   return (
     <div id="mystory">
       <div className='about'>
-        <div className='wrapper'>
+        <div className='wrapper container'>
           <div className='content'>
             <div className='title'>About me</div>
             <p>I am a creative person who with a background in <span>Multimedia Design</span>, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
@@ -54,7 +54,7 @@ const MyStory = () => {
           </div>
         </div>
       </div>
-      <div className='resume'>
+      <div className='resume container'>
         <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" loading="lazy"/></Link>
         <div className='wrapper' id="info" ref={infoRef}>
           <div className='image_wrapper'>
@@ -69,7 +69,7 @@ const MyStory = () => {
         </div>
       </div>
       <div className='my_value'>
-        <div className='wrapper'>
+        <div className='wrapper container'>
           <div className='title'>My Value</div>
           <Slider {...settings}>
             <div className='flexbox'>
@@ -94,7 +94,8 @@ const MyStory = () => {
       <div className="contact">
         <div className='title'>Let's Talk!</div>
         <p>I'd love to chat about new opportunities or anything design related!</p>
-        <span className='btn' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</span>
+        <Button variant='light' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</Button>
+        {/* <span className='btn' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</span> */}
       </div>
     </div>
   )

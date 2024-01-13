@@ -1,12 +1,10 @@
-@import "../variable";
-
 #ef_set {
   .banner {
     position: relative;
-    margin-bottom: $padding-y * 5;
+    margin-bottom: $container-padding-x * 0.5 * 5;
 
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 10;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $container-padding-x * 0.5 * 10;
     }
 
     .image {
@@ -22,7 +20,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0 $padding-x;
+      padding: 0 $container-padding-x;
       margin: auto;
       width: fit-content;
       height: fit-content;
@@ -32,13 +30,13 @@
       color: $white;
       text-transform: uppercase;
 
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         font-size: 50px;
       }
     }
 
     .content {
-      padding: $padding-x;
+      padding: $container-padding-x;
       color: $white;
       position: absolute;
       top: 0;
@@ -49,33 +47,33 @@
       justify-content: space-between;
       align-items: flex-end;
 
-      @media (min-width: $lg) {
-        padding-bottom: $padding-y * 5;
+      @include media-breakpoint-up(lg) {
+        padding-bottom: $container-padding-x * 0.5 * 5;
       }
 
       .keypoint {
         display: flex;
 
-        @media (min-width: $lg) {
-          padding-left: calc((100vw - $lg-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(lg) {
+          padding-left: calc((100vw - $lg-max-width - $container-padding-x) / 2);
         }
 
-        @media (min-width: $xl) {
-          padding-left: calc((100vw - $xl-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(xl) {
+          padding-left: calc((100vw - $xl-max-width - $container-padding-x) / 2);
         }
 
-        @media (min-width: $xxl) {
-          padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(xxl) {
+          padding-left: calc((100vw - $xxl-max-width - $container-padding-x) / 2);
         }
 
         div {
           line-height: 1.5;
 
           &:nth-child(2) {
-            margin: 0 $padding-x;
+            margin: 0 $container-padding-x;
 
-            @media (min-width: $sm) {
-              margin: 0 $padding-x * 4;
+            @include media-breakpoint-up(sm) {
+              margin: 0 $container-padding-x * 4;
             }
           }
 
@@ -84,7 +82,7 @@
               content: "\a";
               white-space: pre;
 
-              @media (min-width: $sm) {
+              @include media-breakpoint-up(sm) {
                 white-space: normal;
               }
             }
@@ -96,7 +94,7 @@
         display: flex;
         flex-direction: column;
         min-width: 30px;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           flex-direction: row;
         }
 
@@ -105,7 +103,7 @@
           height: 30px;
         }
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           img {
             width: 45px;
             height: 45px;
@@ -119,14 +117,14 @@
     font-size: 30px;
     font-weight: 700;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 40px;
     }
   }
 
   p, ol {
     font-size: 16px;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 24px;
     }
   }
@@ -134,18 +132,15 @@
   .btn {
     text-transform: uppercase;
 
-    @media (min-width: $lg) {
-      padding: $padding-y $padding-x * 5;
+    @include media-breakpoint-up(lg) {
+      padding: $container-padding-x * 0.5 $container-padding-x * 5;
     }
   }
   .section {
-    margin-bottom: $padding-y * 10;
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 15;
+    margin-bottom: $container-padding-x * 0.5 * 10;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $container-padding-x * 0.5 * 15;
     }
-  }
-  .wrapper {
-    @include container();
   }
 
   .flexbox {
@@ -154,7 +149,7 @@
     justify-content: space-between;
     .image {
       flex-basis: 100%;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         flex-basis: 48%;
       }
       img {
@@ -168,55 +163,55 @@
   }
 
   .bg {
-    background-color: $white-400;
-    padding: $padding-y * 10 0;
-    @media (min-width: $lg) {
-      padding: $padding-y * 15 0;
+    background-color: $gray-400;
+    padding: $container-padding-x * 0.5 * 10 0;
+    @include media-breakpoint-up(lg) {
+      padding: $container-padding-x * 0.5 * 15 0;
     }
   }
 
 
   .gallery {
-    @media (min-width: $xl) {
+    @include media-breakpoint-up(xl) {
       margin-bottom: 0;
     }
     img {
       display: block;
-      margin-bottom: $padding-y * 5;
+      margin-bottom: $container-padding-x * 0.5 * 5;
       &:nth-child(1) {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           margin-right: auto;
         }
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           margin-bottom: 0;
         }
       }
       &:nth-child(2) {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           margin-left: auto;
         }
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           position: relative;
           top: -50px;
           margin-bottom: 0;
         }
       }
       &:nth-child(3) {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           margin-right: auto;
         }
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           position: relative;
           top: -250px;
           margin-bottom: 0;
         }
       }
       &:nth-child(4) {
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           margin-left: auto;
           margin-right: auto;
         }
-        @media (min-width: $xl) {
+        @include media-breakpoint-up(xl) {
           position: relative;
           top: -150px;
           margin-bottom: 0;
@@ -225,7 +220,7 @@
     }
     .image {
       text-align: center;
-      margin-bottom: $padding-y * 5;
+      margin-bottom: $container-padding-x * 0.5 * 5;
       position: relative;
 
       button {
@@ -239,32 +234,32 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: $padding-y * 5;
-        margin-left: $padding-x;
-        @media (min-width: $sm) {
-          margin-left: calc((100vw - $sm-max-width) / 2 + $padding-x);
+        margin-top: $container-padding-x * 0.5 * 5;
+        margin-left: $container-padding-x;
+        @include media-breakpoint-up(sm) {
+          margin-left: calc((100vw - $sm-max-width) / 2 + $container-padding-x);
         }
-        @media (min-width: $md) {
-          margin-left: calc((100vw - $md-max-width) / 2 + $padding-x);
+        @include media-breakpoint-up(md) {
+          margin-left: calc((100vw - $md-max-width) / 2 + $container-padding-x);
         }
-        @media (min-width: $lg) {
-          margin-left: calc((100vw - $lg-max-width) / 2 + $padding-x);
+        @include media-breakpoint-up(lg) {
+          margin-left: calc((100vw - $lg-max-width) / 2 + $container-padding-x);
         }
-        @media (min-width: $xl) {
-          margin-top: $padding-y * 10;
-          margin-left: calc((100vw - $xl-max-width) / 2 + $padding-x);
+        @include media-breakpoint-up(xl) {
+          margin-top: $container-padding-x * 0.5 * 10;
+          margin-left: calc((100vw - $xl-max-width) / 2 + $container-padding-x);
         }
-        @media (min-width: $xxl) {
-          margin-left: calc((100vw - $xxl-max-width) / 2 + $padding-x);
+        @include media-breakpoint-up(xxl) {
+          margin-left: calc((100vw - $xxl-max-width) / 2 + $container-padding-x);
         }
         // @media (min-width: $xxxl) {
-        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + $padding-x);
+        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + $container-padding-x);
         // } 
         // @media (min-width: $xxxxl) {
-        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + $padding-x);
+        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + $container-padding-x);
         // }
         img {
-          margin-right: $padding-x * 2;
+          margin-right: $container-padding-x * 2;
           margin-bottom: 0;
         }
       }

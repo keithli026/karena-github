@@ -1,9 +1,7 @@
-@import "../../variable";
-
 #footer {
-  background-color: $grey;
+  background-color: $gray-700;
   color: $white;
-  padding: $padding-x * 2 $padding-x; 
+  padding: $container-padding-x * 2 $container-padding-x; 
   font-size: 16px;
   display: flex;
   flex-wrap: wrap;

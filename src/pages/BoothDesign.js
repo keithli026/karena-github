@@ -1,5 +1,4 @@
 import React from 'react'
-import "./boothDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/bookfair/banner.png"
@@ -17,6 +16,7 @@ import foamBoard3 from "../assets/images/bookfair/foamboard_3.jpg"
 import igStory from "../assets/images/bookfair/ig_story.png"
 import bookCoverBack from "../assets/images/bookfair/cover-back.png"
 import bookCover from "../assets/images/bookfair/book-cover.png"
+import Container from 'react-bootstrap/Container';
 
 const BoothDesign = () => {
   return (
@@ -36,7 +36,7 @@ const BoothDesign = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Brief</h2>
           <p>Years of experience designing different exhibition booth, I responsible for creating visually appealing and all the materials both online and offline, including visual elements, space planning, 3D visualization, and materials on social media platform that effectively delivery key messages to the audiences.</p>
@@ -73,7 +73,7 @@ const BoothDesign = () => {
         <div className="section center">
           <OtherProjectsButton />
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

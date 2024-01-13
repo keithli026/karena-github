@@ -1,11 +1,9 @@
-@import "../variable";
-
 #re-home {
   .banner {
     position: relative;
     margin-bottom: $padding-y * 5;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 10;
     }
 
@@ -22,7 +20,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0 $padding-x;
+      padding: 0 $container-padding-x;
       margin: auto;
       width: fit-content;
       height: fit-content;
@@ -35,30 +33,30 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         font-size: 50px;
       }
       img {
         width: 40px;
-        margin-right: $padding-x;
+        margin-right: $container-padding-x;
         margin-bottom: $padding-y;
-        @media (min-width: $sm) {
+        @include media-breakpoint-up(sm) {
           margin-bottom: 0;
         }
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: auto;
         }
       }
       span {
         margin-bottom: $padding-y;
-        @media (min-width: $sm) {
+        @include media-breakpoint-up(sm) {
           margin-bottom: 0;
         }
       }
     }
 
     .content {
-      padding: $padding-x;
+      padding: $container-padding-x;
       color: $white;
       position: absolute;
       top: 0;
@@ -69,33 +67,33 @@
       justify-content: space-between;
       align-items: flex-end;
 
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         padding-bottom: $padding-y * 5;
       }
 
       .keypoint {
         display: flex;
         word-break: break-all;
-        @media (min-width: $lg) {
-          padding-left: calc((100vw - $lg-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(lg) {
+          padding-left: calc((100vw - $lg-max-width - $container-padding-x) / 2);
         }
 
-        @media (min-width: $xl) {
-          padding-left: calc((100vw - $xl-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(xl) {
+          padding-left: calc((100vw - $xl-max-width - $container-padding-x) / 2);
         }
 
-        @media (min-width: $xxl) {
-          padding-left: calc((100vw - $xxl-max-width - $padding-x) / 2);
+        @include media-breakpoint-up(xxl) {
+          padding-left: calc((100vw - $xxl-max-width - $container-padding-x) / 2);
         }
 
         div {
           line-height: 1.5;
 
           &:nth-child(2) {
-            margin: 0 $padding-x;
+            margin: 0 $container-padding-x;
 
-            @media (min-width: $sm) {
-              margin: 0 $padding-x * 4;
+            @include media-breakpoint-up(sm) {
+              margin: 0 $container-padding-x * 4;
             }
           }
 
@@ -104,7 +102,7 @@
               content: "\a";
               white-space: pre;
 
-              @media (min-width: $sm) {
+              @include media-breakpoint-up(sm) {
                 white-space: normal;
               }
             }
@@ -116,7 +114,7 @@
         display: flex;
         flex-direction: column;
         min-width: 30px;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           flex-direction: row;
           min-width: 45px * 4;
         }
@@ -126,7 +124,7 @@
           height: 30px;
         }
 
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           img {
             width: 45px;
             height: 45px;
@@ -140,7 +138,7 @@
     font-size: 30px;
     font-weight: 700;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 40px;
     }
   }
@@ -149,15 +147,15 @@
   ol {
     font-size: 16px;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 24px;
     }
   }
 
   .btn {
     text-transform: uppercase;
-    @media (min-width: $lg) {
-      padding: $padding-y $padding-x * 5;
+    @include media-breakpoint-up(lg) {
+      padding: $padding-y $container-padding-x * 5;
     }
   }
 
@@ -168,92 +166,87 @@
   .section {
     margin-bottom: $padding-y * 10;
 
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
     }
-  }
-
-  .wrapper {
-    @include container();
   }
 
   .bg {
     background-color: #aed0d1;
     padding: $padding-y * 10 0;
-    @media (min-width: $md) {
+    @include media-breakpoint-up(md) {
       padding: $padding-y * 15 0;
     }
 
-    .wrapper {
-      .flexbox {
-        display: flex;
-        flex-wrap: wrap;
-        @media (min-width: $md) {
-          flex-direction: column;
-          height: 2800px;
-        }
-        @media (min-width: $lg) {
-          height: 2000px;
-        }
-        @media (min-width: $xl) {
-          height: 2200px;
-        }
-        @media (min-width: $xxl) {
-          height: 2350px;
-        }
-        .content {
-          flex-basis: 100%;
-          margin-bottom: $padding-y * 5;
-          @media (min-width: $md) {
-            max-width: 45%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 10;
-          }
-          @media (min-width: $lg) {
-            max-width: 30%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 10;
-          }
-          @media (min-width: $xl) {
-            position: absolute;
-            max-width: unset;
-            width: 50%;
-            max-width: 800px;
-          }
-        }
-
-        .image {
-          text-align: center;
-          flex-basis: 100%;
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      @include media-breakpoint-up(md) {
+        flex-direction: column;
+        height: 2800px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 2000px;
+      }
+      @include media-breakpoint-up(xl) {
+        height: 2200px;
+      }
+      @include media-breakpoint-up(xxl) {
+        height: 2350px;
+      }
+      .content {
+        flex-basis: 100%;
+        margin-bottom: $padding-y * 5;
+        @include media-breakpoint-up(md) {
+          max-width: 45%;
+          flex-basis: auto;
           margin-bottom: $padding-y * 10;
-          @media (min-width: $md) {
-            text-align: start;
-            max-width: 45%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 15;
+        }
+        @include media-breakpoint-up(lg) {
+          max-width: 30%;
+          flex-basis: auto;
+          margin-bottom: $padding-y * 10;
+        }
+        @include media-breakpoint-up(xl) {
+          position: absolute;
+          max-width: unset;
+          width: 50%;
+          max-width: 800px;
+        }
+      }
+
+      .image {
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: $padding-y * 10;
+        @include media-breakpoint-up(md) {
+          text-align: start;
+          max-width: 45%;
+          flex-basis: auto;
+          margin-bottom: $padding-y * 15;
+        }
+        @include media-breakpoint-up(lg) {
+          max-width: 30%;
+          flex-basis: auto;
+          margin-bottom: $padding-y * 15;
+          &:nth-of-type(4) {
+            margin-top: $padding-y * 20;
           }
-          @media (min-width: $lg) {
-            max-width: 30%;
-            flex-basis: auto;
-            margin-bottom: $padding-y * 15;
-            &:nth-of-type(4) {
-              margin-top: $padding-y * 20;
-            }
+        }
+        @include media-breakpoint-up(xl) {
+          &:nth-of-type(2) {
+            margin-top: $padding-y * 45;
           }
-          @media (min-width: $xl) {
-            &:nth-of-type(2) {
-              margin-top: $padding-y * 45;
-            }
-            &:nth-of-type(4) {
-              margin-top: $padding-y * 30;
-            }
+          &:nth-of-type(4) {
+            margin-top: $padding-y * 30;
           }
-          img {
-            width: auto;
-          }
+        }
+        img {
+          width: auto;
         }
       }
     }
+  
   }
 
   button {
@@ -268,7 +261,7 @@
       color: $black;
     }
     img {
-      margin-right: $padding-x * 2;
+      margin-right: $container-padding-x * 2;
       margin-bottom: 0;
     }
   }

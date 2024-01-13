@@ -1,5 +1,4 @@
 import React from 'react'
-import "./reHome.scss"
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/re-home/banner.png"
 import reHomeIcon from "../assets/images/icons/REHome_logo.png"
@@ -19,6 +18,7 @@ import confirmation from "../assets/images/re-home/confirmation.png"
 import dogInformation from "../assets/images/re-home/dog-infomation.png"
 import booking from "../assets/images/re-home/booking.png"
 import laptop from "../assets/images/re-home/laptop.jpg"
+import Container from 'react-bootstrap/Container'
 
 const ReHome = () => {
   return (
@@ -41,7 +41,7 @@ const ReHome = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         {/* <BackButton /> */}
         <div className='section'>
           <h2>Design Approach</h2>
@@ -51,15 +51,15 @@ const ReHome = () => {
         </div>
         <h2>Persona</h2>
         <p>By conducting research, we interviewed 2 people and identified few problems of adopting animals who could be our target users.</p>
-      </div>
+      </Container>
       <div className='bg section'>
-          <div className='wrapper'>
+          <Container>
             <div className='center'>
             <img src={persona} alt="Persona" loading="lazy"/>
             </div>
-          </div>
+          </Container>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Sitemap</h2>
           <p>
@@ -98,9 +98,9 @@ const ReHome = () => {
             <img src={usabilityStudy} alt="Usability study" loading="lazy"/>
           </div>
         </div>
-      </div>
+      </Container>
       <div className='bg'>
-        <div className='wrapper'>
+        <Container>
           <div className='flexbox'>
             <div className='content'>
               <h2>The solution</h2>
@@ -113,16 +113,16 @@ const ReHome = () => {
             <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy"/></div>
             <div className='image'><img src={booking} alt="Booking" loading="lazy"/></div>
           </div>
-        </div>
+        </Container>
       </div>
       <div className='section'>
       <div className='image'><img src={laptop} alt="Laptop" loading="lazy"/></div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className="section center">
           <OtherProjectsButton />
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

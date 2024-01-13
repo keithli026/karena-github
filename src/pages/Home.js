@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import "./home.scss"
 import Contact from '../components/Contact'
 import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"
@@ -10,19 +9,21 @@ import efSet from "../assets/images/home/EF_SET.png"
 import hult from "../assets/images/home/HULT.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
 import ScrollClassAdder from '../components/ScrollClassAdder'
+import Button from 'react-bootstrap/Button'
 
 const Home = () => {
   const className = ScrollClassAdder("header", "scrolled", 200);
 
   return (
     <>
-      <div id="home">
-        <div id="greeting" className={className}>
+      <div id="home" className='container'>
+        <div id="greeting">
           <div className='flexbox'>
             <div className='content'>
               <div className='title'>Hello there! <span>I’m Karena</span></div>
               <p className='intro'>A Multimedia Designer at EF who loves to creating digital experience for <span>people</span>.</p>
-              <Link to="/my-story" className='btn'>About me</Link>
+              {/* <Link to="/my-story" className='btn'>About me</Link> */}
+              <Button variant='light' href="/my-story">About me</Button>
             </div>
             <div className='image_wrapper'>
               <img src={karena} alt="karena" />

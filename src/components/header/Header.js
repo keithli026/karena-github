@@ -1,10 +1,12 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import "./header.scss";
 import siteLogo from "../../assets/images/icons/logo.png"
 import fingerDownIcon from "../../assets/images/icons/finger_down.png"
 import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
+import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
+
 // import ScrollClassAdder from '../ScrollClassAdder'
 
 const Header = () => {
@@ -28,13 +30,13 @@ const Header = () => {
   return (
     <>
       <div id="header" ref={refHeader}>
-        <div className='wrapper'>
+        <Container className='wrapper'>
           <Link to="/" title="home" id="logo" onClick={closeMenu}>
             <img alt="site logo" src={siteLogo} />
           </Link>
-          <div className="btn" onClick={showMenu}>
+          <Button variant='outline-light' onClick={showMenu}>
             {show ? <img alt="menu" src={fingerDownIcon} /> : <img alt="menu" src={fingerLeftIcon} />}
-          </div>
+          </Button>
           <nav className={show ? "show" : null} ref={refMenu}>
             <ul>
               <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
@@ -43,7 +45,7 @@ const Header = () => {
               <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li>
             </ul>
           </nav>
-        </div>
+        </Container>
       </div>
     </>
   );

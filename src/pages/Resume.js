@@ -1,15 +1,15 @@
 import React from 'react'
-import "./resume.scss"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import mailIcon from "../assets/images/icons/mail.png"
 import karena from "../assets/images/home/karena.png"
+import Container from 'react-bootstrap/Container';
 
 const Resume = () => {
   return (
     <div id="resume">
-      <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" /></a>  
-      <div className='wrapper'>
+      <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>  
+      <Container>
         <div className='flexbox section'>
           <div className='image'>
             <img src={karena} alt="karena" loading="lazy"/>
@@ -17,7 +17,7 @@ const Resume = () => {
           <div className='content'>
             <h2 className='name'>KARENA <br/>LI</h2>
             <div className='position'>MULTIMEDIA<FontAwesomeIcon icon={faCircle} />UI/UX DESIGNER</div>
-            <p>I am a creative person who with a background in multimedia Design, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 8 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
+            <p>I am a creative person who with a background in multimedia Design, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 9 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
           </div>
         </div>
         <h2>Experience</h2>
@@ -65,7 +65,7 @@ const Resume = () => {
             <div>Diploma  丨  Graphic Design, Hong Kong</div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

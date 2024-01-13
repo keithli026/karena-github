@@ -1,15 +1,13 @@
-@import "../variable";
-
 #projects {
   .banner {
     position: relative;
-    margin-bottom: $padding-y * 5;
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 15;
+    margin-bottom: $container-padding-x * 0.5 * 5;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $container-padding-x * 0.5 * 15;
     }
     .image {
       position: relative;
-      margin-bottom: $padding-y * 5;
+      margin-bottom: $container-padding-x * 0.5 * 5;
       img {
         height: 100vh;
         object-fit: cover;
@@ -21,7 +19,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0 $padding-x;
+      padding: 0 $container-padding-x;
       margin: auto;
       width: fit-content;
       height: fit-content;
@@ -30,7 +28,7 @@
       font-weight: 700;
       color: $white;
       text-transform: uppercase;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         font-size: 50px;
       }
     }
@@ -39,23 +37,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: $padding-y * 5;
-    @media (min-width: $lg) {
-      margin-bottom: $padding-y * 10;
+    margin-bottom: $container-padding-x * 0.5 * 5;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $container-padding-x * 0.5 * 10;
     }
-    @include container();
+    // @include container();
     .image {
       flex-basis: 100%;
-      margin-bottom: $padding-y * 5;
-      @media (min-width: $sm) {
+      margin-bottom: $container-padding-x * 0.5 * 5;
+      @include media-breakpoint-up(sm) {
         flex-basis: 46%;
       }
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         flex-basis: 47%;
-        margin-bottom: $padding-y * 6;
+        margin-bottom: $container-padding-x * 0.5 * 6;
       }
-      @media (min-width: $xxl) {
-        margin-bottom: $padding-y * 8;
+      @include media-breakpoint-up(xxl) {
+        margin-bottom: $container-padding-x * 0.5 * 8;
       }
     }
   }

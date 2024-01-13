@@ -1,11 +1,5 @@
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
-// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
-@import "../../variable";
-
+$header-mobile-height: 54px;
 #header {
-  // background-color: $black;
-  // background-color: $white;
   position: fixed;
   top: 0;
   z-index: 99;
@@ -13,106 +7,57 @@
   width: 100%;
 
   .wrapper {
-    @include container();
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    // padding: $padding-y 0;
 
-    @media (min-width: $lg) {
-      // padding: $padding-x 0;
-    }
     #logo {
-      // order: 2;
       width: 50px;
-      @media (min-width: 350px) {
-        // margin-left: 60px;
-      }
-      @media (min-width: $lg) {
-        // order: 1;
-        // margin-left: $padding-x;
-      }
-    }
-    div.btn {
-      // order: 1;
-      // margin-left: $padding-x;
-      border: none;
-      padding: 0;
-    
-      &:hover {
-        background-color: unset;
-      }
-      @media (min-width: $lg) {
-        // display: none;
-        // margin-left: 0;
-      }
     }
   
     nav {
       position: fixed;
       top: $header-mobile-height;
-      // left: 100%;
       right: -100%;
-      // background-color: $black;
-      // background-color: $white;
-      // transition: left 0.2s ease;
       transition: right 0.2s ease;
       width: auto;
       font-size: 20px;
+      font-weight: 700;
       &.show {
-        // left: 0;
         right: 0;
       }
-      @media (min-width: $sm) {
+      @include media-breakpoint-up(sm) {
         margin-right: calc((100vw - $sm-max-width) * 0.5);
       }
-      @media (min-width: $md) {
+      @include media-breakpoint-up(md) {
         margin-right: calc((100vw - $md-max-width) * 0.5);
       }
-      @media (min-width: $lg) {
-        // position: unset;
-        // order: 2;
-        // width: auto;
-        // margin-left: auto;
+      @include media-breakpoint-up(lg) {
         margin-right: calc((100vw - $lg-max-width) * 0.5);
       }
-      @media (min-width: $xl) {
+      @include media-breakpoint-up(xl) {
         margin-right: calc((100vw - $xl-max-width) * 0.5);
       }
-      @media (min-width: $xxl) {
+      @include media-breakpoint-up(xxl) {
         margin-right: calc((100vw - $xxl-max-width) * 0.5);
       }
       ul {
         padding: 0;
         margin: 0;
         list-style-type: none;
-        @media (min-width: $lg) {
-          // display: flex;
-        }
         li {
           text-align: center;
-          &:first-child {
-            // border-top: 2px solid $white;
-          }
-          // border-bottom: 2px solid $white;
-          padding: $padding-x $padding-x;
-          @media (min-width: $lg) {
-            &:first-child {
-              // border-top: none;
-            }
-            // padding: 0;
+          padding: $container-padding-x $container-padding-x;
+          @include media-breakpoint-up(lg) {
             margin-left: auto;
-            // margin-right: $padding-x * 3;
             border-bottom: none;
           }
           a {
-            // display: flex;
-            // align-items: center;
             img {
-              margin-left: $padding-x;
+              margin-left: $container-padding-x;
               max-width: 60px;
-              @media (min-width: $lg) {
+              @include media-breakpoint-up(lg) {
                 display: none;
               }
             }
@@ -121,23 +66,5 @@
         }
       }
     }
-    // #resume {
-    //   order: 3;
-    //   &.btn {
-    //     color: $white;
-    //     background-color: $black-100;
-    //     padding: $padding-y $padding-x;
-    //     border-radius: $border-radius 0 0 $border-radius;
-    //     border: 1px solid $white;
-    //     border-right: none;
-    //     &:hover {
-    //       border: 1px solid $pink;
-    //       // color: $pink;
-    //     }
-    //   }
-    //   @media (min-width: $lg) {
-  
-    //   }
-    // }
   }
 }

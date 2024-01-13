@@ -1,5 +1,4 @@
 import React from 'react'
-import "./efSet.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/ef_set/banner.png"
@@ -14,6 +13,7 @@ import EFSetTest5 from "../assets/images/ef_set/image_5.webp"
 import result1 from "../assets/images/ef_set/result_1.webp"
 import result2 from "../assets/images/ef_set/result_2.webp"
 import mobile from "../assets/images/ef_set/mobile.webp"
+import Container from 'react-bootstrap/Container';
 
 const EFSet = () => {
   return (
@@ -33,7 +33,7 @@ const EFSet = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Brief</h2>
           <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First, a global language training company​.</p>
@@ -48,37 +48,37 @@ const EFSet = () => {
             <li>Create a prominent and visually appealing CTA that clearly communicates thr desired action</li>
           </ol>
         </div>
-      </div>
+      </Container>
       <div className='section gallery'>
         <div className='image'>
           <img src={EFSetTest1} alt="EF Set test" loading="lazy"/>
           {/* <BackButton />  */}
         </div>
-        <div className='wrapper'>
+        <Container>
           <img src={EFSetTest2} alt="EF Set test" loading="lazy"/>
           <img src={EFSetTest3} alt="EF Set test" loading="lazy"/>
           <img src={EFSetTest4} alt="EF Set test" loading="lazy"/>
           <img src={EFSetTest5} alt="EF Set test" loading="lazy"/>
-        </div>
+        </Container>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <div className='flexbox'>
             <div className='image'><img src={result1} alt="EF Set test" loading="lazy"/></div>
             <div className='image'><img src={result2} alt="EF Set test" loading="lazy"/></div>
           </div>
         </div>
-      </div>
+      </Container>
       <div className='bg section'>
-        <div className='wrapper'>
+        <Container>
           <img src={mobile} alt="EF Set test" loading="lazy"/>
-        </div>
+        </Container>
       </div>
-      <div className="wrapper">
+      <Container>
         <div className='section center'>
           <OtherProjectsButton />
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import "./projectsOverview.scss"
 import banner from "../assets/images/more_projects/banner.png"
 import Contact from '../components/Contact'
 import pocina from "../assets/images/more_projects/pocina.png"
@@ -18,7 +17,7 @@ const ProjectsOverview = () => {
           <div className='image'><img src={banner} alt="banner" /></div>       
           <div className='title'>More projects</div>
         </div>
-        <div className='showcase'>
+        <div className='showcase container'>
           <div className='image'><Link to="/projects/brand-design"><img src={pocina} alt="Pocina" loading="lazy"/></Link></div>
           <div className='image'><Link to="/projects/re-home"><img src={reHome} alt="RE-HOME" loading="lazy"/></Link></div>
           <div className='image'><Link to="/projects/booth-design"><img src={boothDesign} alt="Book fair booth" loading="lazy"/></Link></div>

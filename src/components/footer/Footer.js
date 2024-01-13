@@ -1,5 +1,4 @@
 import React from 'react'
-import "./footer.scss"
 import heartIcon from "../../assets/images/icons/heart.png"
 
 const Footer = () => {

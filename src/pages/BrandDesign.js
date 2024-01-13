@@ -1,5 +1,4 @@
 import React from 'react'
-import "./brandDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_design/banner.png"
@@ -25,6 +24,7 @@ import dayNightRoutine from "../assets/images/brand_design/day_and_night.png"
 import tea from "../assets/images/brand_design/tea.png"
 import diet from "../assets/images/brand_design/diet.png"
 import taste from "../assets/images/brand_design/taste.jpg"
+import Container from 'react-bootstrap/Container';
 
 const BrandDesign = () => {
   return (
@@ -44,7 +44,7 @@ const BrandDesign = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Brief</h2>
           <p>Pocina meal replacement shakes are a popular type of meal replacement that comes in the form of a drink. They are made from protein powder, vitamins, and minerals, and are designed to provide a balanced and nutritious alternative to a traditional meal.</p>
@@ -92,7 +92,7 @@ const BrandDesign = () => {
         <div className="section center">
           <OtherProjectsButton />
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

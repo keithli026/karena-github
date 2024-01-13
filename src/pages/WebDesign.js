@@ -1,5 +1,4 @@
 import React from 'react'
-import "./webDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/web_design/banner.png"
@@ -14,6 +13,7 @@ import mobileDesign3 from "../assets/images/web_design/mobile3.png"
 import desktopDesign1 from "../assets/images/web_design/web1.jpg"
 import desktopDesign3 from "../assets/images/web_design/web3.jpg"
 import desktopDesign4 from "../assets/images/web_design/web4.jpg"
+import Container from 'react-bootstrap/Container';
 
 const WebDesign = () => {
   return (
@@ -34,7 +34,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Brief</h2>
           <p>I was given the task to updated new logo, redesign visual content strategy and ensure that the website is responsiveness and optimized for version devices and screen size. Optimize landing pages and forms to improve conversion rates.</p>
@@ -48,9 +48,9 @@ const WebDesign = () => {
             <li>Mobile-optimized designs and responsive layouts provide a seamless experience across devices</li>
           </ol>
         </div>
-      </div>
+      </Container>
       <div className='bg'>
-        <div className='wrapper'>
+        <Container>
           {/* <BackButton /> */}
           <div className='section center'>
             <img src={iPadLayout} alt="iPad layout design" loading="lazy"/>
@@ -58,9 +58,9 @@ const WebDesign = () => {
           <div className='section center'>
             <img src={desktopDesign2} alt="Englishtown desktop design" loading="lazy"/>
           </div>
-        </div>
+        </Container>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Next Steps</h2>
           <p>Improve responsiveness on mobile and tablet</p>
@@ -84,7 +84,7 @@ const WebDesign = () => {
         <div className="section center">
           <OtherProjectsButton />
         </div>
-      </div>
+      </Container>
 
     </div>
   )

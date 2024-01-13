@@ -1,5 +1,4 @@
 import React from 'react'
-import "./badgeDesign.scss"
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/badge_design/banner.png"
@@ -15,6 +14,7 @@ import badgeMobile from "../assets/images/badge_design/badge_on_phone.png"
 import badgeDesign1 from "../assets/images/badge_design/badge_design_1.png"
 import badgeDesign2 from "../assets/images/badge_design/badge_design_2.png"
 import awardPage from "../assets/images/badge_design/award.png"
+import Container from 'react-bootstrap/Container';
 
 const BadgeDesign = () => {
   return (
@@ -34,7 +34,7 @@ const BadgeDesign = () => {
           </div>
         </div>
       </div>
-      <div className='wrapper'>
+      <Container>
         <div className='section'>
           <h2>Brief</h2>
           <p>The inspiration came from a anti-counterfeit design elements that are used for security purposes. Guilloche is a pattern of subtle thin lines interwoven according to the rules of geometry. It includes all wavy decorative lines and graphic patterns which are primarily used on banknotes and securities. The use of Guilloche lines might in itself prevent the counterfeiting of products (e.g. certificates, diplomas, gift vouchers, tickets, packaging, and badge). My teammates and I design its badge for EF Standard English Test. By earning badges at different stages or levels, users can see their advancement and feel a sense of progression, which can enhance their motivation to continue engaging with a product.</p>
@@ -46,9 +46,9 @@ const BadgeDesign = () => {
             <li>Define the desired visual style, considering branding guidelines</li>
           </ol>
         </div>
-      </div>
+      </Container>
       <div className='bg'>
-        <div className='wrapper'>
+        <Container className='wrapper'>
           {/* <BackButton /> */}
           <img src={badge40} alt="Badge 40" loading="lazy"/>
           <img src={badge60} alt="Badge 60" loading="lazy"/>
@@ -56,19 +56,19 @@ const BadgeDesign = () => {
           <img src={badge50} alt="Badge 50" loading="lazy"/>
           <img src={badge70} alt="Badge 70" loading="lazy"/>
           <img src={badgeMobile} alt="badge on mobile" loading="lazy"/>
-        </div>
+        </Container>
         <div className='section'>
           <div className='image'><img src={badgeDesign1} alt="badge design" loading="lazy"/></div>
         </div>
         <div className='section'>
           <div className='image'><img src={badgeDesign2} alt="badge design" loading="lazy"/></div>
         </div>
-        <div className='wrapper'>
+        <Container className='wrapper'>
           <img src={awardPage} alt="award page" loading="lazy"/>
           <div className="center">
             <OtherProjectsButton />
           </div>
-        </div>
+        </Container>
       </div>
     </div>
   )

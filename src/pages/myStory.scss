@@ -1,20 +1,17 @@
-@import "../variable";
-
 #mystory {
   .about {
     background-image: url("../assets/images/my_story/cloudy.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    @media (min-width: $lg) {
+    @include media-breakpoint-up(lg) {
       overflow-x: unset;
     }
     .wrapper {
-      @include container();
       padding-top: $padding-y * 15;
       .content {
         background-color: $white;
-        padding: $padding-y * 5 $padding-x;
+        padding: $padding-y * 5 $container-padding-x;
         position: relative;
         &::after {
           content: "";
@@ -24,16 +21,16 @@
           width: 100%;
           height: 100%;
           background-color: $white;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             position: unset;
-            background-color: $white-200;
+            background-color: $gray-200;
           }
         }
-        @media (min-width: $lg) {
-          padding: $padding-y * 10 $padding-x * 2;
+        @include media-breakpoint-up(lg) {
+          padding: $padding-y * 10 $container-padding-x * 2;
           width: 50%;
           margin-left: auto;
-          background-color: $white-200;
+          background-color: $gray-200;
           position: relative;
           &::before {
             content: "";
@@ -42,12 +39,12 @@
             left: -3%;
             width: 103%;
             height: 3%;
-            background-color: $white-200;
+            background-color: $gray-200;
             z-index: 1;
-            @media (min-width: $xxl) {
+            @include media-breakpoint-up(xxl) {
               // height: 6%;
             }
-            @media (min-width: $xxl) {
+            @include media-breakpoint-up(xxl) {
               // height: 10%;
             }
           }
@@ -59,7 +56,7 @@
             right: 100%;
             width: 3%;
             height: 100%;
-            background-color: $white-200;
+            background-color: $gray-200;
             z-index: 1;
           }
         }
@@ -68,7 +65,7 @@
           font-weight: 500;
           margin-bottom: $padding-y * 4;
           position: relative;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 40px;
           }
           &::after {
@@ -82,7 +79,7 @@
         }
         p {
           font-size: 14px;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 24px;
           }
           &:last-child {
@@ -98,7 +95,7 @@
   }
   .resume {
     position: relative;
-    @include container();
+    // @include container();
     .quicklink {
       display: flex;
       justify-content: center;
@@ -106,7 +103,7 @@
       font-size: 20px;
       font-weight: 700;
       margin: $padding-y * 5 0;
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         position: absolute;
         top: 10%;
         left: 55%;
@@ -114,23 +111,23 @@
         margin: 0;
         font-size: 50px;
       }
-      @media (min-width: $xxl) {
+      @include media-breakpoint-up(xxl) {
         top: 15%;
       }
       img {
-        margin-left: $padding-x;
+        margin-left: $container-padding-x;
         height: fit-content;
         align-self: center;
       }
     }
     .wrapper {
-      @media (min-width: $lg) {
+      @include media-breakpoint-up(lg) {
         position: relative;
       }
       .image_wrapper {
         text-align: center;
         background-color: $lightgrey-100;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           width: 50%;
           position: relative;
           &::before {
@@ -149,8 +146,8 @@
       }
       .content {
         border: 3px solid $black;
-        padding: $padding-y * 4 $padding-x * 2;
-        @media (min-width: $lg) {
+        padding: $padding-y * 4 $container-padding-x * 2;
+        @include media-breakpoint-up(lg) {
           position: absolute;
           top: 0;
           left: 45%;
@@ -166,7 +163,7 @@
           margin-bottom: $padding-y * 4;
           position: relative;
           font-size: 20px;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 40px;
           }
           &::after {
@@ -182,7 +179,7 @@
           margin-bottom: $padding-y;
           font-weight: 500;
           font-size: 16px;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 25px;
           }
         }
@@ -191,7 +188,7 @@
           word-break: break-all;
           font-size: 15px;
           font-weight: 300;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 25px;
           }
         }
@@ -199,7 +196,7 @@
           margin-bottom: $padding-y;
           font-weight: 300;
           font-size: 15px;
-          @media (min-width: $lg) {
+          @include media-breakpoint-up(lg) {
             font-size: 25px;
           }
         }
@@ -210,7 +207,6 @@
     background-color: $lightgrey-100;
     margin: $padding-y * 10 0;
     .wrapper {
-      @include container();
       padding-top: $padding-y * 5;
       padding-bottom: $padding-y * 5;
       .title {
@@ -218,7 +214,7 @@
         font-weight: 700;
         text-align: center;
         margin-bottom: $padding-y * 5;
-        @media (min-width: $lg) {
+        @include media-breakpoint-up(lg) {
           font-size: 36px;
         }
       }
