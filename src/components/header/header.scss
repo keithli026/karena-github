@@ -3,10 +3,10 @@ $header-mobile-height: 54px;
   position: fixed;
   top: 0;
   z-index: 99;
-  padding-top: $padding-y * 3;
+  margin-top: $padding-y * 3;
   width: 100%;
 
-  .wrapper {
+  #navTop {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -15,55 +15,54 @@ $header-mobile-height: 54px;
     #logo {
       width: 50px;
     }
-  
-    nav {
-      position: fixed;
-      top: $header-mobile-height;
-      right: -100%;
-      transition: right 0.2s ease;
-      width: auto;
-      font-size: 20px;
-      font-weight: 700;
-      &.show {
-        right: 0;
-      }
-      @include media-breakpoint-up(sm) {
-        margin-right: calc((100vw - $sm-max-width) * 0.5);
-      }
-      @include media-breakpoint-up(md) {
-        margin-right: calc((100vw - $md-max-width) * 0.5);
-      }
-      @include media-breakpoint-up(lg) {
-        margin-right: calc((100vw - $lg-max-width) * 0.5);
-      }
-      @include media-breakpoint-up(xl) {
-        margin-right: calc((100vw - $xl-max-width) * 0.5);
-      }
-      @include media-breakpoint-up(xxl) {
-        margin-right: calc((100vw - $xxl-max-width) * 0.5);
-      }
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        li {
-          text-align: center;
-          padding: $container-padding-x $container-padding-x;
-          @include media-breakpoint-up(lg) {
-            margin-left: auto;
-            border-bottom: none;
-          }
-          a {
-            img {
-              margin-left: $container-padding-x;
-              max-width: 60px;
-              @include media-breakpoint-up(lg) {
-                display: none;
-              }
+  }
+  #navMain {
+    position: fixed;
+    top: $header-mobile-height;
+    right: -100%;
+    transition: right 0.2s ease;
+    width: auto;
+    font-size: 20px;
+    font-weight: 700;
+    &.show {
+      right: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      margin-right: calc((100vw - $sm-max-width) * 0.5);
+    }
+    @include media-breakpoint-up(md) {
+      margin-right: calc((100vw - $md-max-width) * 0.5);
+    }
+    @include media-breakpoint-up(lg) {
+      margin-right: calc((100vw - $lg-max-width) * 0.5);
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: calc((100vw - $xl-max-width) * 0.5);
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-right: calc((100vw - $xxl-max-width) * 0.5);
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        text-align: center;
+        padding: $container-padding-x $container-padding-x;
+        @include media-breakpoint-up(lg) {
+          margin-left: auto;
+          border-bottom: none;
+        }
+        a {
+          img {
+            margin-left: $container-padding-x;
+            max-width: 60px;
+            @include media-breakpoint-up(lg) {
+              display: none;
             }
           }
-    
         }
+  
       }
     }
   }

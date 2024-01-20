@@ -519,7 +519,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           20px;
+$grid-gutter-width:           40px;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -789,7 +789,7 @@ $table-variants: (
 
 // scss-docs-start input-btn-variables
 $input-btn-padding-y:         10px;
-$input-btn-padding-x:         40px;
+$input-btn-padding-x:         20px;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
