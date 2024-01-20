@@ -48,14 +48,14 @@ $header-mobile-height: 54px;
       list-style-type: none;
       li {
         text-align: center;
-        padding: $container-padding-x $container-padding-x;
+        padding: 20px 20px;
         @include media-breakpoint-up(lg) {
           margin-left: auto;
           border-bottom: none;
         }
         a {
           img {
-            margin-left: $container-padding-x;
+            margin-left: 20px;
             max-width: 60px;
             @include media-breakpoint-up(lg) {
               display: none;

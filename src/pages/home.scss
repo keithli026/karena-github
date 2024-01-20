@@ -92,10 +92,10 @@
         .btn {
           text-transform: uppercase;
           @include media-breakpoint-up(sm) {
-            padding: $padding-y $container-padding-x ;
+            padding: $padding-y 20px ;
           }
           @include media-breakpoint-up(md) {
-            padding: $padding-y $container-padding-x * 2.5;
+            padding: $padding-y 100px;
           }
         }
       }
@@ -282,7 +282,7 @@
           padding-top: $padding-y * 4;
           padding-bottom: $padding-y * 10;
           @include media-breakpoint-up(lg) {
-            padding: $padding-y * 2 $container-padding-x * 2;
+            padding: $padding-y * 2 40px;
           }
           .hashtag {
             word-break: break-all;

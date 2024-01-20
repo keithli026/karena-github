@@ -1,10 +1,10 @@
 #ef_set {
   .banner {
     position: relative;
-    margin-bottom: $container-padding-x * 0.5 * 5;
+    margin-bottom: 50px;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: $container-padding-x * 0.5 * 10;
+      margin-bottom: 100px;
     }
 
     .image {
@@ -20,7 +20,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0 $container-padding-x;
+      padding: 0 20px;
       margin: auto;
       width: fit-content;
       height: fit-content;
@@ -36,7 +36,7 @@
     }
 
     .content {
-      padding: $container-padding-x;
+      padding: 20px;
       color: $white;
       position: absolute;
       top: 0;
@@ -48,32 +48,32 @@
       align-items: flex-end;
 
       @include media-breakpoint-up(lg) {
-        padding-bottom: $container-padding-x * 0.5 * 5;
+        padding-bottom: 50px;
       }
 
       .keypoint {
         display: flex;
 
         @include media-breakpoint-up(lg) {
-          padding-left: calc((100vw - $lg-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $lg-max-width - 20px) / 2);
         }
 
         @include media-breakpoint-up(xl) {
-          padding-left: calc((100vw - $xl-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $xl-max-width - 20px) / 2);
         }
 
         @include media-breakpoint-up(xxl) {
-          padding-left: calc((100vw - $xxl-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $xxl-max-width - 20px) / 2);
         }
 
         div {
           line-height: 1.5;
 
           &:nth-child(2) {
-            margin: 0 $container-padding-x;
+            margin: 0 20px;
 
             @include media-breakpoint-up(sm) {
-              margin: 0 $container-padding-x * 4;
+              margin: 0 80px;
             }
           }
 
@@ -133,13 +133,13 @@
     text-transform: uppercase;
 
     @include media-breakpoint-up(lg) {
-      padding: $container-padding-x * 0.5 $container-padding-x * 5;
+      padding: 10px;
     }
   }
   .section {
-    margin-bottom: $container-padding-x * 0.5 * 10;
+    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
-      margin-bottom: $container-padding-x * 0.5 * 15;
+      margin-bottom: 150px;
     }
   }
 
@@ -164,9 +164,9 @@
 
   .bg {
     background-color: $gray-400;
-    padding: $container-padding-x * 0.5 * 10 0;
+    padding: 100px 0;
     @include media-breakpoint-up(lg) {
-      padding: $container-padding-x * 0.5 * 15 0;
+      padding: 150px 0;
     }
   }
 
@@ -177,7 +177,7 @@
     }
     img {
       display: block;
-      margin-bottom: $container-padding-x * 0.5 * 5;
+      margin-bottom: 20px * 0.5 * 5;
       &:nth-child(1) {
         @include media-breakpoint-up(lg) {
           margin-right: auto;
@@ -220,7 +220,7 @@
     }
     .image {
       text-align: center;
-      margin-bottom: $container-padding-x * 0.5 * 5;
+      margin-bottom: 20px * 0.5 * 5;
       position: relative;
 
       button {
@@ -234,32 +234,32 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: $container-padding-x * 0.5 * 5;
-        margin-left: $container-padding-x;
+        margin-top: 20px * 0.5 * 5;
+        margin-left: 20px;
         @include media-breakpoint-up(sm) {
-          margin-left: calc((100vw - $sm-max-width) / 2 + $container-padding-x);
+          margin-left: calc((100vw - $sm-max-width) / 2 + 20px);
         }
         @include media-breakpoint-up(md) {
-          margin-left: calc((100vw - $md-max-width) / 2 + $container-padding-x);
+          margin-left: calc((100vw - $md-max-width) / 2 + 20px);
         }
         @include media-breakpoint-up(lg) {
-          margin-left: calc((100vw - $lg-max-width) / 2 + $container-padding-x);
+          margin-left: calc((100vw - $lg-max-width) / 2 + 20px);
         }
         @include media-breakpoint-up(xl) {
-          margin-top: $container-padding-x * 0.5 * 10;
-          margin-left: calc((100vw - $xl-max-width) / 2 + $container-padding-x);
+          margin-top: 100px;
+          margin-left: calc((100vw - $xl-max-width) / 2 + 20px);
         }
         @include media-breakpoint-up(xxl) {
-          margin-left: calc((100vw - $xxl-max-width) / 2 + $container-padding-x);
+          margin-left: calc((100vw - $xxl-max-width) / 2 + 20px);
         }
         // @media (min-width: $xxxl) {
-        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + $container-padding-x);
+        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + 20px);
         // } 
         // @media (min-width: $xxxxl) {
-        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + $container-padding-x);
+        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + 20px);
         // }
         img {
-          margin-right: $container-padding-x * 2;
+          margin-right: 20px * 2;
           margin-bottom: 0;
         }
       }

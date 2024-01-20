@@ -1,7 +1,7 @@
 .back-to-top {
   position: fixed;
   bottom: $padding-y * 2;
-  right: $container-padding-x;
+  right: 20px;
   z-index: 50;
   cursor: pointer;
   img {
@@ -25,7 +25,7 @@
     @include media-breakpoint-up(lg) {
       width: 40px;
       height: 40px;
-      padding: $container-padding-x;
+      padding: 20px;
     }
   }
 }

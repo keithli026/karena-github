@@ -7,7 +7,7 @@
   #email {
     position: absolute;
     bottom: $padding-y;
-    left: $container-padding-x;
+    left: 20px;
   }
 
   h2 {
@@ -66,7 +66,7 @@
     text-transform: uppercase;
 
     @include media-breakpoint-up(lg) {
-      padding: $padding-y $container-padding-x * 5;
+      padding: $padding-y 100px;
     }
   }
   .section {
@@ -135,11 +135,8 @@
       font-size: 5px;
       color: $lightgrey-200;
       vertical-align: middle;
-      margin: 0 $container-padding-x * 0.5;
+      margin: 0 10px;
     }
-  }
-  .wrapper {
-    // @include container();
   }
 
   .flexbox {

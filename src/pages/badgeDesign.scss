@@ -20,7 +20,7 @@
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 0 $container-padding-x;
+      padding: 0 20px;
       margin: auto;
       width: fit-content;
       height: fit-content;
@@ -36,7 +36,7 @@
     }
 
     .content {
-      padding: $container-padding-x;
+      padding: 20px;
       color: $white;
       position: absolute;
       top: 0;
@@ -55,25 +55,25 @@
         display: flex;
 
         @include media-breakpoint-up(lg) {
-          padding-left: calc((100vw - $lg-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $lg-max-width - 20px) / 2);
         }
 
         @include media-breakpoint-up(xl) {
-          padding-left: calc((100vw - $xl-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $xl-max-width - 20px) / 2);
         }
 
         @include media-breakpoint-up(xxl) {
-          padding-left: calc((100vw - $xxl-max-width - $container-padding-x) / 2);
+          padding-left: calc((100vw - $xxl-max-width - 20px) / 2);
         }
 
         div {
           line-height: 1.5;
 
           &:nth-child(2) {
-            margin: 0 $container-padding-x;
+            margin: 0 20px;
 
             @include media-breakpoint-up(sm) {
-              margin: 0 $container-padding-x * 4;
+              margin: 0 20px * 4;
             }
           }
 
@@ -134,7 +134,7 @@
   .btn {
     text-transform: uppercase;
     @include media-breakpoint-up(lg) {
-      padding: $padding-y $container-padding-x * 5;
+      padding: $padding-y 20px * 5;
     }
   }
 
@@ -147,6 +147,11 @@
 
     @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
+    }
+    .image {
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -170,7 +175,7 @@
           color: $black;
         }
         img {
-          margin-right: $container-padding-x * 2;
+          margin-right: 20px * 2;
           margin-bottom: 0;
         }
       }

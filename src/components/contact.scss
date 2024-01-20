@@ -12,7 +12,7 @@
   .btn {
     text-transform: uppercase;
     @include media-breakpoint-up(lg) {
-      padding: $padding-y $container-padding-x * 5;
+      padding: $padding-y 100px;
     }
   }
 }

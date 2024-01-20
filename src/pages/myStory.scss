@@ -11,7 +11,7 @@
       padding-top: $padding-y * 15;
       .content {
         background-color: $white;
-        padding: $padding-y * 5 $container-padding-x;
+        padding: $padding-y * 5 20px;
         position: relative;
         &::after {
           content: "";
@@ -27,7 +27,7 @@
           }
         }
         @include media-breakpoint-up(lg) {
-          padding: $padding-y * 10 $container-padding-x * 2;
+          padding: $padding-y * 10 40px;
           width: 50%;
           margin-left: auto;
           background-color: $gray-200;
@@ -115,7 +115,7 @@
         top: 15%;
       }
       img {
-        margin-left: $container-padding-x;
+        margin-left: 20px;
         height: fit-content;
         align-self: center;
       }
@@ -146,7 +146,7 @@
       }
       .content {
         border: 3px solid $black;
-        padding: $padding-y * 4 $container-padding-x * 2;
+        padding: $padding-y * 4 40px;
         @include media-breakpoint-up(lg) {
           position: absolute;
           top: 0;
