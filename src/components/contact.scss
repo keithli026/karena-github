@@ -1,6 +1,17 @@
 .contact {
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition: all 1s;
   text-align: center;
   margin-bottom: $padding-y * 10;
+  &.scrolled {
+    top: 0;
+    opacity: 1;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: $padding-y * 20;
+  }
   .title {
     font-size: 20px;
     font-weight: 700;
