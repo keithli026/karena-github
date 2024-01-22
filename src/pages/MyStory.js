@@ -10,7 +10,8 @@ import arrowPink from "../assets/images/icons/arrow_pink.png"
 import value1 from "../assets/images/icons/value_1.svg"
 import value2 from "../assets/images/icons/value_2.svg"
 import value3 from "../assets/images/icons/value_3.svg"
-import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button'
+import ScrollClassAdder from '../components/ScrollClassAdder'
 
 const MyStory = () => {
   var settings = {
@@ -91,7 +92,7 @@ const MyStory = () => {
         </div>
       </div>
 
-      <div className="contact">
+      <div className={`contact ${ScrollClassAdder(".contact", "scrolled", 200)}`}>
         <div className='title'>Let's Talk!</div>
         <p>I'd love to chat about new opportunities or anything design related!</p>
         <Button variant='light' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</Button>

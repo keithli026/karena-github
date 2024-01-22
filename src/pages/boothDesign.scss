@@ -53,19 +53,6 @@
 
       .keypoint {
         display: flex;
-
-        @include media-breakpoint-up(lg) {
-          padding-left: calc((100vw - $lg-max-width - 20px) / 2);
-        }
-
-        @include media-breakpoint-up(xl) {
-          padding-left: calc((100vw - $xl-max-width - 20px) / 2);
-        }
-
-        @include media-breakpoint-up(xxl) {
-          padding-left: calc((100vw - $xxl-max-width - 20px) / 2);
-        }
-
         div {
           line-height: 1.5;
 

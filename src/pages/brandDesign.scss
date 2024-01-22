@@ -53,19 +53,6 @@
 
       .keypoint {
         display: flex;
-
-        @include media-breakpoint-up(lg) {
-          padding-left: calc((100vw - $lg-max-width - 20px) / 2);
-        }
-
-        @include media-breakpoint-up(xl) {
-          padding-left: calc((100vw - $xl-max-width - 20px) / 2);
-        }
-
-        @include media-breakpoint-up(xxl) {
-          padding-left: calc((100vw - $xxl-max-width - 20px) / 2);
-        }
-
         div {
           line-height: 1.5;
 
@@ -161,7 +148,13 @@
       margin-bottom: $padding-y * 5;
     }
   }
-
+  .wrapper {
+    @include media-breakpoint-up(lg) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .section {
     margin-bottom: $padding-y * 10;
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import karena from "../assets/images/home/karena.png"
@@ -21,12 +21,8 @@ const Home = () => {
     ScrollClassAdder("#projects .project:nth-child(4)", "scrolled", 200)
   ];
 
-  // console.log(className);
   useEffect(() => {
     const addClassToElement = () => {
-      // console.log(document.querySelector("#projects >div:nth-child(2)"));
-      // console.log(document.querySelector("#projects .project:nth-child(2)"));
-
       const greeting = document.getElementById("greeting");
       if (greeting) {
         greeting.classList.add("scrolled");

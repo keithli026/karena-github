@@ -1,8 +1,15 @@
 import React from 'react'
+import Form from '../components/Form'
+import Container from "react-bootstrap/Container"
 
 const LetsTalk = () => {
   return (
-    <div>LetsTalk</div>
+    <div id="lets-talk">
+      <Container>
+        <div>LetsTalk</div>
+        <Form />
+      </Container>
+    </div>
   )
 }
 

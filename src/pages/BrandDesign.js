@@ -57,37 +57,39 @@ const BrandDesign = () => {
             <li>Creating motion graphics for social media to get target audience attention.</li>
           </ol>
         </div>
-        <div className='section center'>
-          {/* <BackButton /> */}
-          <img src={color4} alt="Four colors" loading="lazy"/>
-          <div className='ref'>
-            <img src={greenPowder} alt="Green powder" loading="lazy"/>
-            <img src={pocina} alt="POCINA" className='cover' loading="lazy"/>
+        <div className='wrapper'>
+          <div className='section center'>
+            {/* <BackButton /> */}
+            <img src={color4} alt="Four colors" loading="lazy" />
+            <div className='ref'>
+              <img src={greenPowder} alt="Green powder" loading="lazy" />
+              <img src={pocina} alt="POCINA" className='cover' loading="lazy" />
+            </div>
+            <img src={combination} alt="Combination" loading="lazy" />
           </div>
-          <img src={combination} alt="Combination" loading="lazy"/>
-        </div>
-        <div className='section flexbox two'>
-          <div className='image'><img src={chocolatePowder} alt="Chocolate powder" loading="lazy"/></div>
-          <div className='image'><img src={chocolateBag} alt="Chocolate bag" loading="lazy"/></div>    
-          <div className='image'><img src={greenTeaBag} alt="Green tea bag" loading="lazy"/></div>
-          <div className='image'><img src={greenTeaPowder} alt="Green tea powder" loading="lazy"/></div>
-        </div>
-        <div className='section flexbox three'>
-          <div className='image'><img src={powder} alt="Powder" loading="lazy"/></div>
-          <div className='image'><img src={about} alt="About" loading="lazy"/></div>
-          <div className='image'><img src={taro} alt="Taro" loading="lazy"/></div>
-          <div className='image'><img src={nightRoutine} alt="Night routine" loading="lazy"/></div>
-          <div className='image'><img src={about2} alt="About" loading="lazy"/></div>
-          <div className='image'><img src={dayRoutine} alt="Day routine" loading="lazy"/></div>
-        </div>
-        <div className='center'>
-          <img src={facesss} alt="Facesss" />
-        </div>
-        <div className='section flexbox two'>
-          <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy"/></div>
-          <div className='image'><img src={tea} alt="Tea" loading="lazy"/></div>
-          <div className='image'><img src={diet} alt="Diet" loading="lazy"/></div>
-          <div className='image'><img src={taste} alt="Taste" loading="lazy"/></div>
+          <div className='section flexbox two'>
+            <div className='image'><img src={chocolatePowder} alt="Chocolate powder" loading="lazy" /></div>
+            <div className='image'><img src={chocolateBag} alt="Chocolate bag" loading="lazy" /></div>
+            <div className='image'><img src={greenTeaBag} alt="Green tea bag" loading="lazy" /></div>
+            <div className='image'><img src={greenTeaPowder} alt="Green tea powder" loading="lazy" /></div>
+          </div>
+          <div className='section flexbox three'>
+            <div className='image'><img src={powder} alt="Powder" loading="lazy" /></div>
+            <div className='image'><img src={about} alt="About" loading="lazy" /></div>
+            <div className='image'><img src={taro} alt="Taro" loading="lazy" /></div>
+            <div className='image'><img src={nightRoutine} alt="Night routine" loading="lazy" /></div>
+            <div className='image'><img src={about2} alt="About" loading="lazy" /></div>
+            <div className='image'><img src={dayRoutine} alt="Day routine" loading="lazy" /></div>
+          </div>
+          <div className='center'>
+            <img src={facesss} alt="Facesss" />
+          </div>
+          <div className='section flexbox two'>
+            <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div>
+            <div className='image'><img src={tea} alt="Tea" loading="lazy" /></div>
+            <div className='image'><img src={diet} alt="Diet" loading="lazy" /></div>
+            <div className='image'><img src={taste} alt="Taste" loading="lazy" /></div>
+          </div>
         </div>
         <div className="section center">
           <OtherProjectsButton />

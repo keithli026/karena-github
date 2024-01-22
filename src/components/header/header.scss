@@ -27,21 +27,7 @@ $header-mobile-height: 54px;
     &.show {
       right: 0;
     }
-    @include media-breakpoint-up(sm) {
-      margin-right: calc((100vw - $sm-max-width) * 0.5);
-    }
-    @include media-breakpoint-up(md) {
-      margin-right: calc((100vw - $md-max-width) * 0.5);
-    }
-    @include media-breakpoint-up(lg) {
-      margin-right: calc((100vw - $lg-max-width) * 0.5);
-    }
-    @include media-breakpoint-up(xl) {
-      margin-right: calc((100vw - $xl-max-width) * 0.5);
-    }
-    @include media-breakpoint-up(xxl) {
-      margin-right: calc((100vw - $xxl-max-width) * 0.5);
-    }
+
     ul {
       padding: 0;
       margin: 0;

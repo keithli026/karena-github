@@ -85,7 +85,7 @@
           }
           @include media-breakpoint-up(lg) {
             margin-bottom: 80px;
-            font-size: 38px;
+            font-size: 35px;
             line-height: 50px;
           }
         }
@@ -169,7 +169,7 @@
       opacity: 0;
       transition: all 0.2s;
       @include media-breakpoint-up(lg) {
-        font-size: 64px;
+        font-size: 55px;
       }
     }
 
@@ -179,8 +179,8 @@
       top: 30px;
       opacity: 0;
       transition: all 0.2s linear 0.4s;
-      @include media-breakpoint-up(xl) {
-        font-size: 32px;
+      @include media-breakpoint-up(lg) {
+        font-size: 22px;
       }
       &.bold {
         font-weight: 500;

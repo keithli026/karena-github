@@ -36,7 +36,7 @@ const EFSet = () => {
       <Container>
         <div className='section'>
           <h2>Brief</h2>
-          <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First, a global language training company​.</p>
+          <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First​.</p>
           <p>With the EF Standard English Test, EF set out to challenge the status quo - to build a testing solution that not only provides reliable measurement, but is also affordable, simple to use, and always accessible. It is the world's first completely free standardized English test for learners of all levels, from beginner to advanced.</p>
           <p>I was given tasks to understand the exciting brand guidelines and ensure the landing page design aligns with overall brand identity. Determine the content that needs to br included, such as headline, subheadings, key message, call-to-action buttons and supporting visuals.</p>
           <h2>Problem</h2>
