@@ -9,13 +9,12 @@ const ScrollClassAdder = (el, className, throttleTime) => {
       // const targetElement = document.querySelector(el);
       const targetElement = typeof el === 'string' ? document.querySelector(el) : el;
       const targetElementMiddle = (targetElement.getBoundingClientRect().top + targetElement.getBoundingClientRect().bottom) * 0.5;
-      if(scrollPosition > targetElementMiddle) {
-        console.log("into view");
+      if(scrollPosition > targetElementMiddle) {;
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-      console.log("scroll position:", scrollPosition, ", target element middle:",targetElementMiddle, "target element:", targetElement);
+      // console.log("scroll position:", scrollPosition, ", target element middle:",targetElementMiddle, "target element:", targetElement);
     }, throttleTime);
     window.addEventListener("scroll", handleScroll);
     return () => {

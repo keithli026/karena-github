@@ -47,15 +47,12 @@
 
     .project {
       flex-basis: 100%;
+      margin-bottom: 30px;
       @include media-breakpoint-up(sm) {
         flex-basis: 48%;
-      }
-      @include media-breakpoint-up(lg) {
         margin-bottom: 20px;
-        // margin-bottom: 60px;
       }
       @include media-breakpoint-up(xxl) {
-        // flex-basis: 49%;
         margin-bottom: 40px;
       }
       figure {
@@ -66,11 +63,24 @@
         }
         img {
           margin-bottom: 0;
+          @include media-breakpoint-up(sm) {
+            height: 150px;
+          }
+          @include media-breakpoint-up(md) {
+            height: 200px;
+          }
           @include media-breakpoint-up(lg) {
+            height: 220px;
             &:hover {
               transform: scale(1.1);
               transition: transform 0.5s ease;
             }
+          }
+          @include media-breakpoint-up(xl) {
+            height: 250px;
+          }
+          @include media-breakpoint-up(xxl) {
+            height: 300px;
           }
         }
         figcaption {

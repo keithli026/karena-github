@@ -39,7 +39,6 @@ const MyStory = () => {
   useEffect(() => {
     const el = document.getElementById(targetId);
     if (el) {
-      // console.log("i am going to scroll", el);
       el.scrollIntoView({ behavior: 'smooth' });
     }
   }, [targetId])
@@ -96,7 +95,6 @@ const MyStory = () => {
         <div className='title'>Let's Talk!</div>
         <p>I'd love to chat about new opportunities or anything design related!</p>
         <Button variant='light' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</Button>
-        {/* <span className='btn' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</span> */}
       </div>
     </div>
   )
