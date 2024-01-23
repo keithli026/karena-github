@@ -42,12 +42,6 @@
             height: 3%;
             background-color: $gray-200;
             z-index: 1;
-            @include media-breakpoint-up(xxl) {
-              // height: 6%;
-            }
-            @include media-breakpoint-up(xxl) {
-              // height: 10%;
-            }
           }
           &::after {
             content: "";
@@ -96,7 +90,6 @@
   }
   .resume {
     position: relative;
-    // @include container();
     .quicklink {
       display: flex;
       justify-content: center;
@@ -106,15 +99,13 @@
       margin: $padding-y * 5 0;
       @include media-breakpoint-up(lg) {
         position: absolute;
-        top: 10%;
+        top: 0;
         left: 55%;
-        z-index: 1;
+        z-index: 99;
         margin: 0;
         font-size: 50px;
       }
-      @include media-breakpoint-up(xxl) {
-        top: 0%;
-      }
+
       img {
         margin-left: 20px;
         height: fit-content;
@@ -123,7 +114,6 @@
     }
     .wrapper {
       @include media-breakpoint-up(lg) {
-        // position: relative;
         display: flex;
         justify-content: center;
       }
@@ -131,19 +121,6 @@
         text-align: center;
         background-color: $lightgrey-100;
         @include media-breakpoint-up(lg) {
-
-          // width: 30%;
-          // left: 15%;
-          // position: relative;
-          // &::before {
-          //   content: "";
-          //   position: absolute;
-          //   bottom: 100%;
-          //   left: 0;
-          //   width: 100%;
-          //   height: 5%;
-          //   background-color: $lightgrey-100;
-          // }
           img {
             margin-top: 100px;
           }
@@ -155,15 +132,7 @@
         @include media-breakpoint-up(lg) {
           align-self: center;
           position: relative;
-          left: -20px;
-          // position: absolute;
-          // top: 0;
-          // left: 45%;
-          // bottom: 0;
-          // margin-top: auto;
-          // margin-bottom: auto;
-          // width: 55%;
-          // height: fit-content;
+          left: -20px;;
         }
         @include media-breakpoint-up(xl) {
           min-width: 550px;
