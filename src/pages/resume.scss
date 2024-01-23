@@ -19,14 +19,19 @@
     position: relative;
     @include media-breakpoint-up(lg) {
       font-size: 25px;
+      margin-bottom: $padding-y * 7;
     }
     &::after {
       content: "";
-      width: 2em;
+      width: 1.5em;
       border-top: 1px solid $dark;
       position: absolute;
       top: 150%;
       left: 0;
+      @include media-breakpoint-up(lg) {
+        width: 2.5em;
+        top: 200%;
+      }
     }
     &.name {
       font-size: 25px;
@@ -35,10 +40,11 @@
       @include media-breakpoint-up(lg) {
         margin-bottom: $padding-y * 5;
         font-size: 70px;
+        line-height: 78px;
       }
       &::after {
         content: "";
-        width: 2em;
+        width: 1em;
         border-top: 1px solid $dark;
         position: absolute;
         top: 115%;
@@ -50,15 +56,18 @@
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 16px;
+    font-weight: 700;
     @include media-breakpoint-up(lg) {
       font-size: 22px;
     }
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 18px;
     @include media-breakpoint-up(lg) {
-      font-size: 24px;
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 
@@ -76,22 +85,37 @@
     }
   }
 
-  #intro {
-    h2 {
-      margin-bottom: $padding-y * 3;
-      @include media-breakpoint-up(lg) {
-        margin-bottom: $padding-y * 5;
-      }
-    }
-    .position {
-      font-size: 10px;
-      margin-bottom: $padding-y * 3;
-      @include media-breakpoint-up(lg) {
-        font-size: 20px;
-        margin-bottom: $padding-y * 5;
-      }
-    }
-  }
+  // #intro {
+  //   h2 {
+  //     &.name {
+  //       font-size: 25px;
+  //       font-weight: 800;
+  //       color: $black;
+  //       @include media-breakpoint-up(lg) {
+  //         margin-bottom: $padding-y * 5;
+  //         font-size: 70px;
+  //         line-height: 78px;
+  //       }
+  //       &::after {
+  //         content: "";
+  //         width: 1em;
+  //         border-top: 1px solid $dark;
+  //         position: absolute;
+  //         top: 115%;
+  //         left: 0;
+  //       }
+  //     }
+  //   }
+  //   .position {
+  //     font-size: 10px;
+  //     margin-bottom: $padding-y * 3;
+  //     @include media-breakpoint-up(lg) {
+  //       font-size: 20px;
+  //       margin-bottom: $padding-y * 5;
+  //     }
+  //   }
+
+  // }
 
   #experience {
     padding-bottom: $padding-y * 5;
@@ -127,6 +151,9 @@
         margin-bottom: $padding-y *5;
       }
     }
+    p {
+      margin-bottom: 0;
+    }
   }
 
   .position {
@@ -160,11 +187,7 @@
         flex-basis: 70%;
       }
       p {
-        font-size: 12px;
         margin-bottom: 0;
-        @include media-breakpoint-up(lg) {
-          font-size: 20px;
-        }
       }
     }
     .box {

@@ -11,9 +11,38 @@ $header-mobile-height: 54px;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
+    .wrapper {
+      @media (min-width: 1600px) {
+        max-width: 1550px;
+      }
+      @media (min-width: 1800px) {
+        max-width: 1600px;
+      }
+    }
     #logo {
       width: 50px;
+      @include media-breakpoint-up(sm) {
+        width: 70px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 100px;
+      }
+    }
+    button {
+      width: 40px;
+      @include media-breakpoint-up(sm) {
+        width: 50px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 80px;
+      }
+      img {
+        transform: rotate(0);
+        transition: transform 0.2s;
+        &.rotate {
+          transform: rotate(-90deg);
+        }
+      }
     }
   }
   #navMain {
@@ -24,6 +53,12 @@ $header-mobile-height: 54px;
     width: auto;
     font-size: 20px;
     font-weight: 700;
+    @media (min-width: 1600px) {
+      margin-right: calc((100% - 1550px) * 0.5);
+    }
+    @media (min-width: 1800px) {
+      margin-right: calc((100% - 1600px) * 0.5);
+    }
     &.show {
       right: 0;
     }

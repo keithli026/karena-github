@@ -333,11 +333,14 @@
        
           .hashtag {
             word-break: break-all;
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.8;
             color: $gray-600;
             margin-bottom: $padding-y * 5;
             font-weight: 500;
+            @include media-breakpoint-up(lg) {
+              font-size: 20px;
+            }
             span {
               margin-right: 20px;
             }
@@ -345,19 +348,26 @@
           .title {
             font-size: 24px;
             font-weight: 700;
-            margin-bottom: $padding-y * 4;
+            margin-bottom: $padding-y * 5;
             position: relative;
+            line-height: 34px;
             &::after {
               content: "";
               width: 2em;
               border-top: 2px solid $dark;
               position: absolute;
-              top: calc(100% + 10px);
+              top: calc(100% + 20px);
               left: 0;
             }
           }
           p {
             margin-bottom: $padding-y * 4;
+            font-size: 16px;
+            line-height: 23px;
+            @include media-breakpoint-up(lg) {
+              font-size: 24px;
+              line-height: 34px;
+            }
           }
         }
       }

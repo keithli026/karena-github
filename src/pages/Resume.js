@@ -10,7 +10,7 @@ const Resume = () => {
     <div id="resume">
       <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>  
       <Container>
-        <div className='flexbox section'>
+        <div className='flexbox section' id="intro">
           <div className='image'>
             <img src={karena} alt="karena" loading="lazy"/>
           </div>
@@ -54,15 +54,15 @@ const Resume = () => {
         <div className='flexbox' id="education">
           <div className='box'>
             <h3>Professional Certificate In Ux Design</h3>
-            <div>Google online program</div> 
+            <p>Google online program</p> 
           </div>
           <div className='box'>
             <h3>Swimburne University Of Technology, Australia</h3>
-            <div>Bachelor of communication Design  丨  Multimedia Design Melbourne, Australia</div> 
+            <p>Bachelor of communication Design  丨  Multimedia Design Melbourne, Australia</p> 
           </div>
           <div className='box'>
             <h3>First Institute of Art & Design</h3>
-            <div>Diploma  丨  Graphic Design, Hong Kong</div>
+            <p>Diploma  丨  Graphic Design, Hong Kong</p>
           </div>
         </div>
       </Container>

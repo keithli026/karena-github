@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import siteLogo from "../../assets/images/icons/logo.png"
-import fingerDownIcon from "../../assets/images/icons/finger_down.png"
+import fingerUpIcon from "../../assets/images/icons/finger_up.png"
 import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
@@ -31,12 +31,12 @@ const Header = () => {
   return (
     <div id="header" >
       <Navbar id="navTop" ref={refHeader}>
-        <Container fluid>
+        <Container fluid className='wrapper'>
           <Link to="/" title="home" id="logo" onClick={closeMenu}>
             <img alt="site logo" src={siteLogo} />
           </Link>
           <Button variant='outline-light' onClick={showMenu}>
-            {show ? <img alt="menu" src={fingerDownIcon} /> : <img alt="menu" src={fingerLeftIcon} />}
+            {show ? <img alt="menu" className="rotate" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />}
           </Button>
         </Container>
       </Navbar>
