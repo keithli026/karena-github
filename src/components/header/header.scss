@@ -27,63 +27,73 @@ $header-mobile-height: 54px;
         width: 100px;
       }
     }
-    button {
-      width: 40px;
-      @include media-breakpoint-up(sm) {
-        width: 50px;
-      }
-      @include media-breakpoint-up(xl) {
-        width: 80px;
-      }
-      img {
-        transform: rotate(0);
+    #menu {
+      position: relative;
+      // &:hover {
+      //   button {
+      //     transform: rotate(-90deg);
+      //   }
+      // }
+
+      button {
+        width: 40px;
+        @include media-breakpoint-up(sm) {
+          width: 50px;
+        }
+        @include media-breakpoint-up(xl) {
+          width: 80px;
+        }
+
+        // &:focus-visible {
+        //   transform: rotate(-90deg);
+        // }
+        transform: rotate(0deg);
         transition: transform 0.2s;
         &.rotate {
           transform: rotate(-90deg);
         }
       }
-    }
-  }
-  #navMain {
-    position: fixed;
-    top: $header-mobile-height;
-    right: -100%;
-    transition: right 0.2s ease;
-    width: auto;
-    font-size: 20px;
-    font-weight: 700;
-    @media (min-width: 1600px) {
-      margin-right: calc((100% - 1550px) * 0.5);
-    }
-    @media (min-width: 1800px) {
-      margin-right: calc((100% - 1600px) * 0.5);
-    }
-    &.show {
-      right: 0;
-    }
-
-    ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      li {
-        text-align: center;
-        padding: 20px 20px;
+      ul {
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        position: absolute;
+        top: 100%;
+        right: -100vw;
+        font-size: 16px;
+        transition: right 0.2s;
         @include media-breakpoint-up(lg) {
-          margin-left: auto;
-          border-bottom: none;
+          font-size: 25px;
         }
-        a {
-          img {
-            margin-left: 20px;
-            max-width: 60px;
-            @include media-breakpoint-up(lg) {
-              display: none;
+        &.show {
+          right: 0;
+        }
+
+        li {
+          text-align: center;
+          width: max-content;
+          &:first-child {
+            margin-top: 40px;
+          }
+          margin-top: 20px;
+          @include media-breakpoint-up(lg) {
+            margin-left: auto;
+            border-bottom: none;
+          }
+          a {
+            img {
+              margin-left: 20px;
+              max-width: 60px;
+              @include media-breakpoint-up(lg) {
+                display: none;
+              }
             }
           }
+    
         }
-  
       }
     }
   }
+
 }
