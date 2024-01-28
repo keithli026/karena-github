@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { DataContext } from '../components/DataContext'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import karena from "../assets/images/home/karena.png"
@@ -21,7 +22,10 @@ const Home = () => {
     ScrollClassAdder("#projects .project:nth-child(4)", "scrolled", 200)
   ];
 
+  // const { elementRef } = useContext(DataContext);
+
   useEffect(() => {
+
     const addClassToElement = () => {
       const greeting = document.getElementById("greeting");
       if (greeting) {

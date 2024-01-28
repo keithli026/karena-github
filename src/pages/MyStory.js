@@ -35,8 +35,10 @@ const MyStory = () => {
   const { targetId } = state || {};
   const infoRef = useRef(null);
   // console.log(state, targetId, infoRef.current);
+  // const { elementRef } = useContext(DataContext);
 
   useEffect(() => {
+
     const el = document.getElementById(targetId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });

@@ -1,13 +1,13 @@
 import React from 'react'
-import Form from '../components/Form'
+import WebForm from '../components/WebForm'
 import Container from "react-bootstrap/Container"
 
 const LetsTalk = () => {
   return (
     <div id="lets-talk">
       <Container>
-        <div>LetsTalk</div>
-        <Form />
+        <div className='title'>Let's talk</div>
+        <WebForm />
       </Container>
     </div>
   )

@@ -1,0 +1,14 @@
+#webform {
+  .field {
+    margin-bottom: 30px;
+    label {
+      &::before {
+        content: "*";
+        margin-right: 5px;
+      }
+    }
+  }
+  .error {
+    color: $red;
+  }
+}

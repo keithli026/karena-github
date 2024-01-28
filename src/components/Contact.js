@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import ScrollClassAdder from './ScrollClassAdder'
 
 const Contact = () => {
+
   return (
     <div className={`contact ${ScrollClassAdder(".contact", "scrolled", 200)}`}>
       <div className='title'>Let's Talk!</div>

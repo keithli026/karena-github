@@ -1,4 +1,12 @@
 #lets-talk {
   margin-top: 200px;
   margin-bottom: 200px;
+  .title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+    }
+  }
 }

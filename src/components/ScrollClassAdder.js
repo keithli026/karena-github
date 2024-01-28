@@ -1,8 +1,11 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useContext} from 'react'
+import { DataContext } from './DataContext'
 import throttle from 'lodash.throttle'
 
 const ScrollClassAdder = (el, className, throttleTime) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { elementRef } = useContext(DataContext);
+
   useEffect(() => {
     const handleScroll = throttle(() => {
       const scrollPosition = window.innerHeight;
