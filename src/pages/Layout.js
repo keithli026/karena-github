@@ -5,6 +5,7 @@ import Footer from '../components/footer/Footer'
 import { DataProvider } from '../components/DataContext'
 
 const Layout = () => {
+
   return (
     <DataProvider>
       <Header />

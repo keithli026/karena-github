@@ -43,10 +43,10 @@ $header-mobile-height: 54px;
         @include media-breakpoint-up(xl) {
           width: 80px;
         }
-
-        // &:focus-visible {
-        //   transform: rotate(-90deg);
-        // }
+   
+        &:focus-visible {
+          border: 2px solid $black;
+        }
         transform: rotate(0deg);
         transition: transform 0.2s;
         &.rotate {
@@ -63,10 +63,12 @@ $header-mobile-height: 54px;
         right: -100vw;
         font-size: 16px;
         transition: right 0.2s;
+        // display: none;
         @include media-breakpoint-up(lg) {
           font-size: 25px;
         }
         &.show {
+          // display: block;
           right: 0;
         }
 

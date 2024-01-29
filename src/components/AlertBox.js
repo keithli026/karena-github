@@ -1,29 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
+import Alert from 'react-bootstrap/Alert'
 
-const AlertBox = () => {
-  const [showAlert, setShowAlert] = useState(false);
+const AlertBox = (props) => {
 
+  const [seconds, setSeconds] = useState(5);
+  
   useEffect(() => {
-    if (showAlert) {
-      const timer = setTimeout(() => {
-        setShowAlert(false);
-      }, 1000);
 
-      return () => {
-        clearTimeout(timer);
-      };
+    if (props.showAlert) {
+      if (seconds >= 0) {
+        const timer = setInterval(() => setSeconds(seconds - 1), 1000);
+        return () => clearInterval(timer);
+      } else {
+        props.setShowAlert(false);
+      }
     }
-  }, [showAlert]);
-
-  const handleButtonClick = () => {
-    setShowAlert(true);
-  };
+  }, [props, seconds]);
 
   return (
-    <div>
-      <button onClick={handleButtonClick}>Show Alert</button>
-      {showAlert && <div className="alert">This is an alert!</div>}
-    </div>
+    <Alert variant="success">
+      <Alert.Heading>Message successfully sent to Karena LI.</Alert.Heading>
+      {seconds > 0 ? <p className='mb-0'>This box is going to close within {seconds} seconds.</p> : <p className='mb-0'>This box is going to close within {seconds} second.</p>}
+    </Alert>
   );
 };
 

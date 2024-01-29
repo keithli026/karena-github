@@ -10,8 +10,10 @@ import arrowPink from "../assets/images/icons/arrow_pink.png"
 import value1 from "../assets/images/icons/value_1.svg"
 import value2 from "../assets/images/icons/value_2.svg"
 import value3 from "../assets/images/icons/value_3.svg"
-import Button from 'react-bootstrap/Button'
-import ScrollClassAdder from '../components/ScrollClassAdder'
+// import Button from 'react-bootstrap/Button'
+// import ScrollClassAdder from '../components/ScrollClassAdder'
+import Contact from '../components/Contact'
+import Container from "react-bootstrap/Container"
 
 const MyStory = () => {
   var settings = {
@@ -92,12 +94,14 @@ const MyStory = () => {
           </Slider>
         </div>
       </div>
-
-      <div className={`contact ${ScrollClassAdder(".contact", "scrolled", 200)}`}>
+      <Container>
+        <Contact />
+      </Container>
+      {/* <div className={`contact ${ScrollClassAdder(".contact", "scrolled", 200)}`}>
         <div className='title'>Let's Talk!</div>
         <p>I'd love to chat about new opportunities or anything design related!</p>
         <Button variant='light' onClick={() => infoRef.current.scrollIntoView({ behavior: 'smooth' })}>Contact me</Button>
-      </div>
+      </div> */}
     </div>
   )
 };

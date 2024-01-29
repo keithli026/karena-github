@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import mailIcon from "../assets/images/icons/mail.png"
@@ -8,7 +9,8 @@ import Container from 'react-bootstrap/Container';
 const Resume = () => {
   return (
     <div id="resume">
-      <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>  
+      <Link to="/lets-talk" id="email"><img src={mailIcon} alt="email" loading="lazy"/></Link>
+      {/* <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>   */}
       <Container>
         <div className='flexbox section' id="intro">
           <div className='image'>
