@@ -23,7 +23,7 @@ const BoothDesign = () => {
     <div id='booth_design'>
       <div className='banner'>
         <div className='image'><img src={banner} alt="Book fair" /></div>
-        <div className='title'>Badge Design</div>
+        <div className='title'>Book Fair</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>PRODUCT DESIGN 丨<span>BRANDING</span> 丨<span>3D DESIGN</span></span></div>
@@ -50,25 +50,29 @@ const BoothDesign = () => {
           </ol>
         </div>
         {/* <BackButton /> */}
-        <img src={colours} alt="Colours" loading="lazy"/>
-        <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy"/>
-        <img src={booth} alt="Booth" loading="lazy"/>
-        <img src={floorPlan} alt="Floor plan" loading="lazy"/>
-        <img src={booth1} alt="Booth" loading="lazy"/>
-        <div className='flexbox_wrapper'>
-          <div className='flexbox'>
-            <img src={foamBoard1} alt="Foamboard" loading="lazy"/>
+        <div className='center'>
+          <img src={colours} alt="Colours" loading="lazy" />
+          <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
+          <img src={booth} alt="Booth" loading="lazy" />
+          <img src={floorPlan} alt="Floor plan" loading="lazy" />
+          <img src={booth1} alt="Booth" loading="lazy" />
+          <div className='flexbox_wrapper'>
+            <div className='flexbox'>
+              <img src={foamBoard1} alt="Foamboard" loading="lazy" />
+            </div>
+            <div className='flexbox'>
+              <img src={foamBoard2} alt="Foamboard" loading="lazy" />
+              <img src={foamBoard3} alt="Foamboard" loading="lazy" />
+            </div>
           </div>
-          <div className='flexbox'>
-            <img src={foamBoard2} alt="Foamboard" loading="lazy"/>
-            <img src={foamBoard3} alt="Foamboard" loading="lazy"/>
-          </div>
+          <img src={igStory} alt="IG story" loading="lazy" />
         </div>
-        <img src={igStory} alt="IG story" loading="lazy"/>
         <div className='section'>
           <h2>Book cover design</h2>
-          <img src={bookCoverBack} alt="Book cover back" loading="lazy"/>
-          <img src={bookCover} alt="Book cover" loading="lazy"/>
+          <div className='center'>
+          <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
+          <img src={bookCover} alt="Book cover" loading="lazy" />
+          </div>
         </div>
         <div className="section center">
           <OtherProjectsButton />

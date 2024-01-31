@@ -55,12 +55,14 @@
         display: flex;
         div {
           line-height: 1.5;
-
+          font-size: 12px;
+          @include media-breakpoint-up(sm) {
+            font-size: 16px;
+          }
           &:nth-child(2) {
             margin: 0 20px;
-
             @include media-breakpoint-up(sm) {
-              margin: 0 20px * 4;
+              margin: 0 80px;
             }
           }
 
@@ -109,7 +111,8 @@
     }
   }
 
-  p, ol {
+  p,
+  ol {
     font-size: 16px;
 
     @include media-breakpoint-up(lg) {
@@ -119,6 +122,7 @@
 
   .btn {
     text-transform: uppercase;
+
     @include media-breakpoint-up(lg) {
       padding: $padding-y 20px * 5;
     }
@@ -126,6 +130,12 @@
 
   .center {
     text-align: center;
+    img {
+      margin-bottom: $padding-y * 10;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $padding-y * 15;
+      }
+    }
   }
 
   .section {
@@ -169,29 +179,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     .flexbox {
       flex-basis: 100%;
+
       @include media-breakpoint-up(lg) {
         &:first-child {
           flex-basis: auto;
         }
+
         &:nth-child(2) {
           margin-left: 2.2%;
           flex-basis: 31.8%;
+
           img {
             margin-bottom: 20px;
           }
         }
       }
+
       @include media-breakpoint-up(xl) {
         &:nth-child(2) {
           margin-left: 20px;
           flex-basis: 26.6%;
         }
       }
+
       @include media-breakpoint-up(xxl) {
         &:nth-child(2) {
           flex-basis: 22.9%;
+
           img {
             margin-bottom: 20px;
           }

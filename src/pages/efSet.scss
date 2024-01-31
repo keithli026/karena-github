@@ -1,10 +1,10 @@
 #ef_set {
   .banner {
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: $padding-y * 5;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 100px;
+      margin-bottom: $padding-y * 10;
     }
 
     .image {
@@ -48,17 +48,19 @@
       align-items: flex-end;
 
       @include media-breakpoint-up(lg) {
-        padding-bottom: 50px;
+        padding-bottom: $padding-y * 5;
       }
 
       .keypoint {
         display: flex;
         div {
           line-height: 1.5;
-
+          font-size: 12px;
+          @include media-breakpoint-up(sm) {
+            font-size: 16px;
+          }
           &:nth-child(2) {
             margin: 0 20px;
-
             @include media-breakpoint-up(sm) {
               margin: 0 80px;
             }

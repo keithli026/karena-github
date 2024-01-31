@@ -48,6 +48,10 @@ p {
   line-height: 1.4;
   font-weight: 300;
   font-family: 'Nunito', 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 50px;
+  }
 }
 
 ul, ol {
