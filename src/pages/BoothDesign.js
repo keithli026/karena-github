@@ -54,7 +54,7 @@ const BoothDesign = () => {
         <div className='center'>
           <img src={colours} alt="Colours" loading="lazy" />
           <div className='video'>
-            <video controls>
+            <video controls preload="none" poster={booth}>
               <source src={video} type="video/mp4" />
               <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag."/>
             </video>

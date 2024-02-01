@@ -24,52 +24,65 @@ const ProjectsOverview = () => {
         <Container>
           <div className='showcase'>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/brand-design">
-                  <Figure.Image src={pocina} alt="Pocina" loading="lazy" />
-                </Link>
-                <Figure.Caption>Creating engaging and shareable content, including eye-catching graphics, infographics and captivating videos for social media.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/brand-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={pocina} alt="Pocina" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Creating engaging and shareable content, including eye-catching graphics, infographics and captivating videos for social media.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
+
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/booth-design">
-                  <Figure.Image src={boothDesign} alt="Book fair booth" loading="lazy" />
-                </Link>
-                <Figure.Caption>Creating visually appealing and all the materials both online and offline for the exhibition booth.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/booth-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={boothDesign} alt="Book fair booth" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Creating visually appealing and all the materials both online and offline for the exhibition booth.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/re-home">
-                  <Figure.Image src={reHome} alt="RE-HOME" loading="lazy" />
-                </Link>
-                <Figure.Caption>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/re-home">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={reHome} alt="RE-HOME" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/ef-set">
-                  <Figure.Image src={efSet} alt="EF SET" loading="lazy" />
-                </Link>
-                <Figure.Caption>EF Set is an English standard test for non-native English speakers. I was given a task to ensure the landing page design aligns with overall brand identity.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/ef-set">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={efSet} alt="EF SET" loading="lazy" />
+                  </div>
+                  <Figure.Caption>EF Set is an English standard test for non-native English speakers. I was given a task to ensure the landing page design aligns with overall brand identity.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/badge-design">
-                  <Figure.Image src={BadgeDesign} alt="Badge" loading="lazy" />
-                </Link>
-                <Figure.Caption>Designing a badges at different stages or levels, which can enhance their motivation to continue engaging with a product.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/badge-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={BadgeDesign} alt="Badge" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Designing a badges at different stages or levels, which can enhance their motivation to continue engaging with a product.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/web-design">
-                  <Figure.Image src={englishTown} alt="Englishtown" loading="lazy" />
-                </Link>
-                <Figure.Caption>Collaborating on a UI design project for a web that aims to provide a intuitive user experience for people.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
-              </Figure>
+              <Link to="/projects/web-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={englishTown} alt="Englishtown" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Collaborating on a UI design project for a web that aims to provide a intuitive user experience for people.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
           </div>
           <Contact />

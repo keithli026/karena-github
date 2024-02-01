@@ -57,33 +57,34 @@
         margin-bottom: 40px;
       }
       figure {
-        a {
+        .image {
           margin-bottom: 5px;
           display: inline-block;
           overflow: hidden;
-        }
-        .figure-img {
-          margin-bottom: 0;
-          @include media-breakpoint-up(sm) {
-            height: 150px;
-          }
-          @include media-breakpoint-up(md) {
-            height: 200px;
-          }
-          @include media-breakpoint-up(lg) {
-            height: 220px;
-            transition: transform 0.5s ease;
-            &:hover {
-              transform: scale(1.1);
+          .figure-img {
+            margin-bottom: 0;
+            @include media-breakpoint-up(sm) {
+              height: 150px;
+            }
+            @include media-breakpoint-up(md) {
+              height: 200px;
+            }
+            @include media-breakpoint-up(lg) {
+              height: 220px;
+              transition: transform 0.5s ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+            @include media-breakpoint-up(xl) {
+              height: 250px;
+            }
+            @include media-breakpoint-up(xxl) {
+              height: 300px;
             }
           }
-          @include media-breakpoint-up(xl) {
-            height: 250px;
-          }
-          @include media-breakpoint-up(xxl) {
-            height: 300px;
-          }
         }
+   
         figcaption {
           max-width: 572px;
           font-weight: 500;

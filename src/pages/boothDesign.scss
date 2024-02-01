@@ -128,12 +128,12 @@
     }
   }
   
-  video {
+  .video {
     margin-bottom: $padding-y * 10;
     @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
     }
-    .video {
+    video {
       width: 100%;
     }
   }

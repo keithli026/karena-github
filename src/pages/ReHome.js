@@ -11,6 +11,7 @@ import persona from "../assets/images/re-home/persona.png"
 import sitemap from "../assets/images/re-home/sitemap.png"
 import wireframe from "../assets/images/re-home/wireframe.png"
 import usabilityStudy from "../assets/images/re-home/usability-study.png"
+import reHome1 from "../assets/images/re-home/rehome_1.png"
 import loginOpen from "../assets/images/re-home/login-open.png"
 import search from "../assets/images/re-home/search.png"
 import welcome from "../assets/images/re-home/welcome.png"
@@ -91,11 +92,12 @@ const ReHome = () => {
             <img src={wireframe} alt="Wireframe" loading="lazy"/>
           </div>
         </div>
-        <div className='section'>
+        <div className='section' id="usability_studies">
           <h2>Usability studies</h2>
           <p>Early design allowed for some text search but after usability studies, i added icons option to choose.</p>
           <div className='center'>
-            <img src={usabilityStudy} alt="Usability study" loading="lazy"/>
+            <div className='image_wrapper'><img src={usabilityStudy} alt="Usability study" loading="lazy"/></div>
+            <div className='image_wrapper'><img src={reHome1} alt="reHome" loading="lazy"/></div>
           </div>
         </div>
       </Container>

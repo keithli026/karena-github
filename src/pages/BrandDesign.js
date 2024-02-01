@@ -66,7 +66,7 @@ const BrandDesign = () => {
             {/* <BackButton /> */}
             {/* <img src={color4} alt="Four colors" loading="lazy" /> */}
             <div className='video'>
-              <video autoPlay loop muted>
+              <video autoPlay loop muted playsInline>
                 <source src={pocinaVideo} type="video/mp4" />
                 <img src={color4} alt="Four colors" loading="lazy" title="Your browser does not support the video tag." />
               </video>
@@ -97,13 +97,13 @@ const BrandDesign = () => {
           <div className='section flexbox two'>
             <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div>
             <div className='video'>
-              <video autoPlay loop muted>
+              <video autoPlay loop muted playsInline>
                 <source src={teaVideo} type="video/mp4" />
                 <img src={tea} alt="Tea" loading="lazy" title="Your browser does not support the video tag." />
               </video>
             </div>
             <div className='video'>
-              <video autoPlay loop muted>
+              <video autoPlay loop muted playsInline>
                 <source src={dietVideo} type="video/mp4" />
                 <img src={diet} alt="Diet" loading="lazy" title="Your browser does not support the video tag." />
               </video>
