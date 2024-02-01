@@ -9,7 +9,8 @@
       position: relative;
       margin-bottom: 50px;
       img {
-        height: 100vh;
+        max-height: 500px;
+        width: 100%;
         object-fit: cover;
       }
     }

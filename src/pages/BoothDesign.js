@@ -16,6 +16,7 @@ import foamBoard3 from "../assets/images/bookfair/foamboard_3.jpg"
 import igStory from "../assets/images/bookfair/ig_story.png"
 import bookCoverBack from "../assets/images/bookfair/cover-back.png"
 import bookCover from "../assets/images/bookfair/book-cover.png"
+import video from "../assets/videos/bookfair/23bookfair.mov"
 import Container from 'react-bootstrap/Container';
 
 const BoothDesign = () => {
@@ -52,6 +53,12 @@ const BoothDesign = () => {
         {/* <BackButton /> */}
         <div className='center'>
           <img src={colours} alt="Colours" loading="lazy" />
+          <div className='video'>
+            <video controls>
+              <source src={video} type="video/mp4" />
+              <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag."/>
+            </video>
+          </div>
           <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
           <img src={booth} alt="Booth" loading="lazy" />
           <img src={floorPlan} alt="Floor plan" loading="lazy" />
@@ -70,8 +77,8 @@ const BoothDesign = () => {
         <div className='section'>
           <h2>Book cover design</h2>
           <div className='center'>
-          <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
-          <img src={bookCover} alt="Book cover" loading="lazy" />
+            <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
+            <img src={bookCover} alt="Book cover" loading="lazy" />
           </div>
         </div>
         <div className="section center">

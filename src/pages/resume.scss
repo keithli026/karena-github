@@ -1,8 +1,39 @@
+@keyframes icon {
+  0%   {top:0px;}
+  33%  {top:-50px;}
+  66%  {top:-50px;}
+  100% {top:0px;}
+}
+
 #resume {
   position: relative;
   margin-top: $padding-y * 15;
   @include media-breakpoint-up(lg) {
     margin-top: $padding-y * 20;
+  }
+  &.scrolled {
+    .flexbox {
+      .image {
+        img {
+          animation-name: icon;
+          animation-duration: 1.5s;
+          animation-iteration-count: 1;
+        }
+        &::before {
+          opacity: 1;
+          right: -32%;
+          top: 50px;
+        }
+        &::after {
+          opacity: 1;
+          right: -15%;
+          top: 0;
+        }
+      }
+    }
+  }
+  #intro {
+    margin-bottom: $padding-y * 5;
   }
   #email {
     position: absolute;
@@ -78,7 +109,13 @@
     text-transform: uppercase;
 
     @include media-breakpoint-up(lg) {
-      padding: $padding-y 100px;
+      // padding: $padding-y 100px;
+    }
+  }
+  .backBtn {
+    margin-bottom: $padding-y * 10;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $padding-y * 15;
     }
   }
   .section {
@@ -141,21 +178,60 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
+
     .image {
       background-color: $lightgrey-100;
       display: flex;
       align-items: flex-end;
       flex-basis: 35%;
+      position: relative;
       @include media-breakpoint-up(lg) {
         display: flex;
         align-items: flex-end;
         flex-basis: 25%;
       }
+      img {
+        position: relative;
+        top: 0;
+        transition: top 0.5s linear;
+      }
+      &::before {
+        content: "";
+        background-image: url("../assets/images/icons/K_pink.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        opacity: 0;
+        transition: all 0.5s ease 1s;
+        // max-width: 100px;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      &::after {
+        content: "";
+        background-image: url("../assets/images/icons/K_trans.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        position: absolute;
+        top: 50px;
+        right: 100%;
+        opacity: 0;
+        transition: all 0.5s;
+        width: 100%;
+        height: 100%;
+        // max-width: 100px;
+      }
     }
     .content {
       flex-basis: 60%;
       @include media-breakpoint-up(lg) {
-        flex-basis: 70%;
+        // flex-basis: 70%;
       }
       p {
         margin-bottom: 0;

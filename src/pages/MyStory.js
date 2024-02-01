@@ -11,7 +11,7 @@ import value1 from "../assets/images/icons/value_1.svg"
 import value2 from "../assets/images/icons/value_2.svg"
 import value3 from "../assets/images/icons/value_3.svg"
 // import Button from 'react-bootstrap/Button'
-// import ScrollClassAdder from '../components/ScrollClassAdder'
+import ScrollClassAdder from '../components/ScrollClassAdder'
 import Contact from '../components/Contact'
 import Container from "react-bootstrap/Container"
 
@@ -52,13 +52,13 @@ const MyStory = () => {
         <div className='wrapper container'>
           <div className='content'>
             <div className='title'>About me</div>
-            <p>I am a creative person who with a background in <span>Multimedia Design</span>, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
+            <p>I am a creative person who with a background in <span>Graphic and Multimedia Design</span>, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
             <p>With 8 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
             <p>My mission is to expand my digital briefcase of work by taking on new challenges and finding creative clever solutions.</p>
           </div>
         </div>
       </div>
-      <div className='resume container'>
+      <div className={`resume container ${ScrollClassAdder(".resume", "scrolled", 200)}`}>
         <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" loading="lazy"/></Link>
         <div className='wrapper' id="info" ref={infoRef}>
           <div className='image_wrapper'>

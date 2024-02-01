@@ -127,6 +127,17 @@
       padding: $padding-y 20px * 5;
     }
   }
+  
+  video {
+    margin-bottom: $padding-y * 10;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: $padding-y * 15;
+    }
+    .video {
+      width: 100%;
+    }
+  }
+
 
   .center {
     text-align: center;

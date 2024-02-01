@@ -106,7 +106,18 @@
 
   .resume {
     position: relative;
-
+    &.scrolled {
+      .wrapper {
+        .image_wrapper {
+          left: 0;
+          opacity: 1;
+        }
+        .content {
+          right: 0;
+          opacity: 1;
+        }
+      }
+    }
     .quicklink {
       display: flex;
       justify-content: center;
@@ -135,10 +146,14 @@
       position: relative;
 
       .image_wrapper {
+        position: relative;
         align-self: center;
         background-color: $white;
         width: 50%;
         text-align: end;
+        left: -100px;
+        opacity: 0;
+        transition: all 0.5s;
         img {
           padding-top: 50px;
           background-color: $lightgrey-100;
@@ -157,14 +172,15 @@
         border: 3px solid $black;
         padding: 20px;
         position: absolute;
-        right: 0;
+        right: -100px;
+        opacity: 0;
         width: 55%;
         top: 0;
         bottom: 0;
         height: fit-content;
         margin-top: auto;
         margin-bottom: auto;
-   
+        transition: all 0.5s;
         @include media-breakpoint-up(lg) {
           padding: 40px;
         }
