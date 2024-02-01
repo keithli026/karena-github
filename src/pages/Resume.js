@@ -39,7 +39,7 @@ const Resume = () => {
           <div className='content'>
             <h2 className='name'>KARENA <br/>LI</h2>
             <div className='position'>MULTIMEDIA<FontAwesomeIcon icon={faCircle} />GRAPHIC DESIGNER</div>
-            <p>I am a creative person who with a background in <u>Graphic and Multimedia Design</u>, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 9 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
+            <p>I am a creative person who with a background in Graphic and Multimedia Design, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 9 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
           </div>
         </div>
         <BackButton />

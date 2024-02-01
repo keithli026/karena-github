@@ -8,9 +8,34 @@
     }
 
     .image {
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(0, 0, 0, 0.3);
+        }
+      }
       img {
         height: 100vh;
+        width: 100%;
         object-fit: cover;
+        &.mobile {
+          display: block;
+          @include media-breakpoint-up(sm) {
+            display: none;
+          }
+        }
+        &.desktop {
+          display: none;
+          @include media-breakpoint-up(sm) {
+            display: block;
+          }
+        }
       }
     }
 

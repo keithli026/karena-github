@@ -2,6 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/badge_design/banner.png"
+import bannerMobile from "../assets/images/badge_design/banner_mobile.png"
 import XDIcon from "../assets/images/icons/XD.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
@@ -20,7 +21,10 @@ const BadgeDesign = () => {
   return (
     <div id='badge_design'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="Badge design banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="Badge design banner" className='desktop'/>
+          <img src={bannerMobile} alt="Badge design banner" className='mobile'/>
+        </div>
         <div className='title'>Badge Design</div>
         <div className='content'>
           <div className='keypoint'>

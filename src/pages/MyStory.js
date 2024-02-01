@@ -52,7 +52,7 @@ const MyStory = () => {
         <div className='wrapper container'>
           <div className='content'>
             <div className='title'>About me</div>
-            <p>I am a creative person who with a background in <span>Graphic and Multimedia Design</span>, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
+            <p>I am a creative person who with a background in <span>Graphic</span> and <span>Multimedia Design</span>, experience in creating <span>digital</span>, <span>interactive graphics</span> and <span>ui/ux</span> design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas that combines the <span>problem-solving</span> aspect of design with deep empathy for the user.</p>
             <p>With 8 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
             <p>My mission is to expand my digital briefcase of work by taking on new challenges and finding creative clever solutions.</p>
           </div>

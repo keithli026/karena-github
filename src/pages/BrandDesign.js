@@ -2,6 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_design/banner.png"
+import bannerMobile from "../assets/images/brand_design/banner_mobile.png"
 import AEIcon from "../assets/images/icons/AE.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
@@ -34,7 +35,10 @@ const BrandDesign = () => {
   return (
     <div id='brand_design'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="Brand identity design banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="Brand identity design banner" className='desktop'/>
+          <img src={bannerMobile} alt="Brand identity design banner" className='mobile'/>
+        </div>
         <div className='title'>Brand Identity Design</div>
         <div className='content'>
           <div className='keypoint'>

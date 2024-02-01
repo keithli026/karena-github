@@ -98,25 +98,23 @@
 
   p {
     font-size: 14px;
-    // line-height: 18px;
     @include media-breakpoint-up(lg) {
       font-size: 18px;
-      // line-height: 22px;
     }
   }
 
   .btn {
     text-transform: uppercase;
-
-    @include media-breakpoint-up(lg) {
-      // padding: $padding-y 100px;
-    }
   }
   .backBtn {
+    position: relative;
     margin-bottom: $padding-y * 10;
     @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
     }
+    @media (min-width: 1600px) {
+      left: -100px;
+    } 
   }
   .section {
     margin-bottom: $padding-y * 10;

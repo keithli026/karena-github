@@ -15,19 +15,22 @@
   overflow-x: hidden; 
   #greeting {
     position: relative;
-    margin-bottom: 200px;
-
+    margin-bottom: 100px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 200px;
+    }
     &.scrolled {
       .banner {
         .cloud {
           top: 0;
+          transform: scale(1.5);
           @include media-breakpoint-up(lg) {
+            transform: scaleX(1.5);
             top: -100px;
           }
           @include media-breakpoint-up(xl) {
             top: -200px;
           }
-          transform: scaleX(1.5);
         }
   
       }
@@ -59,6 +62,15 @@
       position: absolute;
       left: 0;
       top: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background-image: linear-gradient(transparent, $white);
+      }
       .bg {
         height: 100vh;
         width: 100vw;
@@ -68,8 +80,11 @@
         position: absolute;
         left: 0;
         top: 100vh;
-        transform: scaleX(3);
-        transition: all 3s;
+        transform: scale(3);
+        @include media-breakpoint-up(lg) {
+          transform: scaleX(3);
+        }
+        transition: all 2s;
       }
 
     }
@@ -80,17 +95,14 @@
       justify-content: space-between;
       align-items: center;
       height: 100vh;
-      // padding-top: $padding-y * 15;
-      // @include media-breakpoint-up(lg) {
-      //   padding-top: $padding-y * 20;
-      // }
+
       .content {
         position: relative;
         z-index: 1;
         flex-basis: 60%;
         margin-bottom: 0;
         top: 100vh;
-        transition: all 3s;
+        transition: all 2s;
         @include media-breakpoint-up(lg) {
           flex-basis: 50%;
         }
@@ -142,55 +154,20 @@
           }
         }
       }
-      // .image_wrapper { 
-      //   flex-basis: 40%;
-      //   text-align: center;
-      //   position: relative;
-      //   @include media-breakpoint-up(lg) {
-      //     flex-basis: 50%;
-      //   }
-      //   img {
-      //     position: relative;
-      //     top: 0;
-      //     transition: top 0.5s linear;
-      //   }
-      //   &::before {
-      //     content: "";
-      //     background-image: url("../assets/images/icons/K_pink.png");
-      //     background-repeat: no-repeat;
-      //     background-size: contain;
-      //     position: absolute;
-      //     top: 100px;
-      //     right: -100%;
-      //     opacity: 0;
-      //     transition: all 0.5s ease 1s;
-      //     width: 100%;
-      //     height: 100%;
-      //     z-index: 1;
-      //   }
-      //   &::after {
-      //     content: "";
-      //     background-image: url("../assets/images/icons/K_trans.png");
-      //     background-repeat: no-repeat;
-      //     background-size: contain;
-      //     position: absolute;
-      //     top: 50px;
-      //     right: 100%;
-      //     opacity: 0;
-      //     transition: all 0.5s;
-      //     width: 100%;
-      //     height: 100%;
-      //   }
-      // }
-
     }
   }
   #slogan {
     background-image: url("../assets//images/icons/mobile_little_icon.png");
     background-size: contain;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
+    padding: 100px 0;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 200px;
+      padding: 150px 0;
+    }
     &.scrolled {
       .title {
         top: 0;
@@ -222,8 +199,16 @@
       top: 30px;
       opacity: 0;
       transition: all 0.2s linear 0.4s;
+      @include media-breakpoint-up(md) {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
       @include media-breakpoint-up(lg) {
         font-size: 22px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-left: 20%;
+        margin-right: 20%;
       }
       &.bold {
         font-weight: 500;
@@ -240,7 +225,7 @@
       animation-iteration-count: infinite;
       animation-timing-function: linear;
       @include media-breakpoint-up(lg) {
-        max-height: 110px;
+        max-height: 80px;
       }
     }
   }
@@ -284,6 +269,7 @@
             opacity: 1;
           }
         }
+    
         &:nth-of-type(2n) {
           @include media-breakpoint-up(lg) {
             .image {
@@ -308,16 +294,16 @@
       }
       &:last-of-type {
         @include media-breakpoint-up(lg) {
-          margin-bottom: 450px;
+          // margin-bottom: 450px;
           .image {
             position: relative;
             z-index: 1;
           }
           .content {
-            margin-top: unset;
-            margin-bottom: unset;
-            bottom: unset;
-            top: 30%;
+            // margin-top: unset;
+            // margin-bottom: unset;
+            // bottom: unset;
+            // top: 30%;
             .wrapper {
               @include media-breakpoint-up(lg) {
                 padding-right: 80px;
@@ -325,12 +311,12 @@
             }
           }
         }
-        @include media-breakpoint-up(xl) {
-          margin-bottom: 400px;
-        }
-        @include media-breakpoint-up(xxl) {
-          margin-bottom: 350px;
-        }
+        // @include media-breakpoint-up(xl) {
+        //   margin-bottom: 400px;
+        // }
+        // @include media-breakpoint-up(xxl) {
+        //   margin-bottom: 350px;
+        // }
       }
       .image {
         position: relative;
@@ -364,6 +350,7 @@
           margin-bottom: auto;
           transition: all 0.5s;
         }
+  
         .wrapper {
           padding-top: $padding-y * 4;
           padding-bottom: $padding-y * 10;
@@ -371,18 +358,18 @@
             padding: $padding-y * 2 40px $padding-y * 4;
           }
           @include media-breakpoint-up(xl) {
-            padding: $padding-y * 4 80px $padding-y * 6;
+            padding: $padding-y * 4 50px $padding-y * 4;
           }
        
           .hashtag {
             word-break: break-all;
-            font-size: 20px;
+            font-size: 12px;
             line-height: 1.8;
             color: $gray-600;
             margin-bottom: $padding-y * 5;
             font-weight: 500;
-            @include media-breakpoint-up(lg) {
-              font-size: 20px;
+            @include media-breakpoint-up(sm) {
+              font-size: 18px;
             }
             span {
               margin-right: 20px;

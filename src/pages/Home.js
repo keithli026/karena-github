@@ -3,9 +3,6 @@ import { DataContext } from '../components/DataContext'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import cloud from "../assets/images/home/cloud.png"
-import cloud1 from "../assets/images/home/cloud1.png"
-import cloud2 from "../assets/images/home/cloud2.png"
-import cloud3 from "../assets/images/home/cloud3.png"
 import background from "../assets/images/home/background.jpg"
 import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"

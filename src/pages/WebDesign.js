@@ -2,6 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/web_design/banner.png"
+import bannerMobile from "../assets/images/web_design/banner_mobile.png"
 import EFIcon from "../assets/images/icons/EF_logo.png"
 import XDIcon from "../assets/images/icons/XD.png"
 import PSIcon from "../assets/images/icons/PS.png"
@@ -19,7 +20,10 @@ const WebDesign = () => {
   return (
     <div id='web_design'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="EF website banner" className='desktop' />
+          <img src={bannerMobile} alt="EF website banner" className='mobile' />
+        </div>
         <div className='title'>
           <img src={EFIcon} alt="EF Englishtown logo" />
         </div>
