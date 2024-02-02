@@ -19,6 +19,7 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 200px;
     }
+    
     &.scrolled {
       .banner {
         .cloud {
@@ -35,23 +36,6 @@
   
       }
       .flexbox {
-        // .image_wrapper {
-        //   img {
-        //     animation-name: icon;
-        //     animation-duration: 1.5s;
-        //     animation-iteration-count: 1;
-        //   }
-        //   &::before {
-        //     opacity: 1;
-        //     right: -32%;
-        //     top: 50px;
-        //   }
-        //   &::after {
-        //     opacity: 1;
-        //     right: -15%;
-        //     top: 0;
-        //   }
-        // }
         .content {
           top: 0;
         }
@@ -62,63 +46,77 @@
       position: absolute;
       left: 0;
       top: 0;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
+
+      .bg_mobile {
+        display: block;
+        max-height: 100vh;
+        height: 100dvh;
         width: 100%;
-        height: 10vh;
-        background-image: linear-gradient(transparent, $white);
-      }
-      .bg {
-        height: 100vh;
-        width: 100vw;
         object-fit: cover;
       }
-      .cloud {
-        position: absolute;
-        left: 0;
-        top: 100vh;
-        transform: scale(3);
-        @include media-breakpoint-up(lg) {
-          transform: scaleX(3);
+      .bg {
+        display: none;
+      }
+
+      @include media-breakpoint-up(sm) {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 10vh;
+          background-image: linear-gradient(transparent, $white);
         }
-        transition: all 2s;
+        .bg_mobile {
+          display: none;
+        }
+        .bg {
+          display: block;
+          height: 100vh;
+          width: 100vw;
+          object-fit: cover;
+        }
+        .cloud {
+          position: absolute;
+          left: 0;
+          top: 100vh;
+          transform: scaleX(3);
+          transition: all 2s;
+        }
       }
 
     }
-
     .flexbox {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       height: 100vh;
-
+      @include media-breakpoint-up(sm) {
+        justify-content: unset;
+      }
       .content {
         position: relative;
         z-index: 1;
-        flex-basis: 60%;
+        height: fit-content;
         margin-bottom: 0;
-        top: 100vh;
-        transition: all 2s;
-        @include media-breakpoint-up(lg) {
-          flex-basis: 50%;
+        max-width: 250px;
+        @include media-breakpoint-up(sm) {
+          
+          top: 100vh;
+          transition: all 2s;
         }
+        @include media-breakpoint-up(lg) {
+          max-width: 350px;
+        }
+   
         .title {
-          font-weight: 700;
+          font-weight: 900;
           font-size: 36px;
-          line-height: 40px;
           margin-bottom: 30px;
           @include media-breakpoint-up(lg) {
             margin-bottom: $padding-y * 5;
-            font-size: 60px;
-            line-height: 80px;
-          }
-          @include media-breakpoint-up(xl) {
-            font-size: 80px;
-            line-height: 100px;
+            font-size: 50px;
           }
           span::before {
             content: "\a";
@@ -128,7 +126,6 @@
         .intro {
           font-weight: 500;
           font-size: 15px;
-          line-height: 22px;
           margin-bottom: $padding-y * 5;
           span {
             color: $pink;
@@ -136,20 +133,18 @@
           }
           @include media-breakpoint-up(lg) {
             margin-bottom: 80px;
-            font-size: 35px;
-            line-height: 50px;
+            font-size: 25px;
           }
         }
         .btn {
           text-transform: uppercase;
           background-color: transparent;
+          padding: $padding-y 40px;
           &:hover {
             background-color: $pink;
           }
-          @include media-breakpoint-up(sm) {
-            padding: $padding-y 20px ;
-          }
-          @include media-breakpoint-up(md) {
+    
+          @include media-breakpoint-up(lg) {
             padding: $padding-y 100px;
           }
         }
@@ -199,17 +194,11 @@
       top: 30px;
       opacity: 0;
       transition: all 0.2s linear 0.4s;
-      @include media-breakpoint-up(md) {
-        margin-left: 10%;
-        margin-right: 10%;
-      }
+
       @include media-breakpoint-up(lg) {
         font-size: 22px;
       }
-      @include media-breakpoint-up(xl) {
-        margin-left: 20%;
-        margin-right: 20%;
-      }
+
       &.bold {
         font-weight: 500;
         transition: all 0.2s linear 0.6s;
@@ -365,18 +354,18 @@
             word-break: break-all;
             font-size: 12px;
             line-height: 1.8;
-            color: $gray-600;
+            color: $black;
             margin-bottom: $padding-y * 5;
             font-weight: 500;
             @include media-breakpoint-up(sm) {
-              font-size: 18px;
+              font-size: 14px;
             }
             span {
               margin-right: 20px;
             }
           }
           .title {
-            font-size: 24px;
+            font-size: 18px;
             font-weight: 700;
             margin-bottom: $padding-y * 5;
             position: relative;
@@ -393,8 +382,9 @@
           p {
             margin-bottom: $padding-y * 4;
             font-size: 16px;
+            font-weight: 300;
             @include media-breakpoint-up(lg) {
-              font-size: 24px;
+              font-size: 18px;
             }
           }
           .arrow {

@@ -26,8 +26,10 @@ body {
 }
 button, .btn, .btn.btn-light {
   border: 1px solid $black;
+  font-weight: 900;
   @include media-breakpoint-up(lg) {
     border: 2px solid $black;
+    font-size: 18px;
   }
   &:hover, &:focus, &:active {
     background-color: $pink;
@@ -50,8 +52,10 @@ p {
   font-weight: 300;
   font-family: 'Nunito', 'Montserrat', sans-serif;
   margin-bottom: 30px;
+  font-size: 16px;
   @include media-breakpoint-up(lg) {
     margin-bottom: 50px;
+    font-size: 18px;
   }
 }
 

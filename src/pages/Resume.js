@@ -30,7 +30,6 @@ const Resume = () => {
   return (
     <div id="resume">
       <Link to="/lets-talk" id="email"><img src={mailIcon} alt="email" loading="lazy"/></Link>
-      {/* <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>   */}
       <Container>
         <div className='flexbox' id="intro">
           <div className='image'>

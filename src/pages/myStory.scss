@@ -125,7 +125,6 @@
       font-size: 25px;
       font-weight: 800;
       margin: $padding-y * 5 0;
-
       @include media-breakpoint-up(lg) {
         position: absolute;
         top: 0;
@@ -274,6 +273,9 @@
       .slick-slider {
         .slick-slide {
           .flexbox {
+            @include media-breakpoint-up(lg) {
+              padding: 0 20px;
+            }
             img {
               margin-bottom: $padding-y * 2;
               width: 100px;
@@ -282,8 +284,8 @@
             }
 
             .value {
-              font-weight: 500;
-              font-size: 36px;
+              font-weight: 800;
+              font-size: 22px;
               margin-bottom: $padding-y * 2;
               text-align: center;
             }

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import cloud from "../assets/images/home/cloud.png"
 import background from "../assets/images/home/background.jpg"
+import backgroundMobile from "../assets/images/home/background_mobile.jpg"
 import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
@@ -48,6 +49,7 @@ const Home = () => {
     <div id="home">
       <div id="greeting">
         <div className='banner'>
+          <img src={backgroundMobile} alt="background" loading='lazy' className='bg_mobile'/>
           <img src={background} alt="background" loading='lazy' className='bg'/>
           <img src={cloud} alt="cloud" loading='lazy' className='cloud'/>
         </div>
