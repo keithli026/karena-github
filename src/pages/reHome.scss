@@ -21,7 +21,8 @@
         }
       }
       img {
-        height: 100vh;
+        max-height: 100vh;
+        height: 100svh;
         width: 100%;
         object-fit: cover;
         &.mobile {
@@ -144,8 +145,8 @@
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
 
     @include media-breakpoint-up(lg) {
       font-size: 40px;
@@ -153,8 +154,8 @@
   }
 
   p,
-  ol {
-    font-size: 16px;
+  ul {
+    font-size: 12px;
 
     @include media-breakpoint-up(lg) {
       font-size: 24px;
@@ -188,6 +189,14 @@
 
     @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
+    }
+    .list_title {
+      font-size: 12px;
+      text-decoration: underline;
+      margin-bottom: 20px;
+      @include media-breakpoint-up(lg) {
+        font-size: 24px;
+      }
     }
 
     .image {
