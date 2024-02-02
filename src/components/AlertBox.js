@@ -20,7 +20,7 @@ const AlertBox = (props) => {
   return (
     <Alert variant="success">
       <Alert.Heading>Message successfully sent to Karena LI.</Alert.Heading>
-      {seconds > 0 ? <p className='mb-0'>This box is going to close within {seconds} seconds.</p> : <p className='mb-0'>This box is going to close within {seconds} second.</p>}
+      {seconds > 0 ? <p className='mb-0'>This box is going to close in {seconds} seconds.</p> : <p className='mb-0'>This box is going to close in {seconds} second.</p>}
     </Alert>
   );
 };
