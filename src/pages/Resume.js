@@ -1,27 +1,48 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import mailIcon from "../assets/images/icons/mail.png"
 import karena from "../assets/images/home/karena.png"
 import Container from 'react-bootstrap/Container';
+import backButton from "../components/BackButton"
+import BackButton from '../components/BackButton'
 
 const Resume = () => {
+  useEffect(() => {
+    // console.log("run", document.readyState);
+    const addClassToElement = () => {
+      const resume = document.getElementById("resume");
+      if (resume) {
+        resume.classList.add("scrolled");
+      }
+    }
+    if(document.readyState === "complete") {
+      setTimeout(addClassToElement, 1000);
+    } else {
+      window.addEventListener("load", addClassToElement);
+      return () => {
+        window.removeEventListener("load", addClassToElement);
+      }
+    }
+  }, []);
+
   return (
     <div id="resume">
       <Link to="/lets-talk" id="email"><img src={mailIcon} alt="email" loading="lazy"/></Link>
       {/* <a href="mailto:iamkarena66@gmail.com" id="email"><img src={mailIcon} alt="email" loading="lazy"/></a>   */}
       <Container>
-        <div className='flexbox section' id="intro">
+        <div className='flexbox' id="intro">
           <div className='image'>
             <img src={karena} alt="karena" loading="lazy"/>
           </div>
           <div className='content'>
             <h2 className='name'>KARENA <br/>LI</h2>
-            <div className='position'>MULTIMEDIA<FontAwesomeIcon icon={faCircle} />UI/UX DESIGNER</div>
-            <p>I am a creative person who with a background in multimedia Design, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 9 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
+            <div className='position'>MULTIMEDIA<FontAwesomeIcon icon={faCircle} />GRAPHIC DESIGNER</div>
+            <p>I am a creative person who with a background in Graphic and Multimedia Design, experience in creating digital , interactive graphics and ui/ux design for people. I thrive in a collaborative environment and enjoy exploring new innovative ideas. With 9 years of experience in the field. My passion for design and creativity has led me to develop a keen eye for details and strong understanding of principles of visual communication.</p>
           </div>
         </div>
+        <BackButton />
         <h2>Experience</h2>
         <div className='flexbox section' id="experience">
           <div className='box'>

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/re-home/banner.png"
+import bannerMobile from "../assets/images/re-home/banner_mobile.png"
 import reHomeIcon from "../assets/images/icons/REHome_logo.png"
 import XDIcon from "../assets/images/icons/XD.png"
 import PSIcon from "../assets/images/icons/PS.png"
@@ -11,6 +12,8 @@ import persona from "../assets/images/re-home/persona.png"
 import sitemap from "../assets/images/re-home/sitemap.png"
 import wireframe from "../assets/images/re-home/wireframe.png"
 import usabilityStudy from "../assets/images/re-home/usability-study.png"
+import reHomeApp from "../assets/images/re-home/rehome_1.png"
+import video from "../assets/videos/re-home/comp_1.mp4"
 import loginOpen from "../assets/images/re-home/login-open.png"
 import search from "../assets/images/re-home/search.png"
 import welcome from "../assets/images/re-home/welcome.png"
@@ -19,12 +22,28 @@ import dogInformation from "../assets/images/re-home/dog-infomation.png"
 import booking from "../assets/images/re-home/booking.png"
 import laptop from "../assets/images/re-home/laptop.jpg"
 import Container from 'react-bootstrap/Container'
+import useIntersectionObserver from '@react-hook/intersection-observer'
 
 const ReHome = () => {
+  const videoRef = useRef();
+  const [isLoad, setIsLoad] = useState(false);
+  const { isIntersecting } = useIntersectionObserver(videoRef);
+
+  useEffect(() => {
+    if (isIntersecting && !isLoad) {
+      setIsLoad(true);
+      // console.log(isLoad, isIntersecting);
+    }
+
+  }, [isIntersecting]);
+
   return (
     <div id='re-home'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="RE-Home banner" className='desktop' />
+          <img src={bannerMobile} alt="RE-Home banner" className='mobile' />
+        </div>
         <div className='title'>
           <img src={reHomeIcon} alt="RE-Home logo" /><span>RE-Home</span>
         </div>
@@ -46,18 +65,18 @@ const ReHome = () => {
         <div className='section'>
           <h2>Design Approach</h2>
           <div className='center'>
-            <img src={designApproach} alt="Design approach" loading="lazy"/>
+            <img src={designApproach} alt="Design approach" loading="lazy" />
           </div>
         </div>
         <h2>Persona</h2>
         <p>By conducting research, we interviewed 2 people and identified few problems of adopting animals who could be our target users.</p>
       </Container>
       <div className='bg section'>
-          <Container>
-            <div className='center'>
-            <img src={persona} alt="Persona" loading="lazy"/>
-            </div>
-          </Container>
+        <Container>
+          <div className='center'>
+            <img src={persona} alt="Persona" loading="lazy" />
+          </div>
+        </Container>
       </div>
       <Container>
         <div className='section'>
@@ -67,7 +86,7 @@ const ReHome = () => {
             My goal here was to make strategic information architecture decisions that would improve overall responsive web flow.
           </p>
           <div className='center'>
-            <img src={sitemap} alt="Sitemap" loading="lazy"/>
+            <img src={sitemap} alt="Sitemap" loading="lazy" />
           </div>
         </div>
         <div className='section'>
@@ -88,14 +107,21 @@ const ReHome = () => {
         <div className='section'>
           <h2>Paper wireframes</h2>
           <div className='center'>
-            <img src={wireframe} alt="Wireframe" loading="lazy"/>
+            <img src={wireframe} alt="Wireframe" loading="lazy" />
           </div>
         </div>
-        <div className='section'>
+        <div className='section' id="usability_studies">
           <h2>Usability studies</h2>
           <p>Early design allowed for some text search but after usability studies, i added icons option to choose.</p>
           <div className='center'>
-            <img src={usabilityStudy} alt="Usability study" loading="lazy"/>
+            <div className='image_wrapper'><img src={usabilityStudy} alt="Usability study" loading="lazy" /></div>
+            {/* <div className='image_wrapper'><img src={reHomeApp} alt="reHome" loading="lazy"/></div> */}
+            <div className='video' ref={videoRef}>
+               <video controls preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : reHomeApp}>
+                  <source src={video} type="video/mp4" />
+                  <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
+                </video>
+            </div>
           </div>
         </div>
       </Container>
@@ -106,17 +132,17 @@ const ReHome = () => {
               <h2>The solution</h2>
               <p>Easy to search and access to detailed information about the animals available for adoption</p>
             </div>
-            <div className='image'><img src={loginOpen} alt="Login open" loading="lazy"/></div>
-            <div className='image'><img src={search} alt="Search" loading="lazy"/></div>
-            <div className='image'><img src={welcome} alt="Welcome" loading="lazy"/></div>
-            <div className='image'><img src={confirmation} alt="Confirmation" loading="lazy"/></div>
-            <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy"/></div>
-            <div className='image'><img src={booking} alt="Booking" loading="lazy"/></div>
+            <div className='image'><img src={loginOpen} alt="Login open" loading="lazy" /></div>
+            <div className='image'><img src={search} alt="Search" loading="lazy" /></div>
+            <div className='image'><img src={welcome} alt="Welcome" loading="lazy" /></div>
+            <div className='image'><img src={confirmation} alt="Confirmation" loading="lazy" /></div>
+            <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy" /></div>
+            <div className='image'><img src={booking} alt="Booking" loading="lazy" /></div>
           </div>
         </Container>
       </div>
       <div className='section'>
-      <div className='image'><img src={laptop} alt="Laptop" loading="lazy"/></div>
+        <div className='image'><img src={laptop} alt="Laptop" loading="lazy" /></div>
       </div>
       <Container>
         <div className="section center">

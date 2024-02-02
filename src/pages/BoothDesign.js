@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/bookfair/banner.png"
+import bannerMobile from "../assets/images/bookfair/banner_mobile.png"
 import floorPlannerIcon from "../assets/images/icons/floorplanner.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
@@ -16,14 +17,30 @@ import foamBoard3 from "../assets/images/bookfair/foamboard_3.jpg"
 import igStory from "../assets/images/bookfair/ig_story.png"
 import bookCoverBack from "../assets/images/bookfair/cover-back.png"
 import bookCover from "../assets/images/bookfair/book-cover.png"
+import video from "../assets/videos/bookfair/23bookfair.mov"
+import useIntersectionObserver from '@react-hook/intersection-observer'
 import Container from 'react-bootstrap/Container';
 
 const BoothDesign = () => {
+  const videoRef = useRef();
+  const [isLoad, setIsLoad] = useState(false);
+  const { isIntersecting } = useIntersectionObserver(videoRef);
+
+  useEffect(() => {
+    if (isIntersecting && !isLoad) {
+      setIsLoad(true);
+      // console.log(isLoad, isIntersecting);
+    }
+
+  }, [isIntersecting]);
   return (
     <div id='booth_design'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="Book fair" /></div>
-        <div className='title'>Badge Design</div>
+        <div className='image'>
+          <img src={banner} alt="Book fair" className='desktop'/>
+          <img src={bannerMobile} alt="Book fair" className='mobile'/>
+        </div>
+        <div className='title'>Book Fair</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>PRODUCT DESIGN 丨<span>BRANDING</span> 丨<span>3D DESIGN</span></span></div>
@@ -50,25 +67,35 @@ const BoothDesign = () => {
           </ol>
         </div>
         {/* <BackButton /> */}
-        <img src={colours} alt="Colours" loading="lazy"/>
-        <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy"/>
-        <img src={booth} alt="Booth" loading="lazy"/>
-        <img src={floorPlan} alt="Floor plan" loading="lazy"/>
-        <img src={booth1} alt="Booth" loading="lazy"/>
-        <div className='flexbox_wrapper'>
-          <div className='flexbox'>
-            <img src={foamBoard1} alt="Foamboard" loading="lazy"/>
+        <div className='center'>
+          <img src={colours} alt="Colours" loading="lazy" />
+          <div className='video' ref={videoRef}>
+              <video controls preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : booth}>
+                <source src={video} type="video/mp4" />
+                <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag." />
+              </video>
           </div>
-          <div className='flexbox'>
-            <img src={foamBoard2} alt="Foamboard" loading="lazy"/>
-            <img src={foamBoard3} alt="Foamboard" loading="lazy"/>
+          <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
+          <img src={booth} alt="Booth" loading="lazy" />
+          <img src={floorPlan} alt="Floor plan" loading="lazy" />
+          <img src={booth1} alt="Booth" loading="lazy" />
+          <div className='flexbox_wrapper'>
+            <div className='flexbox'>
+              <img src={foamBoard1} alt="Foamboard" loading="lazy" />
+            </div>
+            <div className='flexbox'>
+              <img src={foamBoard2} alt="Foamboard" loading="lazy" />
+              <img src={foamBoard3} alt="Foamboard" loading="lazy" />
+            </div>
           </div>
+          <img src={igStory} alt="IG story" loading="lazy" />
         </div>
-        <img src={igStory} alt="IG story" loading="lazy"/>
         <div className='section'>
           <h2>Book cover design</h2>
-          <img src={bookCoverBack} alt="Book cover back" loading="lazy"/>
-          <img src={bookCover} alt="Book cover" loading="lazy"/>
+          <div className='center'>
+            <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
+            <img src={bookCover} alt="Book cover" loading="lazy" />
+          </div>
         </div>
         <div className="section center">
           <OtherProjectsButton />

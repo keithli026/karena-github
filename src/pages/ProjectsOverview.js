@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import banner from "../assets/images/more_projects/banner.png"
+import bannerMobile from "../assets/images/more_projects/banner_mobile.png"
 import Contact from '../components/Contact'
 import pocina from "../assets/images/more_projects/pocina.png"
 import reHome from "../assets/images/more_projects/RE-HOME.png"
@@ -8,70 +9,88 @@ import boothDesign from "../assets/images/more_projects/book_fair_booth.png"
 import efSet from "../assets/images/more_projects/EFSET.png"
 import BadgeDesign from '../assets/images/more_projects/badge.png'
 import englishTown from "../assets/images/more_projects/englishtown.png"
+import arrowBlack from "../assets/images/icons/arrow_black.png"
 import Figure from 'react-bootstrap/Figure'
 import Container from 'react-bootstrap/Container'
+
 
 const ProjectsOverview = () => {
   return (
     <>
       <div id='projects'>
         <div className='banner'>
-          <div className='image'><img src={banner} alt="banner" /></div>
+          <div className='image'>
+            <img src={banner} alt="More projects banner" className='desktop' />
+            <img src={bannerMobile} alt="More projects banner" className='mobile' /> 
+          </div>
           <div className='title'>More projects</div>
         </div>
         <Container>
           <div className='showcase'>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/brand-design">
-                  <Figure.Image src={pocina} alt="Pocina" loading="lazy" />
-                </Link>
-                <Figure.Caption>Creating engaging and shareable content, including eye-catching graphics, infographics and captivating videos for social media.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/brand-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={pocina} alt="Pocina" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Creating engaging and shareable content, including eye-catching graphics, infographics and captivating videos for social media.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
+
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/booth-design">
-                  <Figure.Image src={boothDesign} alt="Book fair booth" loading="lazy" />
-                </Link>
-                <Figure.Caption>Creating visually appealing and all the materials both online and offline for the exhibition booth.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/booth-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={boothDesign} alt="Book fair booth" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Creating visually appealing and all the materials both online and offline for the exhibition booth.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/re-home">
-                  <Figure.Image src={reHome} alt="RE-HOME" loading="lazy" />
-                </Link>
-                <Figure.Caption>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/re-home">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={reHome} alt="RE-HOME" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/ef-set">
-                  <Figure.Image src={efSet} alt="EF SET" loading="lazy" />
-                </Link>
-                <Figure.Caption>EF Set is an English standard test for non-native English speakers. I was given a task to ensure the landing page design aligns with overall brand identity.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/ef-set">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={efSet} alt="EF SET" loading="lazy" />
+                  </div>
+                  <Figure.Caption>EF Set is an English standard test for non-native English speakers. I was given a task to ensure the landing page design aligns with overall brand identity.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/badge-design">
-                  <Figure.Image src={BadgeDesign} alt="Badge" loading="lazy" />
-                </Link>
-                <Figure.Caption>Designing a badges at different stages or levels, which can enhance their motivation to continue engaging with a product.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/badge-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={BadgeDesign} alt="Badge" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Designing a badges at different stages or levels, which can enhance their motivation to continue engaging with a product.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
             <div className='project'>
-              <Figure>
-                <Link to="/projects/web-design">
-                  <Figure.Image src={englishTown} alt="Englishtown" loading="lazy" />
-                </Link>
-                <Figure.Caption>Collaborating on a UI design project for a web that aims to provide a intuitive user experience for people.</Figure.Caption>
-              </Figure>
+              <Link to="/projects/web-design">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={englishTown} alt="Englishtown" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Collaborating on a UI design project for a web that aims to provide a intuitive user experience for people.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
             </div>
           </div>
+          <Contact />
         </Container>
-        <Contact />
       </div>
     </>
   )

@@ -8,9 +8,34 @@
     }
 
     .image {
+      @include media-breakpoint-down(sm) {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.1%, rgba(0, 0, 0, 0.5) 100%);
+        }
+      }
       img {
         height: 100vh;
+        width: 100%;
         object-fit: cover;
+        &.mobile {
+          display: block;
+          @include media-breakpoint-up(sm) {
+            display: none;
+          }
+        }
+        &.desktop {
+          display: none;
+          @include media-breakpoint-up(sm) {
+            display: block;
+          }
+        }
       }
     }
 
@@ -55,12 +80,14 @@
         display: flex;
         div {
           line-height: 1.5;
-
+          font-size: 12px;
+          @include media-breakpoint-up(sm) {
+            font-size: 16px;
+          }
           &:nth-child(2) {
             margin: 0 20px;
-
             @include media-breakpoint-up(sm) {
-              margin: 0 20px * 4;
+              margin: 0 80px;
             }
           }
 
@@ -143,6 +170,13 @@
         margin-bottom: 0;
       }
     }
+    .video {
+      margin-bottom: 100px;
+      video, img {
+        width: 100%;
+      }
+    }
+
 
     img {
       margin-bottom: $padding-y * 5;
@@ -169,33 +203,31 @@
     justify-content: space-between;
 
     &.two {
-      .image {
-        flex-basis: 100%;
-        margin-bottom: 5px;
+      .image, .video {
+        display: flex;
+        margin-bottom: 2vw;
+        flex-basis: 49%;
         @include media-breakpoint-up(lg) {
-          flex-basis: 50%;
-          &:nth-child(2n-1) {
-            padding-right: 20px * 0.25;
-          }
-          &:nth-child(2n) {
-            padding-left: 20px * 0.25;
-          }
+          margin-bottom: 1.6vw;
+        }
+      }
+      .video {
+        video, img {
+          width: 100%;
         }
       }
     }
     &.three {
       .image {
-        margin-bottom: 5px;
-        @include media-breakpoint-up(lg) {
-          flex-basis: 33%;
-        }
+        margin-bottom: 0.83vw;
+        flex-basis: 32.5%;
       }
     }
   }
 
   .ref {
     position: relative;
-    margin-bottom: $padding-y * 5;
+    margin-bottom: 100px;
     img {
       margin-bottom: 0;
     }

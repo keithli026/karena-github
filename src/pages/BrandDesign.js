@@ -2,6 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_design/banner.png"
+import bannerMobile from "../assets/images/brand_design/banner_mobile.png"
 import AEIcon from "../assets/images/icons/AE.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
@@ -24,13 +25,20 @@ import dayNightRoutine from "../assets/images/brand_design/day_and_night.png"
 import tea from "../assets/images/brand_design/tea.png"
 import diet from "../assets/images/brand_design/diet.png"
 import taste from "../assets/images/brand_design/taste.jpg"
+import teaVideo from "../assets/videos/brand_design/tea.mp4"
+import dietVideo from "../assets/videos/brand_design/diet.mp4"
+import pocinaVideo from "../assets/videos/brand_design/pocina.mp4"
+
 import Container from 'react-bootstrap/Container';
 
 const BrandDesign = () => {
   return (
     <div id='brand_design'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="Brand identity design banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="Brand identity design banner" className='desktop'/>
+          <img src={bannerMobile} alt="Brand identity design banner" className='mobile'/>
+        </div>
         <div className='title'>Brand Identity Design</div>
         <div className='content'>
           <div className='keypoint'>
@@ -60,7 +68,13 @@ const BrandDesign = () => {
         <div className='wrapper'>
           <div className='section center'>
             {/* <BackButton /> */}
-            <img src={color4} alt="Four colors" loading="lazy" />
+            {/* <img src={color4} alt="Four colors" loading="lazy" /> */}
+            <div className='video'>
+              <video autoPlay loop muted playsInline>
+                <source src={pocinaVideo} type="video/mp4" />
+                <img src={color4} alt="Four colors" loading="lazy" title="Your browser does not support the video tag." />
+              </video>
+            </div>
             <div className='ref'>
               <img src={greenPowder} alt="Green powder" loading="lazy" />
               <img src={pocina} alt="POCINA" className='cover' loading="lazy" />
@@ -86,8 +100,18 @@ const BrandDesign = () => {
           </div>
           <div className='section flexbox two'>
             <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div>
-            <div className='image'><img src={tea} alt="Tea" loading="lazy" /></div>
-            <div className='image'><img src={diet} alt="Diet" loading="lazy" /></div>
+            <div className='video'>
+              <video autoPlay loop muted playsInline>
+                <source src={teaVideo} type="video/mp4" />
+                <img src={tea} alt="Tea" loading="lazy" title="Your browser does not support the video tag." />
+              </video>
+            </div>
+            <div className='video'>
+              <video autoPlay loop muted playsInline>
+                <source src={dietVideo} type="video/mp4" />
+                <img src={diet} alt="Diet" loading="lazy" title="Your browser does not support the video tag." />
+              </video>
+            </div>
             <div className='image'><img src={taste} alt="Taste" loading="lazy" /></div>
           </div>
         </div>

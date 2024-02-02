@@ -2,6 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/ef_set/banner.png"
+import bannerMobile from "../assets/images/ef_set/banner_mobile.png"
 import XDIcon from "../assets/images/icons/XD.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
@@ -19,7 +20,10 @@ const EFSet = () => {
   return (
     <div id='ef_set'>
       <div className='banner'>
-        <div className='image'><img src={banner} alt="banner" /></div>
+        <div className='image'>
+          <img src={banner} alt="EF Set banner" className='desktop' />
+          <img src={bannerMobile} alt="EF Set banner" className='mobile' />
+        </div>
         <div className='title'>EF SET TESTS</div>
         <div className='content'>
           <div className='keypoint'>
@@ -51,27 +55,27 @@ const EFSet = () => {
       </Container>
       <div className='section gallery'>
         <div className='image'>
-          <img src={EFSetTest1} alt="EF Set test" loading="lazy"/>
+          <img src={EFSetTest1} alt="EF Set test" loading="lazy" />
           {/* <BackButton />  */}
         </div>
         <Container>
-          <img src={EFSetTest2} alt="EF Set test" loading="lazy"/>
-          <img src={EFSetTest3} alt="EF Set test" loading="lazy"/>
-          <img src={EFSetTest4} alt="EF Set test" loading="lazy"/>
-          <img src={EFSetTest5} alt="EF Set test" loading="lazy"/>
+          <img src={EFSetTest2} alt="EF Set test" loading="lazy" />
+          <img src={EFSetTest3} alt="EF Set test" loading="lazy" />
+          <img src={EFSetTest4} alt="EF Set test" loading="lazy" />
+          <img src={EFSetTest5} alt="EF Set test" loading="lazy" />
         </Container>
       </div>
       <Container>
         <div className='section'>
           <div className='flexbox'>
-            <div className='image'><img src={result1} alt="EF Set test" loading="lazy"/></div>
-            <div className='image'><img src={result2} alt="EF Set test" loading="lazy"/></div>
+            <div className='image'><img src={result1} alt="EF Set test" loading="lazy" /></div>
+            <div className='image'><img src={result2} alt="EF Set test" loading="lazy" /></div>
           </div>
         </div>
       </Container>
       <div className='bg section'>
         <Container>
-          <img src={mobile} alt="EF Set test" loading="lazy"/>
+          <img src={mobile} alt="EF Set test" loading="lazy" />
         </Container>
       </div>
       <Container>

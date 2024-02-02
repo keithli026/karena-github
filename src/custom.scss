@@ -2,6 +2,7 @@
 @import "font";
 @import "variable";
 @import '~bootstrap/scss/bootstrap.scss';
+@import "./components/backButton.scss";
 @import "./components/backToTopButton.scss";
 @import "./components/header/header.scss";
 @import "./components/footer/footer.scss";
@@ -48,6 +49,10 @@ p {
   line-height: 1.4;
   font-weight: 300;
   font-family: 'Nunito', 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 50px;
+  }
 }
 
 ul, ol {
