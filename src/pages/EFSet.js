@@ -18,7 +18,7 @@ import Container from 'react-bootstrap/Container';
 
 const EFSet = () => {
   return (
-    <div id='ef_set'>
+    <div id='ef_set' className='project'>
       <div className='banner'>
         <div className='image'>
           <img src={banner} alt="EF Set banner" className='desktop' />

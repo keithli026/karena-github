@@ -19,11 +19,11 @@ import Container from 'react-bootstrap/Container';
 
 const BadgeDesign = () => {
   return (
-    <div id='badge_design'>
+    <div id='badge_design' className='project'>
       <div className='banner'>
         <div className='image'>
-          <img src={banner} alt="Badge design banner" className='desktop'/>
-          <img src={bannerMobile} alt="Badge design banner" className='mobile'/>
+          <img src={banner} alt="Badge design banner" className='desktop' />
+          <img src={bannerMobile} alt="Badge design banner" className='mobile' />
         </div>
         <div className='title'>Badge Design</div>
         <div className='content'>
@@ -52,24 +52,28 @@ const BadgeDesign = () => {
         </div>
       </Container>
       <div className='bg'>
-        <Container className='wrapper'>
-          {/* <BackButton /> */}
-          <img src={badge40} alt="Badge 40" loading="lazy"/>
-          <img src={badge60} alt="Badge 60" loading="lazy"/>
-          <img src={badge30} alt="Badge 30" loading="lazy"/>
-          <img src={badge50} alt="Badge 50" loading="lazy"/>
-          <img src={badge70} alt="Badge 70" loading="lazy"/>
-          <img src={badgeMobile} alt="badge on mobile" loading="lazy"/>
+        <Container>
+          <div className='center'>
+            {/* <BackButton /> */}
+            <img src={badge40} alt="Badge 40" loading="lazy" />
+            <img src={badge60} alt="Badge 60" loading="lazy" />
+            <img src={badge30} alt="Badge 30" loading="lazy" />
+            <img src={badge50} alt="Badge 50" loading="lazy" />
+            <img src={badge70} alt="Badge 70" loading="lazy" />
+            <img src={badgeMobile} alt="badge on mobile" loading="lazy" />
+          </div>
         </Container>
         <div className='section'>
-          <div className='image'><img src={badgeDesign1} alt="badge design" loading="lazy"/></div>
+          <div className='image'><img src={badgeDesign1} alt="badge design" loading="lazy" /></div>
         </div>
         <div className='section'>
-          <div className='image'><img src={badgeDesign2} alt="badge design" loading="lazy"/></div>
+          <div className='image'><img src={badgeDesign2} alt="badge design" loading="lazy" /></div>
         </div>
-        <Container className='wrapper'>
-          <img src={awardPage} alt="award page" loading="lazy"/>
-          <div className="center">
+        <Container>
+          <div className='section'>
+            <img src={awardPage} alt="award page" loading="lazy" />
+          </div>
+          <div className="section center">
             <OtherProjectsButton />
           </div>
         </Container>

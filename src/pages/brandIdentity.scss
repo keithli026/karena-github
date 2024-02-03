@@ -1,0 +1,54 @@
+#brand_identity {
+  .banner {
+    .image {
+      @include media-breakpoint-down(sm) {
+        &::before {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 41.1%, rgba(0, 0, 0, 0.5) 100%);
+        }
+      }
+    }
+  }
+
+  .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &.two {
+      .image, .video {
+        display: flex;
+        margin-bottom: 2vw;
+        flex-basis: 49%;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 1.6vw;
+        }
+      }
+    }
+    &.three {
+      .image {
+        margin-bottom: 0.83vw;
+        flex-basis: 32.5%;
+      }
+    }
+  }
+
+  .ref {
+    position: relative;
+    margin-bottom: 100px;
+    img {
+      margin-bottom: 0;
+    }
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin-right: 20px;
+      margin-top: auto;
+      margin-bottom: auto;
+      width: auto;
+      height: auto;
+      max-width: 45%;
+    }
+  }
+}

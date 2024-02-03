@@ -34,7 +34,7 @@ const BoothDesign = () => {
 
   }, [isIntersecting]);
   return (
-    <div id='booth_design'>
+    <div id='booth_design' className='project'>
       <div className='banner'>
         <div className='image'>
           <img src={banner} alt="Book fair" className='desktop'/>
@@ -70,7 +70,7 @@ const BoothDesign = () => {
         <div className='center'>
           <img src={colours} alt="Colours" loading="lazy" />
           <div className='video' ref={videoRef}>
-              <video controls preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : booth}>
+              <video controls playsInline preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : booth}>
                 <source src={video} type="video/mp4" />
                 <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag." />
               </video>

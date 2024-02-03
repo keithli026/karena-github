@@ -1,4 +1,4 @@
-#badge_design {
+.project {
   .banner {
     position: relative;
     margin-bottom: $padding-y * 5;
@@ -10,6 +10,7 @@
     .image {
       @include media-breakpoint-down(sm) {
         position: relative;
+
         &::before {
           content: "";
           position: absolute;
@@ -17,22 +18,26 @@
           left: 0;
           height: 100%;
           width: 100%;
-          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
         }
       }
+
       img {
         max-height: 100vh;
         height: 100svh;
         width: 100%;
         object-fit: cover;
+
         &.mobile {
           display: block;
+
           @include media-breakpoint-up(sm) {
             display: none;
           }
         }
+
         &.desktop {
           display: none;
+
           @include media-breakpoint-up(sm) {
             display: block;
           }
@@ -80,14 +85,18 @@
 
       .keypoint {
         display: flex;
+
         div {
           line-height: 1.5;
           font-size: 12px;
+
           @include media-breakpoint-up(sm) {
             font-size: 16px;
           }
+
           &:nth-child(2) {
             margin: 0 20px;
+
             @include media-breakpoint-up(sm) {
               margin: 0 80px;
             }
@@ -110,6 +119,7 @@
         display: flex;
         flex-direction: column;
         min-width: 30px;
+
         @include media-breakpoint-up(lg) {
           flex-direction: row;
         }
@@ -130,8 +140,8 @@
   }
 
   h2 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 800;
 
     @include media-breakpoint-up(lg) {
       font-size: 40px;
@@ -139,7 +149,8 @@
   }
 
   p,
-  ol {
+  ol,
+  ul {
     font-size: 16px;
 
     @include media-breakpoint-up(lg) {
@@ -149,8 +160,25 @@
 
   .btn {
     text-transform: uppercase;
+
     @include media-breakpoint-up(lg) {
       padding: $padding-y 20px * 5;
+    }
+  }
+
+  .video {
+    margin-bottom: 100px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 150px;
+    }
+    video, img {
+      width: 100%;
+    }
+  }
+
+  .image {
+    img {
+      width: 100%;
     }
   }
 
@@ -164,41 +192,35 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: $padding-y * 15;
     }
+  }
+
+  .bg {
+    background-color: $gray-400;
+    padding: 100px 0;
+    @include media-breakpoint-up(lg) {
+      padding: 150px 0;
+    }
+  }
+}
+
+#badge_design {
+  .banner {
     .image {
-      img {
-        width: 100%;
+      @include media-breakpoint-down(sm) {
+        &::before {
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
       }
     }
   }
 
   .bg {
-    background-color: $gray-400;
-    padding: $padding-y * 10 0;
-    @include media-breakpoint-up(lg) {
-      padding: $padding-y * 15 0;
-    }
-    .wrapper {
-      text-align: center;
-      button {
-        display: flex;
-        align-items: center;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-        margin-bottom: $padding-y * 5;
-        font-size: 32px;
-        &:hover {
-          color: $black;
-        }
-        img {
-          margin-right: 20px * 2;
-          margin-bottom: 0;
-        }
-      }
+    .center {
       img {
-        margin-bottom: $padding-y * 10;
+        margin-bottom: 100px;
+
         @include media-breakpoint-up(lg) {
-          margin-bottom: $padding-y * 15;
+          margin-bottom: 150px;
         }
       }
     }

@@ -18,7 +18,7 @@ import Container from 'react-bootstrap/Container';
 
 const WebDesign = () => {
   return (
-    <div id='web_design'>
+    <div id='web_design' className='project'>
       <div className='banner'>
         <div className='image'>
           <img src={banner} alt="EF website banner" className='desktop' />
@@ -53,32 +53,29 @@ const WebDesign = () => {
           </ol>
         </div>
       </Container>
-      <div className='bg'>
+      <div className='bg section'>
         <Container>
-          {/* <BackButton /> */}
-          <div className='section center'>
-            <img src={iPadLayout} alt="iPad layout design" loading="lazy"/>
-          </div>
-          <div className='section center'>
-            <img src={desktopDesign2} alt="Englishtown desktop design" loading="lazy"/>
-          </div>
+        <img src={iPadLayout} alt="iPad layout design" loading="lazy" />
         </Container>
+      </div>
+      <div className='section center'>
+        <img src={desktopDesign2} alt="Englishtown desktop design" loading="lazy" />
       </div>
       <Container>
         <div className='section'>
           <h2>Next Steps</h2>
           <p>Improve responsiveness on mobile and tablet</p>
           <div className='flexbox'>
-            <div className='image'><img src={mobileDesign1} alt="Englishtown mobile design" loading="lazy"/></div>
-            <div className='image'><img src={mobileDesign2} alt="Englishtown mobile design" loading="lazy"/></div>
-            <div className='image'><img src={mobileDesign3} alt="Englishtown mobile design" loading="lazy"/></div>
+            <div className='image'><img src={mobileDesign1} alt="Englishtown mobile design" loading="lazy" /></div>
+            <div className='image'><img src={mobileDesign2} alt="Englishtown mobile design" loading="lazy" /></div>
+            <div className='image'><img src={mobileDesign3} alt="Englishtown mobile design" loading="lazy" /></div>
           </div>
           <div className='flexbox two'>
-            <div className='image'><img src={desktopDesign1} alt="Englishtown desktop design" loading="lazy"/></div>
-            <div className='image'><img src={desktopDesign3} alt="Englishtown desktop design" loading="lazy"/></div>
+            <div className='image'><img src={desktopDesign1} alt="Englishtown desktop design" loading="lazy" /></div>
+            <div className='image'><img src={desktopDesign3} alt="Englishtown desktop design" loading="lazy" /></div>
           </div>
           <div className='center'>
-            <img src={desktopDesign4} alt="Englishtown desktop design" loading="lazy"/>
+            <img src={desktopDesign4} alt="Englishtown desktop design" loading="lazy" />
           </div>
         </div>
         <div className='section'>

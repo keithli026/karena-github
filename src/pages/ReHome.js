@@ -38,7 +38,7 @@ const ReHome = () => {
   }, [isIntersecting]);
 
   return (
-    <div id='re-home'>
+    <div id='re-home' className='project'>
       <div className='banner'>
         <div className='image'>
           <img src={banner} alt="RE-Home banner" className='desktop' />

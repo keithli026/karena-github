@@ -28,7 +28,7 @@ const ProjectsOverview = () => {
         <Container>
           <div className='showcase'>
             <div className='project'>
-              <Link to="/projects/brand-design">
+              <Link to="/projects/brand-identity">
                 <Figure>
                   <div className='image'>
                     <Figure.Image src={pocina} alt="Pocina" loading="lazy" />

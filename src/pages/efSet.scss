@@ -1,160 +1,11 @@
 #ef_set {
   .banner {
-    position: relative;
-    margin-bottom: $padding-y * 5;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 10;
-    }
-
     .image {
       @include media-breakpoint-down(sm) {
-        position: relative;
         &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
           background: rgba(0, 0, 0, 0.3);
         }
       }
-      img {
-        max-height: 100vh;
-        height: 100svh;
-        width: 100%;
-        object-fit: cover;
-        &.mobile {
-          display: block;
-          @include media-breakpoint-up(sm) {
-            display: none;
-          }
-        }
-        &.desktop {
-          display: none;
-          @include media-breakpoint-up(sm) {
-            display: block;
-          }
-        }
-      }
-    }
-
-    .title {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 0 20px;
-      margin: auto;
-      width: fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 700;
-      color: $white;
-      text-transform: uppercase;
-
-      @include media-breakpoint-up(lg) {
-        font-size: 50px;
-      }
-    }
-
-    .content {
-      padding: 20px;
-      color: $white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      @include media-breakpoint-up(lg) {
-        padding-bottom: $padding-y * 5;
-      }
-
-      .keypoint {
-        display: flex;
-        div {
-          line-height: 1.5;
-          font-size: 12px;
-          @include media-breakpoint-up(sm) {
-            font-size: 16px;
-          }
-          &:nth-child(2) {
-            margin: 0 20px;
-            @include media-breakpoint-up(sm) {
-              margin: 0 80px;
-            }
-          }
-
-          span {
-            &::before {
-              content: "\a";
-              white-space: pre;
-
-              @include media-breakpoint-up(sm) {
-                white-space: normal;
-              }
-            }
-          }
-        }
-      }
-
-      .icons {
-        display: flex;
-        flex-direction: column;
-        min-width: 30px;
-        @include media-breakpoint-up(lg) {
-          flex-direction: row;
-        }
-
-        img {
-          width: 30px;
-          height: 30px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          img {
-            width: 45px;
-            height: 45px;
-          }
-        }
-      }
-    }
-  }
-
-  h2 {
-    font-size: 30px;
-    font-weight: 700;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 40px;
-    }
-  }
-
-  p, ol {
-    font-size: 16px;
-    @include media-breakpoint-up(lg) {
-      font-size: 24px;
-    }
-  }
-
-  .btn {
-    text-transform: uppercase;
-
-    @include media-breakpoint-up(lg) {
-      padding: 10px;
-    }
-  }
-  .section {
-    margin-bottom: 100px;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 150px;
     }
   }
 
@@ -173,26 +24,13 @@
     }
   }
 
-  .center {
-    text-align: center;
-  }
-
-  .bg {
-    background-color: $gray-400;
-    padding: 100px 0;
-    @include media-breakpoint-up(lg) {
-      padding: 150px 0;
-    }
-  }
-
-
   .gallery {
     @include media-breakpoint-up(xl) {
       margin-bottom: 0;
     }
     img {
       display: block;
-      margin-bottom: 20px * 0.5 * 5;
+      margin-bottom: 50px;
       &:nth-child(1) {
         @include media-breakpoint-up(lg) {
           margin-right: auto;
@@ -235,7 +73,7 @@
     }
     .image {
       text-align: center;
-      margin-bottom: 20px * 0.5 * 5;
+      margin-bottom: 50px;
       position: relative;
 
       button {
@@ -249,7 +87,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-top: 20px * 0.5 * 5;
+        margin-top: 50px;
         margin-left: 20px;
         @include media-breakpoint-up(sm) {
           margin-left: calc((100vw - $sm-max-width) / 2 + 20px);
@@ -267,12 +105,6 @@
         @include media-breakpoint-up(xxl) {
           margin-left: calc((100vw - $xxl-max-width) / 2 + 20px);
         }
-        // @media (min-width: $xxxl) {
-        //   // margin-left: calc((100vw - $xxxl-max-width) / 2 + 20px);
-        // } 
-        // @media (min-width: $xxxxl) {
-        //   // margin-left: calc((100vw - $xxxxl-max-width) / 2 + 20px);
-        // }
         img {
           margin-right: 20px * 2;
           margin-bottom: 0;

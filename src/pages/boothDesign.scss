@@ -1,212 +1,20 @@
 #booth_design {
   .banner {
-    position: relative;
-    margin-bottom: $padding-y * 5;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 10;
-    }
-
     .image {
       @include media-breakpoint-down(sm) {
-        position: relative;
         &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
           background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         }
       }
-      img {
-        max-height: 100vh;
-        height: 100svh;
-        width: 100%;
-        object-fit: cover;
-        &.mobile {
-          display: block;
-          @include media-breakpoint-up(sm) {
-            display: none;
-          }
-        }
-        &.desktop {
-          display: none;
-          @include media-breakpoint-up(sm) {
-            display: block;
-          }
-        }
-      }
-    }
-
-    .title {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 0 20px;
-      margin: auto;
-      width: fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 700;
-      color: $white;
-      text-transform: uppercase;
-
-      @include media-breakpoint-up(lg) {
-        font-size: 50px;
-      }
-    }
-
-    .content {
-      padding: 20px;
-      color: $white;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-
-      @include media-breakpoint-up(lg) {
-        padding-bottom: $padding-y * 5;
-      }
-
-      .keypoint {
-        display: flex;
-        div {
-          line-height: 1.5;
-          font-size: 12px;
-          @include media-breakpoint-up(sm) {
-            font-size: 16px;
-          }
-          &:nth-child(2) {
-            margin: 0 20px;
-            @include media-breakpoint-up(sm) {
-              margin: 0 80px;
-            }
-          }
-
-          span {
-            &::before {
-              content: "\a";
-              white-space: pre;
-
-              @include media-breakpoint-up(sm) {
-                white-space: normal;
-              }
-            }
-          }
-        }
-      }
-
-      .icons {
-        display: flex;
-        flex-direction: column;
-        min-width: 30px;
-        @include media-breakpoint-up(lg) {
-          flex-direction: row;
-        }
-
-        img {
-          width: 30px;
-          height: 30px;
-        }
-
-        @include media-breakpoint-up(lg) {
-          img {
-            width: 45px;
-            height: 45px;
-          }
-        }
-      }
-    }
-  }
-
-  h2 {
-    font-size: 30px;
-    font-weight: 700;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 40px;
-    }
-  }
-
-  p,
-  ol {
-    font-size: 16px;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 24px;
-    }
-  }
-
-  .btn {
-    text-transform: uppercase;
-
-    @include media-breakpoint-up(lg) {
-      padding: $padding-y 20px * 5;
-    }
-  }
-  
-  .video {
-    margin-bottom: $padding-y * 10;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 15;
-    }
-    video {
-      width: 100%;
     }
   }
 
   .center {
-    text-align: center;
     img {
-      margin-bottom: $padding-y * 10;
-      @include media-breakpoint-up(lg) {
-        margin-bottom: $padding-y * 15;
-      }
-    }
-  }
-
-  .section {
-    margin-bottom: $padding-y * 10;
-
-    @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 15;
-    }
-  }
-
-  .wrapper {
-    button {
-      display: flex;
-      align-items: center;
-      padding: 0;
-      border: none;
-      background-color: transparent;
-      margin-bottom: $padding-y * 5;
-      font-size: 32px;
-      &:hover {
-        color: $black;
-      }
-      img {
-        margin-right: 20px * 2;
-        margin-bottom: 0;
-      }
-    }
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: $padding-y * 10;
+      margin-bottom: 100px;
 
       @include media-breakpoint-up(lg) {
-        margin-bottom: $padding-y * 15;
+        margin-bottom: 150px;
       }
     }
   }
@@ -214,41 +22,47 @@
   .flexbox_wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 150px;
+    }
+    @include media-breakpoint-up(xl) {
+      justify-content: space-evenly;
+    }
 
     .flexbox {
-      flex-basis: 100%;
+      &:first-child {
+        flex-basis: 66%;
+      }
 
-      @include media-breakpoint-up(lg) {
+      &:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        flex-basis: 32%;
+      }
+
+
+      @include media-breakpoint-up(xl) {
         &:first-child {
           flex-basis: auto;
         }
-
         &:nth-child(2) {
-          margin-left: 2.2%;
-          flex-basis: 31.8%;
-
-          img {
-            margin-bottom: 20px;
-          }
-        }
-      }
-
-      @include media-breakpoint-up(xl) {
-        &:nth-child(2) {
-          margin-left: 20px;
-          flex-basis: 26.6%;
+          flex-basis: 30%;
         }
       }
 
       @include media-breakpoint-up(xxl) {
         &:nth-child(2) {
-          flex-basis: 22.9%;
+          flex-basis: 27%;
 
-          img {
-            margin-bottom: 20px;
-          }
         }
+      }
+
+      img {
+        margin-bottom: 0px;
       }
     }
   }
