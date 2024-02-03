@@ -117,7 +117,7 @@ const ReHome = () => {
             <div className='image_wrapper'><img src={usabilityStudy} alt="Usability study" loading="lazy" /></div>
             {/* <div className='image_wrapper'><img src={reHomeApp} alt="reHome" loading="lazy"/></div> */}
             <div className='video' ref={videoRef}>
-               <video controls preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : reHomeApp}>
+               <video controls playsInline preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : reHomeApp}>
                   <source src={video} type="video/mp4" />
                   <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
                 </video>

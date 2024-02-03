@@ -115,7 +115,7 @@
           font-size: 36px;
           margin-bottom: 30px;
           @include media-breakpoint-up(lg) {
-            margin-bottom: $padding-y * 5;
+            margin-bottom: 50px;
             font-size: 50px;
           }
           span::before {
@@ -126,7 +126,7 @@
         .intro {
           font-weight: 500;
           font-size: 15px;
-          margin-bottom: $padding-y * 5;
+          margin-bottom: 50px;
           span {
             color: $pink;
             text-decoration: underline;
@@ -219,7 +219,7 @@
     }
   }
   #projects {
-    margin-bottom: $padding-y * 10;
+    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
       max-width: $lg-max-width;
@@ -237,7 +237,7 @@
     .project {
       position: relative;
       @include media-breakpoint-up(lg) {
-        margin-bottom: $padding-y * 10;
+        margin-bottom: 150px;
       }
       &.scrolled {
         .image {
@@ -281,31 +281,30 @@
           }
         }
       }
+      &:nth-last-of-type(2) {
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 250px;
+        }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 200px;
+        }
+      }
       &:last-of-type {
         @include media-breakpoint-up(lg) {
-          // margin-bottom: 450px;
+          margin-bottom: 250px;
           .image {
             position: relative;
             z-index: 1;
           }
           .content {
-            // margin-top: unset;
-            // margin-bottom: unset;
-            // bottom: unset;
-            // top: 30%;
             .wrapper {
-              @include media-breakpoint-up(lg) {
-                padding-right: 80px;
-              }
+              padding-right: 53px;
             }
           }
         }
-        // @include media-breakpoint-up(xl) {
-        //   margin-bottom: 400px;
-        // }
-        // @include media-breakpoint-up(xxl) {
-        //   margin-bottom: 350px;
-        // }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 200px;
+        }
       }
       .image {
         position: relative;
@@ -341,13 +340,13 @@
         }
   
         .wrapper {
-          padding-top: $padding-y * 4;
-          padding-bottom: $padding-y * 10;
+          padding-top: 40px;
+          padding-bottom: 100px;
           @include media-breakpoint-up(lg) {
-            padding: $padding-y * 2 40px $padding-y * 4;
+            padding: 20px 40px 40px;
           }
           @include media-breakpoint-up(xl) {
-            padding: $padding-y * 4 50px $padding-y * 4;
+            padding: 40px;
           }
        
           .hashtag {
@@ -355,7 +354,7 @@
             font-size: 12px;
             line-height: 1.8;
             color: $black;
-            margin-bottom: $padding-y * 5;
+            margin-bottom: 50px;
             font-weight: 500;
             @include media-breakpoint-up(sm) {
               font-size: 14px;
@@ -367,7 +366,7 @@
           .title {
             font-size: 18px;
             font-weight: 700;
-            margin-bottom: $padding-y * 5;
+            margin-bottom: 50px;
             position: relative;
             line-height: 34px;
             &::after {
@@ -380,7 +379,7 @@
             }
           }
           p {
-            margin-bottom: $padding-y * 4;
+            margin-bottom: 40px;
             font-size: 16px;
             font-weight: 300;
             @include media-breakpoint-up(lg) {

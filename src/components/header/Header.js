@@ -28,7 +28,7 @@ const Header = () => {
   const refButton = useRef(null);
 
   useEffect(() => {
-    if(show) {
+    if (show) {
       refButton.current.classList.add("rotate");
     } else {
       refButton.current.classList.remove("rotate");
@@ -37,27 +37,42 @@ const Header = () => {
   }, [show]);
 
   return (
-    <div id="header" >
-      <Navbar id="navTop" ref={refHeader}>
-        <Container fluid className='wrapper'>
-          <Link to="/" title="home" id="logo" onClick={closeMenu}>
-            <img alt="site logo" src={siteLogo} />
-          </Link>
-          <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => {resetButton(); closeMenu();}}>
-            <Button variant='outline-light' onClick={showMenu} ref={refButton}>
-              <img alt="menu" src={fingerLeftIcon} />
-              {/* {show ? <img alt="menu" className="rotate1" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />} */}
-            </Button>
-            <ul className={show ? "show" : null}>
-              <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
-              <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-              <li><Link to="/lets-talk" state={{ targetId: "info" }} onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
-              {/* <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li> */}
-            </ul>
-          </div>
-        </Container>
-      </Navbar>
-    </div>
+    // <div id="header" >
+    //   <Navbar id="navTop" ref={refHeader}>
+    //     <Container fluid className='wrapper'>
+    //       <Link to="/" title="home" id="logo" onClick={closeMenu}>
+    //         <img alt="site logo" src={siteLogo} />
+    //       </Link>
+    //       <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }}>
+    //         <Button variant='outline-light' onClick={showMenu} ref={refButton}>
+    //           <img alt="menu" src={fingerLeftIcon} />
+    //         </Button>
+    //         <ul className={show ? "show" : null}>
+    //           <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
+    //           <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
+    //           <li><Link to="/lets-talk" onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
+    //         </ul>
+    //       </div>
+    //     </Container>
+    //   </Navbar>
+    // </div>
+    <>
+      <Link to="/" title="home" id="logo" onClick={closeMenu}>
+        <img alt="site logo" src={siteLogo} />
+      </Link>
+      <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }}>
+        <Button variant='outline-light' onClick={showMenu} ref={refButton}>
+          <img alt="menu" src={fingerLeftIcon} />
+          {/* {show ? <img alt="menu" className="rotate1" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />} */}
+        </Button>
+        <ul className={show ? "show" : null}>
+          <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
+          <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
+          <li><Link to="/lets-talk" state={{ targetId: "info" }} onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
+          {/* <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li> */}
+        </ul>
+      </div>
+    </>
   );
 }
 

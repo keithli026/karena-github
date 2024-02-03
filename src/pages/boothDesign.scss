@@ -44,20 +44,12 @@
         flex-basis: 32%;
       }
 
-
       @include media-breakpoint-up(xl) {
         &:first-child {
           flex-basis: auto;
         }
         &:nth-child(2) {
           flex-basis: 30%;
-        }
-      }
-
-      @include media-breakpoint-up(xxl) {
-        &:nth-child(2) {
-          flex-basis: 27%;
-
         }
       }
 
