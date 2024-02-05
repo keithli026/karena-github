@@ -9,7 +9,7 @@
       position: relative;
       margin-bottom: 50px;
       img {
-        max-height: 100vh;
+        max-height: 521px;
         height: 100svh;
         width: 100%;
         object-fit: cover;
@@ -23,7 +23,7 @@
           display: none;
           @include media-breakpoint-up(sm) {
             display: block;
-            max-height: 500px;
+            max-height: 550px;
           }
         }
       }
@@ -78,23 +78,20 @@
           .figure-img {
             margin-bottom: 0;
             @include media-breakpoint-up(sm) {
-              height: 150px;
+              height: 140px;
             }
             @include media-breakpoint-up(md) {
               height: 200px;
             }
             @include media-breakpoint-up(lg) {
-              height: 220px;
+              height: 180px;
               transition: transform 0.5s ease;
               &:hover {
                 transform: scale(1.1);
               }
             }
             @include media-breakpoint-up(xl) {
-              height: 250px;
-            }
-            @include media-breakpoint-up(xxl) {
-              height: 300px;
+              height: 220px;
             }
           }
         }

@@ -21,10 +21,39 @@ import confirmation from "../assets/images/re-home/confirmation.png"
 import dogInformation from "../assets/images/re-home/dog-infomation.png"
 import booking from "../assets/images/re-home/booking.png"
 import laptop from "../assets/images/re-home/laptop.jpg"
+import cert1 from "../assets/images/re-home/Coursera_UXC1.jpg"
+import cert2 from "../assets/images/re-home/Coursera_UXC2.jpg"
+import cert3 from "../assets/images/re-home/Coursera_UXC3.jpg"
+import cert4 from "../assets/images/re-home/Coursera_UXC4.jpg"
+import cert5 from "../assets/images/re-home/Coursera_UXC5.jpg"
+import cert6 from "../assets/images/re-home/Coursera_UXC6.jpg"
+import cert7 from "../assets/images/re-home/Coursera_UXC7.jpg"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
 
 const ReHome = () => {
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false
+        }
+      }
+    ]
+  };
+
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
   const { isIntersecting } = useIntersectionObserver(videoRef);
@@ -117,10 +146,10 @@ const ReHome = () => {
             <div className='image_wrapper'><img src={usabilityStudy} alt="Usability study" loading="lazy" /></div>
             {/* <div className='image_wrapper'><img src={reHomeApp} alt="reHome" loading="lazy"/></div> */}
             <div className='video' ref={videoRef}>
-               <video controls playsInline preload={isLoad ? "auto" :"none"} poster={isLoad ? undefined : reHomeApp}>
-                  <source src={video} type="video/mp4" />
-                  <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
-                </video>
+              <video controls playsInline preload={isLoad ? "auto" : "none"} poster={reHomeApp}>
+                <source src={video} type="video/mp4" />
+                <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
+              </video>
             </div>
           </div>
         </div>
@@ -145,6 +174,17 @@ const ReHome = () => {
         <div className='image'><img src={laptop} alt="Laptop" loading="lazy" /></div>
       </div>
       <Container>
+        <div className='section' id="certs">
+          <Slider  {...settings}>
+            <div className='image'><img src={cert1} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert2} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert3} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert4} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert5} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert6} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert7} alt="Coursera certificate" loading="lazy" /></div>
+          </Slider>
+        </div>
         <div className="section center">
           <OtherProjectsButton />
         </div>

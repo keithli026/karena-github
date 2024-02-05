@@ -13,7 +13,7 @@
     margin-bottom: $padding-y * 20;
   }
   .title {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 900;
     margin-bottom: 20px;
     @include media-breakpoint-up(lg) {
@@ -21,15 +21,10 @@
     }
   }
   p {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 300;
     @include media-breakpoint-up(lg) {
       font-size: 18px;
-    }
-  }
-  .btn {
-    text-transform: uppercase;
-    @include media-breakpoint-up(lg) {
-      padding: $padding-y 100px;
     }
   }
 }

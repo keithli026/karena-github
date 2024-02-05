@@ -25,11 +25,17 @@ body {
   overflow-x: hidden;  
 }
 button, .btn, .btn.btn-light {
+  text-transform: uppercase;
   border: 1px solid $black;
-  font-weight: 900;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 30px;
   @include media-breakpoint-up(lg) {
-    border: 2px solid $black;
-    font-size: 18px;
+    border: 1px solid $black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 50px;
   }
   &:hover, &:focus, &:active {
     background-color: $pink;
@@ -37,6 +43,7 @@ button, .btn, .btn.btn-light {
     color: $white;
   }
 } 
+
 .btn.btn-outline-light {
   padding: 0;
   border-color: transparent;
@@ -54,7 +61,7 @@ p {
   margin-bottom: 30px;
   font-size: 16px;
   @include media-breakpoint-up(lg) {
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     font-size: 18px;
   }
 }
@@ -76,4 +83,20 @@ img {
   max-width: 100%;
 }
 
-
+.slick-arrow {
+  &.slick-prev {
+    // background-color: $black;
+    &::before {
+      content: "\25C0";
+      color: $black;
+    }
+  }
+  
+  &.slick-next {
+    // background-color: $black;
+    &::before {
+      content: "\25B6";
+      color: $black;
+    }
+  }
+}

@@ -68,8 +68,7 @@ const Header = () => {
         <ul className={show ? "show" : null}>
           <li><Link to="/my-story" onClick={closeMenu}>My Story</Link></li>
           <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
-          <li><Link to="/lets-talk" state={{ targetId: "info" }} onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
-          {/* <li><a href="mailto: iamkarena66@gmail.com" onClick={closeMenu}>Let's Talk</a></li> */}
+          <li><Link to="/lets-talk" onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
         </ul>
       </div>
     </>

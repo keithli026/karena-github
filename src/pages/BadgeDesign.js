@@ -73,7 +73,7 @@ const BadgeDesign = () => {
           <div className='section'>
             <img src={awardPage} alt="award page" loading="lazy" />
           </div>
-          <div className="section center">
+          <div className="center">
             <OtherProjectsButton />
           </div>
         </Container>
