@@ -162,6 +162,9 @@
     text-align: center;
     margin-bottom: 100px;
     // padding: 100px 0;
+    @include media-breakpoint-up(sm) {
+      background-image: url("../assets//images/icons/little_icon.png");
+    }
     @include media-breakpoint-up(lg) {
       margin-bottom: 200px;
       padding: 150px 0;

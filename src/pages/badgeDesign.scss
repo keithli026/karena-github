@@ -140,21 +140,28 @@
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
 
     @include media-breakpoint-up(lg) {
-      font-size: 40px;
+      font-size: 18px;
     }
   }
 
-  p,
-  ol,
-  ul {
-    font-size: 16px;
+  p {
+    font-size: 14px;
 
     @include media-breakpoint-up(lg) {
-      font-size: 24px;
+      font-size: 18px;
+    }
+  }
+
+  ol,
+  ul {
+    font-size: 14px;
+      line-height: 1.4;
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
     }
   }
 

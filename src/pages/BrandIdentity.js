@@ -2,7 +2,7 @@ import React from 'react'
 // import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_identity/banner.png"
-import bannerMobile from "../assets/images/brand_identity/banner_mobile.png"
+import bannerMobile from "../assets/images/brand_identity/banner_mobile.jpg"
 import AEIcon from "../assets/images/icons/AE.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
