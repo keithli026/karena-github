@@ -27,11 +27,30 @@ const Header = () => {
   const refHeader = useRef(null);
   const refButton = useRef(null);
 
+  const addClassToElement = () => {
+    const logo = document.getElementById("logo");
+    if (logo) {
+      logo.classList.add("scrolled");
+    }
+    const menu = document.getElementById("menu");
+    if (menu) {
+      menu.classList.add("scrolled");
+    }
+  }
+
   useEffect(() => {
     if (show) {
       refButton.current.classList.add("rotate");
     } else {
       refButton.current.classList.remove("rotate");
+    }
+    if(document.readyState === "complete") {
+      setTimeout(addClassToElement, 1000);
+    } else {
+      window.addEventListener("load", addClassToElement);
+      return () => {
+        window.removeEventListener("load", addClassToElement);
+      }
     }
     // refMenu.current.style.top = `${refHeader.current.clientHeight}px`;
   }, [show]);

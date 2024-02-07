@@ -1,11 +1,9 @@
-import React, { useEffect, useContext } from 'react'
-import { DataContext } from '../components/DataContext'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import cloud from "../assets/images/home/cloud.png"
 import background from "../assets/images/home/background.jpg"
 import backgroundMobile from "../assets/images/home/background_mobile.jpg"
-import karena from "../assets/images/home/karena.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
 import badgeDesign from "../assets/images/home/badge_design.png"
@@ -25,16 +23,15 @@ const Home = () => {
     ScrollClassAdder("#projects .project:nth-child(4)", "scrolled", 200)
   ];
 
-  // const { elementRef } = useContext(DataContext);
+  const addClassToElement = () => {
+    const greeting = document.getElementById("greeting");
+    if (greeting) {
+      greeting.classList.add("scrolled");
+    }
+  }
 
   useEffect(() => {
 
-    const addClassToElement = () => {
-      const greeting = document.getElementById("greeting");
-      if (greeting) {
-        greeting.classList.add("scrolled");
-      }
-    }
     if(document.readyState === "complete") {
       setTimeout(addClassToElement, 1000);
     } else {
@@ -60,9 +57,6 @@ const Home = () => {
               <p className='intro'>A Multimedia Designer at EF who loves to creating digital experience for <span>people</span>.</p>
               <Button variant='light' href="/my-story">About me</Button>
             </div>
-            {/* <div className='image_wrapper'>
-              <img src={karena} alt="karena" loading='lazy' />
-            </div> */}
           </div>
         </Container>
       </div>

@@ -138,9 +138,6 @@
         width: 46px;
         height: fit-content;
         align-self: center;
-        @include media-breakpoint-up(lg) {
-          width: fit-content;
-        }
       }
     }
 
@@ -189,7 +186,6 @@
    
         @include media-breakpoint-up(lg) {
           width: 55%;
-          // border: 3px solid $black;
         }
 
         @include media-breakpoint-up(xl) {
