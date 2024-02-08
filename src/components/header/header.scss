@@ -47,7 +47,7 @@ $header-mobile-height: 54px;
       width: 70px;
     }
     @include media-breakpoint-up(xl) {
-      width: 130px;
+      width: 110px;
     }
   }
 }
@@ -70,7 +70,7 @@ $header-mobile-height: 54px;
     transition: all 0.5s ease-out 1.5s;
   }
   @include media-breakpoint-up(xl) {
-    margin-top: 63px;
+    margin-top: 46px;
   }
   @media(min-width: 1500px) {
     margin-right: 8vw;
