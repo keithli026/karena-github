@@ -61,19 +61,9 @@ const BadgeDesign = () => {
             <img src={badge50} alt="Badge 50" loading="lazy" />
             <img src={badge70} alt="Badge 70" loading="lazy" />
             <img src={badgeMobile} alt="badge on mobile" loading="lazy" />
-          </div>
-        </Container>
-        <div className='section'>
-          <div className='image'><img src={badgeDesign1} alt="badge design" loading="lazy" /></div>
-        </div>
-        <div className='section'>
-          <div className='image'><img src={badgeDesign2} alt="badge design" loading="lazy" /></div>
-        </div>
-        <Container>
-          <div className='section'>
+            <img src={badgeDesign1} alt="badge design" loading="lazy" />
+            <img src={badgeDesign2} alt="badge design" loading="lazy" />
             <img src={awardPage} alt="award page" loading="lazy" />
-          </div>
-          <div className="center">
             <OtherProjectsButton />
           </div>
         </Container>

@@ -32,13 +32,13 @@ const BoothDesign = () => {
       // console.log("isLoad:", isLoad, ";isIntersecting:", isIntersecting);
     }
 
-  }, [isIntersecting]);
+  }, [isIntersecting, isLoad]);
   return (
     <div id='booth_design' className='project'>
       <div className='banner'>
         <div className='image'>
-          <img src={banner} alt="Book fair" className='desktop'/>
-          <img src={bannerMobile} alt="Book fair" className='mobile'/>
+          <img src={banner} alt="Book fair" className='desktop' />
+          <img src={bannerMobile} alt="Book fair" className='mobile' />
         </div>
         <div className='title'>Book Fair</div>
         <div className='content'>
@@ -67,13 +67,13 @@ const BoothDesign = () => {
           </ol>
         </div>
         {/* <BackButton /> */}
-        <div className='center'>
+        <div className='section center'>
           <img src={colours} alt="Colours" loading="lazy" />
           <div className='video' ref={videoRef}>
-              <video controls playsInline preload={isLoad ? "auto" :"none"} poster={booth}>
-                <source src={video} type="video/mp4" />
-                <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag." />
-              </video>
+            <video controls playsInline preload={isLoad ? "auto" : "none"} poster={booth}>
+              <source src={video} type="video/mp4" />
+              <img src={booth} alt="booth" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
           </div>
           <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
           <img src={booth} alt="Booth" loading="lazy" />
@@ -94,7 +94,7 @@ const BoothDesign = () => {
           <h2>Book cover design</h2>
           <div className='center'>
             <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
-            <img src={bookCover} alt="Book cover" loading="lazy" />
+            <img src={bookCover} alt="Book cover" loading="lazy" id="book-cover" />
           </div>
         </div>
         <div className="section center">

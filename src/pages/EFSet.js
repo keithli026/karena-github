@@ -54,11 +54,8 @@ const EFSet = () => {
         </div>
       </Container>
       <div className='section gallery'>
-        <div className='image'>
-          <img src={EFSetTest1} alt="EF Set test" loading="lazy" />
-          {/* <BackButton />  */}
-        </div>
         <Container>
+        <img src={EFSetTest1} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest2} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest3} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest4} alt="EF Set test" loading="lazy" />
@@ -73,7 +70,7 @@ const EFSet = () => {
           </div>
         </div>
       </Container>
-      <div className='bg section'>
+      <div className='section'>
         <Container>
           <img src={mobile} alt="EF Set test" loading="lazy" />
         </Container>

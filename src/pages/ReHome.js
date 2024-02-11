@@ -42,6 +42,8 @@ const ReHome = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1000,
@@ -64,7 +66,7 @@ const ReHome = () => {
       // console.log(isLoad, isIntersecting);
     }
 
-  }, [isIntersecting]);
+  }, [isIntersecting, isLoad]);
 
   return (
     <div id='re-home' className='project'>
@@ -97,17 +99,11 @@ const ReHome = () => {
             <img src={designApproach} alt="Design approach" loading="lazy" />
           </div>
         </div>
-        <h2>Persona</h2>
-        <p>By conducting research, we interviewed 2 people and identified few problems of adopting animals who could be our target users.</p>
-      </Container>
-      <div className='bg section'>
-        <Container>
-          <div className='center'>
-            <img src={persona} alt="Persona" loading="lazy" />
-          </div>
-        </Container>
-      </div>
-      <Container>
+        <div className='section'>
+          <h2>Persona</h2>
+          <p>By conducting research, we interviewed 2 people and identified few problems of adopting animals who could be our target users.</p>
+          <img src={persona} alt="Persona" loading="lazy" />
+        </div>
         <div className='section'>
           <h2>Sitemap</h2>
           <p>
@@ -139,50 +135,48 @@ const ReHome = () => {
             <img src={wireframe} alt="Wireframe" loading="lazy" />
           </div>
         </div>
-        <div className='section' id="usability_studies">
+        <div className='section'>
           <h2>Usability studies</h2>
           <p>Early design allowed for some text search but after usability studies, i added icons option to choose.</p>
           <div className='center'>
-            <div className='image_wrapper'><img src={usabilityStudy} alt="Usability study" loading="lazy" /></div>
-            {/* <div className='image_wrapper'><img src={reHomeApp} alt="reHome" loading="lazy"/></div> */}
-            <div className='video' ref={videoRef}>
-              <video controls playsInline preload={isLoad ? "auto" : "none"} poster={reHomeApp}>
-                <source src={video} type="video/mp4" />
-                <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
-              </video>
-            </div>
+            <img src={usabilityStudy} alt="Usability study" loading="lazy" />
           </div>
         </div>
-      </Container>
-      <div className='bg'>
-        <Container>
-          <div className='flexbox'>
-            <div className='content'>
-              <h2>The solution</h2>
-              <p>Easy to search and access to detailed information about the animals available for adoption</p>
-            </div>
-            <div className='image'><img src={loginOpen} alt="Login open" loading="lazy" /></div>
-            <div className='image'><img src={search} alt="Search" loading="lazy" /></div>
-            <div className='image'><img src={welcome} alt="Welcome" loading="lazy" /></div>
-            <div className='image'><img src={confirmation} alt="Confirmation" loading="lazy" /></div>
-            <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy" /></div>
-            <div className='image'><img src={booking} alt="Booking" loading="lazy" /></div>
+        <div className='section'>
+          <h2>The solution</h2>
+          <div className='video' ref={videoRef}>
+            <video controls playsInline preload={isLoad ? "auto" : "none"} poster={reHomeApp}>
+              <source src={video} type="video/mp4" />
+              <img src={reHomeApp} alt="reHome app" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
           </div>
-        </Container>
-      </div>
-      <div className='section'>
-        <div className='image'><img src={laptop} alt="Laptop" loading="lazy" /></div>
-      </div>
-      <Container>
+        </div>
+        <div className='flexbox'>
+          <div className='content'>
+            Easy to search and access to detailed information about the animals available for adoption
+          </div>
+          <div className='image' id="one"><img src={loginOpen} alt="Login open" loading="lazy" /></div>
+          <div className='content shift'>
+            Scheduling time to visit  through the app
+          </div>
+          <div className='image'><img src={search} alt="Search" loading="lazy" /></div>
+          <div className='image' id="three"><img src={welcome} alt="Welcome" loading="lazy" /></div>
+          <div className='image'><img src={confirmation} alt="Confirmation" loading="lazy" /></div>
+          <div className='image'><img src={dogInformation} alt="Dog Infomation" loading="lazy" /></div>
+          <div className='image'><img src={booking} alt="Booking" loading="lazy" /></div>
+        </div>
+        <div className='section'>
+          <img src={laptop} alt="Laptop" loading="lazy" />
+        </div>
         <div className='section' id="certs">
           <Slider  {...settings}>
-            <div className='image'><img src={cert1} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert2} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert3} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert4} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert5} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert6} alt="Coursera certificate" loading="lazy" /></div>
-            <div className='image'><img src={cert7} alt="Coursera certificate" loading="lazy" /></div>
+            <div className='image'><img src={cert1} alt="Coursera certificate - Foundations of User Experience (UX) Design" loading="lazy" /></div>
+            <div className='image'><img src={cert2} alt="Coursera certificate - Start the UX Design Process: Empathize, Define, and Ideate" loading="lazy" /></div>
+            <div className='image'><img src={cert3} alt="Coursera certificate - Build Wireframes and Low-Fidelity Prototypes" loading="lazy" /></div>
+            <div className='image'><img src={cert4} alt="Coursera certificate - Conduct UX Research and Test Early Concepts" loading="lazy" /></div>
+            <div className='image'><img src={cert5} alt="Coursera certificate - Create High-Fidelity Designs and Prototypes in Figma" loading="lazy" /></div>
+            <div className='image'><img src={cert6} alt="Coursera certificate - Responsive Web Design in Adobe XD" loading="lazy" /></div>
+            <div className='image'><img src={cert7} alt="Coursera certificate - Design a User Experience for Social Good & Prepare for Jobs" loading="lazy" /></div>
           </Slider>
         </div>
         <div className="section center">

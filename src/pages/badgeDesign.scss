@@ -4,7 +4,7 @@
     margin-bottom: $padding-y * 5;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 10;
+      margin-bottom: 100px;
     }
 
     .image {
@@ -142,7 +142,7 @@
   h2 {
     font-size: 14px;
     font-weight: 800;
-
+    margin-bottom: 20px;
     @include media-breakpoint-up(lg) {
       font-size: 18px;
     }
@@ -159,7 +159,8 @@
   ol,
   ul {
     font-size: 14px;
-      line-height: 1.4;
+    line-height: 1.4;
+    margin-bottom: 50px;
     @include media-breakpoint-up(lg) {
       font-size: 18px;
     }
@@ -175,10 +176,13 @@
 
   .video {
     margin-bottom: 100px;
+
     @include media-breakpoint-up(lg) {
       margin-bottom: 150px;
     }
-    video, img {
+
+    video,
+    img {
       width: auto;
       max-width: 100%;
     }
@@ -195,16 +199,17 @@
   }
 
   .section {
-    margin-bottom: $padding-y * 10;
+    margin-bottom: 100px;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: $padding-y * 15;
+      margin-bottom: 150px;
     }
   }
 
   .bg {
     background-color: $gray-400;
     padding: 100px 0;
+
     @include media-breakpoint-up(lg) {
       padding: 150px 0;
     }
@@ -222,16 +227,10 @@
     }
   }
 
-  .bg {
-    .center {
-      img {
-        margin-bottom: 100px;
-
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 150px;
-        }
-      }
+  img {
+    margin-bottom: 100px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 150px;
     }
-
   }
 }
