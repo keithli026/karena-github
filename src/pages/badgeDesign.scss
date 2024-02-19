@@ -142,9 +142,10 @@
   h2 {
     font-size: 14px;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     @include media-breakpoint-up(lg) {
       font-size: 18px;
+      margin-bottom: 20px;
     }
   }
 
@@ -199,10 +200,10 @@
   }
 
   .section {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 150px;
+      margin-bottom: 100px;
     }
   }
 
@@ -232,5 +233,8 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 150px;
     }
+  }
+  #award_page {
+    width: 500px;
   }
 }

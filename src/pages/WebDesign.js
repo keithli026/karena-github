@@ -42,8 +42,12 @@ const WebDesign = () => {
         <div className='section'>
           <h2>Brief</h2>
           <p>I was given the task to updated new logo, redesign visual content strategy and ensure that the website is responsiveness and optimized for version devices and screen size. Optimize landing pages and forms to improve conversion rates.</p>
+        </div>
+        <div className='section'>
           <h2>Problem</h2>
           <p>Through user research, we discovered the problems of low discoverability, inconsistency, and inefficiency. The flow was confusing and difficult to navigate. Lack of mobile optimization and poor user experience on small screen and content that is not properly adapted for mobile.</p>
+        </div>
+        <div className='section'>
           <h2>Goal</h2>
           <ol>
             <li>Streamlined navigation flow enhances the overall user experience, leading to higher satisfaction</li>
@@ -55,7 +59,7 @@ const WebDesign = () => {
       </Container>
       <div className='bg section'>
         <Container>
-        <img src={iPadLayout} alt="iPad layout design" loading="lazy" />
+          <img src={iPadLayout} alt="iPad layout design" loading="lazy" />
         </Container>
       </div>
       <div className='section center'>

@@ -138,17 +138,13 @@
           }
         }
         .btn {
-          background-color: transparent;
           padding: 5px 50px;
           @include media-breakpoint-up(lg) {
             padding: 10px 100px;
             font-size: 18px;
             font-weight: 800;
-            border: 2px solid $black;
+            border-width: 2px;
             padding: 10px 100px;
-          }
-          &:hover {
-            background-color: $pink;
           }
         }
       }

@@ -57,8 +57,12 @@ const BoothDesign = () => {
         <div className='section'>
           <h2>Brief</h2>
           <p>Years of experience designing different exhibition booth, I responsible for creating visually appealing and all the materials both online and offline, including visual elements, space planning, 3D visualization, and materials on social media platform that effectively delivery key messages to the audiences.</p>
+        </div>
+        <div className='section'>
           <h2>Problem</h2>
           <p>How might we effective use of space and effectively communicate the brand identity.</p>
+        </div>
+        <div className='section'>
           <h2>Goal</h2>
           <ol>
             <li>Improved brand awareness by integrative displays, demonstrations, samples or hand- on activities to create a memorable and immersive experience</li>
@@ -66,7 +70,6 @@ const BoothDesign = () => {
             <li>Incorporate social media elements into your booth design to encourage attendees to share their experience to increase online visibility and engagement</li>
           </ol>
         </div>
-        {/* <BackButton /> */}
         <div className='section center'>
           <img src={colours} alt="Colours" loading="lazy" />
           <div className='video' ref={videoRef}>

@@ -43,8 +43,12 @@ const EFSet = () => {
           <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First​.</p>
           <p>With the EF Standard English Test, EF set out to challenge the status quo - to build a testing solution that not only provides reliable measurement, but is also affordable, simple to use, and always accessible. It is the world's first completely free standardized English test for learners of all levels, from beginner to advanced.</p>
           <p>I was given tasks to understand the exciting brand guidelines and ensure the landing page design aligns with overall brand identity. Determine the content that needs to br included, such as headline, subheadings, key message, call-to-action buttons and supporting visuals.</p>
+        </div>
+        <div className='section'>
           <h2>Problem</h2>
           <p>Through user research, we discovered the problems of confusing design can overwhelm visitor and make it difficult for them to understand the purpose of the page and if landing page lacks a clear and compelling call-to- action, visitors may ne unsure of what action to take next.</p>
+        </div>
+        <div className='section'>
           <h2>Goal</h2>
           <ol>
             <li>Create the landing page aligns with thr overall brand identity in terms of colours, typography and visual style </li>
@@ -55,7 +59,7 @@ const EFSet = () => {
       </Container>
       <div className='section gallery'>
         <Container>
-        <img src={EFSetTest1} alt="EF Set test" loading="lazy" />
+          <img src={EFSetTest1} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest2} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest3} alt="EF Set test" loading="lazy" />
           <img src={EFSetTest4} alt="EF Set test" loading="lazy" />
