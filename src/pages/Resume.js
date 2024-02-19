@@ -5,7 +5,7 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import mailIcon from "../assets/images/icons/mail.png"
 import karena from "../assets/images/home/karena.png"
 import Container from 'react-bootstrap/Container';
-import backButton from "../components/BackButton"
+// import backButton from "../components/BackButton"
 import BackButton from '../components/BackButton'
 
 const Resume = () => {

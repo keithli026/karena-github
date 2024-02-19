@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { useLocation } from 'react-router-dom'
-import { useRef } from 'react';
 import karena from "../assets/images/home/karena.png"
 import arrowPink from "../assets/images/icons/arrow_pink.png"
 import value1 from "../assets/images/icons/value_1.svg"
 import value2 from "../assets/images/icons/value_2.svg"
 import value3 from "../assets/images/icons/value_3.svg"
-// import Button from 'react-bootstrap/Button'
 import ScrollClassAdder from '../components/ScrollClassAdder'
 import Contact from '../components/Contact'
 import Container from "react-bootstrap/Container"
@@ -33,19 +30,7 @@ const MyStory = () => {
       }
     ]
   };
-  // const { state } = useLocation();
-  // const { targetId } = state || {};
-  // const infoRef = useRef(null);
-  // console.log(state, targetId, infoRef.current);
-  // const { elementRef } = useContext(DataContext);
 
-  // useEffect(() => {
-
-  //   const el = document.getElementById(targetId);
-  //   if (el) {
-  //     el.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // }, [targetId])
   return (
     <div id="mystory">
       <div className='about'>
