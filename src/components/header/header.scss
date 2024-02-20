@@ -57,6 +57,7 @@ $header-mobile-height: 54px;
 
   button {
     width: 40px;
+
     @include media-breakpoint-up(sm) {
       width: 50px;
     }
@@ -67,10 +68,10 @@ $header-mobile-height: 54px;
     &:focus-visible {
       border: 2px solid $black;
     }
-    transform: rotate(0deg);
+    transform: rotate(-90deg);
     transition: transform 0.2s;
     &.rotate {
-      transform: rotate(-90deg);
+      transform: rotate(-180deg);
     }
     img {
       // background-image: radial-gradient(closest-side at 50% 50%, $white, transparent);
@@ -86,7 +87,7 @@ $header-mobile-height: 54px;
     right: -100vw;
     font-size: 16px;
     transition: right 0.2s;
-    // text-shadow: 0 0 1em $white;
+    text-shadow: 0 0 1em $white;
     // display: none;
     @include media-breakpoint-up(lg) {
       font-size: 25px;

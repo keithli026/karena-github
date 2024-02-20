@@ -13,16 +13,155 @@
 
 #home {
   overflow-x: hidden; 
-  #greeting {
+  #greeting1 {
     position: relative;
+    height: 100vh;
+    width: 100vw;
     @include media-breakpoint-up(lg) {
       margin-bottom: 200px;
     }
     &.scrolled {
       .banner {
-        .cloud {
-          transform: scale(1.2);
+
+      }
+      .flexbox {
+        .content {
+          bottom: 40vh;
+          opacity: 1;
+          color: $white;
+          .title {
+
+          }
+          .intro {
+            span {
+              color: $white;
+            }
+          }
+          .btn {
+            color: $white;
+            border-color: $white;
+            &:hover {
+              border-color: $pink;
+            }
+          }
         }
+      }
+    }
+
+    .banner {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      @include media-breakpoint-up(sm) {
+        // top: unset;
+        // bottom: 0;
+        // right: 0;
+        // margin: auto;
+        width: 100%;
+        height: 100%;
+      }
+      .bg_mobile {
+        display: block;
+        max-height: 100vh;
+        height: 100svh;
+        width: 100%;
+        object-fit: cover;
+        @include media-breakpoint-up(sm) {
+          display: none;
+        }
+      }
+      .bg {
+        display: none;
+        @include media-breakpoint-up(sm) {
+          display: block;
+          height: 100%;
+          width: 100%;
+          // max-width: 250px;
+          object-fit: cover;
+         
+        }
+        @include media-breakpoint-up(lg) {
+          // max-width: 350px;
+        }
+      }
+    }
+    .flexbox {
+      position: relative;
+      height: 100svh;
+      max-height: 100vh;
+      .content {
+        position: absolute;
+        z-index: 1;
+        height: inherit;
+        margin-bottom: 0;
+        max-width: 250px;
+        @include media-breakpoint-up(sm) {
+          // opacity: 0;
+          bottom: 50px;
+          transition: all 0.5s ease-out 1.5s;
+        }
+        @include media-breakpoint-up(lg) {
+          top: unset;
+          bottom: 30vh;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 350px;
+          height: fit-content;
+        }
+   
+        .title {
+          font-weight: 900;
+          font-size: 36px;
+          margin-bottom: 20px;
+          line-height: 1.2;
+          @include media-breakpoint-up(lg) {
+            line-height: 1.4;
+            font-size: 50px;
+          }
+          span::before {
+            content: "\a";
+            white-space: pre;
+          }
+        }
+        .intro {
+          font-weight: 500;
+          font-size: 15px;
+          margin-bottom: 30px;
+          span {
+            color: $pink;
+            text-decoration: underline;
+          }
+          @include media-breakpoint-up(lg) {
+            margin-bottom: 40px;
+            font-size: 18px;
+          }
+        }
+        .btn {
+          padding: 5px 50px;
+          @include media-breakpoint-up(lg) {
+            padding: 10px 100px;
+            font-size: 18px;
+            font-weight: 800;
+            border-width: 2px;
+            padding: 10px 100px;
+          }
+        }
+      }
+    }
+  }
+  #greeting {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      // margin-bottom: 200px;
+    }
+    &.scrolled {
+      .banner {
+        // .cloud {
+        //   transform: scale(1.2);
+        // }
   
       }
       .flexbox {
@@ -38,54 +177,57 @@
       left: 0;
       top: 0;
       width: 100%;
-      @include media-breakpoint-up(sm) {
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 10vh;
-          background-image: linear-gradient(transparent, $white);
-        }
-      }
+      // @include media-breakpoint-up(sm) {
+      //   &::before {
+      //     content: "";
+      //     position: absolute;
+      //     bottom: 0;
+      //     left: 0;
+      //     width: 100%;
+      //     height: 10vh;
+      //     background-image: linear-gradient(transparent, $white);
+      //   }
+      // }
 
-      .bg_mobile {
-        display: block;
-        max-height: 100vh;
-        height: 100svh;
-        width: 100%;
+      // .bg_mobile {
+      //   display: block;
+      //   max-height: 100vh;
+      //   height: 100svh;
+      //   width: 100%;
+      //   object-fit: cover;
+      //   @include media-breakpoint-up(sm) {
+      //     display: none;
+      //   }
+      // }
+      .bg {
+        // display: none;
+        height: 100vh;
+        width: 100vw;
         object-fit: cover;
         @include media-breakpoint-up(sm) {
-          display: none;
+          // display: block;
+          // height: 100vh;
+          // width: 100vw;
+          // object-fit: cover;
         }
       }
-      .bg {
-        display: none;
-        @include media-breakpoint-up(sm) {
-          display: block;
-          height: 100vh;
-          width: 100vw;
-          object-fit: cover;
-        }
-      }
-      .cloud {
-        display: none;
-        @include media-breakpoint-up(sm) {
-          display: block;
-          position: absolute;
-          left: 0;
-          top: 0;
-          transform: scale(4);
-          transition: all 2s ease-out;
-        }
-        @include media-breakpoint-up(lg) {
-          top: -100px;
-        }
-        @include media-breakpoint-up(xl) {
-          top: -200px;
-        }
-      }
+      // .cloud {
+      //   display: none;
+      //   @include media-breakpoint-up(sm) {
+      //     display: block;
+      //     position: absolute;
+      //     left: 0;
+      //     top: 0;
+      //     transform: scale(4);
+      //     transition: all 2s ease-out;
+      //   }
+      //   @include media-breakpoint-up(lg) {
+      //     top: -100px;
+      //   }
+      //   @include media-breakpoint-up(xl) {
+      //     top: -200px;
+      //   }
+      // }
     }
     .flexbox {
       display: flex;
@@ -151,18 +293,18 @@
     }
   }
   #slogan {
-    background-image: url("../assets//images/icons/mobile_little_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    // background-image: url("../assets//images/icons/mobile_little_icon.png");
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
     text-align: center;
     margin-bottom: 100px;
     @include media-breakpoint-up(sm) {
-      background-image: url("../assets//images/icons/little_icon.png");
+      // background-image: url("../assets//images/icons/little_icon.png");
     }
     @include media-breakpoint-up(lg) {
       margin-bottom: 200px;
-      padding: 150px 0;
+      // padding: 150px 0;
     }
     &.scrolled {
       .title {
