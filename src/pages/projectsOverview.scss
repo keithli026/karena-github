@@ -75,8 +75,10 @@
           margin-bottom: 5px;
           display: inline-block;
           overflow: hidden;
+          width: 100%;
           .figure-img {
             margin-bottom: 0;
+            object-fit: cover;
             @include media-breakpoint-up(sm) {
               height: 140px;
             }

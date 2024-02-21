@@ -320,14 +320,14 @@
     .title {
       color: $pink;
       font-size: 32px;
-      font-weight: 700;
+      font-weight: 900;
       margin-bottom: 30px;
       position: relative;
       top: 30px;
       opacity: 0;
       transition: all 0.2s;
       @include media-breakpoint-up(lg) {
-        font-size: 55px;
+        font-size: 35px;
       }
     }
 
@@ -339,7 +339,7 @@
       transition: all 0.2s linear 0.4s;
 
       @include media-breakpoint-up(lg) {
-        font-size: 22px;
+        font-size: 16px;
       }
 
       &.bold {

@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-// import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/bookfair/banner.png"
 import bannerMobile from "../assets/images/bookfair/banner_mobile.png"

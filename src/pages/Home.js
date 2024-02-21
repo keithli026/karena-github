@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
-// import background1 from "../assets/images/home/container_1.jpg"
-// import background2 from "../assets/images/home/container_2.jpg"
+import background1 from "../assets/images/home/container_1.png"
+import background2 from "../assets/images/home/container_2.jpg"
 import cloud from "../assets/images/home/cloud.png"
 import background from "../assets/images/home/background.jpg"
 // import backgroundMobile from "../assets/images/home/background_mobile.jpg"

@@ -9,10 +9,10 @@ import boothDesign from "../assets/images/more_projects/book_fair_booth.png"
 import efSet from "../assets/images/more_projects/EFSET.png"
 import BadgeDesign from '../assets/images/more_projects/badge.png'
 import englishTown from "../assets/images/more_projects/englishtown.png"
+import fitsio from "../assets/images/more_projects/fitsio.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
 import Figure from 'react-bootstrap/Figure'
 import Container from 'react-bootstrap/Container'
-
 
 const ProjectsOverview = () => {
   return (
@@ -85,6 +85,16 @@ const ProjectsOverview = () => {
                     <Figure.Image src={englishTown} alt="Englishtown" loading="lazy" />
                   </div>
                   <Figure.Caption>Collaborating on a UI design project for a web that aims to provide a intuitive user experience for people.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                </Figure>
+              </Link>
+            </div>
+            <div className='project'>
+              <Link to="/projects/fitsio">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={fitsio} alt="Fitsio" loading="lazy" />
+                  </div>
+                  <Figure.Caption>Designing a branding guideline for physiotherapy company...project in progress.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
                 </Figure>
               </Link>
             </div>
