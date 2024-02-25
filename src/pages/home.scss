@@ -10,29 +10,49 @@
   75% {top: 10px;}
   100% {top: 0px;}
 }
-
+$center-x: 50%;
+$center-y: 90%;
+$offset-x: 150px;
+$offset-y: calc(100% - $center-y);
+$offset-x-lg: 250px;
+$offset-y-lg: calc(100% - $center-y);
+$offset-x1: 50vw;
+$offset-y1: 100vh;
 #home {
   overflow-x: hidden; 
-  #greeting1 {
+  #greeting {
     position: relative;
     height: 100vh;
     width: 100vw;
+    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
       margin-bottom: 200px;
     }
     &.scrolled {
       .banner {
-
+        clip-path: polygon(
+          calc($center-x - $offset-x1) calc($center-y - $offset-y1), 
+          calc($center-x + $offset-x1) calc($center-y - $offset-y1), 
+          calc($center-x + $offset-x1) calc($center-y + $offset-y1),
+          calc($center-x - $offset-x1) calc($center-y + $offset-y1) 
+        );
+        .overlay {
+          position: absolute;
+          top:0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(47,47,47,0.5);
+        }
       }
       .flexbox {
         .content {
-          bottom: 40vh;
-          opacity: 1;
-          color: $white;
+          bottom: 30vh;
           .title {
-
+            color: $white;
           }
           .intro {
+            color: $white;
             span {
               color: $white;
             }
@@ -40,6 +60,7 @@
           .btn {
             color: $white;
             border-color: $white;
+            visibility: visible;
             &:hover {
               border-color: $pink;
             }
@@ -47,44 +68,33 @@
         }
       }
     }
-
     .banner {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
-      @include media-breakpoint-up(sm) {
-        // top: unset;
-        // bottom: 0;
-        // right: 0;
-        // margin: auto;
-        width: 100%;
-        height: 100%;
+      height: 100%;
+      transition: all 1s ease-out;
+      clip-path: polygon(
+        calc($center-x - $offset-x) calc($center-y - $offset-y), 
+        calc($center-x + $offset-x) calc($center-y - $offset-y), 
+        calc($center-x + $offset-x) calc($center-y + $offset-y),
+        calc($center-x - $offset-x) calc($center-y + $offset-y) 
+      );
+      @include media-breakpoint-up(lg) { 
+        clip-path: polygon(
+          calc($center-x - $offset-x-lg) calc($center-y - $offset-y-lg), 
+          calc($center-x + $offset-x-lg) calc($center-y - $offset-y-lg), 
+          calc($center-x + $offset-x-lg) calc($center-y + $offset-y-lg),
+          calc($center-x - $offset-x-lg) calc($center-y + $offset-y-lg) 
+        );
       }
-      .bg_mobile {
-        display: block;
-        max-height: 100vh;
-        height: 100svh;
+      .bg {   
+        height: 100%;
         width: 100%;
         object-fit: cover;
-        @include media-breakpoint-up(sm) {
-          display: none;
-        }
       }
-      .bg {
-        display: none;
-        @include media-breakpoint-up(sm) {
-          display: block;
-          height: 100%;
-          width: 100%;
-          // max-width: 250px;
-          object-fit: cover;
-         
-        }
-        @include media-breakpoint-up(lg) {
-          // max-width: 350px;
-        }
-      }
+
     }
     .flexbox {
       position: relative;
@@ -96,158 +106,13 @@
         height: inherit;
         margin-bottom: 0;
         max-width: 250px;
-        @include media-breakpoint-up(sm) {
-          // opacity: 0;
-          bottom: 50px;
-          transition: all 0.5s ease-out 1.5s;
-        }
-        @include media-breakpoint-up(lg) {
-          top: unset;
-          bottom: 30vh;
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 350px;
-          height: fit-content;
-        }
-   
-        .title {
-          font-weight: 900;
-          font-size: 36px;
-          margin-bottom: 20px;
-          line-height: 1.2;
-          @include media-breakpoint-up(lg) {
-            line-height: 1.4;
-            font-size: 50px;
-          }
-          span::before {
-            content: "\a";
-            white-space: pre;
-          }
-        }
-        .intro {
-          font-weight: 500;
-          font-size: 15px;
-          margin-bottom: 30px;
-          span {
-            color: $pink;
-            text-decoration: underline;
-          }
-          @include media-breakpoint-up(lg) {
-            margin-bottom: 40px;
-            font-size: 18px;
-          }
-        }
-        .btn {
-          padding: 5px 50px;
-          @include media-breakpoint-up(lg) {
-            padding: 10px 100px;
-            font-size: 18px;
-            font-weight: 800;
-            border-width: 2px;
-            padding: 10px 100px;
-          }
-        }
-      }
-    }
-  }
-  #greeting {
-    position: relative;
-    @include media-breakpoint-up(lg) {
-      // margin-bottom: 200px;
-    }
-    &.scrolled {
-      .banner {
-        // .cloud {
-        //   transform: scale(1.2);
-        // }
-  
-      }
-      .flexbox {
-        .content {
-          top: 0;
-          opacity: 1;
-        }
-      }
-    }
-
-    .banner {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      // @include media-breakpoint-up(sm) {
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     bottom: 0;
-      //     left: 0;
-      //     width: 100%;
-      //     height: 10vh;
-      //     background-image: linear-gradient(transparent, $white);
-      //   }
-      // }
-
-      // .bg_mobile {
-      //   display: block;
-      //   max-height: 100vh;
-      //   height: 100svh;
-      //   width: 100%;
-      //   object-fit: cover;
-      //   @include media-breakpoint-up(sm) {
-      //     display: none;
-      //   }
-      // }
-      .bg {
-        // display: none;
-        height: 100vh;
-        width: 100vw;
-        object-fit: cover;
-        @include media-breakpoint-up(sm) {
-          // display: block;
-          // height: 100vh;
-          // width: 100vw;
-          // object-fit: cover;
-        }
-      }
-      // .cloud {
-      //   display: none;
-      //   @include media-breakpoint-up(sm) {
-      //     display: block;
-      //     position: absolute;
-      //     left: 0;
-      //     top: 0;
-      //     transform: scale(4);
-      //     transition: all 2s ease-out;
-      //   }
-      //   @include media-breakpoint-up(lg) {
-      //     top: -100px;
-      //   }
-      //   @include media-breakpoint-up(xl) {
-      //     top: -200px;
-      //   }
-      // }
-    }
-    .flexbox {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      @include media-breakpoint-up(sm) {
-        justify-content: unset;
-      }
-      .content {
-        position: relative;
-        z-index: 1;
+        bottom: 20vh;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         height: fit-content;
-        margin-bottom: 0;
-        max-width: 250px;
-        @include media-breakpoint-up(sm) {
-          top: 50px;
-          opacity: 0;
-          transition: all 0.5s ease-out 1.5s;
-        }
+        transition: all 1s ease-out;
         @include media-breakpoint-up(lg) {
           max-width: 350px;
         }
@@ -276,17 +141,17 @@
           }
           @include media-breakpoint-up(lg) {
             margin-bottom: 40px;
-            font-size: 25px;
+            font-size: 18px;
           }
         }
         .btn {
           padding: 5px 50px;
+          visibility: hidden;
           @include media-breakpoint-up(lg) {
             padding: 10px 100px;
             font-size: 18px;
             font-weight: 800;
             border-width: 2px;
-            padding: 10px 100px;
           }
         }
       }

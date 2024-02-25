@@ -2,7 +2,6 @@ import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import siteLogo from "../../assets/images/icons/logo.png"
-import fingerLeftIcon from "../../assets/images/icons/finger_left.png"
 import fingerTopIcon from "../../assets/images/icons/finger_top.svg"
 import Button from 'react-bootstrap/Button'
 

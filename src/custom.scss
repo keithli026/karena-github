@@ -22,9 +22,18 @@
 @import "./pages/fitsio.scss";
 @import "./pages/letsTalk.scss";
 
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 body {
   overflow-x: hidden;  
 }
+
 button, .btn, .btn.btn-light {
   text-transform: uppercase;
   border: 1px solid $black;

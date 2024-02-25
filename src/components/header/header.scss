@@ -1,24 +1,20 @@
-$header-mobile-height: 54px;
-
 #logo {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: $container-padding-x * 0.5;
+  left: $container-padding-x * 0.5;
   z-index: 1;
-  margin-top: $container-padding-x * 0.5;
-  margin-left: $container-padding-x * 0.5;
 
   &.scrolled {
-    top: 0;
+    top: $container-padding-x * 0.5;
     opacity: 1;
   }
   @include media-breakpoint-up(sm) {
     top: -50px;
     opacity: 0;
-    transition: all 0.5s ease-out 1.5s;
+    transition: all 0.5s ease-out;
   }
   @media(min-width: 1500px) {
-    margin-left: 8vw;
+    left: 8vw;
   }
   img {
     width: 50px;
@@ -31,38 +27,35 @@ $header-mobile-height: 54px;
   }
 }
 #menu {
-  position: relative;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: $container-padding-x * 0.5;
   z-index: 1;
-  margin-top: 35px;
-  margin-right: $container-padding-x * 0.5;
   &.scrolled {
-    top: 0;
+    top: 25px;
     opacity: 1;
+    @include media-breakpoint-up(xl) {
+      top: 30px;
+    }
   }
   @include media-breakpoint-up(sm) {
-    margin-top: 40px;
     top: -50px;
     opacity: 0;
-    transition: all 0.5s ease-out 1.5s;
+    transition: all 0.5s ease-out;
   }
-  @include media-breakpoint-up(xl) {
-    margin-top: 46px;
-  }
+
   @media(min-width: 1500px) {
-    margin-right: 8vw;
+    right: 8vw;
   }
 
   button {
-    width: 40px;
+    width: 30px;
 
     @include media-breakpoint-up(sm) {
-      width: 50px;
+      width: 45px;
     }
     @include media-breakpoint-up(xl) {
-      width: 80px;
+      width: 65px;
     }
 
     &:focus-visible {

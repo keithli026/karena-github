@@ -1,11 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
-import background1 from "../assets/images/home/container_1.png"
-import background2 from "../assets/images/home/container_2.jpg"
-import cloud from "../assets/images/home/cloud.png"
-import background from "../assets/images/home/background.jpg"
-// import backgroundMobile from "../assets/images/home/background_mobile.jpg"
+import background from "../assets/images/home/container_1.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
 import badgeDesign from "../assets/images/home/badge_design.png"
@@ -19,25 +15,20 @@ import Button from 'react-bootstrap/Button'
 
 const Home = () => {
   const classNames = [
-    ScrollClassAdder("#projects .project:first-child", "scrolled", 200),
-    ScrollClassAdder("#projects .project:nth-child(2)", "scrolled", 200),
-    ScrollClassAdder("#projects .project:nth-child(3)", "scrolled", 200),
-    ScrollClassAdder("#projects .project:nth-child(4)", "scrolled", 200)
+    ScrollClassAdder("#projects >div:first-child", "scrolled", 200),
+    ScrollClassAdder("#projects >div:nth-child(2)", "scrolled", 200),
+    ScrollClassAdder("#projects >div:nth-child(3)", "scrolled", 200),
+    ScrollClassAdder("#projects >div:nth-child(4)", "scrolled", 200)
   ];
 
   const addClassToElement = () => {
-    const greeting = document.getElementById("greeting");
-    if (greeting) {
-      greeting.classList.add("scrolled");
-    }
-    // const greeting1 = document.getElementById("greeting1");
-    // if (greeting1) {
-    //   greeting1.classList.add("scrolled");
+    // const greeting = document.getElementById("greeting");
+    // if (greeting) {
+    //   greeting.classList.add("scrolled");
     // }
   }
 
   useEffect(() => {
-
     if (document.readyState === "complete") {
       setTimeout(addClassToElement, 1000);
     } else {
@@ -50,26 +41,10 @@ const Home = () => {
 
   return (
     <div id="home">
-      {/* <div id="greeting1">
+      <div id="greeting" className={ScrollClassAdder("#greeting", "scrolled", 200)}>
         <div className='banner'>
-          <img src={background1} alt="background" loading='lazy' className='bg_mobile' />
-          <img src={background1} alt="background" loading='lazy' className='bg' />
-        </div>
-        <Container>
-          <div className='flexbox'>
-            <div className='content'>
-              <div className='title'>Hello there! <span>I’m Karena</span></div>
-              <p className='intro'>A Multimedia Designer at EF who loves to creating digital experience for <span>people</span>.</p>
-              <Button variant='light' href="/my-story">About me</Button>
-            </div>
-          </div>
-        </Container>
-      </div> */}
-      <div id="greeting">
-        <div className='banner'>
-          {/* <img src={backgroundMobile} alt="background" loading='lazy' className='bg_mobile' /> */}
           <img src={background} alt="background" loading='lazy' className='bg' />
-          {/* <img src={cloud} alt="cloud" loading='lazy' className='cloud'/> */}
+          <div className='overlay'></div>
         </div>
         <Container>
           <div className='flexbox'>
@@ -81,6 +56,7 @@ const Home = () => {
           </div>
         </Container>
       </div>
+
       <div id="slogan" className={ScrollClassAdder("#slogan", "scrolled", 200)}>
         <Container>
           <div className='title'>“Simple is Better”</div>
