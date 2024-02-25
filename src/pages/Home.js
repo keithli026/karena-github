@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import background from "../assets/images/home/container_1.png"
@@ -12,7 +12,6 @@ import ScrollClassAdder from '../components/ScrollClassAdder'
 import Container from "react-bootstrap/Container"
 import Button from 'react-bootstrap/Button'
 
-
 const Home = () => {
   const classNames = [
     ScrollClassAdder("#projects >div:first-child", "scrolled", 200),
@@ -20,24 +19,6 @@ const Home = () => {
     ScrollClassAdder("#projects >div:nth-child(3)", "scrolled", 200),
     ScrollClassAdder("#projects >div:nth-child(4)", "scrolled", 200)
   ];
-
-  const addClassToElement = () => {
-    // const greeting = document.getElementById("greeting");
-    // if (greeting) {
-    //   greeting.classList.add("scrolled");
-    // }
-  }
-
-  useEffect(() => {
-    if (document.readyState === "complete") {
-      setTimeout(addClassToElement, 1000);
-    } else {
-      window.addEventListener("load", addClassToElement);
-      return () => {
-        window.removeEventListener("load", addClassToElement);
-      }
-    }
-  }, []);
 
   return (
     <div id="home">
