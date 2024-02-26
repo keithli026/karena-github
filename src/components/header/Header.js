@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import siteLogo from "../../assets/images/icons/logo.png"
 import fingerTopIcon from "../../assets/images/icons/finger_top.svg"
 import Button from 'react-bootstrap/Button'
+import ScrollClassAdder from '../ScrollClassAdder'
 
 const Header = () => {
 
@@ -25,39 +26,20 @@ const Header = () => {
 
   const refButton = useRef(null);
 
-  const addClassToElement = () => {
-    const logo = document.getElementById("logo");
-    if (logo) {
-      logo.classList.add("scrolled");
-    }
-    const menu = document.getElementById("menu");
-    if (menu) {
-      menu.classList.add("scrolled");
-    }
-  }
-
   useEffect(() => {
     if (show) {
       refButton.current.classList.add("rotate");
     } else {
       refButton.current.classList.remove("rotate");
     }
-    if(document.readyState === "complete") {
-      setTimeout(addClassToElement, 1000);
-    } else {
-      window.addEventListener("load", addClassToElement);
-      return () => {
-        window.removeEventListener("load", addClassToElement);
-      }
-    }
   }, [show]);
 
   return (
     <>
-      <Link to="/" title="home" id="logo" onClick={closeMenu}>
+      <Link to="/" title="home" id="logo" onClick={closeMenu} className={ScrollClassAdder("#logo", "scrolled", 200)}>
         <img alt="site logo" src={siteLogo} />
       </Link>
-      <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }}>
+      <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }} className={ScrollClassAdder("#menu", "scrolled", 200)}>
         <Button variant='outline-light' onClick={showMenu} ref={refButton}>
           <img alt="menu" src={fingerTopIcon} />
           {/* {show ? <img alt="menu" className="rotate1" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />} */}

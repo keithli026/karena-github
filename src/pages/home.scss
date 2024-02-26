@@ -30,12 +30,12 @@ $offset-y1: 100vh;
     }
     &.scrolled {
       .banner {
-        clip-path: polygon(
-          calc($center-x - $offset-x1) calc($center-y - $offset-y1), 
-          calc($center-x + $offset-x1) calc($center-y - $offset-y1), 
-          calc($center-x + $offset-x1) calc($center-y + $offset-y1),
-          calc($center-x - $offset-x1) calc($center-y + $offset-y1) 
-        );
+        // clip-path: polygon(
+        //   calc($center-x - $offset-x1) calc($center-y - $offset-y1), 
+        //   calc($center-x + $offset-x1) calc($center-y - $offset-y1), 
+        //   calc($center-x + $offset-x1) calc($center-y + $offset-y1),
+        //   calc($center-x - $offset-x1) calc($center-y + $offset-y1) 
+        // );
         .overlay {
           position: absolute;
           top:0;
@@ -43,6 +43,10 @@ $offset-y1: 100vh;
           width: 100%;
           height: 100%;
           background-color: rgba(47,47,47,0.5);
+        }
+        .bg {
+          height: 100vh;
+          width: 100vw;
         }
       }
       .flexbox {
@@ -74,25 +78,38 @@ $offset-y1: 100vh;
       top: 0;
       width: 100%;
       height: 100%;
-      transition: all 1s ease-out;
-      clip-path: polygon(
-        calc($center-x - $offset-x) calc($center-y - $offset-y), 
-        calc($center-x + $offset-x) calc($center-y - $offset-y), 
-        calc($center-x + $offset-x) calc($center-y + $offset-y),
-        calc($center-x - $offset-x) calc($center-y + $offset-y) 
-      );
-      @include media-breakpoint-up(lg) { 
-        clip-path: polygon(
-          calc($center-x - $offset-x-lg) calc($center-y - $offset-y-lg), 
-          calc($center-x + $offset-x-lg) calc($center-y - $offset-y-lg), 
-          calc($center-x + $offset-x-lg) calc($center-y + $offset-y-lg),
-          calc($center-x - $offset-x-lg) calc($center-y + $offset-y-lg) 
-        );
-      }
+      // transition: all 1s ease-out;
+      // clip-path: polygon(
+      //   calc($center-x - $offset-x) calc($center-y - $offset-y), 
+      //   calc($center-x + $offset-x) calc($center-y - $offset-y), 
+      //   calc($center-x + $offset-x) calc($center-y + $offset-y),
+      //   calc($center-x - $offset-x) calc($center-y + $offset-y) 
+      // );
+      // @include media-breakpoint-up(lg) { 
+      //   clip-path: polygon(
+      //     calc($center-x - $offset-x-lg) calc($center-y - $offset-y-lg), 
+      //     calc($center-x + $offset-x-lg) calc($center-y - $offset-y-lg), 
+      //     calc($center-x + $offset-x-lg) calc($center-y + $offset-y-lg),
+      //     calc($center-x - $offset-x-lg) calc($center-y + $offset-y-lg) 
+      //   );
+      // }
       .bg {   
-        height: 100%;
-        width: 100%;
+        // height: 100%;
+        // width: 100%;
+        // object-fit: cover;
+        transition: all 0.8s ease-out;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
         object-fit: cover;
+        height: 20vh;
+        width: 300px;
+        @include media-breakpoint-up(lg) { 
+          width: 500px;
+        }
       }
 
     }

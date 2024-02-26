@@ -3,18 +3,19 @@
   top: $container-padding-x * 0.5;
   left: $container-padding-x * 0.5;
   z-index: 1;
-
-  &.scrolled {
-    top: $container-padding-x * 0.5;
-    opacity: 1;
-  }
   @include media-breakpoint-up(sm) {
     top: -50px;
     opacity: 0;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out 0.5s;
   }
   @media(min-width: 1500px) {
     left: 8vw;
+  }
+  &.scrolled {
+    @include media-breakpoint-up(sm) {
+      top: $container-padding-x * 0.5;
+      opacity: 1;
+    }
   }
   img {
     width: 50px;
@@ -31,21 +32,19 @@
   top: 25px;
   right: $container-padding-x * 0.5;
   z-index: 1;
-  &.scrolled {
-    top: 25px;
-    opacity: 1;
-    @include media-breakpoint-up(xl) {
-      top: 30px;
-    }
-  }
   @include media-breakpoint-up(sm) {
     top: -50px;
     opacity: 0;
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out 0.5s;
   }
-
   @media(min-width: 1500px) {
     right: 8vw;
+  }
+  &.scrolled {
+    @include media-breakpoint-up(sm) {
+      opacity: 1;
+      top: 30px;
+    }
   }
 
   button {
