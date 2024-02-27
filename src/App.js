@@ -13,7 +13,7 @@ import BoothDesign from './pages/BoothDesign'
 import EFSet from './pages/EFSet'
 import WebDesign from './pages/WebDesign'
 import ReHome from './pages/ReHome'
-import Fitsio from './pages/Fitsio'
+// import Fitsio from './pages/Fitsio'
 import LetsTalk from './pages/LetsTalk'
 import NoPage from './pages/NoPage'
 import Resume from './pages/Resume'
@@ -33,7 +33,7 @@ function App() {
               <Route path="booth-design" element={<BoothDesign />} />
               <Route path="ef-set" element={<EFSet />} />
               <Route path="web-design" element={<WebDesign />} />
-              <Route path="fitsio" element={<Fitsio />} />
+              {/* <Route path="fitsio" element={<Fitsio />} /> */}
               <Route path="re-home" element={<ReHome />} />
             </Route>
             <Route path="lets-talk" element={<LetsTalk />} />
