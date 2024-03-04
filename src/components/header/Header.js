@@ -5,10 +5,11 @@ import siteLogo from "../../assets/images/icons/logo.png"
 import fingerTopIcon from "../../assets/images/icons/finger_top.svg"
 import Button from 'react-bootstrap/Button'
 import ScrollClassAdder from '../ScrollClassAdder'
+import throttle from 'lodash.throttle'
 
 const Header = () => {
-
   const [show, setShow] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const showMenu = () => {
     setShow(!show);
@@ -25,6 +26,9 @@ const Header = () => {
   }
 
   const refButton = useRef(null);
+  const handleScroll = throttle(() => {
+    setIsScrolled(true);
+  }, 250);
 
   useEffect(() => {
     if (show) {
@@ -32,14 +36,20 @@ const Header = () => {
     } else {
       refButton.current.classList.remove("rotate");
     }
-  }, [show]);
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+  }, [show,isScrolled]);
 
   return (
     <>
-      <Link to="/" title="home" id="logo" onClick={closeMenu} className={ScrollClassAdder("#logo", "scrolled", 200)}>
+      <Link to="/" title="home" id="logo" onClick={closeMenu} className={isScrolled ? "scrolled": null}>
         <img alt="site logo" src={siteLogo} />
       </Link>
-      <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }} className={ScrollClassAdder("#menu", "scrolled", 200)}>
+      <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }} className={isScrolled ? "scrolled": null}>
         <Button variant='outline-light' onClick={showMenu} ref={refButton}>
           <img alt="menu" src={fingerTopIcon} />
           {/* {show ? <img alt="menu" className="rotate1" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />} */}

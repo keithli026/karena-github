@@ -1,50 +1,8 @@
 #projects {
   .banner {
-    position: relative;
-    margin-bottom: 50px;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 150px;
-    }
     .image {
-      position: relative;
-      margin-bottom: 50px;
       img {
-        max-height: 521px;
-        height: 100svh;
-        width: 100%;
-        object-fit: cover;
-        &.mobile {
-          display: block;
-          @include media-breakpoint-up(sm) {
-            display: none;
-          }
-        }
-        &.desktop {
-          display: none;
-          @include media-breakpoint-up(sm) {
-            display: block;
-            max-height: 550px;
-          }
-        }
-      }
-    }
-    .title {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      padding: 0 $container-padding-x;
-      margin: auto;
-      width: fit-content;
-      height: fit-content;
-      text-align: center;
-      font-size: 36px;
-      font-weight: 900;
-      color: $white;
-      text-transform: uppercase;
-      @include media-breakpoint-up(lg) {
-        font-size: 50px;
+        max-height: 550px;
       }
     }
   }

@@ -14,6 +14,10 @@ import chocolatePowder from "../assets/images/brand_identity/coco_powder.jpg"
 import chocolateBag from "../assets/images/brand_identity/chocolate_package.jpg"
 import greenTeaBag from "../assets/images/brand_identity/green_tea_package.jpg"
 import greenTeaPowder from "../assets/images/brand_identity/green_powder.jpg"
+import sm1 from "../assets/images/brand_identity/sm1.jpg"
+import sm3 from "../assets/images/brand_identity/sm3.jpg"
+import sm2 from "../assets/images/brand_identity/sm2.jpg"
+
 import powder from "../assets/images/brand_identity/powder.jpg"
 import about from "../assets/images/brand_identity/about.jpg"
 import taro from "../assets/images/brand_identity/taro.jpg"
@@ -74,11 +78,12 @@ const BrandDesign = () => {
           </div>
           <div className='ref'>
             <img src={greenPowder} alt="Green powder" loading="lazy" />
-            <img src={pocina} alt="POCINA" className='cover' loading="lazy" />
+            <div className='text'>I took this product photo with great attention to detail and a keen eye for aesthetics. Capturing the essence if the product, I ensured that every angle, lighting, and composition was carefully considered.</div>
+            {/* <img src={pocina} alt="POCINA" className='cover' loading="lazy" /> */}
           </div>
           <img src={combination} alt="Combination" loading="lazy" />
         </div>
-        <div className='section flexbox two'>
+        {/* <div className='section flexbox two'>
           <div className='image'><img src={chocolatePowder} alt="Chocolate powder" loading="lazy" /></div>
           <div className='image'><img src={chocolateBag} alt="Chocolate bag" loading="lazy" /></div>
           <div className='image'><img src={greenTeaBag} alt="Green tea bag" loading="lazy" /></div>
@@ -94,22 +99,30 @@ const BrandDesign = () => {
         </div>
         <div className='section'>
           <img src={facesss} alt="Facesss" />
+        </div> */}
+        <div className='section'>
+          <img src={sm1} alt="sm1" loading="lazy" className='mb-5'/>
+          <img src={sm3} alt="sm3" loading="lazy" />
+        </div>
+        <div className='section'>
+          <img src={sm2} alt="sm2" loading="lazy" />
         </div>
         <div className='section flexbox two'>
-          <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div>
-          <div className='video'>
-            <video autoPlay loop muted playsInline>
-              <source src={teaVideo} type="video/mp4" />
-              <img src={tea} alt="Tea" loading="lazy" title="Your browser does not support the video tag." />
-            </video>
-          </div>
+          {/* <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div> */}
           <div className='video'>
             <video autoPlay loop muted playsInline>
               <source src={dietVideo} type="video/mp4" />
               <img src={diet} alt="Diet" loading="lazy" title="Your browser does not support the video tag." />
             </video>
           </div>
-          <div className='image'><img src={taste} alt="Taste" loading="lazy" /></div>
+          <div className='video'>
+            <video autoPlay loop muted playsInline>
+              <source src={teaVideo} type="video/mp4" />
+              <img src={tea} alt="Tea" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
+          </div>
+  
+          {/* <div className='image'><img src={taste} alt="Taste" loading="lazy" /></div> */}
         </div>
         <div className="section center">
           <OtherProjectsButton />

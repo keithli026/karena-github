@@ -6,8 +6,10 @@ import Contact from '../components/Contact'
 import pocina from "../assets/images/more_projects/pocina.png"
 import reHome from "../assets/images/more_projects/RE-HOME.png"
 import boothDesign from "../assets/images/more_projects/book_fair_booth.png"
+import digital from '../assets/images/more_projects/digital.jpg'
+import print from "../assets/images/more_projects/print.png"
 import efSet from "../assets/images/more_projects/EFSET.png"
-import BadgeDesign from '../assets/images/more_projects/badge.png'
+import badgeDesign from '../assets/images/more_projects/badge.png'
 import englishTown from "../assets/images/more_projects/englishtown.png"
 // import fitsio from "../assets/images/more_projects/fitsio.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
@@ -17,16 +19,42 @@ import Container from 'react-bootstrap/Container'
 const ProjectsOverview = () => {
   return (
     <>
-      <div id='projects'>
+      <div id='projects' className='project'>
         <div className='banner'>
           <div className='image'>
             <img src={banner} alt="More projects banner" className='desktop' />
-            <img src={bannerMobile} alt="More projects banner" className='mobile' /> 
+            <img src={bannerMobile} alt="More projects banner" className='mobile' />
           </div>
           <div className='title'>More projects</div>
         </div>
         <Container>
           <div className='showcase'>
+            <div className='project'>
+              <Link to="/projects/digital">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={digital} alt="Digital" loading="lazy" />
+                  </div>
+                  <Figure.Caption>
+                    Click here to view more digital works.<img src={arrowBlack} alt="arrow" loading="lazy" /><br />
+                    (Landing page, edm, gif banner, gif poster, social media post and video)
+                  </Figure.Caption>
+                </Figure>
+              </Link>
+            </div>
+            <div className='project'>
+              <Link to="/projects/print">
+                <Figure>
+                  <div className='image'>
+                    <Figure.Image src={print} alt="Print" loading="lazy" />
+                  </div>
+                  <Figure.Caption>
+                    Click here to view more print works.<img src={arrowBlack} alt="arrow" loading="lazy" /><br />
+                    (Brochures, flyers, posters, banners, postcard, booklet, calendar, recycle-bag and billboard)
+                  </Figure.Caption>
+                </Figure>
+              </Link>
+            </div>
             <div className='project'>
               <Link to="/projects/brand-identity">
                 <Figure>
@@ -54,7 +82,7 @@ const ProjectsOverview = () => {
                   <div className='image'>
                     <Figure.Image src={reHome} alt="RE-HOME" loading="lazy" />
                   </div>
-                  <Figure.Caption>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
+                  <Figure.Caption>Google ux case study:  Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
                 </Figure>
               </Link>
             </div>
@@ -72,7 +100,7 @@ const ProjectsOverview = () => {
               <Link to="/projects/badge-design">
                 <Figure>
                   <div className='image'>
-                    <Figure.Image src={BadgeDesign} alt="Badge" loading="lazy" />
+                    <Figure.Image src={badgeDesign} alt="Badge" loading="lazy" />
                   </div>
                   <Figure.Caption>Designing a badges at different stages or levels, which can enhance their motivation to continue engaging with a product.<img src={arrowBlack} alt="arrow" loading="lazy" /></Figure.Caption>
                 </Figure>

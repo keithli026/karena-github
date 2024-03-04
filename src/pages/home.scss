@@ -238,9 +238,6 @@ $offset-y1: 100vh;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      @include media-breakpoint-up(lg) {
-        max-height: 80px;
-      }
     }
   }
   #projects {
@@ -284,7 +281,7 @@ $offset-y1: 100vh;
           }
         }
     
-        &:nth-of-type(2n) {
+        &:nth-of-type(2n-1) {
           @include media-breakpoint-up(lg) {
             .image {
               left: 50%;
@@ -296,7 +293,7 @@ $offset-y1: 100vh;
         }
       }
 
-      &:nth-of-type(2n) {
+      &:nth-of-type(2n-1) {
         @include media-breakpoint-up(lg) {
           .image {
             left: 60%;
@@ -306,31 +303,31 @@ $offset-y1: 100vh;
           }
         }
       }
-      &:nth-last-of-type(2) {
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 250px;
-        }
-        @include media-breakpoint-up(xl) {
-          margin-bottom: 200px;
-        }
-      }
-      &:last-of-type {
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 250px;
-          .image {
-            position: relative;
-            z-index: 1;
-          }
-          .content {
-            .wrapper {
-              padding-right: 53px;
-            }
-          }
-        }
-        @include media-breakpoint-up(xl) {
-          margin-bottom: 200px;
-        }
-      }
+      // &:nth-last-of-type(2) {
+      //   @include media-breakpoint-up(lg) {
+      //     margin-bottom: 250px;
+      //   }
+      //   @include media-breakpoint-up(xl) {
+      //     margin-bottom: 200px;
+      //   }
+      // }
+      // &:last-of-type {
+      //   @include media-breakpoint-up(lg) {
+      //     margin-bottom: 250px;
+      //     .image {
+      //       position: relative;
+      //       z-index: 1;
+      //     }
+      //     .content {
+      //       .wrapper {
+      //         padding-right: 53px;
+      //       }
+      //     }
+      //   }
+      //   @include media-breakpoint-up(xl) {
+      //     margin-bottom: 200px;
+      //   }
+      // }
       .image {
         position: relative;
         text-align: center;

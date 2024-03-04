@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ReactGA from 'react-ga';
 import './custom.scss'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Layout from './pages/Layout'
 import Home from './pages/Home'
@@ -10,6 +11,8 @@ import ProjectsOverview from './pages/ProjectsOverview'
 import BrandIdentity from './pages/BrandIdentity'
 import BadgeDesign from './pages/BadgeDesign'
 import BoothDesign from './pages/BoothDesign'
+import Digital from './pages/Digital'
+import Print from './pages/Print'
 import EFSet from './pages/EFSet'
 import WebDesign from './pages/WebDesign'
 import ReHome from './pages/ReHome'
@@ -19,6 +22,13 @@ import NoPage from './pages/NoPage'
 import Resume from './pages/Resume'
 
 function App() {
+  // const TRACKING_ID = "G-0QKR0542GX"; // OUR_TRACKING_ID
+  // ReactGA.initialize(TRACKING_ID);
+
+  // const location = useLocation();
+  // useEffect(() => {
+  //   ReactGA.pageview(location.pathname + location.search);
+  // }, [location]);
   return (
     <BrowserRouter>
       <ScrollToTop>
@@ -31,7 +41,9 @@ function App() {
               <Route path="brand-identity" element={<BrandIdentity />} />
               <Route path="badge-design" element={<BadgeDesign />} />
               <Route path="booth-design" element={<BoothDesign />} />
+              <Route path="digital" element={<Digital />} />
               <Route path="ef-set" element={<EFSet />} />
+              <Route path="print" element={<Print />} />
               <Route path="web-design" element={<WebDesign />} />
               {/* <Route path="fitsio" element={<Fitsio />} /> */}
               <Route path="re-home" element={<ReHome />} />
