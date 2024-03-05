@@ -1,5 +1,6 @@
 #print {
   .section {
+    margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
       &:not(:last-child) {
         margin-bottom: 250px;
@@ -7,6 +8,7 @@
     }
   }
   .banner {
+    margin-bottom: 100px;
     .image {
       &::before {
         background: rgba(0, 0, 0, 0.5);

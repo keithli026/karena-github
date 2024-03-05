@@ -6,7 +6,7 @@ import Contact from '../components/Contact'
 import pocina from "../assets/images/more_projects/pocina.png"
 import reHome from "../assets/images/more_projects/RE-HOME.png"
 import boothDesign from "../assets/images/more_projects/book_fair_booth.png"
-import digital from '../assets/images/more_projects/digital.jpg'
+import digital from '../assets/images/more_projects/digital.png'
 import print from "../assets/images/more_projects/print.png"
 import efSet from "../assets/images/more_projects/EFSET.png"
 import badgeDesign from '../assets/images/more_projects/badge.png'

@@ -1,5 +1,14 @@
 #digital {
+  .section {
+    margin-bottom: 100px;
+    @include media-breakpoint-up(lg) {
+      &:not(:last-child) {
+        margin-bottom: 250px;
+      }
+    }
+  }
   .banner {
+    margin-bottom: 100px;
     .image {
       &::before {
         background: rgba(0, 0, 0, 0.5);
@@ -66,8 +75,10 @@
       }
     }
   }
-  #XHS_landing, #happy_winter {
-    max-width: 800px;
+  #XHS_landing {
+    width: 800px;
   }
-
+  #happy_winter {
+    width: 600px;
+  }
 }
