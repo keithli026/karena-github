@@ -25,7 +25,7 @@ const ProjectsOverview = () => {
             <img src={banner} alt="More projects banner" className='desktop' />
             <img src={bannerMobile} alt="More projects banner" className='mobile' />
           </div>
-          <div className='title'>More projects</div>
+          <div className='title'>MORE PROJECTS</div>
         </div>
         <Container>
           <div className='showcase'>

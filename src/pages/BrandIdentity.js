@@ -1,5 +1,4 @@
 import React from 'react'
-// import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_identity/banner.png"
 import bannerMobile from "../assets/images/brand_identity/banner_mobile.jpg"
@@ -8,27 +7,12 @@ import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
 import color4 from "../assets/images/brand_identity/color_4.jpg"
 import greenPowder from "../assets/images/brand_identity/gt.png"
-import pocina from "../assets/images/brand_identity/pocina.png"
 import combination from "../assets/images/brand_identity/combination.png"
-import chocolatePowder from "../assets/images/brand_identity/coco_powder.jpg"
-import chocolateBag from "../assets/images/brand_identity/chocolate_package.jpg"
-import greenTeaBag from "../assets/images/brand_identity/green_tea_package.jpg"
-import greenTeaPowder from "../assets/images/brand_identity/green_powder.jpg"
 import sm1 from "../assets/images/brand_identity/sm1.jpg"
 import sm3 from "../assets/images/brand_identity/sm3.jpg"
 import sm2 from "../assets/images/brand_identity/sm2.jpg"
-
-import powder from "../assets/images/brand_identity/powder.jpg"
-import about from "../assets/images/brand_identity/about.jpg"
-import taro from "../assets/images/brand_identity/taro.jpg"
-import nightRoutine from "../assets/images/brand_identity/night.jpg"
-import about2 from "../assets/images/brand_identity/about_2.jpg"
-import dayRoutine from "../assets/images/brand_identity/day.jpg"
-import facesss from "../assets/images/brand_identity/facesss.jpg"
-import dayNightRoutine from "../assets/images/brand_identity/day_and_night.png"
 import tea from "../assets/images/brand_identity/tea.png"
 import diet from "../assets/images/brand_identity/diet.png"
-import taste from "../assets/images/brand_identity/taste.jpg"
 import teaVideo from "../assets/videos/brand_identity/tea.mp4"
 import dietVideo from "../assets/videos/brand_identity/diet.mp4"
 import pocinaVideo from "../assets/videos/brand_identity/pocina.mp4"
@@ -43,7 +27,7 @@ const BrandDesign = () => {
           <img src={banner} alt="Brand identity banner" className='desktop' />
           <img src={bannerMobile} alt="Brand identity banner" className='mobile' />
         </div>
-        <div className='title'>Brand Identity</div>
+        <div className='title'>BRAND IDENTITY</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>BRANDING丨<span>MEDIA DESIGN</span> 丨<span>PHOTOGRAPHY</span></span></div>
@@ -83,23 +67,6 @@ const BrandDesign = () => {
           </div>
           <img src={combination} alt="Combination" loading="lazy" />
         </div>
-        {/* <div className='section flexbox two'>
-          <div className='image'><img src={chocolatePowder} alt="Chocolate powder" loading="lazy" /></div>
-          <div className='image'><img src={chocolateBag} alt="Chocolate bag" loading="lazy" /></div>
-          <div className='image'><img src={greenTeaBag} alt="Green tea bag" loading="lazy" /></div>
-          <div className='image'><img src={greenTeaPowder} alt="Green tea powder" loading="lazy" /></div>
-        </div>
-        <div className='section flexbox three'>
-          <div className='image'><img src={powder} alt="Powder" loading="lazy" /></div>
-          <div className='image'><img src={about} alt="About" loading="lazy" /></div>
-          <div className='image'><img src={taro} alt="Taro" loading="lazy" /></div>
-          <div className='image'><img src={nightRoutine} alt="Night routine" loading="lazy" /></div>
-          <div className='image'><img src={about2} alt="About" loading="lazy" /></div>
-          <div className='image'><img src={dayRoutine} alt="Day routine" loading="lazy" /></div>
-        </div>
-        <div className='section'>
-          <img src={facesss} alt="Facesss" />
-        </div> */}
         <div className='section'>
           <img src={sm1} alt="sm1" loading="lazy" className='mb-5'/>
           <img src={sm3} alt="sm3" loading="lazy" />
@@ -108,7 +75,6 @@ const BrandDesign = () => {
           <img src={sm2} alt="sm2" loading="lazy" />
         </div>
         <div className='section flexbox two'>
-          {/* <div className='image'><img src={dayNightRoutine} alt="day and night routine" loading="lazy" /></div> */}
           <div className='video'>
             <video autoPlay loop muted playsInline>
               <source src={dietVideo} type="video/mp4" />
@@ -121,8 +87,6 @@ const BrandDesign = () => {
               <img src={tea} alt="Tea" loading="lazy" title="Your browser does not support the video tag." />
             </video>
           </div>
-  
-          {/* <div className='image'><img src={taste} alt="Taste" loading="lazy" /></div> */}
         </div>
         <div className="section center">
           <OtherProjectsButton />

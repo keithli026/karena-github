@@ -1,5 +1,4 @@
 import React from 'react'
-// import BackButton from '../components/BackButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/ef_set/banner.png"
 import bannerMobile from "../assets/images/ef_set/banner_mobile.png"

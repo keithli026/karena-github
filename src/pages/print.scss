@@ -1,7 +1,9 @@
 #print {
   .section {
     @include media-breakpoint-up(lg) {
-      margin-bottom: 250px;
+      &:not(:last-child) {
+        margin-bottom: 250px;
+      }
     }
   }
   .banner {

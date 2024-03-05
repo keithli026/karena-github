@@ -58,6 +58,7 @@ const BoothDesign = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1000,
@@ -147,9 +148,7 @@ const BoothDesign = () => {
           </div>
 
           <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
-          {/* <img src={booth2023} alt="Hong Kong Book fair 2023" loading="lazy" /> */}
           <img src={floorPlan} alt="Floor plan" loading="lazy" />
-          {/* <img src={booth2022} alt="Hong Kong Book fair 2022" loading="lazy" /> */}
           <div className='flexbox_wrapper'>
             <div className='flexbox'>
               <img src={foamBoard1} alt="Foamboard" loading="lazy" />

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import background from "../assets/images/home/container_1.png"
 import arrow from "../assets/images/icons/arrow.png"
-import reHome from "../assets/images/home/rehome.png"
+// import reHome from "../assets/images/home/rehome.png"
 import badgeDesign from "../assets/images/home/badge_design.png"
 import efSet from "../assets/images/home/EF_SET.png"
-import hult from "../assets/images/home/HULT.png"
+// import hult from "../assets/images/home/HULT.png"
 import brochure from "../assets/images/home/brochure.png"
 import XHS from "../assets/images/home/XHS_LP.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"

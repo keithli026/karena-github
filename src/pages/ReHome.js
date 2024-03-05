@@ -76,7 +76,7 @@ const ReHome = () => {
           <img src={bannerMobile} alt="RE-Home banner" className='mobile' />
         </div>
         <div className='title'>
-          <img src={reHomeIcon} alt="RE-Home logo" /><span>RE-Home</span>
+          <img src={reHomeIcon} alt="RE-Home logo" /><span>RE-HOME</span>
         </div>
         <div className='content'>
           <div className='keypoint'>

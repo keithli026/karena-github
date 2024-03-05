@@ -5,12 +5,12 @@
   100% {top:0px;}
 }
 
-@keyframes arrow {
-  0% {left: 0px;}
-  25% {left: -5px;}
-  75% {left: 5px;}
-  100% {left: 0px;}
-}
+// @keyframes arrow-left {
+//   0% {left: 0px;}
+//   25% {left: -5px;}
+//   75% {left: 5px;}
+//   100% {left: 0px;}
+// }
 
 #resume {
   position: relative;
@@ -49,7 +49,7 @@
     img {
       position: relative;
       left: 0;
-      animation-name: arrow;
+      animation-name: arrow-left;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;

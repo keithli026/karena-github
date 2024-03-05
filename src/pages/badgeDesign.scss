@@ -56,11 +56,11 @@
       margin: auto;
       width: fit-content;
       height: fit-content;
-      // text-align: center;
+      text-align: center;
       font-size: 36px;
       font-weight: 800;
       color: $white;
-      text-transform: uppercase;
+
 
       @include media-breakpoint-up(lg) {
         font-size: 50px;

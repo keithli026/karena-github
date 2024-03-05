@@ -40,26 +40,14 @@ const Print = () => {
           <img src={bannerMobile} alt="Print banner" className='mobile' />
         </div>
         <div className='title'>
-          <div className='name'>Print</div>
+          <div className='name'>PRINT</div>
           <div className='summary'>Specialize in the creation of visual designs for printing such as brochures, flyers, business cards, billboard and a range of other printable marketing materials.</div>
         </div>
-        
-        {/* <div className='content'>
-          <div className='keypoint'>
-            <div>MY ROLE: <span>PRODUCT DESIGN 丨<span>BRANDING</span> 丨<span>3D DESIGN</span></span></div>
-            <div>TIMELINE: <span>4 WEEKS, 2023</span></div>
-          </div>
-          <div className='icons'>
-            <img src={floorPlannerIcon} alt="floorplanner icon" />
-            <img src={PSIcon} alt="ps icon" />
-            <img src={AIIcon} alt="ai icon" />
-          </div>
-        </div> */}
       </div>
       <Container>
         <div className='section center'>
           <h2>Recycle Bag</h2>
-          <div className='description'>Creativity recycle bag design “Dont let the cat out of the bag” it’s mean don’t reveal or say something that is supposed to be secret.</div>
+          <div className='description'>Creative Recycling Bag Design: "Don't let the cat out of the bag" means not revealing or disclosing something that is supposed to be a secret.</div>
           <img src={recycleBag1} alt="Recycle Bag" loading='lazy' />
           <img src={recycleBag2} alt="Recycle Bag" loading='lazy' />
           <div className='flexbox'>
@@ -69,24 +57,24 @@ const Print = () => {
         </div>
         <div className='section center'>
           <h2>Brochure</h2>
-          <div className='description'>I responsible to create a layout design, ensure the page text and images are balanced and create a natural flow for the reader to follow.</div>
+          <div className='description'>I was responsible for creating layout designs that ensured a balanced composition, with well-balanced page text and images that created a natural flow for the reader to follow.</div>
           <img src={brochureENG} alt="Brochure" loading='lazy' />
           <img src={brochure} alt="Brochure" loading='lazy' />
           <img src={brochure2} alt="Brochure" loading='lazy' />
         </div>
         <div className='section center'>
           <h2>Life Club event poster</h2>
-          <div className='description'>Develop a poster overall look and feel, choose the image and gather all information from marking team to create poster for center weekly used.</div>
+          <div className='description'>Developed posters with an overall look and feel, selected appropriate images, and gathered all necessary information from the marketing team to create weekly center posters.</div>
           <img src={LPEvent} alt="Life Club event poster" loading='lazy' />
         </div>
         <div className='section center'>
           <h2>Business card</h2>
-          <div className='description'>By following the guideline and create business card for all teachers and staffs. </div>
+          <div className='description'>Followed the guidelines to create business cards for all teachers and staff members.</div>
           <img src={businessCard} alt="Business card" loading='lazy' />
         </div>
         <div className='section center'>
           <h2>Calendar</h2>
-          <div className='description'>I responsible to choose the images, create a layout, look and feel that match with guideline and prepare digital output file for print shop.</div>
+          <div className='description'>I was responsible for choosing images, creating layouts, looks, and feels that match the guidelines, and preparing digital output files for the print shop.</div>
           <div className='flexbox'>
             <img src={calendar} alt="Calendar" loading='lazy' />
             <img src={calendar2} alt="Calendar" loading='lazy' />
@@ -96,7 +84,7 @@ const Print = () => {
 
         <div className='section center'>
           <h2>Leaflet</h2>
-          <div className='description'>Design a leaflet for different promotion used and align the style with the brand.</div>
+          <div className='description'>Designed a leaflet for different promotions and ensure that the style aligns with the brand.</div>
           <img src={leaflet} alt="Leaflet" loading='lazy' />
         </div>
         <div className='section center'>
@@ -108,13 +96,9 @@ const Print = () => {
           </div>
           <img src={postcard} alt="Postcard" loading='lazy' />
         </div>
-        {/* <div className='section center'>
-          <h2>Postcard</h2>
-          <img src={postcard} alt="Postcard" loading='lazy' />
-        </div> */}
         <div className='section center'>
           <h2>Billboard</h2>
-          <div className='description'>Responsible to create short advertising messages that can be read easily and delivery the key message to audience.</div>
+          <div className='description'>Took responsibility for creating short advertising messages that were easily readable and effectively delivered the key message to the audience.</div>
           <img src={billboardTW} alt="Billboard in Taiwan" loading='lazy' />
           <img src={billboardTW2} alt="Billboard in Taiwan" loading='lazy' />
         </div>

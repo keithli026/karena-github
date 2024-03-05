@@ -25,7 +25,7 @@ const BadgeDesign = () => {
           <img src={banner} alt="Badge design banner" className='desktop' />
           <img src={bannerMobile} alt="Badge design banner" className='mobile' />
         </div>
-        <div className='title'>Badge Design</div>
+        <div className='title'>BADGE DESIGN</div>
         <div className='content'>
           <div className='keypoint'>
             <div>MY ROLE: <span>GRAPHIC DESIGN 丨<span>UI DESIGN</span></span></div>

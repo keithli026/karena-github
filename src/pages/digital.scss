@@ -14,16 +14,30 @@
   .flexbox {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .box {
       &:first-child {
-        flex-basis: 55.6%;
+        flex-basis: 48%;
       }
       &:last-child {
-        flex-basis: 44.4%;
+        flex-basis: 40.4%;
       }
       .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 10px;
         img {
-          max-width: 50%;
+          max-width: 48%;
+          @include media-breakpoint-up(lg) {
+            max-width: 49%;
+          }
+        }
+        +img {
+          margin-bottom: 30px;
+          @include media-breakpoint-up(lg) {
+            margin-bottom: 60px;
+          }
         }
       }
     }
@@ -51,6 +65,9 @@
         transform: rotate(15deg);
       }
     }
+  }
+  #XHS_landing, #happy_winter {
+    max-width: 800px;
   }
 
 }

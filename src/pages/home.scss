@@ -4,7 +4,7 @@
   66%  {top:-50px;}
   100% {top:0px;}
 }
-@keyframes arrow {
+@keyframes arrow-top {
   0% {top: 0px;}
   25% {top: -10px;}
   75% {top: 10px;}
@@ -215,6 +215,9 @@ $offset-y1: 100vh;
 
     p {
       font-size: 14px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
       position: relative;
       top: 30px;
       opacity: 0;
@@ -222,6 +225,7 @@ $offset-y1: 100vh;
 
       @include media-breakpoint-up(lg) {
         font-size: 16px;
+        margin-bottom: 50px;
       }
 
       &.bold {
@@ -234,7 +238,7 @@ $offset-y1: 100vh;
       max-height: 40px;
       position: relative;
       top: 0;
-      animation-name: arrow;
+      animation-name: arrow-top;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
