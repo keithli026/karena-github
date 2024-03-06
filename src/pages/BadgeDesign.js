@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/badge_design/banner.png"
 import bannerMobile from "../assets/images/badge_design/banner_mobile.png"
@@ -38,7 +39,7 @@ const BadgeDesign = () => {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className='project-intro'>
         <div className='section'>
           <h2>Brief</h2>
           <p>The inspiration came from a anti-counterfeit design elements that are used for security purposes. Guilloche is a pattern of subtle thin lines interwoven according to the rules of geometry. It includes all wavy decorative lines and graphic patterns which are primarily used on banknotes and securities. The use of Guilloche lines might in itself prevent the counterfeiting of products (e.g. certificates, diplomas, gift vouchers, tickets, packaging, and badge). My teammates and I design its badge for EF Standard English Test. By earning badges at different stages or levels, users can see their advancement and feel a sense of progression, which can enhance their motivation to continue engaging with a product.</p>
@@ -68,7 +69,10 @@ const BadgeDesign = () => {
             <img src={badgeDesign2} alt="badge design" loading="lazy" />
             <img src={badgeDesign3} alt="badge design" loading="lazy" />
             <img src={awardPage} alt="award page" loading="lazy" id="award_page" />
-            <OtherProjectsButton />
+            <div className='button-wrapper'>
+              <BackToTopButton />
+              <OtherProjectsButton />
+            </div>
           </div>
         </Container>
       </div>

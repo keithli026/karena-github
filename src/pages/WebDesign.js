@@ -1,5 +1,5 @@
 import React from 'react'
-// import BackButton from '../components/BackButton'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/web_design/banner.png"
 import bannerMobile from "../assets/images/web_design/banner_mobile.png"
@@ -38,7 +38,7 @@ const WebDesign = () => {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className='project-intro'>
         <div className='section'>
           <h2>Brief</h2>
           <p>I was given the task to updated new logo, redesign visual content strategy and ensure that the website is responsiveness and optimized for version devices and screen size. Optimize landing pages and forms to improve conversion rates.</p>
@@ -86,7 +86,8 @@ const WebDesign = () => {
           <h2>Reflection</h2>
           <p>I'm proud to work on such a large-scale project from the very beginning. Thanks a lot to my team for believing in me and supporting me throughout the process. I learned to collaborate with developers and hand off final deliverables. I challenged myself to think of a lot of iterations, present them to my manager, and test them with users.</p>
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

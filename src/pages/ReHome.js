@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/re-home/banner.png"
 import bannerMobile from "../assets/images/re-home/banner_mobile.png"
@@ -92,31 +93,32 @@ const ReHome = () => {
         </div>
       </div>
       <Container>
-        <div className='section'>
-          <h2>Brief</h2>
-          <p>Millions of animals are currently in shelters and foster homes awaiting adoption. During the pandemic increase the number of homeless animals in Hong Kong. Many pets owner moved aboard.  Sadly, most of the animals that end up in shelters are euthanised due to lack of space. Although many people are interested in adopting an animals, the process can be difficult.</p>
-          <p>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt. Re-Home app strives to reduce the homeless dog numbers, improve the adoption rate. They offer an experience that would easily connect people to animals and provide a simple adoption process. I design its mobile application for a case study project.</p>
+        <div className='project-intro'>
+          <div className='section'>
+            <h2>Brief</h2>
+            <p>Millions of animals are currently in shelters and foster homes awaiting adoption. During the pandemic increase the number of homeless animals in Hong Kong. Many pets owner moved aboard.  Sadly, most of the animals that end up in shelters are euthanised due to lack of space. Although many people are interested in adopting an animals, the process can be difficult.</p>
+            <p>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt. Re-Home app strives to reduce the homeless dog numbers, improve the adoption rate. They offer an experience that would easily connect people to animals and provide a simple adoption process. I design its mobile application for a case study project.</p>
+          </div>
+          <div className='section'>
+            <h2>Problem</h2>
+            <p>How might we create responsive application and a sustainable community with engaging strategies that can help connect people?</p>
+            <p>
+              People assuming shelter animals have behaviour and health issue<br />
+              Many potential adopters may not be aware of the availability of animals for adoption<br />
+              People worry specific adoption requirement can be challenges and deter potential adopters
+            </p>
+          </div>
+          <div className='section'>
+            <h2>Goal</h2>
+            <ol>
+              <li>Improved user-friendly application that showcases available animals for adoption. Include clear and detailed information about each animals. The platforms allow potential adopters to search for available animals based on their preferences and location.</li>
+              <li>Created booking system</li>
+              <li>Streamline the adoption process to make more efficient and user- friendly. Simplify paperwork, provide clear instructions.</li>
+              <li>Created a education workshop & training system help improve dog-human understanding</li>
+              <li>Prioritize mobile optimization to provide a user-friendly experience for mobile user </li>
+            </ol>
+          </div>
         </div>
-        <div className='section'>
-          <h2>Problem</h2>
-          <p>How might we create responsive application and a sustainable community with engaging strategies that can help connect people?</p>
-          <p>
-            People assuming shelter animals have behaviour and health issue<br />
-            Many potential adopters may not be aware of the availability of animals for adoption<br />
-            People worry specific adoption requirement can be challenges and deter potential adopters
-          </p>
-        </div>
-        <div className='section'>
-          <h2>Goal</h2>
-          <ol>
-            <li>Improved user-friendly application that showcases available animals for adoption. Include clear and detailed information about each animals. The platforms allow potential adopters to search for available animals based on their preferences and location.</li>
-            <li>Created booking system</li>
-            <li>Streamline the adoption process to make more efficient and user- friendly. Simplify paperwork, provide clear instructions.</li>
-            <li>Created a education workshop & training system help improve dog-human understanding</li>
-            <li>Prioritize mobile optimization to provide a user-friendly experience for mobile user </li>
-          </ol>
-        </div>
-
         <div className='section'>
           <h2>Design Approach</h2>
           <div className='center'>
@@ -203,7 +205,8 @@ const ReHome = () => {
             <div className='image'><img src={cert7} alt="Coursera certificate - Design a User Experience for Social Good & Prepare for Jobs" loading="lazy" /></div>
           </Slider>
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

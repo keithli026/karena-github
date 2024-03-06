@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/ef_set/banner.png"
 import bannerMobile from "../assets/images/ef_set/banner_mobile.png"
@@ -36,7 +37,7 @@ const EFSet = () => {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className='project-intro'>
         <div className='section'>
           <h2>Brief</h2>
           <p>The EF Standard English Test (EF SET) is an English standard test for non-native English speakers. It is a product of EF Education First​.</p>
@@ -79,7 +80,8 @@ const EFSet = () => {
         </Container>
       </div>
       <Container>
-        <div className='section center'>
+        <div className='section center button-wrapper'>
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

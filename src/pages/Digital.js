@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/digital/banner.png"
 import bannerMobile from "../assets/images/digital/XHS_LP_2.png"
@@ -80,7 +81,8 @@ const Digital = () => {
             <img src={phoneGif} alt="phone wheel of teacher" loading="lazy" />
           </div>
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

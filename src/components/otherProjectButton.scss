@@ -1,8 +1,7 @@
-.backButton {
-  text-transform: uppercase;
+#backButton {
   font-weight: 900;
   font-size: 14px;
-  display: block;
+  display: inline-block;
   @include media-breakpoint-up(lg) {
     font-size: 20px;
   }

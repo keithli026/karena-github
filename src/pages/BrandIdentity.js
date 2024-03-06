@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/brand_identity/banner.png"
 import bannerMobile from "../assets/images/brand_identity/banner_mobile.jpg"
@@ -40,12 +41,16 @@ const BrandDesign = () => {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className='project-intro'>
         <div className='section'>
           <h2>Brief</h2>
           <p>Pocina meal replacement shakes are a popular type of meal replacement that comes in the form of a drink. They are made from protein powder, vitamins, and minerals, and are designed to provide a balanced and nutritious alternative to a traditional meal.</p>
+        </div>
+        <div className='section'>
           <h2>Problem</h2>
           <p>How might we effectively increase brand awareness and young tagetes audience.</p>
+        </div>
+        <div className='section'>
           <h2>Goal</h2>
           <ol>
             <li>Improved brand awareness by creating engaging and shareable content.</li>
@@ -68,7 +73,7 @@ const BrandDesign = () => {
           <img src={combination} alt="Combination" loading="lazy" />
         </div>
         <div className='section'>
-          <img src={sm1} alt="sm1" loading="lazy" className='mb-5'/>
+          <img src={sm1} alt="sm1" loading="lazy" className='mb-5' />
           <img src={sm3} alt="sm3" loading="lazy" />
         </div>
         <div className='section'>
@@ -88,7 +93,8 @@ const BrandDesign = () => {
             </video>
           </div>
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

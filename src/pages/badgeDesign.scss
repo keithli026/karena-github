@@ -224,9 +224,16 @@
     text-align: center;
   }
 
+  .project-intro {
+    .section {
+      margin-bottom: 50px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 100px;
+      }
+    }
+  }
   .section {
     margin-bottom: 50px;
-
     @include media-breakpoint-up(lg) {
       margin-bottom: 150px;
     }
@@ -239,6 +246,12 @@
     @include media-breakpoint-up(lg) {
       padding: 150px 0;
     }
+  }
+  .button-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
   }
 }
 

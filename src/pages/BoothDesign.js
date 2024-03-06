@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/bookfair/banner.png"
 import bannerMobile from "../assets/images/bookfair/banner_mobile.png"
@@ -105,7 +106,7 @@ const BoothDesign = () => {
           </div>
         </div>
       </div>
-      <Container>
+      <Container className='project-intro'>
         <div className='section'>
           <h2>Brief</h2>
           <p>Years of experience designing different exhibition booth, I responsible for creating visually appealing and all the materials both online and offline, including visual elements, space planning, 3D visualization, and materials on social media platform that effectively delivery key messages to the audiences.</p>
@@ -167,7 +168,8 @@ const BoothDesign = () => {
             <img src={bookCover} alt="Book cover" loading="lazy" id="book-cover" />
           </div>
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

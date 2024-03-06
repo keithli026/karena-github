@@ -1,4 +1,5 @@
 import React from 'react'
+import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/print/banner.png"
 import bannerMobile from "../assets/images/print/banner.png"
@@ -118,7 +119,8 @@ const Print = () => {
           <img src={billboardYL} alt="Billboard in Yuen Long" loading='lazy' />
           <img src={billboardYL2} alt="Billboard in Yuen Long" loading='lazy' />
         </div>
-        <div className="section center">
+        <div className="section center button-wrapper">
+          <BackToTopButton />
           <OtherProjectsButton />
         </div>
       </Container>

@@ -11,9 +11,7 @@
     width: 30px;
     height: 30px;
     padding: $padding-y;
-    // background-color: $white;
     color: $pink;
-    // box-shadow: 2px 2px 3px $grey;
     border-radius: 50%;
     text-align: center;
     z-index: 100;
@@ -27,5 +25,21 @@
       height: 40px;
       padding: 20px;
     }
+  }
+}
+
+#backToTopButton {
+  font-weight: 900;
+  font-size: 14px;
+  display: inline-block;
+  color: $black;
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  &:hover {
+    color: $pink;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
   }
 }

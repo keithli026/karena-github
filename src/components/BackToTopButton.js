@@ -1,7 +1,8 @@
 import React from 'react'
 import backToTop from "../assets/images/icons/backtotop.png"
+import Button from 'react-bootstrap/Button'
 
-const ScrollButton = () => {
+const BackToTopButton = () => {
   const ScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -9,10 +10,11 @@ const ScrollButton = () => {
     });
   }
   return (
-    <div className='back-to-top'>
-      <img src={backToTop} alt="back to top icon" onClick={ScrollToTop} />
-    </div>
+    <Button id="backToTopButton" onClick={ScrollToTop}>BACK TO TOP</Button>
+    // <div className='back-to-top'>
+    //   <img src={backToTop} alt="back to top icon" onClick={ScrollToTop} />
+    // </div>
   )
 }
 
-export default ScrollButton
+export default BackToTopButton

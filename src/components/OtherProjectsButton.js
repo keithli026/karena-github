@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const OtherProjectsButton = () => {
   return (
-    <Link to="/projects" className='backButton'>Other projects</Link>
+    <Link to="/projects" id='backButton'>OTHER PROJECTS</Link>
   )
 }
 
