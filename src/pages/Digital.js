@@ -43,15 +43,15 @@ const Digital = () => {
       </div>
       <Container>
         <div className="section center">
-          <h2>Social media feeds</h2>
+          {/* <h2>Social media feeds</h2> */}
           <img src={igFeed} alt="Social media feeds" loading='lazy' />
         </div>
         <div className="section center">
-          <h2>Xiaohongshu post</h2>
+          {/* <h2>Xiaohongshu post</h2> */}
           <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' />
         </div>
         <div className="section center">
-          <h2>Google Ads gif banner and Landing page</h2>
+          {/* <h2>Google Ads gif banner and Landing page</h2> */}
           <div className='flexbox'>
             <div className='box'>
               <div className='wrapper'>
@@ -67,15 +67,15 @@ const Digital = () => {
           </div>
         </div>
         <div className="section center">
-          <h2>Little Red Book Landing page</h2>
+          {/* <h2>Little Red Book Landing page</h2> */}
           <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' id="XHS_landing"/>
         </div>
         <div className="section center">
-          <h2>Gif poster - Happy Winter solstice</h2>
+          {/* <h2>Gif poster - Happy Winter solstice</h2> */}
           <img src={happyWinterGif} alt="happy winter" loading="lazy" id="happy_winter"/>
         </div>
         <div className="section center">
-          <h2>Social media CNY creative</h2>
+          {/* <h2>Social media CNY creative</h2> */}
           <div className='phone'>
             <img src={bucketlistGif} alt="bucket list" loading="lazy" />
             <img src={phoneGif} alt="phone wheel of teacher" loading="lazy" />
