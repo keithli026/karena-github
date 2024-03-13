@@ -1,4 +1,9 @@
 #print {
+  @include media-breakpoint-up(xl) {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .section {
     margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
@@ -18,14 +23,20 @@
 
   h2 {
     font-size: 14px;
-    text-align: start;
-    margin-bottom: 0px;
+    text-align: center;
+    transition: all 1s ease;
+    &:hover {
+      color: rgba(0,0,0,0.1);
+      letter-spacing: 0.05em;
+    }
   }
   .description {
-    text-align: start;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 14px;
     font-weight: 300;
- 
+    max-width: 400px;
+    margin-bottom: 100px;
   }
   .flexbox {
     img {
@@ -47,5 +58,8 @@
         }
       }
     }
+  }
+  #recycle_bag {
+    margin-top: 50vh;
   }
 }

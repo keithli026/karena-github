@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     {/* <BackToTopButton /> */}
     <BrowserRouter>
-        <App />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

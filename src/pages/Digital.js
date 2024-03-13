@@ -15,10 +15,13 @@ import bucketlistGif from "../assets/images/digital/bucket_list_for_fb_ig.gif"
 import phoneGif from "../assets/images/digital/phone_wheel_of_teachers.gif"
 import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
+import ScrollClassAdder from '../components/ScrollClassAdder'
+import throttle from 'lodash.throttle'
 
 const Digital = () => {
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { isIntersecting } = useIntersectionObserver(videoRef);
 
   useEffect(() => {
@@ -26,12 +29,20 @@ const Digital = () => {
       setIsLoad(true);
       // console.log(isLoad, isIntersecting);
     }
+    const handleScroll = throttle(() => {
+      setIsScrolled(true);
+    }, 250);
 
-  }, [isIntersecting, isLoad]);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+  }, [isIntersecting, isLoad, isScrolled]);
 
   return (
     <div id='digital' className='project'>
-      <div className='banner'>
+      {/* <div className='banner'>
         <div className='image'>
           <img src={banner} alt="Digital banner" className='desktop' />
           <img src={bannerMobile} alt="Digital banner" className='mobile' />
@@ -40,14 +51,17 @@ const Digital = () => {
           <div className='name'>DIGITAL</div>
           <div className='summary'>Creates, manages, and produces digital design solutions for a variety of uses: websites, product graphics, edm, landing page, different social media platform (Facebook, Instagram, Little Red Book) , brand campaigns and short video editing.</div>
         </div>
-      </div>
+      </div> */}
       <Container>
-        <div className="section center">
-          {/* <h2>Social media feeds</h2> */}
-          <img src={igFeed} alt="Social media feeds" loading='lazy' />
+        <div id="info" className={`section center ${isScrolled ? "scrolled" : null}`}>
+          {/* <h2>Little Red Book Landing page</h2> */}
+          <h2 className='name'>DIGITAL</h2>
+          <div className='summary'>Creates, manages, and produces digital design solutions for a variety of uses: websites, product graphics, edm, landing page, different social media platform (Facebook, Instagram, Little Red Book) , brand campaigns and short video editing.</div>
+          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' id="XHS_landing" />
         </div>
         <div className="section center">
-          {/* <h2>Xiaohongshu post</h2> */}
+          <h2>2024<br/>Social media</h2>
+          <img src={igFeed} alt="Social media feeds" loading='lazy' id="ig_feed" />
           <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' />
         </div>
         <div className="section center">
@@ -67,12 +81,8 @@ const Digital = () => {
           </div>
         </div>
         <div className="section center">
-          {/* <h2>Little Red Book Landing page</h2> */}
-          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' id="XHS_landing"/>
-        </div>
-        <div className="section center">
           {/* <h2>Gif poster - Happy Winter solstice</h2> */}
-          <img src={happyWinterGif} alt="happy winter" loading="lazy" id="happy_winter"/>
+          <img src={happyWinterGif} alt="happy winter" loading="lazy" id="happy_winter" />
         </div>
         <div className="section center">
           {/* <h2>Social media CNY creative</h2> */}

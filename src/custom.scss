@@ -72,17 +72,14 @@ p {
   font-weight: 300;
   font-family: 'Nunito', 'Montserrat', sans-serif;
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 ul, ol {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   line-height: 1.4;
   padding-left: 1.2em;
-  @include media-breakpoint-up(lg) {
-    font-size: 18px;
-  }
   li {
     padding-left: 5px;
     // margin-bottom: 10px;

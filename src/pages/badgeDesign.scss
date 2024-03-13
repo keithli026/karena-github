@@ -60,8 +60,6 @@
       font-size: 36px;
       font-weight: 800;
       color: $white;
-
-
       @include media-breakpoint-up(lg) {
         font-size: 50px;
       }
@@ -69,10 +67,11 @@
         position: relative;
         width: fit-content;
         margin-bottom: 40px;
+        font-size: 20px;
         &::after {
           content: "";
           position: absolute;
-          top: calc(100% + 10px);
+          top: calc(100% + 20px);
           left: 0;
           right: 0;
           margin-left: auto;
@@ -82,9 +81,9 @@
         }
       }
       .summary {
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 300;
-        max-width: 450px;
+        max-width: 400px;
       }
     }
 

@@ -35,7 +35,7 @@ import Container from 'react-bootstrap/Container';
 const Print = () => {
   return (
     <div id='print' className='project'>
-      <div className='banner'>
+      {/* <div className='banner'>
         <div className='image'>
           <img src={banner} alt="Print banner" className='desktop' />
           <img src={bannerMobile} alt="Print banner" className='mobile' />
@@ -44,9 +44,9 @@ const Print = () => {
           <div className='name'>PRINT</div>
           <div className='summary'>Specialize in the creation of visual designs for printing such as brochures, flyers, business cards, billboard and a range of other printable marketing materials.</div>
         </div>
-      </div>
+      </div> */}
       <Container>
-        <div className='section center'>
+        <div className='section center' id="recycle_bag">
           <h2>Recycle Bag</h2>
           <div className='description'>Creative Recycling Bag Design: "Don't let the cat out of the bag" means not revealing or disclosing something that is supposed to be a secret.</div>
           <img src={recycleBag1} alt="Recycle Bag" loading='lazy' />
