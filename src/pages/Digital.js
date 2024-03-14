@@ -5,12 +5,16 @@ import banner from "../assets/images/digital/banner.png"
 import bannerMobile from "../assets/images/digital/XHS_LP_2.png"
 import igFeed from "../assets/images/digital/igfeed.jpg"
 import XHSPost from "../assets/images/digital/XHSpost.jpg"
+import summer1 from "../assets/images/digital/summer_1.png"
+import summer2 from "../assets/images/digital/summer_2.png"
+import color from "../assets/images/digital/colour_2.png"
 import googleAd1 from "../assets/images/digital/google_ad1.GIF"
 import googleAd2 from "../assets/images/digital/google_ad2.GIF"
 import englishBite1 from "../assets/images/digital/englishBite1.jpg"
 import englishBite2 from "../assets/images/digital/englishBite2.jpg"
 import englishBite3 from "../assets/images/digital/englishBite3.jpg"
 import happyWinterGif from "../assets/images/digital/happy_winter.gif"
+import spirit from "../assets/images/digital/spirit.png"
 import bucketlistGif from "../assets/images/digital/bucket_list_for_fb_ig.gif"
 import phoneGif from "../assets/images/digital/phone_wheel_of_teachers.gif"
 import Container from 'react-bootstrap/Container'
@@ -60,9 +64,14 @@ const Digital = () => {
           <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' id="XHS_landing" />
         </div>
         <div className="section center">
-          <h2>2024<br/>Social media</h2>
+          <h2>2024<br />Social media</h2>
           <img src={igFeed} alt="Social media feeds" loading='lazy' id="ig_feed" />
           <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' />
+        </div>
+        <div className="section center">
+          <img src={summer2} alt="Summer" loading='lazy' />
+          <img src={color} alt="Color" loading='lazy' />
+          <img src={summer1} alt="Summer" loading='lazy' />
         </div>
         <div className="section center">
           {/* <h2>Google Ads gif banner and Landing page</h2> */}
@@ -81,16 +90,17 @@ const Digital = () => {
           </div>
         </div>
         <div className="section center">
-          {/* <h2>Gif poster - Happy Winter solstice</h2> */}
           <img src={happyWinterGif} alt="happy winter" loading="lazy" id="happy_winter" />
         </div>
         <div className="section center">
-          {/* <h2>Social media CNY creative</h2> */}
+          <img src={spirit} alt="spirit" loading="lazy" />
+        </div>
+        {/* <div className="section center">
           <div className='phone'>
             <img src={bucketlistGif} alt="bucket list" loading="lazy" />
             <img src={phoneGif} alt="phone wheel of teacher" loading="lazy" />
           </div>
-        </div>
+        </div> */}
         <div className="section center button-wrapper">
           <BackToTopButton />
           <OtherProjectsButton />
