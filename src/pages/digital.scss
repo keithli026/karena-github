@@ -1,6 +1,6 @@
 #digital {
   @include media-breakpoint-up(xl) {
-    max-width: 900px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -135,6 +135,10 @@
     }
   }
 
+  .summer {
+    margin-bottom: 100px;
+  }
+
   #info {
     &.scrolled {
       .name, .summary {
@@ -162,7 +166,4 @@
     margin-bottom: 100px;
   }
 
-  #happy_winter {
-    width: 600px;
-  }
 }

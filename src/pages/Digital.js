@@ -64,14 +64,14 @@ const Digital = () => {
           <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' id="XHS_landing" />
         </div>
         <div className="section center">
-          <h2>2024<br />Social media</h2>
+          {/* <h2>2024<br />Social media</h2> */}
           <img src={igFeed} alt="Social media feeds" loading='lazy' id="ig_feed" />
           <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' />
         </div>
         <div className="section center">
-          <img src={summer2} alt="Summer" loading='lazy' />
+          <img src={summer2} alt="Summer" loading='lazy' className='summer' />
+          <img src={summer1} alt="Summer" loading='lazy' className='summer' />
           <img src={color} alt="Color" loading='lazy' />
-          <img src={summer1} alt="Summer" loading='lazy' />
         </div>
         <div className="section center">
           {/* <h2>Google Ads gif banner and Landing page</h2> */}
@@ -90,10 +90,10 @@ const Digital = () => {
           </div>
         </div>
         <div className="section center">
-          <img src={happyWinterGif} alt="happy winter" loading="lazy" id="happy_winter" />
+          <img src={happyWinterGif} alt="happy winter" loading="lazy" style={{width: "600px"}} />
         </div>
         <div className="section center">
-          <img src={spirit} alt="spirit" loading="lazy" />
+          <img src={spirit} alt="spirit" loading="lazy" style={{width: "600px"}} />
         </div>
         {/* <div className="section center">
           <div className='phone'>
