@@ -79,7 +79,7 @@ const Resume = () => {
             <p>Google online program</p> 
           </div>
           <div className='box'>
-            <h3>Swimburne University Of Technology, Australia</h3>
+            <h3>Swinburne University Of Technology, Australia</h3>
             <p>Bachelor of communication Design  丨  Multimedia Design Melbourne, Australia</p> 
           </div>
           <div className='box'>
