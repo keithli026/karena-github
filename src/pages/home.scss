@@ -184,7 +184,7 @@ $offset-y1: 100vh;
     @include media-breakpoint-up(sm) {
       // background-image: url("../assets//images/icons/little_icon.png");
     }
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       margin-bottom: 200px;
       // padding: 150px 0;
     }
