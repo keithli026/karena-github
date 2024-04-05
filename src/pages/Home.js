@@ -40,11 +40,11 @@ const Home = () => {
   return (
 
     <div id="home">
-      <div id="greeting">
-        {/* <div className='banner'>
+      <div id="greeting" className={`${isScrolled ? "scrolled": null}`}>
+        <div className='banner'>
           <img src={background} alt="background" loading='lazy' className='bg' />
           <div className='overlay'></div>
-        </div> */}
+        </div>
         <Container>
           <div className='flexbox'>
             <div className='content'>
@@ -73,7 +73,7 @@ const Home = () => {
         <li><Link to="/my-story#about">About me</Link></li>
         <li><Link to="/projects">Projects</Link></li>
         <li><Link to="/my-story#resume">Resume</Link></li>
-        <li><Link to="/my-story#my_value">My Value</Link></li>
+        <li><Link to="/my-story#my_value">My value</Link></li>
         <li><Link to="/lets-talk">Email</Link></li>
       </ul>
       </div>
@@ -81,7 +81,7 @@ const Home = () => {
         <Container>
           {/* <div className='title'>“Simple is Better”</div> */}
           {/* <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p> */}
-          <p className='bold'>Here’s a few projects that I’d like to share.</p>
+          <p>Here’s a few projects that I’d like to share.</p>
           <img src={arrow} alt="arrow" loading="lazy" />
         </Container>
       </div>

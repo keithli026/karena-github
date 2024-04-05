@@ -31,7 +31,7 @@ $offset-y1: 100vh;
     width: 100vw;
     margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
-      margin-bottom: 0;
+      margin-bottom: 200px;
     }
     &.scrolled {
       .banner {
@@ -67,6 +67,13 @@ $offset-y1: 100vh;
               border-color: $white;
               font-size: inherit;
             }
+          }
+        }
+      }
+      ~.quick_link {
+        ul {
+          @include media-breakpoint-up(lg) {
+            color: $white;
           }
         }
       }
@@ -122,7 +129,7 @@ $offset-y1: 100vh;
         height: inherit;
         margin-bottom: 0;
         max-width: 250px;
-        bottom: 40vh;
+        bottom: 20vh;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -188,9 +195,9 @@ $offset-y1: 100vh;
     }
     ul {
       @include media-breakpoint-up(xl) {
-        font-family: 'Crimson Pro';
+        // font-family: 'Crimson Pro';
         font-style: italic;
-        color: $gray-600;
+        color: #515151;
         list-style-type: none;
         li {
           &:hover {
@@ -252,6 +259,9 @@ $offset-y1: 100vh;
     // }
 
     p {
+      font-family: 'Crimson Pro';
+      font-style: italic;
+      font-weight: 700;
       font-size: 14px;
       max-width: 650px;
       margin-left: auto;
@@ -262,18 +272,8 @@ $offset-y1: 100vh;
       transition: all 0.2s linear;
 
       @include media-breakpoint-up(lg) {
-        font-size: 16px;
+        font-size: 20px;
         margin-bottom: 50px;
-      }
-
-      &.bold {
-        font-family: 'Crimson Pro';
-        font-weight: 700;
-        // transition: all 0.2s linear 0.6s;
-        font-size: 14px;
-        @include media-breakpoint-up(lg) {
-          font-size: 28px;
-        }
       }
     }
     
@@ -373,6 +373,7 @@ $offset-y1: 100vh;
         left: 20%;
         opacity: 0;
         transition: all 0.5s linear 0.5s;
+        box-shadow: 0px 4px 4px 0 rgba(0,0,0,0.25);
         @include media-breakpoint-up(md) {
           width: 55%;
           height: fit-content;
@@ -469,6 +470,9 @@ $offset-y1: 100vh;
     margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 200px;
+    }
     .content {
       position: absolute;
       top: 46%;
@@ -480,7 +484,10 @@ $offset-y1: 100vh;
     }
     img {
       animation: rotation 10s linear infinite;
-      width: 300px;
+      max-width: 300px;
+      // @include media-breakpoint-up(lg) {
+      //   margin-bottom: 200px;
+      // }
     }
   }
 }
