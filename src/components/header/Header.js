@@ -50,7 +50,7 @@ const Header = () => {
         <img alt="site logo" src={siteLogo} />
       </Link>
       <div id="menu" onMouseEnter={rotateButton} onMouseLeave={() => { resetButton(); closeMenu(); }} className={isScrolled ? "scrolled": null}>
-        <Button variant='outline-light' onClick={showMenu} ref={refButton}>
+        <Button variant='link' size="sm" onClick={showMenu} ref={refButton}>
           <img alt="menu" src={fingerTopIcon} />
           {/* {show ? <img alt="menu" className="rotate1" src={fingerLeftIcon} /> : <img alt="menu" src={fingerLeftIcon} />} */}
         </Button>

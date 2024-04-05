@@ -148,7 +148,7 @@ const WebForm = () => {
           <Form.Control as="textarea" rows={3} name="message" value={formData.message} onChange={handleChange} onBlur={handleBlur} />
           {formData.errors.message && <p className="error">{formData.errors.message}</p>}
         </Form.Group>
-        <Button variant="light" type="submit">
+        <Button variant="outline-dark" type="submit">
           Send Message
         </Button>
       </Form>

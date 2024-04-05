@@ -8,6 +8,14 @@ const ScrollToTop = (props) => {
   useEffect(() => {
     if(!location.hash) {
       window.scrollTo(0,0);
+    } else {
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
     }
   },[location]);
   return (

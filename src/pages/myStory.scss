@@ -6,7 +6,7 @@
 }
 
 #mystory {
-  .about {
+  #about {
     background-image: url("../assets/images/my_story/cloudy.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -106,7 +106,7 @@
     }
   }
 
-  .resume {
+  #resume {
     position: relative;
     &.scrolled {
       .wrapper {
@@ -265,7 +265,7 @@
     }
   }
 
-  .my_value {
+  #my_value {
     background-color: $lightgrey-100;
     margin: 100px 0;
 

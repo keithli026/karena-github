@@ -10,10 +10,12 @@ import hult from "../assets/images/home/HULT.png"
 import brochure from "../assets/images/home/brochure.png"
 import XHS from "../assets/images/home/XHS_LP.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
+import circle from "../assets/images/icons/icon_circle.png"
 import ScrollClassAdder from '../components/ScrollClassAdder'
 import Container from "react-bootstrap/Container"
 import Button from 'react-bootstrap/Button'
 import throttle from 'lodash.throttle'
+import { ReactTyped } from "react-typed"
 
 const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,27 +38,49 @@ const Home = () => {
   }, [isScrolled]);
 
   return (
+
     <div id="home">
-      <div id="greeting" className={isScrolled ? "scrolled" : null}>
-        <div className='banner'>
+      <div id="greeting">
+        {/* <div className='banner'>
           <img src={background} alt="background" loading='lazy' className='bg' />
           <div className='overlay'></div>
-        </div>
+        </div> */}
         <Container>
           <div className='flexbox'>
             <div className='content'>
-              <div className='title'>Hello there! <span>I’m Karena</span></div>
-              <p className='intro'>A Multimedia Designer at EF who loves to creating digital experience for <span>people</span>.</p>
-              <Button variant='light' href="/my-story">About me</Button>
+              <div className='title'>Hello there! <span>I’m Karena Li</span></div>
+              <p className='intro'>
+                <span>A</span><Button variant="outline-primary" size="sm">
+                  {" "}
+                  <ReactTyped
+                    strings={["graphic", "multimedia", "UI/UX", "brand", "website"]}
+                    typeSpeed={50}
+                    loop
+                    backSpeed={20}
+                    cursorChar="|"
+                    showCursor={true}
+                  />
+                </Button>
+                <span>designer at EF who loves to creating digital experience for <span style={{textDecoration: "underline"}}>people</span>.</span>
+              </p>
+              {/* <Button variant='light' href="/my-story">About me</Button> */}
             </div>
           </div>
         </Container>
       </div>
-
+      <div class="quick_link">
+      <ul>
+        <li><Link to="/my-story#about">About me</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/my-story#resume">Resume</Link></li>
+        <li><Link to="/my-story#my_value">My Value</Link></li>
+        <li><Link to="/lets-talk">Email</Link></li>
+      </ul>
+      </div>
       <div id="slogan" className={ScrollClassAdder("#slogan", "scrolled", 200)}>
         <Container>
-          <div className='title'>“Simple is Better”</div>
-          <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p>
+          {/* <div className='title'>“Simple is Better”</div> */}
+          {/* <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p> */}
           <p className='bold'>Here’s a few projects that I’d like to share.</p>
           <img src={arrow} alt="arrow" loading="lazy" />
         </Container>
@@ -64,7 +88,7 @@ const Home = () => {
 
       <div id="projects">
         <div className={`project ${classNames[0]}`}>
-          <div className='image' style={{position: "relative", zIndex: "1"}}>
+          <div className='image' style={{ position: "relative", zIndex: "1" }}>
             <img src={hult} alt="HULT" loading="lazy" />
           </div>
           <div className='content'>
@@ -144,7 +168,24 @@ const Home = () => {
         </div> */}
       </div>
       <Container>
-        <Contact />
+        <div className='message'>
+          <span>Reach out to create something</span> <Button variant="outline-primary" size="sm">
+            {" "}
+            <ReactTyped
+              strings={["modern", "dynamic", "stylish", "joyful", "exciting"]}
+              typeSpeed={50}
+              loop
+              backSpeed={20}
+              cursorChar="|"
+              showCursor={true}
+            />
+          </Button>
+        </div>
+        <div className='email'>
+          <div className='content'>Email</div>
+          <Link to="/lets-talk"><img src={circle} alt="arrow" loading="lazy" /></Link>
+        </div>
+        {/* <Contact /> */}
       </Container>
     </div>
   )

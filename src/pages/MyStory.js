@@ -33,7 +33,7 @@ const MyStory = () => {
 
   return (
     <div id="mystory">
-      <div className='about'>
+      <div id='about'>
         <div className='wrapper container'>
           <div className='content'>
             <div className='title'>About me</div>
@@ -43,7 +43,7 @@ const MyStory = () => {
           </div>
         </div>
       </div>
-      <div className={`resume container ${ScrollClassAdder(".resume", "scrolled", 200)}`}>
+      <div id="resume" className={`container ${ScrollClassAdder("#resume", "scrolled", 200)}`}>
         <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" loading="lazy"/></Link>
         <div className='wrapper'>
           <div className='image_wrapper'>
@@ -57,7 +57,7 @@ const MyStory = () => {
           </div>
         </div>
       </div>
-      <div className='my_value'>
+      <div id='my_value'>
         <div className='wrapper container'>
           <div className='title'>My Value</div>
           <Slider {...settings}>

@@ -48,6 +48,13 @@
   }
 
   button {
+    padding: 0;
+    transform: rotate(-90deg);
+    transition: transform 0.2s;
+    &.rotate {
+      transform: rotate(-180deg);
+    }
+    img {
     width: 30px;
 
     @include media-breakpoint-up(sm) {
@@ -56,17 +63,6 @@
     @include media-breakpoint-up(xl) {
       width: 65px;
     }
-
-    &:focus-visible {
-      border: 2px solid $black;
-    }
-    transform: rotate(-90deg);
-    transition: transform 0.2s;
-    &.rotate {
-      transform: rotate(-180deg);
-    }
-    img {
-      // background-image: radial-gradient(closest-side at 50% 50%, $white, transparent);
     }
   }
   ul {

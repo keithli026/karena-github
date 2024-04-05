@@ -10,6 +10,11 @@
   75% {top: 10px;}
   100% {top: 0px;}
 }
+
+@keyframes rotation {
+  0%   {transform: rotate(0);}
+  100%  {transform: rotate(360deg);}
+}
 $center-x: 50%;
 $center-y: 90%;
 $offset-x: 150px;
@@ -26,7 +31,7 @@ $offset-y1: 100vh;
     width: 100vw;
     margin-bottom: 100px;
     @include media-breakpoint-up(lg) {
-      margin-bottom: 200px;
+      margin-bottom: 0;
     }
     &.scrolled {
       .banner {
@@ -57,16 +62,10 @@ $offset-y1: 100vh;
           }
           .intro {
             color: $white;
-            span {
+            .btn {
               color: $white;
-            }
-          }
-          .btn {
-            color: $white;
-            border-color: $white;
-            visibility: visible;
-            &:hover {
-              border-color: $pink;
+              border-color: $white;
+              font-size: inherit;
             }
           }
         }
@@ -123,7 +122,7 @@ $offset-y1: 100vh;
         height: inherit;
         margin-bottom: 0;
         max-width: 250px;
-        bottom: 20vh;
+        bottom: 40vh;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -131,16 +130,17 @@ $offset-y1: 100vh;
         height: fit-content;
         transition: all 1s ease-out;
         @include media-breakpoint-up(lg) {
-          max-width: 350px;
+          max-width: 380px;
         }
    
         .title {
           font-weight: 900;
           font-size: 36px;
+          font-family: 'Crimson Pro';
           margin-bottom: 20px;
           line-height: 1.2;
           @include media-breakpoint-up(lg) {
-            line-height: 1.4;
+            line-height: 1;
             font-size: 50px;
           }
           span::before {
@@ -152,23 +152,57 @@ $offset-y1: 100vh;
           font-weight: 500;
           font-size: 15px;
           margin-bottom: 30px;
-          span {
-            color: $pink;
-            text-decoration: underline;
-          }
           @include media-breakpoint-up(lg) {
             margin-bottom: 40px;
             font-size: 18px;
           }
+          >span {
+            vertical-align: middle;
+          }
+          .btn {
+            margin: 5px;
+            min-width: 120px;
+            font-style: italic;
+            font-family: 'Crimson Pro';
+            font-weight: 500;
+            font-size: inherit;
+            @include media-breakpoint-up(lg) {
+              margin: 5px 10px;
+            }
+          }
         }
-        .btn {
-          padding: 5px 50px;
-          visibility: hidden;
-          @include media-breakpoint-up(lg) {
-            padding: 10px 100px;
-            font-size: 18px;
-            font-weight: 800;
-            border-width: 2px;
+      }
+    }
+  }
+  .quick_link {
+    display: none;
+    @include media-breakpoint-up(xl) {
+      display: block;
+      position: fixed;
+      top: 45vh;
+      left: $container-padding-x * 0.5;
+      z-index: 1;
+    }
+    @media(min-width: 1500px) {
+      left: 8vw;
+    }
+    ul {
+      @include media-breakpoint-up(xl) {
+        font-family: 'Crimson Pro';
+        font-style: italic;
+        color: $gray-600;
+        list-style-type: none;
+        li {
+          &:hover {
+            &::before {
+              content: "|";
+              font-style: normal;
+              margin-right: 1em;
+            }
+          }
+          margin-bottom: 10px;
+          a {
+            color: inherit;
           }
         }
       }
@@ -197,21 +231,25 @@ $offset-y1: 100vh;
         top: 0;
         opacity: 1;
       }
+      img {
+        top: 0;
+        opacity: 1;
+      }
 
     }
-    .title {
-      color: $pink;
-      font-size: 32px;
-      font-weight: 900;
-      margin-bottom: 30px;
-      position: relative;
-      top: 30px;
-      opacity: 0;
-      transition: all 0.2s;
-      @include media-breakpoint-up(lg) {
-        font-size: 35px;
-      }
-    }
+    // .title {
+    //   color: $pink;
+    //   font-size: 32px;
+    //   font-weight: 900;
+    //   margin-bottom: 30px;
+    //   position: relative;
+    //   top: 30px;
+    //   opacity: 0;
+    //   transition: all 0.2s;
+    //   @include media-breakpoint-up(lg) {
+    //     font-size: 35px;
+    //   }
+    // }
 
     p {
       font-size: 14px;
@@ -221,7 +259,7 @@ $offset-y1: 100vh;
       position: relative;
       top: 30px;
       opacity: 0;
-      transition: all 0.2s linear 0.4s;
+      transition: all 0.2s linear;
 
       @include media-breakpoint-up(lg) {
         font-size: 16px;
@@ -229,15 +267,22 @@ $offset-y1: 100vh;
       }
 
       &.bold {
+        font-family: 'Crimson Pro';
         font-weight: 700;
-        transition: all 0.2s linear 0.6s;
+        // transition: all 0.2s linear 0.6s;
+        font-size: 14px;
+        @include media-breakpoint-up(lg) {
+          font-size: 28px;
+        }
       }
     }
     
     img {
-      max-height: 40px;
       position: relative;
-      top: 0;
+      top: 30px;
+      opacity: 0;
+      transition: all 0.2s linear 0.4s;
+      max-height: 40px;
       animation-name: arrow-top;
       animation-duration: 1s;
       animation-iteration-count: infinite;
@@ -388,6 +433,54 @@ $offset-y1: 100vh;
           }
         }
       }
+    }
+  }
+  .message {
+    font-size: 14px;
+    font-family: 'Crimson Pro';
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: $padding-y * 10;
+    @include media-breakpoint-up(lg) {
+      font-size: 28px;
+      margin-bottom: $padding-y * 20;
+    }
+    >span {
+      vertical-align: middle;
+    }
+    .btn {
+      font-size: inherit;
+      margin-left: 5px;
+      font-style: italic;
+      font-family: 'Crimson Pro';
+      font-weight: 500;
+      min-width: 100px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      @include media-breakpoint-up(lg) {
+        min-width: 160px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .email {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    .content {
+      position: absolute;
+      top: 46%;
+      left: 43%;
+      color: $primary;
+      font-weight: 700;
+      font-family: 'Crimson Pro';
+      font-style: italic;
+    }
+    img {
+      animation: rotation 10s linear infinite;
+      width: 300px;
     }
   }
 }
