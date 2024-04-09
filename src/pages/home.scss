@@ -29,10 +29,10 @@ $offset-y1: 100vh;
     position: relative;
     height: 100vh;
     width: 100vw;
-    margin-bottom: 100px;
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 200px;
-    }
+    // margin-bottom: 100px;
+    // @include media-breakpoint-up(lg) {
+    //   margin-bottom: 200px;
+    // }
     &.scrolled {
       .banner {
         // clip-path: polygon(
@@ -70,13 +70,6 @@ $offset-y1: 100vh;
           }
         }
       }
-      ~.quick_link {
-        ul {
-          @include media-breakpoint-up(lg) {
-            color: $white;
-          }
-        }
-      }
     }
     .banner {
       position: absolute;
@@ -107,7 +100,7 @@ $offset-y1: 100vh;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 0;
+        bottom: 20vh;
         margin-left: auto;
         margin-right: auto;
         object-fit: cover;
@@ -129,7 +122,7 @@ $offset-y1: 100vh;
         height: inherit;
         margin-bottom: 0;
         max-width: 250px;
-        bottom: 20vh;
+        bottom: 40vh;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -443,8 +436,7 @@ $offset-y1: 100vh;
     text-align: center;
     margin-bottom: $padding-y * 10;
     @include media-breakpoint-up(lg) {
-      font-size: 28px;
-      margin-bottom: $padding-y * 20;
+      font-size: 20px;
     }
     >span {
       vertical-align: middle;
@@ -475,19 +467,25 @@ $offset-y1: 100vh;
     }
     .content {
       position: absolute;
-      top: 46%;
-      left: 43%;
+      top: 43%;
+      left: 38%;
       color: $primary;
       font-weight: 700;
       font-family: 'Crimson Pro';
       font-style: italic;
+      font-size: 14px;
+      @include media-breakpoint-up(lg) {
+        top: 42%;
+        left: 37%;
+        font-size: 20px;
+      }
     }
     img {
       animation: rotation 10s linear infinite;
-      max-width: 300px;
-      // @include media-breakpoint-up(lg) {
-      //   margin-bottom: 200px;
-      // }
+      max-width: 150px;
+      @include media-breakpoint-up(lg) {
+        max-width: 200px;
+      }
     }
   }
 }

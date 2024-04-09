@@ -40,7 +40,7 @@ const Home = () => {
   return (
 
     <div id="home">
-      <div id="greeting" className={`${isScrolled ? "scrolled": null}`}>
+      <div id="greeting">
         <div className='banner'>
           <img src={background} alt="background" loading='lazy' className='bg' />
           <div className='overlay'></div>
