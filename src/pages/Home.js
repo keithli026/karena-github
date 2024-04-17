@@ -72,7 +72,7 @@ const Home = () => {
       <ul>
         <li><Link to="/my-story#about">About me</Link></li>
         <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/my-story#resume">Resume</Link></li>
+        <li><Link to="/resume">Resume</Link></li>
         <li><Link to="/my-story#my_value">My value</Link></li>
         <li><Link to="/lets-talk">Email</Link></li>
       </ul>
