@@ -3,6 +3,8 @@ import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/print/banner.png"
 import bannerMobile from "../assets/images/print/banner.png"
+import tableCalendar from "../assets/images/print/table_calendar.png"
+import tableCalendar1 from "../assets/images/print/table_calendar_1.png"
 import businessCard from "../assets/images/print/business_card.jpg"
 import brochureENG from "../assets/images/print/brochureENG.jpg"
 import brochure from "../assets/images/print/brochure.jpg"
@@ -46,6 +48,17 @@ const Print = () => {
         </div>
       </div> */}
       <Container>
+      <div className='section center' id="table_calendar">
+          <h2>Calendar</h2>
+          <div className='description'>I was responsible for choosing images, creating layouts, looks, and feels that match the guidelines, and preparing digital output files for the print shop.</div>
+          <img src={tableCalendar} alt="Calendar" loading='lazy' />
+          <img src={tableCalendar1} alt="Calendar" loading='lazy' style={{marginBottom: "100px"}}/>
+          <div className='flexbox'>
+            <img src={calendar} alt="Calendar" loading='lazy' />
+            <img src={calendar2} alt="Calendar" loading='lazy' />
+          </div>
+          <img src={calendar3} alt="Calendar" loading='lazy' />
+        </div>
         <div className='section center' id="recycle_bag">
           <h2>Recycle Bag</h2>
           <div className='description'>Creative Recycling Bag Design: "Don't let the cat out of the bag" means not revealing or disclosing something that is supposed to be a secret.</div>
@@ -73,28 +86,24 @@ const Print = () => {
           <div className='description'>Followed the guidelines to create business cards for all teachers and staff members.</div>
           <img src={businessCard} alt="Business card" loading='lazy' />
         </div>
-        <div className='section center'>
-          <h2>Calendar</h2>
-          <div className='description'>I was responsible for choosing images, creating layouts, looks, and feels that match the guidelines, and preparing digital output files for the print shop.</div>
-          <div className='flexbox'>
-            <img src={calendar} alt="Calendar" loading='lazy' />
-            <img src={calendar2} alt="Calendar" loading='lazy' />
-          </div>
-          <img src={calendar3} alt="Calendar" loading='lazy' />
-        </div>
 
         <div className='section center'>
           <h2>Leaflet</h2>
           <div className='description'>Designed a leaflet for different promotions and ensure that the style aligns with the brand.</div>
-          <img src={leaflet} alt="Leaflet" loading='lazy' />
-        </div>
-        <div className='section center'>
-          <h2>Folder & postcard design</h2>
+          <img src={leaflet} alt="Leaflet" loading='lazy' style={{marginBottom: "100px"}}/>
           <img src={folder} alt="Folder" loading='lazy' />
           <div className='flexbox'>
             <img src={folderFront} alt="Folder front" loading='lazy' />
             <img src={folderBack} alt="Folder back" loading='lazy' />
           </div>
+        </div>
+        <div className='section center'>
+          {/* <h2>Folder & postcard design</h2>
+          <img src={folder} alt="Folder" loading='lazy' />
+          <div className='flexbox'>
+            <img src={folderFront} alt="Folder front" loading='lazy' />
+            <img src={folderBack} alt="Folder back" loading='lazy' />
+          </div> */}
           <img src={postcard} alt="Postcard" loading='lazy' />
         </div>
         <div className='section center'>

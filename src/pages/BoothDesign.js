@@ -159,7 +159,7 @@ const BoothDesign = () => {
               <img src={foamBoard3} alt="Foamboard" loading="lazy" />
             </div>
           </div>
-          <img src={igStory} alt="IG story" loading="lazy" />
+          <img src={igStory} alt="IG story" loading="lazy" style={{width: "370px"}}/>
         </div>
         <div className='section'>
           <h2>Book cover design</h2>

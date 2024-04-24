@@ -21,6 +21,10 @@
     }
   }
 
+  img {
+    margin-bottom: 20px;
+  }
+
   h2 {
     font-size: 14px;
     text-align: center;
@@ -45,12 +49,14 @@
     &.custom {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       img {
-        width: 50%;
+        width: 49%;
         object-fit: cover;
+        margin-bottom: 0;
       }
       .vert {
-        width: 50%;
+        width: 49%;
         display: flex;
         flex-direction: column;
         img {
@@ -59,7 +65,7 @@
       }
     }
   }
-  #recycle_bag {
+  #table_calendar {
     margin-top: 50vh;
   }
 }
