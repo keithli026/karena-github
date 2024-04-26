@@ -61,7 +61,7 @@ const Home = () => {
                     showCursor={true}
                   />
                 </Button>
-                <span>designer at EF who loves to creating digital experience for <span style={{textDecoration: "underline"}}>people</span>.</span>
+                <span>designer who loves to creating digital experience for <span style={{textDecoration: "underline"}}>people</span>.</span>
               </p>
               {/* <Button variant='light' href="/my-story">About me</Button> */}
             </div>
