@@ -20,6 +20,35 @@
       }
     }
   }
+  .name {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50vh;
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 20px);
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40px;
+      border: 1px solid $black;
+    }
+  }
+
+  .summary {
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+  }
 
   img {
     margin-bottom: 20px;
@@ -65,7 +94,27 @@
       }
     }
   }
-  #table_calendar {
-    margin-top: 50vh;
+
+  .info {
+    &.scrolled {
+      .name, .summary {
+        top: 0;
+        opacity: 1;
+      }
+    }
+
+    .name {
+      position: relative;
+      top: 300px;
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    .summary {
+      position: relative;
+      top: 300px;
+      opacity: 0;
+      transition: all 1s ease 0.3s;
+    }
   }
 }

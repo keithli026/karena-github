@@ -3,6 +3,10 @@ import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/digital/banner.png"
 import bannerMobile from "../assets/images/digital/XHS_LP_2.png"
+import filter1 from "../assets/images/digital/filter-1.png"
+import filter2 from "../assets/images/digital/filter-2.png"
+import filter3 from "../assets/images/digital/filter-3.png"
+import filter4 from "../assets/images/digital/filter-4.png"
 import spirit from "../assets/images/digital/hong_kong_spirit.png"
 import spirit1 from "../assets/images/digital/hong_kong_spirit_1.png"
 import spirit2 from "../assets/images/digital/hong_kong_spirit_2.png"
@@ -20,9 +24,6 @@ import googleAd2 from "../assets/images/digital/google_ad2.GIF"
 import englishBite1 from "../assets/images/digital/englishBite1.jpg"
 import englishBite2 from "../assets/images/digital/englishBite2.jpg"
 import englishBite3 from "../assets/images/digital/englishBite3.jpg"
-import happyWinterGif from "../assets/images/digital/happy_winter.gif"
-import bucketlistGif from "../assets/images/digital/bucket_list_for_fb_ig.gif"
-import phoneGif from "../assets/images/digital/phone_wheel_of_teachers.gif"
 import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
 import ScrollClassAdder from '../components/ScrollClassAdder'
@@ -63,10 +64,14 @@ const Digital = () => {
         </div>
       </div> */}
       <Container>
-        <div id="info" className={`section center ${isScrolled ? "scrolled" : null}`}>
+        <div className={`info section center ${isScrolled ? "scrolled" : null}`}>
           {/* <h2>Little Red Book Landing page</h2> */}
           <h2 className='name'>DIGITAL</h2>
           <div className='summary'>Creates, manages, and produces digital design solutions for a variety of uses: websites, product graphics, edm, landing page, different social media platform (Facebook, Instagram, Little Red Book) , brand campaigns and short video editing.</div>
+          <img src={filter1} alt="filter" loading="lazy"/>
+          <img src={filter2} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
+          <img src={filter3} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
+          <img src={filter4} alt="filter" loading="lazy"/>
         </div>
         <div className="section center">
           <img src={spirit} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
@@ -103,16 +108,6 @@ const Digital = () => {
             </div>
           </div>
         </div>
-        <div className="section center">
-          {/* <img src={happyWinterGif} alt="happy winter" loading="lazy" style={{width: "600px"}} /> */}
-        </div>
-    
-        {/* <div className="section center">
-          <div className='phone'>
-            <img src={bucketlistGif} alt="bucket list" loading="lazy" />
-            <img src={phoneGif} alt="phone wheel of teacher" loading="lazy" />
-          </div>
-        </div> */}
         <div className="section center button-wrapper">
           <BackToTopButton />
           <OtherProjectsButton />

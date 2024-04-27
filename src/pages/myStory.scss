@@ -14,10 +14,10 @@
 
     @include media-breakpoint-up(lg) {
       overflow-x: unset;
-      margin-bottom: 200px;
+      margin-bottom: 300px;
     }
     @include media-breakpoint-up(xl) {
-      margin-bottom: 300px;
+      margin-bottom: 400px;
     }
 
     .wrapper {
@@ -106,17 +106,23 @@
     }
   }
 
-  #resume {
+  .resume {
     position: relative;
     &.scrolled {
       .wrapper {
         .image_wrapper {
           left: 0;
           opacity: 1;
+          @include media-breakpoint-up(md) {
+            left: 10%;
+          }
         }
         .content {
           right: 0;
           opacity: 1;
+          @include media-breakpoint-up(md) {
+            right: 10%;
+          }
         }
       }
     }
@@ -129,15 +135,14 @@
       margin: 50px 0;
       @include media-breakpoint-up(lg) {
         position: absolute;
-        top: 0;
+        top: -50px;
         left: 55%;
         z-index: 1;
         margin: 0;
         font-size: 22px;
       }
       @include media-breakpoint-up(xl) {
-        top: 100px;
-        left: 65%;
+        left: 60%;
       }
 
       img {
@@ -167,7 +172,7 @@
         opacity: 0;
         transition: all 0.5s;
         @include media-breakpoint-up(lg) {
-          width: 47%;
+          // width: 47%;
         }
         img {
           padding-top: 50px;
@@ -196,13 +201,18 @@
           width: 70%;
           padding: 40px;
         }
+        @include media-breakpoint-up(md) {
+          width: 50%;
+          padding: 60px;
+        }
    
         @include media-breakpoint-up(lg) {
-          width: 55%;
+          // width: 50%;
+          // padding-left: 100px;
         }
 
         @include media-breakpoint-up(xl) {
-          min-width: 550px;
+          // min-width: 550px;
           padding-left: 100px;
           
         }

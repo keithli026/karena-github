@@ -106,36 +106,7 @@
     }
   }
 
-  .phone {
-    img {
-      max-width: 50%;
-    }
-
-    @include media-breakpoint-up(xl) {
-      position: relative;
-      text-align: start;
-      height: 1100px;
-
-      img {
-        max-height: 600px;
-      }
-
-      >img:first-child {
-        margin-top: 100px;
-        margin-left: 100px;
-        transform: rotate(-15deg);
-      }
-
-      >img:last-child {
-        position: absolute;
-        top: 500px;
-        right: 100px;
-        transform: rotate(15deg);
-      }
-    }
-  }
-
-  #info {
+  .info {
     &.scrolled {
       .name, .summary {
         top: 0;

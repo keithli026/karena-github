@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/print/banner.png"
 import bannerMobile from "../assets/images/print/banner.png"
+import print1 from "../assets/images/print/print-1.png"
+import print2 from "../assets/images/print/print-2.png"
+import print3 from "../assets/images/print/print-3.png"
+import print4 from "../assets/images/print/print-4.png"
+import print5 from "../assets/images/print/print-5.png"
 import tableCalendar from "../assets/images/print/table_calendar.png"
 import tableCalendar1 from "../assets/images/print/table_calendar_1.png"
 import businessCard from "../assets/images/print/business_card.jpg"
@@ -32,9 +37,32 @@ import billboardKT3 from "../assets/images/print/KT_billboard_3.jpg"
 import billboardKT4 from "../assets/images/print/KT_billboard_4.jpg"
 import billboardYL from "../assets/images/print/YL_billboard.jpg"
 import billboardYL2 from "../assets/images/print/YL_billboard_2.jpg"
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import useIntersectionObserver from '@react-hook/intersection-observer'
+import throttle from 'lodash.throttle'
 
 const Print = () => {
+  const videoRef = useRef();
+  const [isLoad, setIsLoad] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { isIntersecting } = useIntersectionObserver(videoRef);
+
+  useEffect(() => {
+    // if (isIntersecting && !isLoad) {
+    //   setIsLoad(true);
+    //   // console.log(isLoad, isIntersecting);
+    // }
+    const handleScroll = throttle(() => {
+      setIsScrolled(true);
+    }, 250);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+
+  }, [isIntersecting, isLoad, isScrolled]);
+  
   return (
     <div id='print' className='project'>
       {/* <div className='banner'>
@@ -48,26 +76,36 @@ const Print = () => {
         </div>
       </div> */}
       <Container>
-      <div className='section center' id="table_calendar">
+        <div className={`info section center ${isScrolled ? "scrolled" : null}`}>
+          {/* <h2>Little Red Book Landing page</h2> */}
+          <h2 className='name'>PRINT</h2>
+          <div className='summary'>Specialize in the creation of visual designs for printing such as brochures, flyers, business cards, billboard and a range of other printable marketing materials.</div>
+          <img src={print1} alt="Print" loading='lazy' />
+          <img src={print2} alt="Print" loading='lazy' style={{width: "50%"}}/>
+          <img src={print3} alt="Print" loading='lazy' style={{width: "50%"}}/>
+          <img src={print4} alt="Print" loading='lazy' />
+          <img src={print5} alt="Print" loading='lazy' />
+        </div>
+        <div className='section center'>
           <h2>Calendar</h2>
           <div className='description'>I was responsible for choosing images, creating layouts, looks, and feels that match the guidelines, and preparing digital output files for the print shop.</div>
           <img src={tableCalendar} alt="Calendar" loading='lazy' />
-          <img src={tableCalendar1} alt="Calendar" loading='lazy' style={{marginBottom: "100px"}}/>
-          <div className='flexbox'>
+          <img src={tableCalendar1} alt="Calendar" loading='lazy' />
+          {/* <div className='flexbox'>
             <img src={calendar} alt="Calendar" loading='lazy' />
             <img src={calendar2} alt="Calendar" loading='lazy' />
           </div>
-          <img src={calendar3} alt="Calendar" loading='lazy' />
+          <img src={calendar3} alt="Calendar" loading='lazy' /> */}
         </div>
-        <div className='section center' id="recycle_bag">
+        <div className='section center'>
           <h2>Recycle Bag</h2>
           <div className='description'>Creative Recycling Bag Design: "Don't let the cat out of the bag" means not revealing or disclosing something that is supposed to be a secret.</div>
           <img src={recycleBag1} alt="Recycle Bag" loading='lazy' />
           <img src={recycleBag2} alt="Recycle Bag" loading='lazy' />
-          <div className='flexbox'>
+          {/* <div className='flexbox'>
             <img src={recycleBag3} alt="Recycle Bag" loading='lazy' />
             <img src={recycleBag4} alt="Recycle Bag" loading='lazy' />
-          </div>
+          </div> */}
         </div>
         <div className='section center'>
           <h2>Brochure</h2>
@@ -90,7 +128,7 @@ const Print = () => {
         <div className='section center'>
           <h2>Leaflet</h2>
           <div className='description'>Designed a leaflet for different promotions and ensure that the style aligns with the brand.</div>
-          <img src={leaflet} alt="Leaflet" loading='lazy' style={{marginBottom: "100px"}}/>
+          <img src={leaflet} alt="Leaflet" loading='lazy' style={{ marginBottom: "100px" }} />
           <img src={folder} alt="Folder" loading='lazy' />
           <div className='flexbox'>
             <img src={folderFront} alt="Folder front" loading='lazy' />
@@ -110,11 +148,8 @@ const Print = () => {
           <h2>Billboard</h2>
           <div className='description'>Took responsibility for creating short advertising messages that were easily readable and effectively delivered the key message to the audience.</div>
           <img src={billboardTW} alt="Billboard in Taiwan" loading='lazy' />
-          <img src={billboardTW2} alt="Billboard in Taiwan" loading='lazy' />
-        </div>
-        <div className='section'>
           <img src={billboardSS} alt="Billboard in Sheung Shui" loading='lazy' />
-          <img src={billboardSS2} alt="Billboard in Sheung Shui" loading='lazy' />
+          <img src={billboardYL} alt="Billboard in Yuen Long" loading='lazy' />
         </div>
         <div className='section flexbox custom'>
           <img src={billboardKT} alt="Billboard in Kung Tong" loading='lazy' />
@@ -123,10 +158,6 @@ const Print = () => {
             <img src={billboardKT3} alt="Billboard in Kung Tong" loading='lazy' />
             <img src={billboardKT4} alt="Billboard in Kung Tong" loading='lazy' />
           </div>
-        </div>
-        <div className='section'>
-          <img src={billboardYL} alt="Billboard in Yuen Long" loading='lazy' />
-          <img src={billboardYL2} alt="Billboard in Yuen Long" loading='lazy' />
         </div>
         <div className="section center button-wrapper">
           <BackToTopButton />
