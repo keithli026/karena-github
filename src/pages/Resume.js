@@ -46,7 +46,7 @@ const Resume = () => {
         <div className='flexbox section' id="experience">
           <div className='box'>
             <div className='position'>
-              <h3>Digital Graphic Designer</h3>
+              <h3>Senior Designer</h3>
               <div>EF Education First  丨  Hong Kong</div>
             </div>
             <p>EF Education First is an international education company focusing on language, academics, and cultural experience. While at EF, I was responsible for digital graphic development of their global website, both designing and adapting for countries and collaborated with creatives, designers, sales and marketing teams to create lead generation campaigns.</p>

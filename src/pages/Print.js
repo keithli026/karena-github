@@ -151,14 +151,14 @@ const Print = () => {
           <img src={billboardSS} alt="Billboard in Sheung Shui" loading='lazy' />
           <img src={billboardYL} alt="Billboard in Yuen Long" loading='lazy' />
         </div>
-        <div className='section flexbox custom'>
+        {/* <div className='section flexbox custom'>
           <img src={billboardKT} alt="Billboard in Kung Tong" loading='lazy' />
           <div className='vert'>
             <img src={billboardKT2} alt="Billboard in Kung Tong" loading='lazy' />
             <img src={billboardKT3} alt="Billboard in Kung Tong" loading='lazy' />
             <img src={billboardKT4} alt="Billboard in Kung Tong" loading='lazy' />
           </div>
-        </div>
+        </div> */}
         <div className="section center button-wrapper">
           <BackToTopButton />
           <OtherProjectsButton />

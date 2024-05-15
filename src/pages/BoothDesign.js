@@ -150,6 +150,7 @@ const BoothDesign = () => {
 
           <img src={bookFairBackdrop} alt="Book fair 2023 backdrop" loading="lazy" />
           <img src={floorPlan} alt="Floor plan" loading="lazy" />
+          <img src={igStory} alt="IG story" loading="lazy" style={{width: "370px"}}/>
           <div className='flexbox_wrapper'>
             <div className='flexbox'>
               <img src={foamBoard1} alt="Foamboard" loading="lazy" />
@@ -159,15 +160,15 @@ const BoothDesign = () => {
               <img src={foamBoard3} alt="Foamboard" loading="lazy" />
             </div>
           </div>
-          <img src={igStory} alt="IG story" loading="lazy" style={{width: "370px"}}/>
+      
         </div>
-        <div className='section'>
+        {/* <div className='section'>
           <h2>Book cover design</h2>
           <div className='center'>
             <img src={bookCoverBack} alt="Book cover back" loading="lazy" />
             <img src={bookCover} alt="Book cover" loading="lazy" id="book-cover" />
           </div>
-        </div>
+        </div> */}
         <div className="section center button-wrapper">
           <BackToTopButton />
           <OtherProjectsButton />

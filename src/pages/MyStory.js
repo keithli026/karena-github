@@ -51,7 +51,7 @@ const MyStory = () => {
           </div>
           <div className='content'>
             <div className='name'>Karena Li</div>
-            <div className='position'>Multimedia Designer</div>
+            <div className='position'>Senior Designer</div>
             <div className='email'><a href="mailto: iamkarena66@gmail.com">iamkarena66@gmail.com</a></div>
             <div className='tel'><a href="tel:+85256279890">56279890</a></div>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import siteLogo from "../../assets/images/icons/logo.png"
+import siteLogo from "../../assets/images/icons/KL _logo.png"
 import fingerTopIcon from "../../assets/images/icons/finger_top.svg"
 import Button from 'react-bootstrap/Button'
 import ScrollClassAdder from '../ScrollClassAdder'

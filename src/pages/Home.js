@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
 import background from "../assets/images/home/container_1.png"
+import slogan from "../assets/images/home/slogan_banner.png"
 import arrow from "../assets/images/icons/arrow.png"
 import reHome from "../assets/images/home/rehome.png"
 import badgeDesign from "../assets/images/home/badge_design.png"
@@ -16,8 +17,50 @@ import Container from "react-bootstrap/Container"
 import Button from 'react-bootstrap/Button'
 import throttle from 'lodash.throttle'
 import { ReactTyped } from "react-typed"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import slide1 from "../assets/images/home/slide1.png"
+import slide2 from "../assets/images/home/slide2.png"
+import slide3 from "../assets/images/home/slide3.png"
+import slide4 from "../assets/images/home/slide4.png"
+import slide5 from "../assets/images/home/slide5.png"
+import slide6 from "../assets/images/home/slide6.png"
+import slide7 from "../assets/images/home/slide7.png"
 
 const Home = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        }
+      }
+    ]
+  };
   const [isScrolled, setIsScrolled] = useState(false);
   const classNames = [
     ScrollClassAdder("#projects >div:first-child", "scrolled", 200),
@@ -61,7 +104,7 @@ const Home = () => {
                     showCursor={true}
                   />
                 </Button>
-                <span>designer who loves to creating digital experience for <span style={{textDecoration: "underline"}}>people</span>.</span>
+                <span>designer who loves to creating digital experience for <span style={{ textDecoration: "underline" }}>people</span>.</span>
               </p>
               {/* <Button variant='light' href="/my-story">About me</Button> */}
             </div>
@@ -69,15 +112,16 @@ const Home = () => {
         </Container>
       </div>
       <div class="quick_link">
-      <ul>
-        <li><Link to="/my-story#about">About me</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/my-story#my_value">My value</Link></li>
-        <li><Link to="/lets-talk">Email</Link></li>
-      </ul>
+        <ul>
+          <li><Link to="/my-story#about">About me</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/resume">Resume</Link></li>
+          <li><Link to="/my-story#my_value">My value</Link></li>
+          <li><Link to="/lets-talk">Email</Link></li>
+        </ul>
       </div>
-      <div id="slogan" className={ScrollClassAdder("#slogan", "scrolled", 200)}>
+      <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div>
+      <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
         <Container>
           {/* <div className='title'>“Simple is Better”</div> */}
           {/* <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p> */}
@@ -88,16 +132,15 @@ const Home = () => {
 
       <div id="projects">
         <div className={`project ${classNames[0]}`}>
-          <div className='image' style={{ position: "relative", zIndex: "1" }}>
-            <img src={hult} alt="HULT" loading="lazy" />
+          <div className='image'>
+            <img src={badgeDesign} alt="Badge Design" loading="lazy" />
           </div>
           <div className='content'>
             <div className='wrapper container'>
-              <div className='hashtag'><span>#BRANDING</span><span>#WEBDESIGN</span><span>#LANDINGPAGE</span><span>#UI</span><span>#UX</span></div>
-              <div className='title'>Landing Page / Web design</div>
-              <p>Plan to delivering top-notch quality UI/UX design for your Website, Landing page by using Figma and Adobe creative suite.</p>
-              <p>Having usability and user experience in mind I will do brainstorming and research about your project to deliver attractively, user-friendly, and interactive UI designs.</p>
-              <Link to="/projects/web-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
+              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#GRAPHIC</span></div>
+              <div className='title'>Badge Design</div>
+              <p>By offering badges as reward, its adds an element of challenge, competition, and achievement for users. This can motivate users to complete certain tasks.</p>
+              <Link to="/projects/badge-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
             </div>
           </div>
         </div>
@@ -141,6 +184,20 @@ const Home = () => {
           </div>
         </div>
         {/* <div className={`project ${classNames[4]}`}>
+          <div className='image' style={{ position: "relative", zIndex: "1" }}>
+            <img src={hult} alt="HULT" loading="lazy" />
+          </div>
+          <div className='content'>
+            <div className='wrapper container'>
+              <div className='hashtag'><span>#BRANDING</span><span>#WEBDESIGN</span><span>#LANDINGPAGE</span><span>#UI</span><span>#UX</span></div>
+              <div className='title'>Landing Page / Web design</div>
+              <p>Plan to delivering top-notch quality UI/UX design for your Website, Landing page by using Figma and Adobe creative suite.</p>
+              <p>Having usability and user experience in mind I will do brainstorming and research about your project to deliver attractively, user-friendly, and interactive UI designs.</p>
+              <Link to="/projects/web-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
+            </div>
+          </div>
+        </div> */}
+        {/* <div className={`project ${classNames[5]}`}>
           <div className='image'>
             <img src={brochure} alt="brochure" loading="lazy" />
           </div>
@@ -153,21 +210,20 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        {/* <div className={`project ${classNames[5]}`}>
-          <div className='image'>
-            <img src={badgeDesign} alt="Badge Design" loading="lazy" />
-          </div>
-          <div className='content'>
-            <div className='wrapper container'>
-              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#GRAPHIC</span></div>
-              <div className='title'>Badge Design</div>
-              <p>By offering badges as reward, its adds an element of challenge, competition, and achievement for users. This can motivate users to complete certain tasks.</p>
-              <Link to="/projects/badge-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
-            </div>
-          </div>
-        </div> */}
       </div>
       <Container>
+        <div id='product_archived'>
+        <div className='title'>Product Archived</div>
+            <Slider {...settings}>
+            <img src={slide1} alt="product" loading="lazy" />
+            <img src={slide2} alt="product" loading="lazy" />
+            <img src={slide3} alt="product" loading="lazy" />
+            <img src={slide4} alt="product" loading="lazy" />
+            <img src={slide5} alt="product" loading="lazy" />
+            <img src={slide6} alt="product" loading="lazy" />
+            <img src={slide7} alt="product" loading="lazy" />
+            </Slider>
+        </div>
         <div className='message'>
           <span>Reach out to create something</span> <Button variant="outline-primary" size="sm">
             {" "}
