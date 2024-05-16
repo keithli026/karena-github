@@ -176,11 +176,14 @@ $offset-y1: 100vh;
   }
   .quick_link {
     display: none;
+    @include media-breakpoint-up(sm) {
+      left: $container-padding-x * 0.5;
+    }
     @include media-breakpoint-up(xl) {
       display: block;
       position: fixed;
-      top: 45vh;
-      left: $container-padding-x * 0.5;
+      top: 60vh;
+      left: 100px;
       z-index: 1;
     }
     @media(min-width: 1500px) {
@@ -192,6 +195,7 @@ $offset-y1: 100vh;
         font-style: italic;
         color: #515151;
         list-style-type: none;
+        // padding-left: 100px;
         li {
           &:hover {
             &::before {
@@ -210,10 +214,14 @@ $offset-y1: 100vh;
   }
   #slogan {
     background-color: #EB75A5;
-    text-align: center;
-    margin-bottom: 100px;
-    padding-left: $grid-gutter-width * 0.5;
-    padding-right: $grid-gutter-width * 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      height: 80vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+    }
   }
   #intro {
     // background-image: url("../assets//images/icons/mobile_little_icon.png");

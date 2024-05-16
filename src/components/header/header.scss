@@ -5,8 +5,12 @@
   z-index: 10;
   @include media-breakpoint-up(sm) {
     top: -50px;
+    // left: 100px;
     opacity: 0;
     transition: all 0.5s ease-out 0.5s;
+  }
+  @include media-breakpoint-up(xl) {
+    left: 100px;
   }
   @media(min-width: 1500px) {
     left: 8vw;
@@ -18,14 +22,13 @@
       opacity: 1;
     }
     @include media-breakpoint-up(xl) {
-      top: 50px;
+      top: 55px;
     }
   }
   img {
-    width: 200px;
-
+    width: 150px;
     @include media-breakpoint-up(xl) {
-      width: auto;
+      width: 200px;
     }
   }
 }
@@ -36,8 +39,12 @@
   z-index: 10;
   @include media-breakpoint-up(sm) {
     top: -50px;
+    // right: 100px;
     opacity: 0;
     transition: all 0.5s ease-out 0.5s;
+  }
+  @include media-breakpoint-up(xl) {
+    right: 100px;
   }
   @media(min-width: 1500px) {
     right: 8vw;
