@@ -213,14 +213,16 @@ $offset-y1: 100vh;
     }
   }
   #slogan {
-    background-color: #EB75A5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    img {
-      height: 80vh;
-      padding-top: 10vh;
-      padding-bottom: 10vh;
+    @include media-breakpoint-up(xl) {
+      background-color: #EB75A5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      img {
+        height: 100vh;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+      }
     }
   }
   #intro {
