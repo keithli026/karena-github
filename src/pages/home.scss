@@ -25,11 +25,13 @@ $offset-x1: 50vw;
 $offset-y1: 100vh;
 #home {
   overflow-x: hidden; 
+  background-color: rgba(244, 240, 237, 1);
+
   #greeting {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(255, 255, 255, 1);
+
     // margin-bottom: 100px;
     // @include media-breakpoint-up(lg) {
     //   margin-bottom: 200px;
