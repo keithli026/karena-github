@@ -111,14 +111,14 @@ const Home = () => {
           </div>
         </Container>
       </div>
-      <div class="quick_link">
-        <ul>
-          <li><Link to="/my-story#about">About me</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-          <li><Link to="/my-story#my_value">My value</Link></li>
-          <li><Link to="/lets-talk">Email</Link></li>
-        </ul>
+      <div className="quick_link">
+      <ul>
+        <li><Link to="/my-story#about">About me</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/resume">Resume</Link></li>
+        <li><Link to="/my-story#my_value">My value</Link></li>
+        <li><Link to="/lets-talk">Email</Link></li>
+      </ul>
       </div>
       <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div>
       <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
