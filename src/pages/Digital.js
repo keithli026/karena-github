@@ -3,6 +3,9 @@ import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/digital/banner.png"
 import bannerMobile from "../assets/images/digital/XHS_LP_2.png"
+import XHS1 from "../assets/images/digital/XHS_v1.png"
+import XHS2 from "../assets/images/digital/XHS_v2.png"
+import XHS3 from "../assets/images/digital/XHS_v3.png"
 import filter1 from "../assets/images/digital/filter-1.png"
 import filter2 from "../assets/images/digital/filter-2.png"
 import filter3 from "../assets/images/digital/filter-3.png"
@@ -68,27 +71,31 @@ const Digital = () => {
           {/* <h2>Little Red Book Landing page</h2> */}
           <h2 className='name'>DIGITAL</h2>
           <div className='summary'>Creates, manages, and produces digital design solutions for a variety of uses: websites, product graphics, edm, landing page, different social media platform (Facebook, Instagram, Little Red Book) , brand campaigns and short video editing.</div>
+          <img src={XHS1} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
+          <img src={XHS2} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
+          <img src={XHS3} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
+          
           <img src={filter1} alt="filter" loading="lazy"/>
           <img src={filter2} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
           <img src={filter3} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
           <img src={filter4} alt="filter" loading="lazy"/>
         </div>
-        <div className="section center">
+        {/* <div className="section center">
           <img src={spirit} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
           <img src={spirit1} alt="spirit" loading="lazy" style={{width: "300px", marginBottom: "100px"}}/>
           <img src={spirit2} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
           <img src={spirit3} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
           <img src={spirit4} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
           <img src={spirit5} alt="spirit" loading="lazy" />
-        </div>
+        </div> */}
         <div className="section center">
           {/* <h2>2024<br />Social media</h2> */}
-          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' style={{marginBottom: "100px"}} />
+          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' style={{marginBottom: "200px"}} />
           <img src={summer2} alt="Summer" loading='lazy' style={{marginBottom: "20px"}}/>
           <img src={summer1} alt="Summer" loading='lazy' style={{marginBottom: "20px"}}/>
-          <img src={color} alt="Color" loading='lazy' style={{marginBottom: "100px"}}/>
-          <img src={igFeed} alt="Social media feeds" loading='lazy' style={{marginBottom: "100px"}} />
-          <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' style={{marginBottom: "100px"}}/>
+          <img src={color} alt="Color" loading='lazy' style={{marginBottom: "200px"}}/>
+          <img src={igFeed} alt="Social media feeds" loading='lazy' style={{marginBottom: "200px"}} />
+          <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' style={{marginBottom: "200px"}}/>
           <img src={igPost} alt="Social media feeds" loading='lazy'/>
         </div>
         

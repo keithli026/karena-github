@@ -29,6 +29,7 @@ $offset-y1: 100vh;
     position: relative;
     height: 100vh;
     width: 100vw;
+    background-color: rgba(255, 255, 255, 1);
     // margin-bottom: 100px;
     // @include media-breakpoint-up(lg) {
     //   margin-bottom: 200px;
@@ -212,19 +213,19 @@ $offset-y1: 100vh;
       }
     }
   }
-  #slogan {
-    @include media-breakpoint-up(xl) {
-      background-color: #EB75A5;
-      position: fixed;
-      top: 0;
-      left: 0;
-      img {
-        height: 100vh;
-        padding-top: 10vh;
-        padding-bottom: 10vh;
-      }
-    }
-  }
+  // #slogan {
+  //   @include media-breakpoint-up(xl) {
+  //     background-color: #EB75A5;
+  //     position: fixed;
+  //     top: 0;
+  //     left: 0;
+  //     img {
+  //       height: 100vh;
+  //       padding-top: 10vh;
+  //       padding-bottom: 10vh;
+  //     }
+  //   }
+  // }
   #intro {
     // background-image: url("../assets//images/icons/mobile_little_icon.png");
     // background-size: contain;

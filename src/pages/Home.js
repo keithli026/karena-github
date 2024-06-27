@@ -120,7 +120,7 @@ const Home = () => {
         <li><Link to="/lets-talk">Email</Link></li>
       </ul>
       </div>
-      <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div>
+      {/* <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div> */}
       <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
         <Container>
           {/* <div className='title'>“Simple is Better”</div> */}
