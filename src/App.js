@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 import './custom.scss'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
@@ -27,10 +27,6 @@ function App() {
   const TRACKING_ID = "G-0QKR0542GX"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
 
-  const location = useLocation();
-  useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
-  }, [location]);
   return (
     <ScrollToTop>
       <Routes>

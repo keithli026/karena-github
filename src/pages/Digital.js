@@ -6,6 +6,9 @@ import bannerMobile from "../assets/images/digital/XHS_LP_2.png"
 import XHS1 from "../assets/images/digital/XHS_v1.png"
 import XHS2 from "../assets/images/digital/XHS_v2.png"
 import XHS3 from "../assets/images/digital/XHS_v3.png"
+import video1 from "../assets/videos/digital/video1.mp4"
+import video2 from "../assets/videos/digital/video2.mp4"
+import video3 from "../assets/videos/digital/video3.mp4"
 import filter1 from "../assets/images/digital/filter-1.png"
 import filter2 from "../assets/images/digital/filter-2.png"
 import filter3 from "../assets/images/digital/filter-3.png"
@@ -71,10 +74,21 @@ const Digital = () => {
           {/* <h2>Little Red Book Landing page</h2> */}
           <h2 className='name'>DIGITAL</h2>
           <div className='summary'>Creates, manages, and produces digital design solutions for a variety of uses: websites, product graphics, edm, landing page, different social media platform (Facebook, Instagram, Little Red Book) , brand campaigns and short video editing.</div>
-          <img src={XHS1} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
+          {/* <img src={XHS1} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
           <img src={XHS2} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
-          <img src={XHS3} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
-          
+          <img src={XHS3} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/> */}
+          <video controls playsInline preload="none" poster={XHS1} style={{width: "33.33%", marginBottom: "200px"}}>
+              <source src={video1} type="video/mp4" />
+              <img src={XHS1} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
+            <video controls playsInline preload="none" poster={XHS2} style={{width: "33.33%", marginBottom: "200px"}}>
+              <source src={video2} type="video/mp4" />
+              <img src={XHS2} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
+            <video controls playsInline preload="none" poster={XHS3} style={{width: "33.33%", marginBottom: "200px"}}>
+              <source src={video3} type="video/mp4" />
+              <img src={XHS3} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+            </video>
           <img src={filter1} alt="filter" loading="lazy"/>
           <img src={filter2} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
           <img src={filter3} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>

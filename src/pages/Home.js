@@ -27,8 +27,15 @@ import slide4 from "../assets/images/home/slide4.png"
 import slide5 from "../assets/images/home/slide5.png"
 import slide6 from "../assets/images/home/slide6.png"
 import slide7 from "../assets/images/home/slide7.png"
+import ReactGA from 'react-ga4'
 
 const Home = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Home" 
+  });
+
   var settings = {
     dots: true,
     infinite: true,
