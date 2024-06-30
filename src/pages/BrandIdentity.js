@@ -17,10 +17,17 @@ import diet from "../assets/images/brand_identity/diet.png"
 import teaVideo from "../assets/videos/brand_identity/tea.mp4"
 import dietVideo from "../assets/videos/brand_identity/diet.mp4"
 import pocinaVideo from "../assets/videos/brand_identity/pocina.mp4"
+import ReactGA from 'react-ga4'
 
 import Container from 'react-bootstrap/Container';
 
 const BrandDesign = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Brand Identity" 
+  });
+
   return (
     <div id='brand_identity' className='project'>
       <div className='banner'>

@@ -7,8 +7,15 @@ import karena from "../assets/images/home/karena.png"
 import Container from 'react-bootstrap/Container';
 // import backButton from "../components/BackButton"
 import BackButton from '../components/BackButton'
+import ReactGA from 'react-ga4'
 
 const Resume = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Resume" 
+  });
+
   useEffect(() => {
     // console.log("run", document.readyState);
     const addClassToElement = () => {

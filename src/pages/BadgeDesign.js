@@ -16,9 +16,16 @@ import badgeDesign1 from "../assets/images/badge_design/badge_design_1.png"
 import badgeDesign2 from "../assets/images/badge_design/badge_design_2.png"
 import badgeDesign3 from "../assets/images/badge_design/badge_design_3.png"
 import awardPage from "../assets/images/badge_design/award.png"
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import ReactGA from 'react-ga4'
 
 const BadgeDesign = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Badge Design" 
+  });
+
   return (
     <div id='badge_design' className='project'>
       <div className='banner'>

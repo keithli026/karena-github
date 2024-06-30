@@ -34,8 +34,15 @@ import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
 import ScrollClassAdder from '../components/ScrollClassAdder'
 import throttle from 'lodash.throttle'
+import ReactGA from 'react-ga4'
 
 const Digital = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Digital" 
+  });
+
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

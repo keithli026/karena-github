@@ -6,8 +6,16 @@ import AEIcon from "../assets/images/icons/AE.png"
 import PSIcon from "../assets/images/icons/PS.png"
 import AIIcon from "../assets/images/icons/AI.png"
 import fitsio from "../assets/images/fitsio/fitsio_white.png"
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import ReactGA from 'react-ga4'
+
 const Fitsio = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Fitsio" 
+  });
+
   return (
     <div id='fitsio' className='project'>
       <div className='banner'>

@@ -14,9 +14,16 @@ import mobileDesign3 from "../assets/images/web_design/mobile3.png"
 import desktopDesign1 from "../assets/images/web_design/web1.jpg"
 import desktopDesign3 from "../assets/images/web_design/web3.jpg"
 import desktopDesign4 from "../assets/images/web_design/web4.jpg"
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import ReactGA from 'react-ga4'
 
 const WebDesign = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "EF Englishtown" 
+  });
+
   return (
     <div id='web_design' className='project'>
       <div className='banner'>

@@ -20,10 +20,17 @@ import bookCoverBack from "../assets/images/bookfair/cover-back.png"
 import bookCover from "../assets/images/bookfair/book-cover.png"
 import video from "../assets/videos/bookfair/23bookfair.mov"
 import useIntersectionObserver from '@react-hook/intersection-observer'
-import Container from 'react-bootstrap/Container';
-import Slider from "react-slick";
+import Container from 'react-bootstrap/Container'
+import Slider from "react-slick"
+import ReactGA from 'react-ga4'
 
 const BoothDesign = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "EDUCATION EXPO & BOOK FAIR" 
+  });
+
   const videoRef = useRef();
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [isLoad, setIsLoad] = useState(false);

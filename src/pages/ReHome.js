@@ -34,8 +34,15 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
+import ReactGA from 'react-ga4'
 
 const ReHome = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "RE-Home" 
+  });
+
   var settings = {
     dots: true,
     arrows: true,

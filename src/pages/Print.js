@@ -40,8 +40,15 @@ import billboardYL2 from "../assets/images/print/YL_billboard_2.jpg"
 import Container from 'react-bootstrap/Container'
 import useIntersectionObserver from '@react-hook/intersection-observer'
 import throttle from 'lodash.throttle'
+import ReactGA from 'react-ga4'
 
 const Print = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Print" 
+  });
+
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

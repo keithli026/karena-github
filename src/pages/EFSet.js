@@ -14,9 +14,16 @@ import EFSetTest5 from "../assets/images/ef_set/image_5.webp"
 import result1 from "../assets/images/ef_set/result_1.webp"
 import result2 from "../assets/images/ef_set/result_2.webp"
 import mobile from "../assets/images/ef_set/mobile.webp"
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import ReactGA from 'react-ga4'
 
 const EFSet = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "EF Set" 
+  });
+
   return (
     <div id='ef_set' className='project'>
       <div className='banner'>

@@ -11,8 +11,15 @@ import value3 from "../assets/images/icons/value_3.svg"
 import ScrollClassAdder from '../components/ScrollClassAdder'
 import Contact from '../components/Contact'
 import Container from "react-bootstrap/Container"
+import ReactGA from 'react-ga4'
 
 const MyStory = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "My Story" 
+  });
+
   var settings = {
     dots: true,
     infinite: true,

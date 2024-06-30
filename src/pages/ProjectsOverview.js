@@ -15,8 +15,15 @@ import englishTown from "../assets/images/more_projects/englishtown.png"
 import arrowBlack from "../assets/images/icons/arrow_black.png"
 import Figure from 'react-bootstrap/Figure'
 import Container from 'react-bootstrap/Container'
+import ReactGA from 'react-ga4'
 
 const ProjectsOverview = () => {
+  ReactGA.send({ 
+    hitType: "pageview", 
+    page: "/", 
+    title: "Projects" 
+  });
+
   return (
     <>
       <div id='projects' className='project'>
