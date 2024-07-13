@@ -1,4 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
+import Lightbox from "yet-another-react-lightbox";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Video from "yet-another-react-lightbox/plugins/video";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/digital/banner.png"
@@ -35,18 +42,22 @@ import useIntersectionObserver from '@react-hook/intersection-observer'
 import ScrollClassAdder from '../components/ScrollClassAdder'
 import throttle from 'lodash.throttle'
 import ReactGA from 'react-ga4'
+import "yet-another-react-lightbox/plugins/captions.css";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import "yet-another-react-lightbox/styles.css";
 
 const Digital = () => {
-  ReactGA.send({ 
-    hitType: "pageview", 
-    page: "/", 
-    title: "Digital" 
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Digital"
   });
 
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isIntersecting } = useIntersectionObserver(videoRef);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (isIntersecting && !isLoad) {
@@ -84,22 +95,22 @@ const Digital = () => {
           {/* <img src={XHS1} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
           <img src={XHS2} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/>
           <img src={XHS3} alt="XHS" loading="lazy" style={{width: "33.33%", marginBottom: "200px"}}/> */}
-          <video controls playsInline preload="none" poster={XHS1} style={{width: "33.33%", marginBottom: "200px"}}>
-              <source src={video1} type="video/mp4" />
-              <img src={XHS1} alt="video" loading="lazy" title="Your browser does not support the video tag." />
-            </video>
-            <video controls playsInline preload="none" poster={XHS2} style={{width: "33.33%", marginBottom: "200px"}}>
-              <source src={video2} type="video/mp4" />
-              <img src={XHS2} alt="video" loading="lazy" title="Your browser does not support the video tag." />
-            </video>
-            <video controls playsInline preload="none" poster={XHS3} style={{width: "33.33%", marginBottom: "200px"}}>
-              <source src={video3} type="video/mp4" />
-              <img src={XHS3} alt="video" loading="lazy" title="Your browser does not support the video tag." />
-            </video>
-          <img src={filter1} alt="filter" loading="lazy"/>
-          <img src={filter2} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
-          <img src={filter3} alt="filter" loading="lazy" style={{width: "50%", marginBottom: "100px"}}/>
-          <img src={filter4} alt="filter" loading="lazy"/>
+          <video controls playsInline preload="none" poster={XHS1} style={{ width: "33.33%", marginBottom: "200px" }}>
+            <source src={video1} type="video/mp4" />
+            <img src={XHS1} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+          </video>
+          <video controls playsInline preload="none" poster={XHS2} style={{ width: "33.33%", marginBottom: "200px" }}>
+            <source src={video2} type="video/mp4" />
+            <img src={XHS2} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+          </video>
+          <video controls playsInline preload="none" poster={XHS3} style={{ width: "33.33%", marginBottom: "200px" }}>
+            <source src={video3} type="video/mp4" />
+            <img src={XHS3} alt="video" loading="lazy" title="Your browser does not support the video tag." />
+          </video>
+          <img src={filter1} alt="filter" loading="lazy" />
+          <img src={filter2} alt="filter" loading="lazy" style={{ width: "50%", marginBottom: "100px" }} />
+          <img src={filter3} alt="filter" loading="lazy" style={{ width: "50%", marginBottom: "100px" }} />
+          <img src={filter4} alt="filter" loading="lazy" />
         </div>
         {/* <div className="section center">
           <img src={spirit} alt="spirit" loading="lazy" style={{marginBottom: "100px"}}/>
@@ -111,15 +122,35 @@ const Digital = () => {
         </div> */}
         <div className="section center">
           {/* <h2>2024<br />Social media</h2> */}
-          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' style={{marginBottom: "200px"}} />
-          <img src={summer2} alt="Summer" loading='lazy' style={{marginBottom: "20px"}}/>
-          <img src={summer1} alt="Summer" loading='lazy' style={{marginBottom: "20px"}}/>
-          <img src={color} alt="Color" loading='lazy' style={{marginBottom: "200px"}}/>
-          <img src={igFeed} alt="Social media feeds" loading='lazy' style={{marginBottom: "200px"}} />
-          <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' style={{marginBottom: "200px"}}/>
-          <img src={igPost} alt="Social media feeds" loading='lazy'/>
+          {/* <button type="button" onClick={() => setOpen(true)}>
+            Open Lightbox
+          </button> */}
+          <Lightbox
+            open={open}
+            close={() => setOpen(false)}
+            slides={[
+              {src: bannerMobile, title: "", description: ""},
+              {src: summer1, title: "", description: ""},
+              {src: summer2, title: "", description: ""},
+              {src: color, title: "", description: ""},
+              {src: igFeed, title: "", description: ""},
+              {src: XHSPost, title: "", description: ""},
+              {src: igPost, title: "", description: ""}
+            ]}
+            plugins={[Captions, Fullscreen, Slideshow, Thumbnails, Video, Zoom]}
+          >
+
+          </Lightbox>
+          <img src={bannerMobile} alt="Little Red Book Landing page" loading='lazy' style={{ marginBottom: "200px" }} />
+          <img src={summer2} alt="Summer" loading='lazy' style={{ marginBottom: "20px" }} />
+          <img src={summer1} alt="Summer" loading='lazy' style={{ marginBottom: "20px" }} />
+          <img src={color} alt="Color" loading='lazy' style={{ marginBottom: "200px" }} />
+          <img src={igFeed} alt="Social media feeds" loading='lazy' style={{ marginBottom: "200px" }} />
+          <img src={XHSPost} alt="Xiaohongshu post" loading='lazy' style={{ marginBottom: "200px" }} />
+          <img src={igPost} alt="Social media feeds" loading='lazy' />
+
         </div>
-        
+
         <div className="section center">
           {/* <h2>Google Ads gif banner and Landing page</h2> */}
           <div className='flexbox'>

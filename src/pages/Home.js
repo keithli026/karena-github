@@ -27,6 +27,9 @@ import slide4 from "../assets/images/home/slide4.png"
 import slide5 from "../assets/images/home/slide5.png"
 import slide6 from "../assets/images/home/slide6.png"
 import slide7 from "../assets/images/home/slide7.png"
+import booth2022 from "../assets/images/bookfair/booth2022.png";
+import booth2023 from "../assets/images/bookfair/booth2023.png";
+import efsetSilde from "../assets/images/home/efset.jpeg"
 import ReactGA from 'react-ga4'
 
 const Home = () => {
@@ -229,6 +232,9 @@ const Home = () => {
             <img src={slide5} alt="product" loading="lazy" />
             <img src={slide6} alt="product" loading="lazy" />
             <img src={slide7} alt="product" loading="lazy" />
+            <img src={booth2022} alt="booth 2022" loading="lazy" height="300" width="300"/>
+            <img src={booth2023} alt="booth 2023" loading="lazy" height="300" width="300"/>
+            <img src={efsetSilde} alt="EF SET" loading="lazy" height="300" width="300"/>
             </Slider>
         </div>
         <div className='message'>
