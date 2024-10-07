@@ -33,10 +33,10 @@ import efsetSilde from "../assets/images/home/efset.jpeg"
 import ReactGA from 'react-ga4'
 
 const Home = () => {
-  ReactGA.send({ 
-    hitType: "pageview", 
-    page: "/", 
-    title: "Home" 
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Home"
   });
 
   var settings = {
@@ -122,13 +122,13 @@ const Home = () => {
         </Container>
       </div>
       <div className="quick_link">
-      <ul>
-        <li><Link to="/my-story#about">About me</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
-        <li><Link to="/my-story#my_value">My value</Link></li>
-        <li><Link to="/lets-talk">Email</Link></li>
-      </ul>
+        <ul>
+          <li><Link to="/my-story#about">About me</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/resume">Resume</Link></li>
+          <li><Link to="/my-story#my_value">My value</Link></li>
+          <li><Link to="/lets-talk">Email</Link></li>
+        </ul>
       </div>
       {/* <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div> */}
       <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
@@ -143,31 +143,18 @@ const Home = () => {
       <div id="projects">
         <div className={`project ${classNames[0]}`}>
           <div className='image'>
-            <img src={badgeDesign} alt="Badge Design" loading="lazy" />
+            <img src={brochure} alt="brochure" loading="lazy" />
           </div>
           <div className='content'>
             <div className='wrapper container'>
-              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#GRAPHIC</span></div>
-              <div className='title'>Badge Design</div>
-              <p>By offering badges as reward, its adds an element of challenge, competition, and achievement for users. This can motivate users to complete certain tasks.</p>
-              <Link to="/projects/badge-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
+              <div className='hashtag'><span>#BRANDING</span><span>#PRINT</span><span>#GRAPHIC</span></div>
+              <div className='title'>Print design</div>
+              <p>Create visual concepts and develop the overall layout and production design for company such as advertisements, brochures, booklet, flyer...etc.</p>
+              <Link to="/projects/print"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
             </div>
           </div>
         </div>
         <div className={`project ${classNames[1]}`}>
-          <div className='image'>
-            <img src={reHome} alt="RE-Home App" loading="lazy" />
-          </div>
-          <div className='content'>
-            <div className='wrapper container'>
-              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#DESIGNER STRATEGY</span><span>#LOGODESIGN</span></div>
-              <div className='title'>Re-Home</div>
-              <p>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt. Re-Home app strives to reduce the homeless dog numbers.They offer a high level flow to simplify the adoption process.</p>
-              <Link to="/projects/re-home"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
-            </div>
-          </div>
-        </div>
-        <div className={`project ${classNames[2]}`}>
           <div className='image'>
             <img src={XHS} alt="XHS Post" loading="lazy" />
           </div>
@@ -180,6 +167,20 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className={`project ${classNames[2]}`}>
+          <div className='image'>
+            <img src={reHome} alt="RE-Home App" loading="lazy" />
+          </div>
+          <div className='content'>
+            <div className='wrapper container'>
+              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#DESIGNER STRATEGY</span><span>#LOGODESIGN</span></div>
+              <div className='title'>Re-Home</div>
+              <p>Re-Home is a local animals adoption app that’s help users easily to find the matched pet to adopt. Re-Home app strives to reduce the homeless dog numbers.They offer a high level flow to simplify the adoption process.</p>
+              <Link to="/projects/re-home"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
+            </div>
+          </div>
+        </div>
+
         <div className={`project ${classNames[3]}`}>
           <div className='image'>
             <img src={efSet} alt="EF SET" loading="lazy" />
@@ -194,6 +195,19 @@ const Home = () => {
           </div>
         </div>
         {/* <div className={`project ${classNames[4]}`}>
+          <div className='image'>
+            <img src={badgeDesign} alt="Badge Design" loading="lazy" />
+          </div>
+          <div className='content'>
+            <div className='wrapper container'>
+              <div className='hashtag'><span>#BRANDING</span><span>#UI</span><span>#UXRESERCHER</span><span>#GRAPHIC</span></div>
+              <div className='title'>Badge Design</div>
+              <p>By offering badges as reward, its adds an element of challenge, competition, and achievement for users. This can motivate users to complete certain tasks.</p>
+              <Link to="/projects/badge-design"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
+            </div>
+          </div>
+        </div> */}
+        {/* <div className={`project ${classNames[5]}`}>
           <div className='image' style={{ position: "relative", zIndex: "1" }}>
             <img src={hult} alt="HULT" loading="lazy" />
           </div>
@@ -207,24 +221,11 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        {/* <div className={`project ${classNames[5]}`}>
-          <div className='image'>
-            <img src={brochure} alt="brochure" loading="lazy" />
-          </div>
-          <div className='content'>
-            <div className='wrapper container'>
-              <div className='hashtag'><span>#BRANDING</span><span>#PRINT</span><span>#GRAPHIC</span></div>
-              <div className='title'>Print design</div>
-              <p>Create visual concepts and develop the overall layout and production design for company such as advertisements, brochures, booklet, flyer...etc.</p>
-              <Link to="/projects/print"><img src={arrowBlack} alt="arrow" loading="lazy" className='arrow' /></Link>
-            </div>
-          </div>
-        </div> */}
       </div>
       <Container>
         <div id='product_archived'>
-        <div className='title'>Product Archived</div>
-            <Slider {...settings}>
+          <div className='title'>Product Archived</div>
+          <Slider {...settings}>
             <img src={slide1} alt="product" loading="lazy" />
             <img src={slide2} alt="product" loading="lazy" />
             <img src={slide3} alt="product" loading="lazy" />
@@ -232,10 +233,10 @@ const Home = () => {
             <img src={slide5} alt="product" loading="lazy" />
             <img src={slide6} alt="product" loading="lazy" />
             <img src={slide7} alt="product" loading="lazy" />
-            <img src={booth2022} alt="booth 2022" loading="lazy" height="300" width="300"/>
-            <img src={booth2023} alt="booth 2023" loading="lazy" height="300" width="300"/>
-            <img src={efsetSilde} alt="EF SET" loading="lazy" height="300" width="300"/>
-            </Slider>
+            <img src={booth2022} alt="booth 2022" loading="lazy" height="300" width="300" />
+            <img src={booth2023} alt="booth 2023" loading="lazy" height="300" width="300" />
+            <img src={efsetSilde} alt="EF SET" loading="lazy" height="300" width="300" />
+          </Slider>
         </div>
         <div className='message'>
           <span>Reach out to create something</span> <Button variant="outline-primary" size="sm">
