@@ -3,6 +3,19 @@ import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/print/banner.png"
 import bannerMobile from "../assets/images/print/banner.png"
+import artboard from "../assets/images/print/Artboard_10.jpg"
+import bottle from "../assets/images/print/bottle.jpg"
+import ecoBento from "../assets/images/print/ecoBento.jpg"
+import ecoCultery from "../assets/images/print/ecoCutlery.jpg"
+import ecoPhotoChain3 from "../assets/images/print/ecoPhotoChain3.jpg"
+import ecoStrawGif from "../assets/images/print/ecoStraw.gif"
+import ecoStraw from "../assets/images/print/ecoStraw.jpg"
+import ecoStrawWalk from "../assets/images/print/ecoStraw_Walk_for_nature.png"
+import ecosCulterySet1 from "../assets/images/print/ecoCutlerySet_1.png"
+import ecosCulterySet2 from "../assets/images/print/ecoCutlerySet_2.png"
+import ecosStrawPKG from "../assets/images/print/ecoStrawPKG.png"
+import carton1 from "../assets/images/print/carton_1.JPG"
+import carton2 from "../assets/images/print/carton_2.JPG"
 import print1 from "../assets/images/print/print-1.png"
 import print2 from "../assets/images/print/print-2.png"
 import print3 from "../assets/images/print/print-3.png"
@@ -43,16 +56,17 @@ import throttle from 'lodash.throttle'
 import ReactGA from 'react-ga4'
 
 const Print = () => {
-  ReactGA.send({ 
-    hitType: "pageview", 
-    page: "/", 
-    title: "Print" 
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Print"
   });
 
   const videoRef = useRef();
   const [isLoad, setIsLoad] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { isIntersecting } = useIntersectionObserver(videoRef);
+  const youtubeURL = "https://www.youtube.com/watch?v=WW99nah3q88";
 
   useEffect(() => {
     // if (isIntersecting && !isLoad) {
@@ -69,7 +83,7 @@ const Print = () => {
     }
 
   }, [isIntersecting, isLoad, isScrolled]);
-  
+
   return (
     <div id='print' className='project'>
       {/* <div className='banner'>
@@ -87,9 +101,32 @@ const Print = () => {
           {/* <h2>Little Red Book Landing page</h2> */}
           <h2 className='name'>PRINT</h2>
           <div className='summary'>Specialize in the creation of visual designs for printing such as brochures, flyers, business cards, billboard and a range of other printable marketing materials.</div>
+
+          <a href={youtubeURL} target="_blank" rel="noopener noreferrer">《米埔深度行 with LINE FRIENDS》</a>
+          <div class="flexbox">
+            <img src={carton2} alt="carton 2" loading='lazy' style={{ width: "69%" }} />
+            <img src={carton1} alt="carton 1" loading='lazy' style={{ width: "29%" }} />
+            <img src={ecoStrawWalk} alt="ecoStrawWalk" loading='lazy' style={{ width: "58%" }} />
+            <img src={ecosStrawPKG} alt="ecosStrawPKG" loading='lazy' style={{ width: "40%" }} />
+            <img src={ecosCulterySet1} alt="ecosCulterySet1" loading='lazy' style={{ width: "45%" }} />
+            <img src={ecosCulterySet2} alt="ecosCulterySet2" loading='lazy' style={{ width: "55%" }} />
+          </div>
+
+          <img src={artboard} alt="artboard" loading='lazy' />
+          <div class="flexbox custom">
+            <img src={ecoStraw} alt="ecoStraw" loading='lazy' />
+            <img src={ecoStrawGif} alt="ecoStraw" loading='lazy' />
+            <img src={bottle} alt="bottle" loading='lazy' />
+            <img src={ecoPhotoChain3} alt="ecoPhotoChain" loading='lazy' />
+            <img src={ecoCultery} alt="ecoCultery" loading='lazy' />
+            <img src={ecoBento} alt="ecoBento" loading='lazy' />
+          </div>
+
+        </div>
+        <div className='section center'>
           <img src={print1} alt="Print" loading='lazy' />
-          <img src={print2} alt="Print" loading='lazy' style={{width: "50%"}}/>
-          <img src={print3} alt="Print" loading='lazy' style={{width: "50%"}}/>
+          <img src={print2} alt="Print" loading='lazy' style={{ width: "50%" }} />
+          <img src={print3} alt="Print" loading='lazy' style={{ width: "50%" }} />
           <img src={print4} alt="Print" loading='lazy' />
           <img src={print5} alt="Print" loading='lazy' />
         </div>

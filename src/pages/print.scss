@@ -72,17 +72,18 @@
     margin-bottom: 100px;
   }
   .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     img {
+      object-fit: contain;
       width: 50%;
     }
     &.custom {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       img {
         width: 49%;
         object-fit: cover;
-        margin-bottom: 0;
+        // margin-bottom: 0;
       }
       .vert {
         width: 49%;
