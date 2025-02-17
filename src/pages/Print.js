@@ -3,6 +3,11 @@ import BackToTopButton from '../components/BackToTopButton'
 import OtherProjectsButton from '../components/OtherProjectsButton'
 import banner from "../assets/images/print/banner.png"
 import bannerMobile from "../assets/images/print/banner.png"
+import mooncake from "../assets/images/print/mooncake.jpg"
+import pochacco from "../assets/images/print/pochacco.jpg"
+import sanrio from "../assets/images/print/sanrio.jpeg"
+import WWF from "../assets/images/print/WWF.jpeg"
+import line from "../assets/images/print/line.jpeg"
 import artboard from "../assets/images/print/Artboard_10.jpg"
 import bottle from "../assets/images/print/bottle.jpg"
 import ecoBento from "../assets/images/print/ecoBento.jpg"
@@ -101,7 +106,24 @@ const Print = () => {
           {/* <h2>Little Red Book Landing page</h2> */}
           <h2 className='name'>PRINT</h2>
           <div className='summary'>Specialize in the creation of visual designs for printing such as brochures, flyers, business cards, billboard and a range of other printable marketing materials.</div>
-
+        </div>
+        <div className='section center'>
+          <h2>Man Lok Yuen - Transforming mooncake box design</h2>
+          <div className='description' style={{ marginBottom: "50px" }}>
+            <p>Used a matte black box with intricate gold floral cutouts on the lid and the sides of the box can fold down and lock into place, transforms into a table for serving or displaying them.</p>
+            <p>This innovative design not only enhances the unboxing experience bus also adds a functional element to the mooncake presentation.</p>
+          </div>
+          <img src={mooncake} alt="mooncake" loading='lazy' style={{ marginBottom: "100px" }} />
+          <h2>Sanrio - Standbox Photo Frame and backdrop design</h2>
+          <div className='description' style={{ marginBottom: "50px" }}>This project focuses on creating a cohesive and visually striking design for a standbox photo frame and an accompanying backdrop. The design aims to enhance the presentation for photographs while providing a stylish and functional display.</div>
+          <img src={sanrio} alt="sanrio" loading='lazy' style={{ marginBottom: "0px", width: "100px" }} />
+          <img src={pochacco} alt="pochacco" loading='lazy' />
+        </div>
+        <div className='section center'>
+          <div className='flexbox' style={{ justifyContent: "center" }}>
+            <img src={WWF} alt="WWF" loading='lazy' style={{ width: "15%" }} />
+            <img src={line} alt="line" loading='lazy' style={{ width: "35%" }} />
+          </div>
           <a href={youtubeURL} target="_blank" rel="noopener noreferrer">《米埔深度行 with LINE FRIENDS》</a>
           <div class="flexbox">
             <img src={carton2} alt="carton 2" loading='lazy' style={{ width: "69%" }} />
@@ -121,7 +143,6 @@ const Print = () => {
             <img src={ecoCultery} alt="ecoCultery" loading='lazy' />
             <img src={ecoBento} alt="ecoBento" loading='lazy' />
           </div>
-
         </div>
         <div className='section center'>
           <img src={print1} alt="Print" loading='lazy' />
