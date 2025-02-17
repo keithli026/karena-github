@@ -7,7 +7,7 @@ import mooncake from "../assets/images/print/mooncake.jpg"
 import pochacco from "../assets/images/print/pochacco.jpg"
 import sanrio from "../assets/images/print/sanrio.jpeg"
 import WWF from "../assets/images/print/WWF.jpeg"
-import line from "../assets/images/print/line.jpeg"
+import line from "../assets/images/print/line2.jpeg"
 import artboard from "../assets/images/print/Artboard_10.jpg"
 import bottle from "../assets/images/print/bottle.jpg"
 import ecoBento from "../assets/images/print/ecoBento.jpg"
@@ -122,7 +122,7 @@ const Print = () => {
         <div className='section center'>
           <div className='flexbox' style={{ justifyContent: "center" }}>
             <img src={WWF} alt="WWF" loading='lazy' style={{ width: "15%" }} />
-            <img src={line} alt="line" loading='lazy' style={{ width: "35%" }} />
+            <img src={line} alt="line" loading='lazy' style={{ width: "15%" }} />
           </div>
           <a href={youtubeURL} target="_blank" rel="noopener noreferrer">《米埔深度行 with LINE FRIENDS》</a>
           <div class="flexbox">
