@@ -106,10 +106,6 @@ const Home = () => {
 
     <div id="home">
       <div id="greeting">
-        {/* <div className='banner'>
-          <img src={background} alt="background" loading='lazy' className='bg' />
-          <div className='overlay'></div>
-        </div> */}
         <Container>
           <div className='flexbox'>
             <div className='content'>
@@ -128,7 +124,6 @@ const Home = () => {
                 </Button>
                 <span>designer who loves to creating digital experience for <span style={{ textDecoration: "underline" }}>people</span>.</span>
               </p>
-              {/* <Button variant='light' href="/my-story">About me</Button> */}
             </div>
             <div className='image'><img src={karena} alt="karena" loading='lazy' /></div>
           </div>
@@ -168,7 +163,7 @@ const Home = () => {
         </div>
 
       </div>
-      <div className="quick_link">
+      {/* <div className="quick_link">
         <ul>
           <li><Link to="/my-story#about">About me</Link></li>
           <li><Link to="/projects">Projects</Link></li>
@@ -176,14 +171,6 @@ const Home = () => {
           <li><Link to="/my-story#my_value">My value</Link></li>
           <li><Link to="/lets-talk">Email</Link></li>
         </ul>
-      </div>
-      {/* <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div> */}
-
-      {/* <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
-        <Container>
-          <p>Here’s a few projects that I’d like to share.</p>
-          <img src={arrow} alt="arrow" loading="lazy" />
-        </Container>
       </div> */}
 
       <div id="projects">
