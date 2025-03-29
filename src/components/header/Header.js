@@ -6,16 +6,21 @@ import fingerTopIcon from "../../assets/images/icons/finger_top.svg"
 import Button from 'react-bootstrap/Button'
 import ScrollClassAdder from '../ScrollClassAdder'
 import throttle from 'lodash.throttle'
+import { lg } from '../../GlobalStyle';
 
 const Header = () => {
   const [show, setShow] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   const showMenu = () => {
-    setShow(!show);
+    if (window.innerWidth < lg) { 
+      setShow(!show);
+    }
   }
   const closeMenu = () => {
-    setShow(false);
+    if (window.innerWidth < lg) { 
+      setShow(false);
+    }
   }
 
   const rotateButton = () => {
@@ -45,7 +50,7 @@ const Header = () => {
   }, [show,isScrolled]);
 
   return (
-    <>
+    <div className='header'>
       <Link to="/" title="home" id="logo" onClick={closeMenu} className={isScrolled ? "scrolled": null}>
         <img alt="site logo" src={siteLogo} />
       </Link>
@@ -60,7 +65,7 @@ const Header = () => {
           <li><Link to="/lets-talk" onClick={closeMenu} onBlur={closeMenu}>Let's Talk</Link></li>
         </ul>
       </div>
-    </>
+    </div>
   );
 }
 

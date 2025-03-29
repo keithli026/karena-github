@@ -1,6 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Contact from '../components/Contact'
+import karena from '../assets/images/home/karena.png'
+import yoe from '../assets/images/home/icon1.png'
+import collaborator from '../assets/images/home/icon2.png'
+import creative from '../assets/images/home/icon4.png'
+import portfolio04 from '../assets/images/home/portfolio-04.png'
+import portfolio05 from '../assets/images/home/portfolio-05.png'
+import portfolio06 from '../assets/images/home/portfolio-06.png'
+import portfolio07 from '../assets/images/home/portfolio-07.png'
+import portfolio08 from '../assets/images/home/portfolio-08.png'
+import portfolio09 from '../assets/images/home/portfolio-09.png'
+import portfolio10 from '../assets/images/home/portfolio-10.png'
+import portfolio11 from '../assets/images/home/portfolio-11.png'
 import background from "../assets/images/home/container_1.png"
 import slogan from "../assets/images/home/slogan_banner.png"
 import arrow from "../assets/images/icons/arrow.png"
@@ -94,10 +106,10 @@ const Home = () => {
 
     <div id="home">
       <div id="greeting">
-        <div className='banner'>
+        {/* <div className='banner'>
           <img src={background} alt="background" loading='lazy' className='bg' />
           <div className='overlay'></div>
-        </div>
+        </div> */}
         <Container>
           <div className='flexbox'>
             <div className='content'>
@@ -118,8 +130,43 @@ const Home = () => {
               </p>
               {/* <Button variant='light' href="/my-story">About me</Button> */}
             </div>
+            <div className='image'><img src={karena} alt="karena" loading='lazy' /></div>
+          </div>
+          <div className='figure'>
+            <div className='box'>
+              <div className='number'>10+</div>
+              <div className='title'>Year of exp.</div>
+              <div className='logo'><img src={yoe} alt="year of exp" loading='lazy' /></div>
+            </div>
+            <div className='box'>
+              <div className='number'>30+</div>
+              <div className='title'>Happy Collaborators</div>
+              <div className='logo'><img src={collaborator} alt="collaborator" loading='lazy' /></div>
+            </div>
+            <div className='box'>
+              <div className='number'>200+</div>
+              <div className='title'>Creatives</div>
+              <div className='logo'><img src={creative} alt="creative" loading='lazy' /></div>
+            </div>
           </div>
         </Container>
+      </div>
+      <div className='brand-logo'>
+        <div className='title'>Brands I've worked with</div>
+
+        <div className='container'>
+          <div className='flexbox'>
+            <div className='image'><img src={portfolio04} alt="Line Friend logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio05} alt="Yum Me Print logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio06} alt="文樂園 logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio07} alt="Pitanium logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio08} alt="WWF logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio09} alt="HKTDC logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio10} alt="Sanrio logo" loading='lazy' /></div>
+            <div className='image'><img src={portfolio11} alt="Papery logo" loading='lazy' /></div>
+          </div>
+        </div>
+
       </div>
       <div className="quick_link">
         <ul>
@@ -131,14 +178,13 @@ const Home = () => {
         </ul>
       </div>
       {/* <div id="slogan"><img src={slogan} alt="slogan" loading="lazy" /></div> */}
-      <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
+
+      {/* <div id="intro" className={ScrollClassAdder("#intro", "scrolled", 200)}>
         <Container>
-          {/* <div className='title'>“Simple is Better”</div> */}
-          {/* <p>Through my career as a designer, I am keen to deliver a meaningful design for social good and make the world a better place.</p> */}
           <p>Here’s a few projects that I’d like to share.</p>
           <img src={arrow} alt="arrow" loading="lazy" />
         </Container>
-      </div>
+      </div> */}
 
       <div id="projects">
         <div className={`project ${classNames[0]}`}>

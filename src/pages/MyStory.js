@@ -53,9 +53,9 @@ const MyStory = () => {
       <div className={`container resume ${ScrollClassAdder(".resume", "scrolled", 200)}`}>
         <Link to="/resume" title="resume" className='quicklink'>Resume.<img src={arrowPink} alt="arrow" loading="lazy"/></Link>
         <div className='wrapper'>
-          <div className='image_wrapper'>
+          {/* <div className='image_wrapper'>
             <img src={karena} alt="karena" loading="lazy"/>
-          </div>
+          </div> */}
           <div className='content'>
             <div className='name'>Karena Li</div>
             <div className='position'>Senior Designer</div>
